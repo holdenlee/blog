@@ -27,9 +27,18 @@ It took me a long time to set up the blog, mainly because there were a lot of fe
 # Setting up Hakyll
 
 1. First install the [Haskell Platform](https://www.haskell.org/downloads) if you haven't already.
-2. 
+2. Next install [Hakyll](https://jaspervdj.be/hakyll/tutorials/01-installation.html) using cabal. Initialize a default Hakyll website (the command below initializes the site in directory "my-site").
+    cabal install hakyll
+	hakyll-init my-site
+3. Read through the Hakyll tutorials to understand how it works.
+
+# Site design using Bootstrap.js
+
+In Hakyll, the content of the site is kept separate from the site design. When you write posts, just write in Markdown and optionally specify some metadata like tags and date edited. In site.hs you'll specify how to "wrap" html, etc. around those posts to create t
 
 # Tags and Categories
+
+# Adding Disqus comments
 
 # Additional features
 
