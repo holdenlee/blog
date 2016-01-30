@@ -11,16 +11,18 @@ machine:
 
 dependencies:
 
-  override:
+  pre: 
     - cabal update
     - cabal sandbox init
-    - cabal install --only-dependencies -j
-    - cabal configure
-
-test:
 
   override:
+    - cabal install --only-dependencies -j --verbose=3
     - cabal build
+
+  cache_directories:
+    - .cabal-sandbox
+
+test:
 
   post:
     - git submodule init
