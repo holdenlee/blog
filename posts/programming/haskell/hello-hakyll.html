@@ -137,7 +137,8 @@ hakyll-init my-site</code></pre></li>
 <li>Unzip the files into the blog directory. (I unzipped them directly into folders css/, js/, and fonts/, but you can also put them as subdirectories in bootstrap/ if you prefer.)</li>
 <li>Modify the starter template, and saved it as default.html. The content of the pages will go into <code>$body$</code>. Note that I added a footer. ```html
 <!DOCTYPE html>
-<html>
+<html></li>
+</ol>
 <head>
 <p><meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --></p>
 <p><meta name="description" content="Holden Lee's Blog"> <meta name="author" content="Holden Lee"></p>
@@ -148,39 +149,42 @@ hakyll-init my-site</code></pre></li>
 <link href="../../../css/blog.css" rel="stylesheet"> <link href="../../../css/default.css" rel="stylesheet">
 </head>
 <body>
-<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
-<!-- To make a button active (pressed), use <li class="active"> -->
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.--> <!-- To make a button active (pressed), use <li class="active"> -->
 <div id="header">
 <nav class="navbar navbar-inverse navbar-fixed-top">
 <div class="container">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-</button>
-<p><a class="navbar-brand" href="../../../">Holden’s Blog</a></p>
-</div>
-<div id="navbar" class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-<li>
-<a href="../../../">Home</a>
-</li>
-<li>
-<a href="sitemap.html">Sitemap</a>
-</li>
-<li>
-<a href="about.html">About</a>
-</li>
+<pre><code> &lt;div class=&quot;navbar-header&quot;&gt;
+ &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;
+ &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+ &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+ &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+ &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;Holden's Blog&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div id=&quot;navbar&quot; class=&quot;collapse navbar-collapse&quot;&gt;
+ &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+ &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href=&quot;sitemap.html&quot;&gt;Sitemap&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;</code></pre>
 <!-- TODO: make this part a for loop over main pages -->
 </ul>
-</div>
-</div>
-<p></nav></p>
+<pre><code> &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+</nav>
 </div>
 <p><span class="math inline">\(body\)</span></p>
 <!-- Footer -->
 <div id="footer">
 <div class="container">
-<p>Built with <a href="http://jaspervdj.be/hakyll">Hakyll</a> using <a href="http://www.getbootstrap.com">Bootstrap</a>, <a href="http://www.mathjax.org">MathJax</a>, <a href="http://www.disqus.com">Disqus</a>, <a href="http://highlightjs.org/">Highlight.js</a>, and <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a></p>
+<pre><code> Built with
+ &lt;a href=&quot;http://jaspervdj.be/hakyll&quot;&gt;Hakyll&lt;/a&gt; 
+ using 
+ &lt;a href=&quot;http://www.getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt;, 
+ &lt;a href=&quot;http://www.mathjax.org&quot;&gt;MathJax&lt;/a&gt;, 
+ &lt;a href=&quot;http://www.disqus.com&quot;&gt;Disqus&lt;/a&gt;,
+ &lt;a href=&quot;http://highlightjs.org/&quot;&gt;Highlight.js&lt;/a&gt;, and 
+ &lt;a href=&quot;http://ignorethecode.net/blog/2010/04/20/footnotes/&quot;&gt;Footnotes.js&lt;/a&gt;</code></pre>
 </div>
 </div>
 </body>
@@ -189,8 +193,7 @@ hakyll-init my-site</code></pre></li>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="../../../js/bootstrap.min.js"></script>
-<p>```</p></li>
-</ol>
+<pre><code>```</code></pre>
 <h2 id="template-html-files">Template html files</h2>
 <p>How do we turn a post written in Markdown into actual webpage? First, we read the metadata (title, subtitle, tags, date) from the Markdown file and display them in a uniform manner. Create the file templates/post.html:</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span>
@@ -251,7 +254,7 @@ Thus, to add MathJax functionality to all pages, add this add the end of default
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;/highlight/styles/tomorrow-night-bright.css&quot;</span><span class="kw">&gt;</span>
 <span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;/highlight/highlight.pack.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
 <span class="kw">&lt;script&gt;</span><span class="va">hljs</span>.<span class="at">initHighlightingOnLoad</span>()<span class="op">;&lt;</span><span class="ss">/script&gt;</span></code></pre></div>
-<p>To highlight code in posts, put name/abbreviation of the language at the start of the code block</p>
+<p>To highlight code in posts, put name/abbreviation of the language at the start of the code block like this:</p>
 <div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown"> ```haskell
 <span class="bn">    main = putStrLn &quot;Hello World!&quot;</span>
  ```</code></pre></div>
@@ -314,7 +317,7 @@ Thus, to add MathJax functionality to all pages, add this add the end of default
 
 <!-- For MathJax https://docs.mathjax.org/en/v2.5-latest/tex.html -->
 <!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,file:///C:/Users/holden-lee/Dropbox/website/test/MathJax/config/local/local"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/blog/MathJax/config/local/local"></script>
 
 <!-- Footnotes http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
 <script src="../../../js/footnotes.js"></script>
