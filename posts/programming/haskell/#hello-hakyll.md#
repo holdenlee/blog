@@ -1,0 +1,20 @@
+---
+title: Hello Hakyll!
+subtitle: Setting up this blog
+published: 2016-01-30
+modified: 2016-01-30
+tags: haskell, blogging, web design
+---
+
+# Why Hakyll?
+
+I've decided to switch blogging platforms from Wordpress to Hakyll, a website generation platform that can be customized using Haskell. The following two blog posts articulate some of my reasons for doing so:
+
+* [Why switch from Wordpress to Jekyll?](http://karpathy.github.io/2014/07/01/switching-to-jekyll/)
+* [Why switch from Jekyll to Hakyll?](http://mark.reid.name/blog/switching-to-hakyll.html)
+
+Here is my own list of reasons:
+
+* I like having complete control over 
+
+There are many beautifully organized blogs written in Hakyll 
