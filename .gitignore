@@ -1,0 +1,11 @@
+# Complied source #
+###################
+
+*.exe
+*.hi
+*.o
+
+# Miscellaneous files #
+#######################
+
+*~
