@@ -20,4 +20,4 @@ The main reason is that I want to have complete control over the content:
 3. I have complete control in the sense that I can create arbitrary scripts to turn the text files into published posts. For example, I can add footnotes, enable latex macros, enable comments, and automatically build a hierarchical sitemap of all posts. I can make arbitrary macros for common patterns (ex. links to wikipedia pages) if I wanted to. Moreover, I can write the scripts in Haskell!
 4. There are many beautiful blogs and websites written in Haskell, for example, [Chris Olah's blog](http://colah.github.io) and [Gwern's site](http://www.gwern.net/).
 
-In the rest of this post, 
+In the rest of this post, I'll detail how I set up the blog. This is still very much a work in progress! Many people have written excellent tutorials already, so I will give links to their articles rather than re-explaining. Since there were many features I wanted to add, it took me some time to fi

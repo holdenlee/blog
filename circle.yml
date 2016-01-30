@@ -1,28 +1,20 @@
 machine:
 
-  pre:
-    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 20
-    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 20
-    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 10
-    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 10
-
   ghc:
     version: 7.10.2
 
 dependencies:
 
-  pre: 
+  override:
     - cabal update
     - cabal sandbox init
-
-  override:
-    - cabal install --only-dependencies -j --verbose=3
-    - cabal build
-
-  cache_directories:
-    - .cabal-sandbox
+    - cabal install --only-dependencies -j
+    - cabal configure
 
 test:
+
+  override:
+    - cabal build
 
   post:
     - git submodule init
