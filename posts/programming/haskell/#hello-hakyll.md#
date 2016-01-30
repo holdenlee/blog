@@ -15,7 +15,17 @@ I've decided to switch blogging platforms from Wordpress to Hakyll, a website ge
 
 Here is my own list of reasons:
 
-* Writing posts in Wordpress is clunky - I have to bring up the editor. I often have to fight with the formatting (especially on lists that get corrupted)
-* I like having complete control over 
+* I want to have the freedom to edit 
+
+Writing posts in Wordpress is clunky. I have to work inside its editor.I often like to start writing posts 
+
+* I want my posts to be as close to plain text as possible. See [Gwern](http://www.gwern.net/About#long-site) and especially the quote by Julian Assange on why this is 
+
+* I want to have complete control over my blog, not because I'm distri 
+
+. I often have to fight with the formatting (especially on lists that get corrupted)
+* 
+* I like having complete control over
+* I want to be able
 
 There are many beautifully organized blogs written in Hakyll 
