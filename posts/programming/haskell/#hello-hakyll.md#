@@ -13,6 +13,8 @@ I've decided to switch blogging platforms from Wordpress to Hakyll, a website ge
 * [Why switch from Wordpress to Jekyll?](http://karpathy.github.io/2014/07/01/switching-to-jekyll/)
 * [Why switch from Jekyll to Hakyll?](http://mark.reid.name/blog/switching-to-hakyll.html)
 
+The main reason is that I want to have complete control over the content. I want to edit blog posts as text (markdown) files on my computer, rather than editing them inside an editor in the browser. Having them as simple files means it is easy to import and export material that I write, or convert it to a differ
+
 Here is my own list of reasons:
 
 * I want to have the freedom to edit 
