@@ -34,7 +34,9 @@ It took me a long time to set up the blog, mainly because there were a lot of fe
 
 # Site design using Bootstrap.js
 
-In Hakyll, the content of the site is kept separate from the site design. When you write posts, just write in Markdown and optionally specify some metadata like tags and date edited. In site.hs you'll specify how to "wrap" html, etc. around those posts to create t
+In Hakyll, the content of the site is kept separate from the site design. When you write posts, just write in Markdown and optionally specify some metadata like tags and date edited. In site.hs you'll specify how to "wrap" html, etc. around those posts to create the actual pages on the site. Thus, Hakyll is very modular - you can easily change the site layout independently of the content.
+
+I used a minimal 
 
 # Tags and Categories
 
