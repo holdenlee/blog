@@ -1,10 +1,4 @@
-machine:
-
-dependencies:
-
 test:
-
-  override:
 
   post:
     - git submodule init
