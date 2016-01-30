@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Holden Lee's Blog">
+  <meta name="author" content="Holden Lee">
+  <!-- If the page has tags, populate keywords. This doesn't work right now because tags is not raw text.-->
+  <!-- <meta name="keywords" content=<a href="/tags/haskell.html">haskell</a>, <a href="/tags/blogging.html">blogging</a>, <a href="/tags/web%20design.html">web design</a>> -->
+  <!-- link rel="icon" href="../../favicon.ico" -->
+    
+  <title>Hello Hakyll!</title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- This URL will be relativized. https://hackage.haskell.org/package/hakyll-4.7.5.0/docs/Hakyll-Web-Html-RelativizeUrls.html -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <!--link href="/css/starter-template.css" rel="stylesheet"-->
+  <!--link href="../css/lavish-bootstrap.css" rel="stylesheet"-->
+  <link href="../../../css/blog2.css" rel="stylesheet">
+  <!--link href="../css/no-transition.css" rel="stylesheet"-->
+  <link href="../../../css/default.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+  <!-- Facebook -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <!-- Google -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  
+
+</head>
+
+<body>
+
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../">Holden's Blog</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../">Home</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="about.html">About</a></li>
+<!-- TODO: make this part a for loop over main pages -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+<!-- Content -->
+<!--div id="content">
+  <h1>Mental Wilderness</h1>-->
+
+
+
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Hello Hakyll!</h1>
+    </div>
+    <div class="info">
+       <div class="subtitle"><p>Setting up this blog</p></div> 
+       
+        <p>Posted: 2016-01-30 
+          , Modified: 2016-01-30 
+	</p>
+      
+       <p>Tags: <a href="../../../tags/haskell.html">haskell</a>, <a href="../../../tags/blogging.html">blogging</a>, <a href="../../../tags/web%20design.html">web design</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <div class="blog-main">
+    <h2 id="why-hakyll">Why Hakyll?</h2>
+<p>I’ve decided to switch blogging platforms from Wordpress to Hakyll, a website generation platform that can be customized using Haskell. All previous posts will remain on <a href="http://holdenlee.wordpress.com/">Wordpress site</a>, but it will no longer be updated.</p>
+<p>The following two blog posts articulate some of my reasons for switching to Hakyll:</p>
+<ul>
+<li><a href="http://karpathy.github.io/2014/07/01/switching-to-jekyll/">Why switch from Wordpress to Jekyll?</a></li>
+<li><a href="http://mark.reid.name/blog/switching-to-hakyll.html">Why switch from Jekyll to Hakyll?</a></li>
+</ul>
+<p>The main reason is that I want to have complete control over the content:</p>
+<ol type="1">
+<li>I want to edit blog posts as text (markdown) files on my computer, rather than inside an editor in the browser. Firstly, it’s simpler to edit them as text files. For me, using a formatting toolbar for editing posts (lists, bold, quotes, etc.) has hurt me more than it’s helped: often the bulleted lists get corrupted and I have to mess with the html t fix them). In Markdown, I can do all the basic formatting very simply, without having to click something external to the text, or work with something clunky like html.</li>
+<li>Having blog posts as simple files means it is easy to import and export material that I write, or convert it to a different format as I wish. I can organize blog posts as I do my own file system. See <a href="http://www.gwern.net/About#long-site">Gwern</a>, especially the quote by Julian Assange, on why a simple format, good organization, and control over content help one’s writing survive.</li>
+<li>I have complete control in the sense that I can create arbitrary scripts to turn the text files into published posts. For example, I can add footnotes, enable latex macros, enable comments, and automatically build a hierarchical sitemap of all posts. I can make arbitrary macros for common patterns (ex. links to wikipedia pages) if I wanted to. Moreover, I can write the scripts in Haskell!</li>
+<li>There are many beautiful blogs and websites written in Haskell, for example, <a href="http://colah.github.io">Chris Olah’s blog</a> and <a href="http://www.gwern.net/">Gwern’s site</a>. Much of the design on this blog is copied from Chris Olah’s blog and</li>
+</ol>
+<p>In the rest of this post, I’ll detail how I set up the blog. This is still very much a work in progress! Many people have written excellent tutorials already, so I will give links to their articles rather than re-explaining.</p>
+<p>It took me a long time to set up the blog, mainly because there were a lot of features I wanted to add, and I had to look for instructions on many different sites. I hope this post will be a useful “directory” on how to add various features.</p>
+<h2 id="setting-up-hakyll">Setting up Hakyll</h2>
+<ol type="1">
+<li>First install the <a href="https://www.haskell.org/downloads">Haskell Platform</a> if you haven’t already.</li>
+<li><p>Next install <a href="https://jaspervdj.be/hakyll/tutorials/01-installation.html">Hakyll</a> using cabal. Initialize a default Hakyll website (the command below initializes the site in directory “my-site”).</p>
+<pre><code>cabal install hakyll
+hakyll-init my-site</code></pre></li>
+<li><p>Read through the Hakyll tutorials to understand how it works.</p></li>
+</ol>
+<p>On Windows, when trying to run ./site in Cygwin, I got the error <a href="https://jaspervdj.be/hakyll/tutorials/faq.html">commitBuffer: invalid argument (invalid character)</a>. I solved this by running in Windows Powershell.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">chcp</span> 65001
+<span class="kw">./site</span> build</code></pre></div>
+<h2 id="site-design-using-bootstrap.js">Site design using Bootstrap.js</h2>
+<p>In Hakyll, the content of the site is kept separate from the site design. When you write posts, just write in Markdown and optionally specify some metadata like tags and date edited. In site.hs you’ll specify how to “wrap” html, etc. around those posts to create the actual pages on the site. Thus, Hakyll is very modular - you can easily change the site layout independently of the content.</p>
+<p>I chose a minimal theme (basically just to get the navigation bar). There’s much more you can do with Bootstrap; see the page for info.</p>
+<ol type="1">
+<li><a href="http://getbootstrap.com/getting-started/">Get bootstrap</a>.</li>
+<li>Unzip the files into the blog directory. (I unzipped them directly into folders css/, js/, and fonts/, but you can also put them as subdirectories in bootstrap/ if you prefer.)</li>
+<li>Modify the starter template, and saved it as default.html. The content of the pages will go into <code>$body$</code>. Note that I added a footer. ```html
+<!DOCTYPE html>
+<html>
+<head>
+<p><meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --></p>
+<p><meta name="description" content="Holden Lee's Blog"> <meta name="author" content="Holden Lee"></p>
+<title>
+<span class="math inline">\(title\)</span>
+</title>
+<p><link href="../../../css/bootstrap.min.css" rel="stylesheet"></p>
+<link href="../../../css/blog.css" rel="stylesheet"> <link href="../../../css/default.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+</button>
+<p><a class="navbar-brand" href="../../../">Holden’s Blog</a></p>
+</div>
+<div id="navbar" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li>
+<a href="../../../">Home</a>
+</li>
+<li>
+<a href="sitemap.html">Sitemap</a>
+</li>
+<li>
+<a href="about.html">About</a>
+</li>
+<!-- TODO: make this part a for loop over main pages -->
+</ul>
+</div>
+</div>
+<p></nav></p>
+</div>
+<p><span class="math inline">\(body\)</span></p>
+<!-- Footer -->
+<div id="footer">
+<div class="container">
+<p>Built with <a href="http://jaspervdj.be/hakyll">Hakyll</a> using <a href="http://www.getbootstrap.com">Bootstrap</a>, <a href="http://www.mathjax.org">MathJax</a>, <a href="http://www.disqus.com">Disqus</a>, <a href="http://highlightjs.org/">Highlight.js</a>, and <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a></p>
+</div>
+</div>
+</body>
+</html>
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="../../../js/bootstrap.min.js"></script>
+<p>```</p></li>
+</ol>
+<h2 id="template-html-files">Template html files</h2>
+<p>How do we turn a post written in Markdown into actual webpage? First, we read the metadata (title, subtitle, tags, date) from the Markdown file and display them in a uniform manner. Create the file templates/post.html:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;content&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;page header&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;h1&gt;</span>$title$<span class="kw">&lt;/h1&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;info&quot;</span><span class="kw">&gt;</span>
+      $if(subtitle)$ <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;subtitle&quot;</span><span class="kw">&gt;&lt;p&gt;</span>$subtitle$<span class="kw">&lt;/p&gt;&lt;/div&gt;</span> $endif$
+      $if(date)$ 
+        <span class="kw">&lt;p&gt;</span>Posted: $date$ 
+          $if(modified)$, Modified: $modified$ $endif$
+	<span class="kw">&lt;/p&gt;</span>
+      $endif$
+      $if(tags)$ <span class="kw">&lt;p&gt;</span>Tags: $tags$<span class="kw">&lt;/p&gt;</span> $endif$
+    <span class="kw">&lt;/div&gt;</span>
+    
+  <span class="kw">&lt;/div&gt;</span>
+
+  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;blog-main&quot;</span><span class="kw">&gt;</span>
+    $body$
+  <span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<p>Every page will be (further) wrapped by default.html which we defined above. Finally, I created stylesheets css/blog.css and css/default.css to specify how I want the headings, subtitles, etc. to look. (Actually, I mostly stole them from other sites.)</p>
+<p>I made a pattern to match the top level pages besides the main page. For convenience, I treat them the same way as posts are treated, except that they don’t have a subtitle, date, tags, etc. I hardcode their URLs into the navbar (though if you want to, you can loop over them instead and hence not have to change the html if you add new top-level pages).</p>
+<h2 id="tags-and-categories">Tags and Categories</h2>
+<p><a href="http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html">Javran’s post</a> gives a tutorial on adding tags.</p>
+<p>You can make categories the same way that you do tags. The difference is that each page is in only one category, determined by the subfolder that it is in.</p>
+<p>I wanted hierarchical categories, which is tricky to do. My code for this is not elegant right now, but it works to give a <a href="sitemap.html">sitemap</a>.</p>
+<h2 id="latex-and-mathjax">LaTeX and MathJax</h2>
+<p>There are two things we have to do: parse text in between dollar signs as LaTeX, and then render the LaTeX in the actual page using MathJax. I got the following material from <a href="http://jdreaver.com/posts/2014-06-22-math-programming-blog-hakyll.html">JD Reaver’s post</a> and <a href="http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html">Travis Athoughies’s post</a>.</p>
+<ol type="1">
+<li><p>Tell Pandoc to parse text between dollar signs as math:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">pandocMathCompiler <span class="fu">=</span>
+	<span class="kw">let</span> mathExtensions <span class="fu">=</span> [<span class="dt">Ext_tex_math_dollars</span>, <span class="dt">Ext_tex_math_double_backslash</span>,
+		<span class="dt">Ext_latex_macros</span>]
+		defaultExtensions <span class="fu">=</span> writerExtensions defaultHakyllWriterOptions
+		newExtensions <span class="fu">=</span> foldr S.insert defaultExtensions mathExtensions
+		writerOptions <span class="fu">=</span> defaultHakyllWriterOptions {
+		                  writerReferenceLinks <span class="fu">=</span> <span class="dt">True</span>,
+                          writerHtml5 <span class="fu">=</span> <span class="dt">True</span>,
+                          writerHighlight <span class="fu">=</span> <span class="dt">True</span>,
+                          writerExtensions <span class="fu">=</span> newExtensions,
+                          writerHTMLMathMethod <span class="fu">=</span> <span class="dt">MathJax</span> <span class="st">&quot;&quot;</span>
+                        }
+    <span class="kw">in</span> pandocCompilerWith defaultHakyllReaderOptions writerOptions</code></pre></div></li>
+<li><p>In order for a web page to render LaTeX, it must link to the MathJax script.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span>
+<span class="ot">    src=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div>
+Thus, to add MathJax functionality to all pages, add this add the end of default.html.</li>
+<li><p>The <a href="https://docs.mathjax.org/en/v2.5-latest/tex.html#defining-tex-macros">MathJax documentation</a> describes how to add packages and macros (so you can write <code>\R</code> for <code>\mathbb{R}</code>, for example). To do this, add a configuration file <code>MathJax/config/local/local.js</code>. The format is described in the link. Now modify the html code above to link to your configuration file. An inconvenience here is that you must give the full, not relative, URL.</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">&lt;</span>script <span class="kw">type</span><span class="fu">=</span><span class="st">&quot;text/javascript&quot;</span>
+    src<span class="fu">=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,file:///C:/Users/holden-lee/Dropbox/website/test/MathJax/config/local/local&quot;</span><span class="fu">&gt;&lt;/</span>script<span class="fu">&gt;</span></code></pre></div></li>
+<li><p>TODO: script</p></li>
+</ol>
+<h2 id="code-highlighting">Code highlighting</h2>
+<p>Get <a href="https://highlightjs.org/download/">highlight.js</a> for all languages you will use, and put it in the folder highlight/ in the blog directory. Include the new css/js files in the pattern matches, and add the following script to default.html, changing the style as you’d like.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;/highlight/styles/tomorrow-night-bright.css&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;/highlight/highlight.pack.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
+<span class="kw">&lt;script&gt;</span><span class="va">hljs</span>.<span class="at">initHighlightingOnLoad</span>()<span class="op">;&lt;</span><span class="ss">/script&gt;</span></code></pre></div>
+<p>To highlight code in posts, put name/abbreviation of the language at the start of the code block</p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown"> ```haskell
+<span class="bn">    main = putStrLn &quot;Hello World!&quot;</span>
+ ```</code></pre></div>
+<h2 id="disqus-comments">Disqus comments</h2>
+<h2 id="github.io-integration">Github.io integration</h2>
+<h2 id="social-media-buttons">Social media buttons</h2>
+<h2 id="additional-features">Additional features</h2>
+<p>There are many cool features I haven’t covered. I would like to add some of these in the future.</p>
+<ul>
+<li><a href>Auto-generated table of contents for each post</a> (cf. Wikipedia)</li>
+<li>[Shortcuts</li>
+<li>Analytics</li>
+</ul>
+  </div>
+  
+  <div class="sharing">
+    <!-- facebook -->
+    <div class="fb-share-button" data-href="/posts/programming/haskell/hello-hakyll.html" data-layout="icon"></div>
+    <!-- google -->
+    <div class="g-plus" data-action="share"></div>
+    <!-- reddit -->
+    <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit1.gif" alt="submit to reddit" border="0" /> </a>
+    <!-- twitter -->
+    <a href="https://twitter.com/share" class="twitter-share-button" {count}>Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    Built with
+    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+    using 
+    <a href="http://www.getbootstrap.com">Bootstrap</a>, 
+    <a href="http://www.mathjax.org">MathJax</a>, 
+    <a href="http://www.disqus.com">Disqus</a>,
+    <a href="http://highlightjs.org/">Highlight.js</a>, and 
+    <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../../js/bootstrap.min.js"></script>
+
+<!-- Syntax highlighting tomorrow-night-bright, agate-->
+<link rel="stylesheet" href="../../../highlight/styles/tomorrow-night-bright.css">
+<script src="../../../highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<!-- For MathJax https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,file:///C:/Users/holden-lee/Dropbox/website/test/MathJax/config/local/local"></script>
+
+<!-- Footnotes http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<script src="../../../js/footnotes.js"></script>
+
+<!-- <script src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script> -->
