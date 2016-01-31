@@ -220,7 +220,7 @@ debug = flip trace
 
 debugShow x = trace (show x) x
 
-debugSummary x f = trace (show (f x)) x
+debugSummary f x = trace (show (f x)) x
 
 -- * Numbers
 

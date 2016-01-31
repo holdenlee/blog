@@ -4,6 +4,7 @@ subtitle: Setting up this blog
 published: 2016-01-30
 modified: 2016-01-30
 tags: haskell, blogging, web design
+showTOC: True
 ---
 
 # Why Hakyll?

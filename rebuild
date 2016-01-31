@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ghc --make -threaded site.hs
+./hc site
 ./site rebuild

@@ -4,7 +4,7 @@ import           Data.Monoid
 import qualified Data.Set as S
 import           Hakyll
 import           Text.Pandoc.Options
-import           System.FilePath (takeBaseName, takeDirectory, joinPath, splitPath)
+import           System.FilePath (takeBaseName, takeDirectory, joinPath, splitPath, replaceExtension)
 import           Control.Lens hiding (Context)
 import           Control.Monad
 import           Data.List
@@ -17,6 +17,7 @@ import Utilities
 import FunTree
 import HakyllUtils
 import NestedCategories
+import TableOfContents
 
 siteURL :: String
 siteURL = "http://holdenlee.github.io/blog"
@@ -24,25 +25,29 @@ siteURL = "http://holdenlee.github.io/blog"
 {-| Main method -}
 main :: IO ()
 main = hakyll $ do
-    --do nothing to the images
+    --IMAGES: copy
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
-    --compress css files
+
+    --CSS: compress
     match ("css/*.css"
-           .||. "highlight/styles/*.css") $ do
+           .||. "*/css/*.css") $ do
         route   idRoute
         compile compressCssCompiler
-    --js files
-    match ("js/*"
-           .||. "highlight/highlight.pack.js"
+
+    --JS: copy
+    match ("js/*.js"
+           .||. "*/js/*.js"
            .||. "MathJax/config/local/local.js") $ do
-      -- .||. "favicon.ico"
       route idRoute
       compile copyFileCompiler
 
-    --build tags http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html
-    tags <- buildTags postPattern (fromCapture "tags/*.html")
+    --TEMPLATES
+    match "templates/*" $ compile templateCompiler
+
+    --TAGS @ http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html
+    tags <- buildTags (postPattern .&&. hasNoVersion) (fromCapture "tags/*.html")
 
     tagsRules tags $ \tag pattern -> do
       let title = "Posts tagged \"" ++ tag ++ "\""
@@ -58,16 +63,9 @@ main = hakyll $ do
           >>= loadAndApplyTemplate "templates/default.html" ctx
           >>= relativizeUrls
 
-    --building categories is similar to building tags. Exclude uncategorized items.
-    categories <- buildNestedCategories (postPattern .&&. (complement "posts/*.md")) (fromCapture "posts/**/index.html")
-                  -- .&&. (complement "posts/*.md")
-                  --(fromCapture "posts/**/index.html")
-    let tagsMapList = nestCategories $ tagsMap categories
-    let tagsMap' = tagsMapList & ((mapped . _1) %~ joinPath)
-    --let tagsMapList2 = tagsMapList & (mapped . _1 . mapped) %~ removeTrailingSlash
-    let treeMap = treeCategories $ tagsMap categories
-    let categories' = debugShow $ categories{tagsMap = tagsMap'}
-    tagsRules categories' $ \tag pattern -> do
+    --CATEGORIES (exclude uncategorized items)
+    (treeMap, categories) <- buildNestedCategories (postPattern .&&. (complement "posts/*.md") .&&. hasNoVersion) (fromCapture "posts/**/index.html")
+    tagsRules categories $ \tag pattern -> do
       let title = "Posts in category \"" ++ tag ++ "\""
       route idRoute
       compile $ do
@@ -81,16 +79,20 @@ main = hakyll $ do
           >>= loadAndApplyTemplate "templates/default.html" ctx
           >>= relativizeUrls
     
-    --for each post, apply the post template, then the default template.
-    match postPattern $ postRules (return $ (postCtxWithTags tags <> constField "isPost" "true"))
+    --POSTS
+    match postPattern $ postRules tags
+    --TOC for posts
+    --match postPattern $ compileTOCVersion
 
-    match topLevelPages $ postRules (return $ postCtx)
+    --TOP-LEVEL PAGES
+    match "pages/*.md" $ pageRules 
 
+    --INDEX
     match "index.html" $ do
         route idRoute
         compile $ do
             pandocMathCompiler
-            posts <- recentFirst =<< loadAll postPattern
+            posts <- recentFirst =<< loadAll (postPattern .&&. hasNoVersion)
             let indexCtx =
                     listField "posts" postCtx (return posts) <>
                     constField "title" "Mental Wilderness"   <>
@@ -101,9 +103,8 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/post.html" indexCtx
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
-
-    match "templates/*" $ compile templateCompiler
-
+    
+    --SITEMAP
     create ["sitemap.html"] $ do
       route idRoute
       compile $ do
@@ -115,18 +116,24 @@ main = hakyll $ do
           >>= loadAndApplyTemplate "templates/default.html" mapCtx
           >>= relativizeUrls
 
+    --FEED
     atomCompiler "content" tags
-
-topLevelPages :: Pattern
-topLevelPages = "about.md"
 
 postPattern :: Pattern
 postPattern = "posts/**.md"
 
-postRules :: Rules (Context String) -> Rules ()
-postRules ctx' = do
-        ctx <- ctx'
-        route $ setExtension "html"
+pageRules :: Rules ()
+pageRules = do
+  route $ takeFileNameRoute "html"
+  defaultRules postCtx
+
+postRules :: Tags -> Rules ()
+postRules tags = do
+  route $ setExtension "html"
+  defaultRules (tocCtx <> postCtxWithTags tags <> constField "isPost" "true")
+
+defaultRules :: Context String -> Rules ()
+defaultRules ctx = do
         compile $ pandocMathCompiler
             >>= return . fmap demoteHeaders -- h1 -> h2; h2 -> h3; etc
             >>= loadAndApplyTemplate "templates/post.html"    ctx
@@ -181,7 +188,7 @@ feedCompiler li renderer content tags =
   create li $ do
     route idRoute
     compile $ do
-        let feedCtx = (postCtxWithTags tags) `mappend`
+        let feedCtx = tocCtx <> (postCtxWithTags tags) <>
                 bodyField "description"
         --take 10 most recent posts
         posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/*" content
