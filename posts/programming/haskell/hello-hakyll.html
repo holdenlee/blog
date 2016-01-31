@@ -114,7 +114,7 @@
 <li>I want to edit blog posts as text (markdown) files on my computer, rather than inside an editor in the browser. Firstly, it’s simpler to edit them as text files. For me, using a formatting toolbar for editing posts (lists, bold, quotes, etc.) has hurt me more than it’s helped: often the bulleted lists get corrupted and I have to mess with the html t fix them). In Markdown, I can do all the basic formatting very simply, without having to click something external to the text, or work with something clunky like html.</li>
 <li>Having blog posts as simple files means it is easy to import and export material that I write, or convert it to a different format as I wish. I can organize blog posts as I do my own file system. See <a href="http://www.gwern.net/About#long-site">Gwern</a>, especially the quote by Julian Assange, on why a simple format, good organization, and control over content help one’s writing survive.</li>
 <li>I have complete control in the sense that I can create arbitrary scripts to turn the text files into published posts. For example, I can add footnotes, enable latex macros, enable comments, and automatically build a hierarchical sitemap of all posts. I can make arbitrary macros for common patterns (ex. links to wikipedia pages) if I wanted to. Moreover, I can write the scripts in Haskell!</li>
-<li>There are many beautiful blogs and websites written in Haskell, for example, <a href="http://colah.github.io">Chris Olah’s blog</a> and <a href="http://www.gwern.net/">Gwern’s site</a>. Much of the design on this blog is copied from Chris Olah’s blog and</li>
+<li>There are many beautiful blogs and websites written in Haskell, for example, <a href="http://colah.github.io">Chris Olah’s blog</a> and <a href="http://www.gwern.net/">Gwern’s site</a>. Much of the design on this blog is copied from Chris Olah’s blog and <a href="https://github.com/oinkina">oinkina</a>.</li>
 </ol>
 <p>In the rest of this post, I’ll detail how I set up the blog. This is still very much a work in progress! Many people have written excellent tutorials already, so I will give links to their articles rather than re-explaining.</p>
 <p>It took me a long time to set up the blog, mainly because there were a lot of features I wanted to add, and I had to look for instructions on many different sites. I hope this post will be a useful “directory” on how to add various features.</p>
@@ -260,9 +260,9 @@ hakyll-init my-site</code></pre></li>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span>
 <span class="ot">    src=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div>
 Thus, to add MathJax functionality to all pages, add this add the end of default.html.</li>
-<li><p>The <a href="https://docs.mathjax.org/en/v2.5-latest/tex.html#defining-tex-macros">MathJax documentation</a> describes how to add packages and macros (so you can write <code>\R</code> for <code>\mathbb{R}</code>, for example). To do this, add a configuration file <code>MathJax/config/local/local.js</code>. The format is described in the link. Now modify the html code above to link to your configuration file. An inconvenience here is that you must give the full, not relative, URL.</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">&lt;</span>script <span class="kw">type</span><span class="fu">=</span><span class="st">&quot;text/javascript&quot;</span>
-    src<span class="fu">=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/blog/MathJax/config/local/local&quot;</span><span class="fu">&gt;&lt;/</span>script<span class="fu">&gt;</span></code></pre></div></li>
+<li><p>The <a href="https://docs.mathjax.org/en/v2.5-latest/tex.html#defining-tex-macros">MathJax documentation</a> describes how to add packages and macros (so you can write <code>\R</code> for <code>\mathbb{R}</code>, for example). To do this, add a configuration file <code>MathJax/config/local/local.js</code>. The format is described in the link. Now modify the html code above to link to your configuration file. Note we must give the full, not relative, URL, so we set <code>siteURL</code> and add it to the context in site.hs. Then we change the link as follows:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span>
+<span class="ot">    src=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,$siteURL$/MathJax/config/local/local&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div></li>
 <li><p>TODO: script</p></li>
 </ol>
 <h2 id="code-highlighting">Code highlighting</h2>
@@ -353,29 +353,23 @@ var Footnotes = {
 <p>Disqus is an external comment management system that you can embed in your website.</p>
 <ol type="1">
 <li>Create an account at <a href="http://www.disqus.com">Disqus</a>. Follow the directions to add Disqus to the site.</li>
-<li><p>Here is the code to add to post.html, copied for convenience:</p>
+<li><p>Here is the code to add to post.html. The page URL is the concatenation of <code>$siteURL$</code> and <code>$url$</code>.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;disqus_thread&quot;</span><span class="kw">&gt;&lt;/div&gt;</span>
 <span class="kw">&lt;script&gt;</span>
-<span class="co">/**</span>
-<span class="er">* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.</span>
-<span class="er">* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables</span>
-<span class="er">*/</span>
-<span class="er">/*</span>
-<span class="er">var disqus_config = function () {</span>
-<span class="er">this.page.url = $url$; // Replace PAGE_URL with your page's canonical URL variable</span>
-<span class="er">this.page.identifier = $path$; // Replace PAGE_IDENTIFIER with your page's unique identifier variable</span>
-<span class="er">};</span>
-<span class="er">*/</span>
-<span class="er">(function() { // DON'T EDIT BELOW THIS LINE</span>
-<span class="er">var d = document, s = d.createElement('script');</span>
+<span class="kw">var</span> disqus_config <span class="op">=</span> <span class="kw">function</span> () <span class="op">{</span>
+<span class="kw">this</span>.<span class="va">page</span>.<span class="at">url</span> <span class="op">=</span> $siteURL$$url$<span class="op">;</span> <span class="co">// Replace PAGE_URL with your page's canonical URL variable</span>
+<span class="kw">this</span>.<span class="va">page</span>.<span class="at">identifier</span> <span class="op">=</span> $url$<span class="op">;</span> <span class="co">// Replace PAGE_IDENTIFIER with your page's unique identifier variable</span>
+<span class="op">};</span>
+(<span class="kw">function</span>() <span class="op">{</span> <span class="co">// DON'T EDIT BELOW THIS LINE</span>
+<span class="kw">var</span> d <span class="op">=</span> document<span class="op">,</span> s <span class="op">=</span> <span class="va">d</span>.<span class="at">createElement</span>(<span class="st">'script'</span>)<span class="op">;</span>
 
-<span class="er">s.src = '//holdenlee.disqus.com/embed.js';</span>
+<span class="va">s</span>.<span class="at">src</span> <span class="op">=</span> <span class="st">'//holdenlee.disqus.com/embed.js'</span><span class="op">;</span>
 
-<span class="er">s.setAttribute('data-timestamp', +new Date());</span>
-<span class="er">(d.head || d.body).appendChild(s);</span>
-<span class="er">})();</span>
-<span class="kw">&lt;/script&gt;</span>
-<span class="er">&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></div></li>
+<span class="va">s</span>.<span class="at">setAttribute</span>(<span class="st">'data-timestamp'</span><span class="op">,</span> <span class="op">+</span><span class="kw">new</span> <span class="at">Date</span>())<span class="op">;</span>
+(<span class="va">d</span>.<span class="at">head</span> <span class="op">||</span> <span class="va">d</span>.<span class="at">body</span>).<span class="at">appendChild</span>(s)<span class="op">;</span>
+<span class="op">}</span>)()<span class="op">;</span>
+<span class="op">&lt;</span><span class="ss">/script&gt;</span>
+<span class="ss">&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/</span><span class="op">?</span>ref_noscript<span class="st">&quot; rel=&quot;</span>nofollow<span class="st">&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></div></li>
 </ol>
 <h2 id="github.io-integration">Github.io integration</h2>
 <p>The compiled html files should be kept separate from the uncompiled files, so by default Hakyll puts the compiled site in _site/. However, I don’t want the blog to be at <code>http://holdenlee.github.io/blog/_site/</code>, and I also want to put the uncompiled files on github. So I create a github repository called <code>blog</code>, make 2 branches <code>gh-pages</code> (which will be shown at http://holdenlee.github.io/blog) and <code>hakyll</code>. I maintain these branches in 2 directories on my computer, and have a script that copies <code>hakyll/_site/</code> to <code>blog</code> and pushes everything.</p>
@@ -413,16 +407,10 @@ git push origin &quot;$2&quot;</code></pre>
 
   <div id="disqus_thread"></div>
   <script>
-    /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-    */
-    /*
     var disqus_config = function () {
     this.page.url = http://holdenlee.github.io/blog/posts/programming/haskell/hello-hakyll.html; // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = posts/programming/haskell/hello-hakyll.md; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.identifier = /posts/programming/haskell/hello-hakyll.html; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
-    */
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
 
@@ -478,12 +466,13 @@ git push origin &quot;$2&quot;</code></pre>
 <script src="../../../highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-
-<!-- For MathJax https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
 <!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/blog/MathJax/config/local/local"></script>
 
-<!-- Footnotes http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
 <script src="../../../js/footnotes.js"></script>
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+<script src="../../../js/inlineDisqussions.js"></script>
 
 <!-- <script src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script> -->
