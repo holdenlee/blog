@@ -81,8 +81,6 @@ main = hakyll $ do
     
     --POSTS
     match postPattern $ postRules tags
-    --TOC for posts
-    --match postPattern $ compileTOCVersion
 
     --TOP-LEVEL PAGES
     match "pages/*.md" $ pageRules 
@@ -110,11 +108,14 @@ main = hakyll $ do
       compile $ do
         let mapCtx = constField "title" "Sitemap" <> basicCtx
         let pt = debugShow $ makePostTree treeMap
-        outline <- compileTree postCtx pt
+        outline <- compileTree (blankTOCCtx <> postCtx) pt
         makeItem outline
           >>= loadAndApplyTemplate "templates/post.html" mapCtx
           >>= loadAndApplyTemplate "templates/default.html" mapCtx
           >>= relativizeUrls
+
+    --TOC for posts
+    match postPattern $ compileTOCVersion
 
     --FEED
     atomCompiler "content" tags

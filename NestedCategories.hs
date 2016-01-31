@@ -80,7 +80,9 @@ compileTree :: Context String -> FunTree [String] [Identifier] -> Compiler Strin
 compileTree ctx p@(rt, m) = do
   let (li, ls') = m M.! rt -- :: ([Identifier], [[String]])
   let ls = sortBy (\x y -> compare (map (map toLower) x) (map (map toLower) y)) ls'
-  listItemString <- (flip loadAllSnapshots) "content" $ foldl (.||.) "" (map (fromGlob . toFilePath) li)
+  --note we must put `.&&. hasNoVersion`, otherwise it tries and fails to load the toc.
+  listItemString <- loadAll $ ((foldl (.||.) "" (map (fromGlob . toFilePath) li)) .&&. hasNoVersion)
+--(flip loadAllSnapshots) "content"  $ foldl (.||.) "" (map (fromGlob . toFilePath) li)
   postItems <- applyTemplateList postItemTemplate ctx listItemString
   childrenListStrings <- mapM (compileTree ctx) (map (,m) ls)
   let childrenOutline = mconcat $ zipWith (\catPath str -> printf "<li><b>%s</b> %s </li>" (last catPath) str) ls childrenListStrings

@@ -17,6 +17,9 @@ compileTOCVersion = version "toc" $
                                   , writerStandalone = True
                                   }
 
+blankTOCCtx :: Context String
+blankTOCCtx = constField "toc" ""
+
 tocCtx :: Context String
 tocCtx = field "toc" $ \item ->
             loadBody ((itemIdentifier item) { identifierVersion = Just "toc"})
