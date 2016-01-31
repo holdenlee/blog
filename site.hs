@@ -16,6 +16,9 @@ import Debug.Trace
 import Utilities
 import FunTree
 
+siteURL :: String
+siteURL = "http://holdenlee.github.io/blog"
+
 {-| Main method -}
 main :: IO ()
 main = hakyll $ do
@@ -46,6 +49,7 @@ main = hakyll $ do
         posts <- recentFirst =<< loadAll pattern
         let ctx = constField "title" title <>
                   listField "posts" defCtx (return posts) <>
+                  constField "siteURL" siteURL <>
                   defaultContext
         makeItem ""
           >>= loadAndApplyTemplate "templates/tag.html" ctx
@@ -150,6 +154,7 @@ pandocMathCompiler =
 defCtx :: Context String
 defCtx =
   --"%B %e, %Y" see https://hackage.haskell.org/package/time-1.5.0.1/docs/Data-Time-Format.html for how to format date
+    constField "siteURL" siteURL <>
     dateField "date" "%F" <>
     defaultContext
 
