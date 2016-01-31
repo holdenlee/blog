@@ -48,9 +48,8 @@ main = hakyll $ do
       compile $ do
         posts <- recentFirst =<< loadAll pattern
         let ctx = constField "title" title <>
-                  listField "posts" defCtx (return posts) <>
-                  constField "siteURL" siteURL <>
-                  defaultContext
+                  listField "posts" postCtx (return posts) <>
+                  basicCtx
         makeItem ""
           >>= loadAndApplyTemplate "templates/tag.html" ctx
           >>= loadAndApplyTemplate "templates/post.html" ctx
@@ -72,9 +71,8 @@ main = hakyll $ do
       compile $ do
         posts <- recentFirst =<< loadAll pattern
         let ctx = constField "title" title <>
-                  listField "posts" defCtx (return posts) <>
-                  constField "siteURL" siteURL <>
-                  defaultContext
+                  listField "posts" postCtx (return posts) <>
+                  basicCtx
         makeItem ""
           >>= loadAndApplyTemplate "templates/tag.html" ctx
           >>= loadAndApplyTemplate "templates/post.html" ctx
@@ -82,9 +80,9 @@ main = hakyll $ do
           >>= relativizeUrls
     
     --for each post, apply the post template, then the default template.
-    match postPattern $ postRules (return $ (defCtxWithTags tags <> constField "isPost" "true"))
+    match postPattern $ postRules (return $ (postCtxWithTags tags <> constField "isPost" "true"))
 
-    match topLevelPages $ postRules (return $ defCtx)
+    match topLevelPages $ postRules (return $ postCtx)
 
     match "index.html" $ do
         route idRoute
@@ -92,9 +90,9 @@ main = hakyll $ do
             pandocMathCompiler
             posts <- recentFirst =<< loadAll postPattern
             let indexCtx =
-                    listField "posts" defCtx (return posts) <>
+                    listField "posts" postCtx (return posts) <>
                     constField "title" "Mental Wilderness"   <>
-                    defaultContext
+                    basicCtx
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
@@ -107,7 +105,7 @@ main = hakyll $ do
     create ["sitemap.html"] $ do
       route idRoute
       compile $ do
-        let mapCtx = constField "title" "Sitemap" <> defaultContext
+        let mapCtx = constField "title" "Sitemap" <> basicCtx
         let pt = debugShow $ makePostTree treeMap
         outline <- compileTree pt
         makeItem outline
@@ -152,16 +150,18 @@ pandocMathCompiler =
 
 
 --------------------------------------------------------------------------------
-defCtx :: Context String
-defCtx =
-  --"%B %e, %Y" see https://hackage.haskell.org/package/time-1.5.0.1/docs/Data-Time-Format.html for how to format date
-    constField "siteURL" siteURL <>
-    dateField "date" "%F" <>
-    defaultContext
+basicCtx :: Context String
+basicCtx = constField "siteURL" siteURL <> defaultContext
 
-defCtxWithTags :: Tags -> Context String
-defCtxWithTags tags = tagsField "tags" tags <>
-                       defCtx
+postCtx :: Context String
+postCtx =
+  --"%B %e, %Y" see https://hackage.haskell.org/package/time-1.5.0.1/docs/Data-Time-Format.html for how to format date
+    dateField "date" "%F" <>
+    basicCtx
+
+postCtxWithTags :: Tags -> Context String
+postCtxWithTags tags = tagsField "tags" tags <>
+                       postCtx
 
 {-| Feed configuration -}
 myFeedConfiguration :: FeedConfiguration
@@ -179,7 +179,7 @@ feedCompiler li renderer content tags =
   create li $ do
     route idRoute
     compile $ do
-        let feedCtx = (defCtxWithTags tags) `mappend`
+        let feedCtx = (postCtxWithTags tags) `mappend`
                 bodyField "description"
         --take 10 most recent posts
         posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/*" content
@@ -236,7 +236,7 @@ compileTree :: FunTree [String] [Identifier] -> Compiler String
 compileTree p@(rt, m) = do
   let (li, ls) = m M.! rt -- :: ([Identifier], [[String]])
   listItemString <- loadAll $ foldl (.||.) "" (map (fromGlob . toFilePath) li)
-  postItems <- applyTemplateList postItemTemplate defCtx listItemString
+  postItems <- applyTemplateList postItemTemplate postCtx listItemString
   childrenListStrings <- mapM compileTree (funTreeChildren p)
   let childrenOutline = mconcat $ zipWith (\catPath str -> printf "<li><b>%s</b> %s </li>" (last catPath) str) ls childrenListStrings
   -- \catPath str -> "<li><b>"++(last catPath)++"</b>"++postItems++"</li>"
