@@ -51,7 +51,8 @@ I chose a minimal theme (basically just to get the navigation bar). There's much
 1. [Get bootstrap](http://getbootstrap.com/getting-started/).
 2. Unzip the files into the blog directory. (I unzipped them directly into folders css/, js/, and fonts/, but you can also put them as subdirectories in bootstrap/ if you prefer.)
 3. Modify the starter template, and saved it as default.html. The content of the pages will go into `$body$`. Note that I added a footer.
-    ```html
+
+```html
     <!DOCTYPE html>
     <html>
  
@@ -91,8 +92,8 @@ I chose a minimal theme (basically just to get the navigation bar). There's much
      <div id="navbar" class="collapse navbar-collapse">
      <ul class="nav navbar-nav">
      <li><a href="/">Home</a></li>
-     <li><a href="sitemap.html">Sitemap</a></li>
-     <li><a href="about.html">About</a></li>
+     <li><a href="/sitemap.html">Sitemap</a></li>
+     <li><a href="/about.html">About</a></li>
  	<!-- TODO: make this part a for loop over main pages -->
      </ul>
      </div>
@@ -125,7 +126,7 @@ I chose a minimal theme (basically just to get the navigation bar). There's much
  	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
  
  	<script src="/js/bootstrap.min.js"></script>
-    ```
+```
 
 # Template html files
 
@@ -164,7 +165,7 @@ I made a pattern to match the top level pages besides the main page. For conveni
 
 You can make categories the same way that you do tags. The difference is that each page is in only one category, determined by the subfolder that it is in.
 
-I wanted hierarchical categories, which is tricky to do. My code for this is not elegant right now, but it works to give a [sitemap](sitemap.html).
+I wanted hierarchical categories, which is tricky to do. My code for this is not elegant right now, but it works to give a [sitemap](/sitemap.html).
 
 # LaTeX and MathJax
 
@@ -179,12 +180,12 @@ There are two things we have to do: parse text in between dollar signs as LaTeX,
 			newExtensions = foldr S.insert defaultExtensions mathExtensions
 			writerOptions = defaultHakyllWriterOptions {
 			                  writerReferenceLinks = True,
-                              writerHtml5 = True,
-                              writerHighlight = True,
-                              writerExtensions = newExtensions,
-                              writerHTMLMathMethod = MathJax ""
-                            }
-        in pandocCompilerWith defaultHakyllReaderOptions writerOptions
+							  writerHtml5 = True,
+							  writerHighlight = True,
+							  writerExtensions = newExtensions,
+							  writerHTMLMathMethod = MathJax ""
+						    }
+		in pandocCompilerWith defaultHakyllReaderOptions writerOptions
     ```
 1. In order for a web page to render LaTeX, it must link to the MathJax script.
     ```html
@@ -195,7 +196,7 @@ There are two things we have to do: parse text in between dollar signs as LaTeX,
 1. The [MathJax documentation](https://docs.mathjax.org/en/v2.5-latest/tex.html#defining-tex-macros) describes how to add packages and macros (so you can write `\R` for `\mathbb{R}`, for example). To do this, add a configuration file `MathJax/config/local/local.js`. The format is described in the link. Now modify the html code above to link to your configuration file. An inconvenience here is that you must give the full, not relative, URL.
     ```haskell
 	<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,file:///C:/Users/holden-lee/Dropbox/website/test/MathJax/config/local/local"></script>
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/blog/MathJax/config/local/local"></script>
 	```
 1. TODO: script
 
@@ -216,9 +217,144 @@ To highlight code in posts, put name/abbreviation of the language at the start o
  ```
 ```
 
+# Footnotes
+
+[Footnotes.js](http://ignorethecode.net/blog/2010/04/20/footnotes/), created by Lukas Mathis, shows the footnote when you hover over the number[^f]. Once you have the js code, the procedure for adding this extension is standard: add a js file and include it in default.html:
+
+1. Put the following into js/footnotes.js.
+    ```js
+    // this script requires jQuery
+    $(document).ready(function() {
+        Footnotes.setup();
+    });
+    
+    var Footnotes = {
+    	footnotetimeout: false,
+        setup: function() {
+            var footnotelinks = $("a[rel='footnote']")
+            
+            footnotelinks.unbind('mouseover',Footnotes.footnoteover);
+            footnotelinks.unbind('mouseout',Footnotes.footnoteoout);
+            
+            footnotelinks.bind('mouseover',Footnotes.footnoteover);
+            footnotelinks.bind('mouseout',Footnotes.footnoteoout);
+        },
+        footnoteover: function() {
+            clearTimeout(Footnotes.footnotetimeout);
+            $('#footnotediv').stop();
+            $('#footnotediv').remove();
+            
+            var id = $(this).attr('href').substr(1);
+            var position = $(this).offset();
+        
+            var div = $(document.createElement('div'));
+            div.attr('id','footnotediv');
+            div.bind('mouseover',Footnotes.divover);
+            div.bind('mouseout',Footnotes.footnoteoout);
+    
+            var el = document.getElementById(id);
+            div.html($(el).html());
+            
+            div.css({
+                position:'absolute',
+                width:'400px',
+                opacity:0.9
+            });
+            $(document.body).append(div);
+    
+            var left = position.left;
+            if(left + 420  > $(window).width() + $(window).scrollLeft())
+                left = $(window).width() - 420 + $(window).scrollLeft();
+            var top = position.top+20;
+            if(top + div.height() > $(window).height() + $(window).scrollTop())
+                top = position.top - div.height() - 15;
+            div.css({
+                left:left,
+                top:top
+            });
+        },
+        footnoteoout: function() {
+            Footnotes.footnotetimeout = setTimeout(function() {
+                $('#footnotediv').animate({
+                    opacity: 0
+                }, 600, function() {
+                    $('#footnotediv').remove();
+                });
+            },100);
+        },
+        divover: function() {
+            clearTimeout(Footnotes.footnotetimeout);
+            $('#footnotediv').stop();
+            $('#footnotediv').css({
+                    opacity: 0.9
+            });
+        }
+    }
+	```
+2. Add this line to default.html:
+    ```html
+    <script src="/js/footnotes.js"></script>
+    ```
+3. To add footnotes, write `[^f1]` at the location where you want the footnote, and then `[^f1]: footnote text` anytime later.
+
+[^f]: like this!
+
 # Disqus comments
 
+Disqus is an external comment management system that you can embed in your website.
+
+1. Create an account at [Disqus](http://www.disqus.com). Follow the directions to add Disqus to the site.
+2. Here is the code to add to post.html, copied for convenience:
+    ```html
+    <div id="disqus_thread"></div>
+    <script>
+    /**
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+    */
+    /*
+    var disqus_config = function () {
+    this.page.url = $url$; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = $path$; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//holdenlee.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	```
+
 # Github.io integration
+
+The compiled html files should be kept separate from the uncompiled files, so by default Hakyll puts the compiled site in _site/. However, I don't want the blog to be at `http://holdenlee.github.io/blog/_site/`, and I also want to put the uncompiled files on github. So I create a github repository called `blog`, make 2 branches `gh-pages` (which will be shown at http://holdenlee.github.io/blog) and `hakyll`. I maintain these branches in 2 directories on my computer, and have a script that copies `hakyll/_site/` to `blog` and pushes everything.
+
+In gitup2:
+```
+#!/bin/bash
+
+git add .
+git commit -a -m "$1"
+git push origin "$2"
+```
+
+In webup:
+```bash
+#!/bin/bash
+
+cp -TRv hakyll/_site/ blog/
+cd hakyll
+gitup2 "$1" hakyll
+cd ../blog
+gitup2 "$1" gh-pages
+```
+
+Juan Pedro Villa has a [post](http://www.stackbuilders.com/news/dr-hakyll-crea-una-pagina-de-github-con-hakyll-y-circleci) on how to integrate Hakyll with [CircleCI](http://www.circleci.com), which builds the site automatically every time you push to github (like the support that Github currently has for Jekyll). (I would like to use this, but am currently having trouble with getting the server to compile the Haskell files.)
 
 # Social media buttons
 
@@ -227,5 +363,5 @@ To highlight code in posts, put name/abbreviation of the language at the start o
 There are many cool features I haven't covered. I would like to add some of these in the future.
 
 * [Auto-generated table of contents for each post]() (cf. Wikipedia)
-* [Shortcuts
+* [Shortcuts]()
 * Analytics

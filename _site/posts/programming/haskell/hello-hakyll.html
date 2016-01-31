@@ -135,65 +135,81 @@ hakyll-init my-site</code></pre></li>
 <ol type="1">
 <li><a href="http://getbootstrap.com/getting-started/">Get bootstrap</a>.</li>
 <li>Unzip the files into the blog directory. (I unzipped them directly into folders css/, js/, and fonts/, but you can also put them as subdirectories in bootstrap/ if you prefer.)</li>
-<li>Modify the starter template, and saved it as default.html. The content of the pages will go into <code>$body$</code>. Note that I added a footer. ```html
-<!DOCTYPE html>
-<html></li>
+<li>Modify the starter template, and saved it as default.html. The content of the pages will go into <code>$body$</code>. Note that I added a footer.</li>
 </ol>
-<head>
-<p><meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --></p>
-<p><meta name="description" content="Holden Lee's Blog"> <meta name="author" content="Holden Lee"></p>
-<title>
-<span class="math inline">\(title\)</span>
-</title>
-<p><link href="../../../css/bootstrap.min.css" rel="stylesheet"></p>
-<link href="../../../css/blog.css" rel="stylesheet"> <link href="../../../css/default.css" rel="stylesheet">
-</head>
-<body>
-<!-- Navigation bar. navbar-inverse is black, navbar-default is white.--> <!-- To make a button active (pressed), use <li class="active"> -->
-<div id="header">
-<nav class="navbar navbar-inverse navbar-fixed-top">
-<div class="container">
-<pre><code> &lt;div class=&quot;navbar-header&quot;&gt;
- &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;
- &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
- &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
- &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
- &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
- &lt;/button&gt;
- &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;Holden's Blog&lt;/a&gt;
- &lt;/div&gt;
- &lt;div id=&quot;navbar&quot; class=&quot;collapse navbar-collapse&quot;&gt;
- &lt;ul class=&quot;nav navbar-nav&quot;&gt;
- &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href=&quot;sitemap.html&quot;&gt;Sitemap&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;</code></pre>
-<!-- TODO: make this part a for loop over main pages -->
-</ul>
-<pre><code> &lt;/div&gt;
- &lt;/div&gt;</code></pre>
-</nav>
-</div>
-<p><span class="math inline">\(body\)</span></p>
-<!-- Footer -->
-<div id="footer">
-<div class="container">
-<pre><code> Built with
- &lt;a href=&quot;http://jaspervdj.be/hakyll&quot;&gt;Hakyll&lt;/a&gt; 
- using 
- &lt;a href=&quot;http://www.getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt;, 
- &lt;a href=&quot;http://www.mathjax.org&quot;&gt;MathJax&lt;/a&gt;, 
- &lt;a href=&quot;http://www.disqus.com&quot;&gt;Disqus&lt;/a&gt;,
- &lt;a href=&quot;http://highlightjs.org/&quot;&gt;Highlight.js&lt;/a&gt;, and 
- &lt;a href=&quot;http://ignorethecode.net/blog/2010/04/20/footnotes/&quot;&gt;Footnotes.js&lt;/a&gt;</code></pre>
-</div>
-</div>
-</body>
-</html>
-<!-- jQuery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="../../../js/bootstrap.min.js"></script>
-<pre><code>```</code></pre>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">    <span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+    <span class="kw">&lt;html&gt;</span>
+ 
+ 	<span class="kw">&lt;head&gt;</span>
+ 	<span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span>
+ 	<span class="kw">&lt;meta</span><span class="ot"> http-equiv=</span><span class="st">&quot;X-UA-Compatible&quot;</span><span class="ot"> content=</span><span class="st">&quot;IE=edge&quot;</span><span class="kw">&gt;</span>
+ 	<span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content=</span><span class="st">&quot;width=device-width, initial-scale=1&quot;</span><span class="kw">&gt;</span>
+ 	<span class="co">&lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&gt;</span>
+ 
+ 	<span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;description&quot;</span><span class="ot"> content=</span><span class="st">&quot;Holden Lee's Blog&quot;</span><span class="kw">&gt;</span>
+ 	<span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;author&quot;</span><span class="ot"> content=</span><span class="st">&quot;Holden Lee&quot;</span><span class="kw">&gt;</span>
+     
+ 	<span class="kw">&lt;title&gt;</span>$title$<span class="kw">&lt;/title&gt;</span>
+ 
+ 	<span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/css/bootstrap.min.css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span>
+ 
+ 	<span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/css/blog.css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span>
+ 	<span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/css/default.css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span>
+ 	<span class="kw">&lt;/head&gt;</span>
+ 
+ 	<span class="kw">&lt;body&gt;</span>
+ 
+ 	<span class="co">&lt;!-- Navigation bar. navbar-inverse is black, navbar-default is white.--&gt;</span>
+ 	<span class="co">&lt;!-- To make a button active (pressed), use &lt;li class=&quot;active&quot;&gt; --&gt;</span>
+ 	<span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;header&quot;</span><span class="kw">&gt;</span>
+ 	<span class="kw">&lt;nav</span><span class="ot"> class=</span><span class="st">&quot;navbar navbar-inverse navbar-fixed-top&quot;</span><span class="kw">&gt;</span>
+     <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span>
+     <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;navbar-header&quot;</span><span class="kw">&gt;</span>
+     <span class="kw">&lt;button</span><span class="ot"> type=</span><span class="st">&quot;button&quot;</span><span class="ot"> class=</span><span class="st">&quot;navbar-toggle collapsed&quot;</span><span class="ot"> data-toggle=</span><span class="st">&quot;collapse&quot;</span><span class="ot"> data-target=</span><span class="st">&quot;#navbar&quot;</span><span class="ot"> aria-expanded=</span><span class="st">&quot;false&quot;</span><span class="ot"> aria-controls=</span><span class="st">&quot;navbar&quot;</span><span class="kw">&gt;</span>
+     <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;sr-only&quot;</span><span class="kw">&gt;</span>Toggle navigation<span class="kw">&lt;/span&gt;</span>
+     <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;icon-bar&quot;</span><span class="kw">&gt;&lt;/span&gt;</span>
+     <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;icon-bar&quot;</span><span class="kw">&gt;&lt;/span&gt;</span>
+     <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;icon-bar&quot;</span><span class="kw">&gt;&lt;/span&gt;</span>
+     <span class="kw">&lt;/button&gt;</span>
+     <span class="kw">&lt;a</span><span class="ot"> class=</span><span class="st">&quot;navbar-brand&quot;</span><span class="ot"> href=</span><span class="st">&quot;/&quot;</span><span class="kw">&gt;</span>Holden's Blog<span class="kw">&lt;/a&gt;</span>
+     <span class="kw">&lt;/div&gt;</span>
+     <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;navbar&quot;</span><span class="ot"> class=</span><span class="st">&quot;collapse navbar-collapse&quot;</span><span class="kw">&gt;</span>
+     <span class="kw">&lt;ul</span><span class="ot"> class=</span><span class="st">&quot;nav navbar-nav&quot;</span><span class="kw">&gt;</span>
+     <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;/&quot;</span><span class="kw">&gt;</span>Home<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;/sitemap.html&quot;</span><span class="kw">&gt;</span>Sitemap<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;/about.html&quot;</span><span class="kw">&gt;</span>About<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+ 	<span class="co">&lt;!-- TODO: make this part a for loop over main pages --&gt;</span>
+     <span class="kw">&lt;/ul&gt;</span>
+     <span class="kw">&lt;/div&gt;</span>
+     <span class="kw">&lt;/div&gt;</span>
+ 	<span class="kw">&lt;/nav&gt;</span>
+ 	<span class="kw">&lt;/div&gt;</span>
+ 
+ 	$body$
+ 
+ 	<span class="co">&lt;!-- Footer --&gt;</span>
+ 	<span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;footer&quot;</span><span class="kw">&gt;</span>
+ 	<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span>
+     Built with
+     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://jaspervdj.be/hakyll&quot;</span><span class="kw">&gt;</span>Hakyll<span class="kw">&lt;/a&gt;</span> 
+     using 
+     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://www.getbootstrap.com&quot;</span><span class="kw">&gt;</span>Bootstrap<span class="kw">&lt;/a&gt;</span>, 
+     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://www.mathjax.org&quot;</span><span class="kw">&gt;</span>MathJax<span class="kw">&lt;/a&gt;</span>, 
+     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://www.disqus.com&quot;</span><span class="kw">&gt;</span>Disqus<span class="kw">&lt;/a&gt;</span>,
+     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://highlightjs.org/&quot;</span><span class="kw">&gt;</span>Highlight.js<span class="kw">&lt;/a&gt;</span>, and 
+     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://ignorethecode.net/blog/2010/04/20/footnotes/&quot;</span><span class="kw">&gt;</span>Footnotes.js<span class="kw">&lt;/a&gt;</span>
+ 	<span class="kw">&lt;/div&gt;</span>
+ 	<span class="kw">&lt;/div&gt;</span>
+ 	<span class="kw">&lt;/body&gt;</span>
+ 
+ 	<span class="kw">&lt;/html&gt;</span>
+ 
+ 	<span class="co">&lt;!-- jQuery--&gt;</span>
+ 	<span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
+ 
+ 	<span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
+ 
+ 	<span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;/js/bootstrap.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div>
 <h2 id="template-html-files">Template html files</h2>
 <p>How do we turn a post written in Markdown into actual webpage? First, we read the metadata (title, subtitle, tags, date) from the Markdown file and display them in a uniform manner. Create the file templates/post.html:</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span>
@@ -222,7 +238,7 @@ hakyll-init my-site</code></pre></li>
 <h2 id="tags-and-categories">Tags and Categories</h2>
 <p><a href="http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html">Javran’s post</a> gives a tutorial on adding tags.</p>
 <p>You can make categories the same way that you do tags. The difference is that each page is in only one category, determined by the subfolder that it is in.</p>
-<p>I wanted hierarchical categories, which is tricky to do. My code for this is not elegant right now, but it works to give a <a href="sitemap.html">sitemap</a>.</p>
+<p>I wanted hierarchical categories, which is tricky to do. My code for this is not elegant right now, but it works to give a <a href="../../../sitemap.html">sitemap</a>.</p>
 <h2 id="latex-and-mathjax">LaTeX and MathJax</h2>
 <p>There are two things we have to do: parse text in between dollar signs as LaTeX, and then render the LaTeX in the actual page using MathJax. I got the following material from <a href="http://jdreaver.com/posts/2014-06-22-math-programming-blog-hakyll.html">JD Reaver’s post</a> and <a href="http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html">Travis Athoughies’s post</a>.</p>
 <ol type="1">
@@ -234,19 +250,19 @@ hakyll-init my-site</code></pre></li>
 		newExtensions <span class="fu">=</span> foldr S.insert defaultExtensions mathExtensions
 		writerOptions <span class="fu">=</span> defaultHakyllWriterOptions {
 		                  writerReferenceLinks <span class="fu">=</span> <span class="dt">True</span>,
-                          writerHtml5 <span class="fu">=</span> <span class="dt">True</span>,
-                          writerHighlight <span class="fu">=</span> <span class="dt">True</span>,
-                          writerExtensions <span class="fu">=</span> newExtensions,
-                          writerHTMLMathMethod <span class="fu">=</span> <span class="dt">MathJax</span> <span class="st">&quot;&quot;</span>
-                        }
-    <span class="kw">in</span> pandocCompilerWith defaultHakyllReaderOptions writerOptions</code></pre></div></li>
+						  writerHtml5 <span class="fu">=</span> <span class="dt">True</span>,
+						  writerHighlight <span class="fu">=</span> <span class="dt">True</span>,
+						  writerExtensions <span class="fu">=</span> newExtensions,
+						  writerHTMLMathMethod <span class="fu">=</span> <span class="dt">MathJax</span> <span class="st">&quot;&quot;</span>
+					    }
+	<span class="kw">in</span> pandocCompilerWith defaultHakyllReaderOptions writerOptions</code></pre></div></li>
 <li><p>In order for a web page to render LaTeX, it must link to the MathJax script.</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span>
 <span class="ot">    src=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div>
 Thus, to add MathJax functionality to all pages, add this add the end of default.html.</li>
 <li><p>The <a href="https://docs.mathjax.org/en/v2.5-latest/tex.html#defining-tex-macros">MathJax documentation</a> describes how to add packages and macros (so you can write <code>\R</code> for <code>\mathbb{R}</code>, for example). To do this, add a configuration file <code>MathJax/config/local/local.js</code>. The format is described in the link. Now modify the html code above to link to your configuration file. An inconvenience here is that you must give the full, not relative, URL.</p>
 <div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">&lt;</span>script <span class="kw">type</span><span class="fu">=</span><span class="st">&quot;text/javascript&quot;</span>
-    src<span class="fu">=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,file:///C:/Users/holden-lee/Dropbox/website/test/MathJax/config/local/local&quot;</span><span class="fu">&gt;&lt;/</span>script<span class="fu">&gt;</span></code></pre></div></li>
+    src<span class="fu">=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/blog/MathJax/config/local/local&quot;</span><span class="fu">&gt;&lt;/</span>script<span class="fu">&gt;</span></code></pre></div></li>
 <li><p>TODO: script</p></li>
 </ol>
 <h2 id="code-highlighting">Code highlighting</h2>
@@ -258,18 +274,166 @@ Thus, to add MathJax functionality to all pages, add this add the end of default
 <div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown"> ```haskell
 <span class="bn">    main = putStrLn &quot;Hello World!&quot;</span>
  ```</code></pre></div>
+<h2 id="footnotes">Footnotes</h2>
+<p><a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>, created by Lukas Mathis, shows the footnote when you hover over the number<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Once you have the js code, the procedure for adding this extension is standard: add a js file and include it in default.html:</p>
+<ol type="1">
+<li><p>Put the following into js/footnotes.js.</p>
+<pre class="js"><code>// this script requires jQuery
+$(document).ready(function() {
+    Footnotes.setup();
+});
+
+var Footnotes = {
+	footnotetimeout: false,
+    setup: function() {
+        var footnotelinks = $(&quot;a[rel='footnote']&quot;)
+
+        footnotelinks.unbind('mouseover',Footnotes.footnoteover);
+        footnotelinks.unbind('mouseout',Footnotes.footnoteoout);
+
+        footnotelinks.bind('mouseover',Footnotes.footnoteover);
+        footnotelinks.bind('mouseout',Footnotes.footnoteoout);
+    },
+    footnoteover: function() {
+        clearTimeout(Footnotes.footnotetimeout);
+        $('#footnotediv').stop();
+        $('#footnotediv').remove();
+
+        var id = $(this).attr('href').substr(1);
+        var position = $(this).offset();
+
+        var div = $(document.createElement('div'));
+        div.attr('id','footnotediv');
+        div.bind('mouseover',Footnotes.divover);
+        div.bind('mouseout',Footnotes.footnoteoout);
+
+        var el = document.getElementById(id);
+        div.html($(el).html());
+
+        div.css({
+            position:'absolute',
+            width:'400px',
+            opacity:0.9
+        });
+        $(document.body).append(div);
+
+        var left = position.left;
+        if(left + 420  &gt; $(window).width() + $(window).scrollLeft())
+            left = $(window).width() - 420 + $(window).scrollLeft();
+        var top = position.top+20;
+        if(top + div.height() &gt; $(window).height() + $(window).scrollTop())
+            top = position.top - div.height() - 15;
+        div.css({
+            left:left,
+            top:top
+        });
+    },
+    footnoteoout: function() {
+        Footnotes.footnotetimeout = setTimeout(function() {
+            $('#footnotediv').animate({
+                opacity: 0
+            }, 600, function() {
+                $('#footnotediv').remove();
+            });
+        },100);
+    },
+    divover: function() {
+        clearTimeout(Footnotes.footnotetimeout);
+        $('#footnotediv').stop();
+        $('#footnotediv').css({
+                opacity: 0.9
+        });
+    }
+}</code></pre></li>
+<li><p>Add this line to default.html:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;/js/footnotes.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div></li>
+<li><p>To add footnotes, write <code>[^f1]</code> at the location where you want the footnote, and then <code>[^f1]: footnote text</code> anytime later.</p></li>
+</ol>
 <h2 id="disqus-comments">Disqus comments</h2>
+<p>Disqus is an external comment management system that you can embed in your website.</p>
+<ol type="1">
+<li>Create an account at <a href="http://www.disqus.com">Disqus</a>. Follow the directions to add Disqus to the site.</li>
+<li><p>Here is the code to add to post.html, copied for convenience:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;disqus_thread&quot;</span><span class="kw">&gt;&lt;/div&gt;</span>
+<span class="kw">&lt;script&gt;</span>
+<span class="co">/**</span>
+<span class="er">* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.</span>
+<span class="er">* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables</span>
+<span class="er">*/</span>
+<span class="er">/*</span>
+<span class="er">var disqus_config = function () {</span>
+<span class="er">this.page.url = $url$; // Replace PAGE_URL with your page's canonical URL variable</span>
+<span class="er">this.page.identifier = $path$; // Replace PAGE_IDENTIFIER with your page's unique identifier variable</span>
+<span class="er">};</span>
+<span class="er">*/</span>
+<span class="er">(function() { // DON'T EDIT BELOW THIS LINE</span>
+<span class="er">var d = document, s = d.createElement('script');</span>
+
+<span class="er">s.src = '//holdenlee.disqus.com/embed.js';</span>
+
+<span class="er">s.setAttribute('data-timestamp', +new Date());</span>
+<span class="er">(d.head || d.body).appendChild(s);</span>
+<span class="er">})();</span>
+<span class="kw">&lt;/script&gt;</span>
+<span class="er">&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></div></li>
+</ol>
 <h2 id="github.io-integration">Github.io integration</h2>
+<p>The compiled html files should be kept separate from the uncompiled files, so by default Hakyll puts the compiled site in _site/. However, I don’t want the blog to be at <code>http://holdenlee.github.io/blog/_site/</code>, and I also want to put the uncompiled files on github. So I create a github repository called <code>blog</code>, make 2 branches <code>gh-pages</code> (which will be shown at http://holdenlee.github.io/blog) and <code>hakyll</code>. I maintain these branches in 2 directories on my computer, and have a script that copies <code>hakyll/_site/</code> to <code>blog</code> and pushes everything.</p>
+<p>In gitup2:</p>
+<pre><code>#!/bin/bash
+
+git add .
+git commit -a -m &quot;$1&quot;
+git push origin &quot;$2&quot;</code></pre>
+<p>In webup:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#!/bin/bash</span>
+
+<span class="kw">cp</span> -TRv hakyll/_site/ blog/
+<span class="kw">cd</span> hakyll
+<span class="kw">gitup2</span> <span class="st">&quot;</span><span class="ot">$1</span><span class="st">&quot;</span> hakyll
+<span class="kw">cd</span> ../blog
+<span class="kw">gitup2</span> <span class="st">&quot;</span><span class="ot">$1</span><span class="st">&quot;</span> gh-pages</code></pre></div>
+<p>Juan Pedro Villa has a <a href="http://www.stackbuilders.com/news/dr-hakyll-crea-una-pagina-de-github-con-hakyll-y-circleci">post</a> on how to integrate Hakyll with <a href="http://www.circleci.com">CircleCI</a>, which builds the site automatically every time you push to github (like the support that Github currently has for Jekyll). (I would like to use this, but am currently having trouble with getting the server to compile the Haskell files.)</p>
 <h2 id="social-media-buttons">Social media buttons</h2>
 <h2 id="additional-features">Additional features</h2>
 <p>There are many cool features I haven’t covered. I would like to add some of these in the future.</p>
 <ul>
 <li><a href>Auto-generated table of contents for each post</a> (cf. Wikipedia)</li>
-<li>[Shortcuts</li>
+<li><a href>Shortcuts</a></li>
 <li>Analytics</li>
 </ul>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>like this!<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
   </div>
   
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+    */
+    /*
+    var disqus_config = function () {
+    this.page.url = /posts/programming/haskell/hello-hakyll.html; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = posts/programming/haskell/hello-hakyll.md; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//holdenlee.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
   <div class="sharing">
     <!-- facebook -->
     <div class="fb-share-button" data-href="/posts/programming/haskell/hello-hakyll.html" data-layout="icon"></div>
