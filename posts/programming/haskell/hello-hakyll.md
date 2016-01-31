@@ -20,7 +20,7 @@ The main reason is that I want to have complete control over the content:
 1. I want to edit blog posts as text (markdown) files on my computer, rather than inside an editor in the browser. Firstly, it's simpler to edit them as text files. For me, using a formatting toolbar for editing posts (lists, bold, quotes, etc.) has hurt me more than it's helped: often the bulleted lists get corrupted and I have to mess with the html t fix them). In Markdown, I can do all the basic formatting very simply, without having to click something external to the text, or work with something clunky like html.
 2. Having blog posts as simple files means it is easy to import and export material that I write, or convert it to a different format as I wish. I can organize blog posts as I do my own file system. See [Gwern](http://www.gwern.net/About#long-site), especially the quote by Julian Assange, on why a simple format, good organization, and control over content help one's writing survive.
 3. I have complete control in the sense that I can create arbitrary scripts to turn the text files into published posts. For example, I can add footnotes, enable latex macros, enable comments, and automatically build a hierarchical sitemap of all posts. I can make arbitrary macros for common patterns (ex. links to wikipedia pages) if I wanted to. Moreover, I can write the scripts in Haskell!
-4. There are many beautiful blogs and websites written in Haskell, for example, [Chris Olah's blog](http://colah.github.io) and [Gwern's site](http://www.gwern.net/). Much of the design on this blog is copied from Chris Olah's blog and 
+4. There are many beautiful blogs and websites written in Haskell, for example, [Chris Olah's blog](http://colah.github.io) and [Gwern's site](http://www.gwern.net/). Much of the design on this blog is copied from Chris Olah's blog and [oinkina](https://github.com/oinkina).
 
 In the rest of this post, I'll detail how I set up the blog. This is still very much a work in progress! Many people have written excellent tutorials already, so I will give links to their articles rather than re-explaining.
 
@@ -193,10 +193,10 @@ There are two things we have to do: parse text in between dollar signs as LaTeX,
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     ```
 	Thus, to add MathJax functionality to all pages, add this add the end of default.html.
-1. The [MathJax documentation](https://docs.mathjax.org/en/v2.5-latest/tex.html#defining-tex-macros) describes how to add packages and macros (so you can write `\R` for `\mathbb{R}`, for example). To do this, add a configuration file `MathJax/config/local/local.js`. The format is described in the link. Now modify the html code above to link to your configuration file. An inconvenience here is that you must give the full, not relative, URL.
-    ```haskell
+1. The [MathJax documentation](https://docs.mathjax.org/en/v2.5-latest/tex.html#defining-tex-macros) describes how to add packages and macros (so you can write `\R` for `\mathbb{R}`, for example). To do this, add a configuration file `MathJax/config/local/local.js`. The format is described in the link. Now modify the html code above to link to your configuration file. Note we must give the full, not relative, URL, so we set `siteURL` and add it to the context in site.hs. Then we change the link as follows:
+    ```html
 	<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/blog/MathJax/config/local/local"></script>
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,$siteURL$/MathJax/config/local/local"></script>
 	```
 1. TODO: script
 
@@ -304,20 +304,14 @@ To highlight code in posts, put name/abbreviation of the language at the start o
 Disqus is an external comment management system that you can embed in your website.
 
 1. Create an account at [Disqus](http://www.disqus.com). Follow the directions to add Disqus to the site.
-2. Here is the code to add to post.html, copied for convenience:
+2. Here is the code to add to post.html. The page URL is the concatenation of `$siteURL$` and `$url$`. 
     ```html
     <div id="disqus_thread"></div>
     <script>
-    /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-    */
-    /*
     var disqus_config = function () {
-    this.page.url = $url$; // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = $path$; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = $siteURL$$url$; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = $url$; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
-    */
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
 
