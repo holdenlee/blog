@@ -230,14 +230,15 @@ makePostTree li =
 -- I want to do this but it isn't right
 -- & at (head li) . _2 .~ li
            & M.adjust (_2 %~ (li:)) (li & reversed %~ tail)))
-  
+
 --type FunTree l b = (l, M.Map l (b,[l]))
 compileTree :: FunTree [String] [Identifier] -> Compiler String
 compileTree p@(rt, m) = do
-  let (li, ls) = m M.! rt -- :: ([Identifier], [[String]])
+  let (li, ls') = m M.! rt -- :: ([Identifier], [[String]])
+  let ls = sortBy (\x y -> compare ((m M.! x) ^. _1) ((m M.! y) ^. _1)) ls'
   listItemString <- loadAll $ foldl (.||.) "" (map (fromGlob . toFilePath) li)
   postItems <- applyTemplateList postItemTemplate postCtx listItemString
-  childrenListStrings <- mapM compileTree (funTreeChildren p)
+  childrenListStrings <- mapM compileTree (map (,m) ls)
   let childrenOutline = mconcat $ zipWith (\catPath str -> printf "<li><b>%s</b> %s </li>" (last catPath) str) ls childrenListStrings
   -- \catPath str -> "<li><b>"++(last catPath)++"</b>"++postItems++"</li>"
   return ("<ul>"++childrenOutline++postItems++"</ul>")
