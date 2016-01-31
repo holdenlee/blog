@@ -73,6 +73,7 @@ main = hakyll $ do
         posts <- recentFirst =<< loadAll pattern
         let ctx = constField "title" title <>
                   listField "posts" defCtx (return posts) <>
+                  constField "siteURL" siteURL <>
                   defaultContext
         makeItem ""
           >>= loadAndApplyTemplate "templates/tag.html" ctx
