@@ -183,7 +183,16 @@
 
 <!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
 <script src="../../js/footnotes.js"></script>
-<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
-<script src="../../js/inlineDisqussions.js"></script>
 
-<!-- <script src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script> -->
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../js/inlineDisqussions.js"></script>
+<link rel="stylesheet" type="text/css" href="../../js/inlineDisqussions.css" />
+<script>
+  disqus_shortname = 'your_disqus_shortname';
+  jQuery(document).ready(function() {
+    jQuery("p").inlineDisqussions();
+  });
+</script>
+
+
