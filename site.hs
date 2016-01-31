@@ -15,6 +15,8 @@ import           Text.Printf
 import Debug.Trace
 import Utilities
 import FunTree
+import HakyllUtils
+import NestedCategories
 
 siteURL :: String
 siteURL = "http://holdenlee.github.io/blog"
@@ -107,7 +109,7 @@ main = hakyll $ do
       compile $ do
         let mapCtx = constField "title" "Sitemap" <> basicCtx
         let pt = debugShow $ makePostTree treeMap
-        outline <- compileTree pt
+        outline <- compileTree postCtx pt
         makeItem outline
           >>= loadAndApplyTemplate "templates/post.html" mapCtx
           >>= loadAndApplyTemplate "templates/default.html" mapCtx
@@ -189,89 +191,3 @@ feedCompiler li renderer content tags =
 atomCompiler = feedCompiler ["atom.xml"] renderAtom
 
 --rssCompiler = feedCompiler ["rss.xml"] renderRss
-
-{-| keep the entire directory name, cutting off the first part (which will be posts/) -}
-getNestedCategory :: MonadMetadata m => Identifier -> m [String]
-getNestedCategory = return . return . joinPath . tail . splitPath . takeDirectory . toFilePath
---getCategory = return . return . takeBaseName . takeDirectory . toFilePath
-
-buildNestedCategories :: MonadMetadata m => Pattern -> (String -> Identifier)
-                -> m Tags
-buildNestedCategories = buildTagsWith getNestedCategory
-
-treeCategories :: [(String, [Identifier])] -> [([String], [Identifier])]
-treeCategories = ((mapped . _1) %~ splitPath) .&
-                 ((mapped . _1 . mapped) %~ removeTrailingSlash)
-
-nestCategories :: [(String, [Identifier])] -> [([String], [Identifier])]
-nestCategories = (((mapped . _1) %~ splitPath) >=>
-                 (\(li, y) -> map (,y) (tail $ inits li))) .&
-                 ((mapped . _1) %~ removeTrailingSlashList) .&
-                 reduce
-
-(.&):: (a -> b) -> (b -> c) -> (a -> c) 
-(.&) = flip (.)
-  
-{- As in, MapReduce -}
-reduce :: (Monoid m, Ord a, Ord m) => [(a, m)] -> [(a, m)]
-reduce = M.toList . M.map mconcat . MM.toMap . MM.fromList
-
-removeTrailingSlash :: String -> String
-removeTrailingSlash = reverse . (\li -> if head li == '/' then tail li else li) . reverse
-
-removeTrailingSlashList :: [String] -> [String]
-removeTrailingSlashList = reverse . (ix 0 %~ removeTrailingSlash) . reverse
-
-makePostTree :: [([String], [Identifier])] -> FunTree [String] [Identifier]
-makePostTree li =
-  for li ([], M.singleton [] ([], [])) (\(li, ids) (rt, m) ->
---note I'm assuming there are no uncategorized posts. Otherwise you have to add a check here if li is already in the map
-    (rt, m & M.insert li (ids, [])
--- I want to do this but it isn't right
--- & at (head li) . _2 .~ li
-           & M.adjust (_2 %~ (li:)) (li & reversed %~ tail)))
-
---type FunTree l b = (l, M.Map l (b,[l]))
-compileTree :: FunTree [String] [Identifier] -> Compiler String
-compileTree p@(rt, m) = do
-  let (li, ls') = m M.! rt -- :: ([Identifier], [[String]])
-  let ls = sortBy (\x y -> compare ((m M.! x) ^. _1) ((m M.! y) ^. _1)) ls'
-  listItemString <- loadAll $ foldl (.||.) "" (map (fromGlob . toFilePath) li)
-  postItems <- applyTemplateList postItemTemplate postCtx listItemString
-  childrenListStrings <- mapM compileTree (map (,m) ls)
-  let childrenOutline = mconcat $ zipWith (\catPath str -> printf "<li><b>%s</b> %s </li>" (last catPath) str) ls childrenListStrings
-  -- \catPath str -> "<li><b>"++(last catPath)++"</b>"++postItems++"</li>"
-  return ("<ul>"++childrenOutline++postItems++"</ul>")
-
-postItemTemplate :: Template
-postItemTemplate = readTemplate "<li><a href=\"$url$\">$title$</a> ($date$)$if(subtitle)$: <span class=\"italic\">$subtitle$</span> $endif$</li>"
-
-{-mapLi :: [String] -> String
-mapLi = mconcat . map (printf "<li>%s</li>\n")-}
-
-{-
-getNestedCategory :: MonadMetadata m => Identifier -> m [String]
-getNestedCategory = return . return . joinPath . tail . splitPath . takeDirectory . toFilePath
---getCategory = return . return . takeBaseName . takeDirectory . toFilePath
-
-buildNestedCategories :: MonadMetadata m => Pattern -> (String -> Identifier)
-                -> m Tags
-buildNestedCategories = buildTagsWith getNestedCategory
-
-nestCategories :: [(String, [Identifier])] -> [(String, [Identifier])]
-nestCategories = (((mapped . _1) %~ splitPath) >=>
-                 (\(li, y) -> map (,y) (tail $ inits li))) .&
-                 ((mapped . _1) %~ (removeTrailingSlash . joinPath)) .&
-                 -- ^ removeTrailingSlash is necessary here because there is a trailing slash, ex. "math/".
-                 reduce
-
-(.&):: (a -> b) -> (b -> c) -> (a -> c) 
-(.&) = flip (.)
-  
-{- As in, MapReduce -}
-reduce :: (Monoid m, Ord a, Ord m) => [(a, m)] -> [(a, m)]
-reduce = M.toList . M.map mconcat . MM.toMap . MM.fromList
-
-removeTrailingSlash :: String -> String
-removeTrailingSlash = reverse . (\li -> if head li == '/' then tail li else li) . reverse
--}
