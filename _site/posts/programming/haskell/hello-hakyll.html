@@ -67,6 +67,8 @@
           <li><a href="../../../">Home</a></li>
           <li><a href="../../../sitemap.html">Sitemap</a></li>
           <li><a href="../../../about.html">About</a></li>
+          <li><a href="../../../notes.html">Notes</a></li>
+          <li><a href="../../../links.html">Links</a></li>
 <!-- TODO: make this part a for loop over main pages -->
         </ul>
       </div><!--/.nav-collapse -->
@@ -85,10 +87,10 @@
       <h1>Hello Hakyll!</h1>
     </div>
     <div class="info">
-       <div class="subtitle"><p>Setting up this blog</p></div> 
+       <div class="subtitle"><p>Moving from Wordpress to Hakyll</p></div> 
        
-        <p>Posted: 2016-01-30 
-          , Modified: 2016-01-30 
+        <p>Posted: 2016-02-01 
+          , Modified: 2016-02-02 
 	</p>
       
        <p>Tags: <a href="../../../tags/haskell.html">haskell</a>, <a href="../../../tags/blogging.html">blogging</a>, <a href="../../../tags/web%20design.html">web design</a></p> 
@@ -97,24 +99,11 @@
   </div>
   <!--/div-->
 
-  <div class="toc"> <ul>
- <li><a href="#why-hakyll">Why Hakyll?</a></li>
- <li><a href="#setting-up-hakyll">Setting up Hakyll</a></li>
- <li><a href="#site-design-using-bootstrap.js">Site design using Bootstrap.js</a></li>
- <li><a href="#template-html-files">Template html files</a></li>
- <li><a href="#tags-and-categories">Tags and Categories</a></li>
- <li><a href="#latex-and-mathjax">LaTeX and MathJax</a></li>
- <li><a href="#code-highlighting">Code highlighting</a></li>
- <li><a href="#footnotes">Footnotes</a></li>
- <li><a href="#disqus-comments">Disqus comments</a></li>
- <li><a href="#github.io-integration">Github.io integration</a></li>
- <li><a href="#social-media-buttons">Social media buttons</a></li>
- <li><a href="#additional-features">Additional features</a></li>
- </ul> </div>
+  
 
   <div class="blog-main">
     <h2 id="why-hakyll">Why Hakyll?</h2>
-<p>I’ve decided to switch blogging platforms from Wordpress to Hakyll, a website generation platform that can be customized using Haskell. All previous posts will remain on <a href="http://holdenlee.wordpress.com/">Wordpress site</a>, but it will no longer be updated.</p>
+<p>I’ve decided to switch blogging platforms from Wordpress to <a href="https://jaspervdj.be/hakyll/">Hakyll</a>, a website generation platform that can be customized using Haskell. All previous posts will remain on <a href="http://holdenlee.wordpress.com/">Wordpress site</a>, but the site will no longer be updated.</p>
 <p>The following two blog posts articulate some of my reasons for switching to Hakyll:</p>
 <ul>
 <li><a href="http://karpathy.github.io/2014/07/01/switching-to-jekyll/">Why switch from Wordpress to Jekyll?</a></li>
@@ -122,311 +111,34 @@
 </ul>
 <p>The main reason is that I want to have complete control over the content:</p>
 <ol type="1">
-<li>I want to edit blog posts as text (markdown) files on my computer, rather than inside an editor in the browser. Firstly, it’s simpler to edit them as text files. For me, using a formatting toolbar for editing posts (lists, bold, quotes, etc.) has hurt me more than it’s helped: often the bulleted lists get corrupted and I have to mess with the html t fix them). In Markdown, I can do all the basic formatting very simply, without having to click something external to the text, or work with something clunky like html.</li>
-<li>Having blog posts as simple files means it is easy to import and export material that I write, or convert it to a different format as I wish. I can organize blog posts as I do my own file system. See <a href="http://www.gwern.net/About#long-site">Gwern</a>, especially the quote by Julian Assange, on why a simple format, good organization, and control over content help one’s writing survive.</li>
-<li>I have complete control in the sense that I can create arbitrary scripts to turn the text files into published posts. For example, I can add footnotes, enable latex macros, enable comments, and automatically build a hierarchical sitemap of all posts. I can make arbitrary macros for common patterns (ex. links to wikipedia pages) if I wanted to. Moreover, I can write the scripts in Haskell!</li>
+<li>I want to edit blog posts as text (markdown) files on my computer, rather than inside an editor in the browser. Firstly, it’s simpler to edit them as text files. Relying on a formatting toolbar for editing posts (lists, bold, quotes, etc.) can be frustrating: often the bulleted lists get corrupted and I have to mess with the html to fix them). In Markdown, I can do all the basic formatting very simply, without having to click something external to the text, or work directly with html.</li>
+<li>Having blog posts as simple files means it is easy to import and export material that I write, or convert it to a different format as I wish. I can organize blog posts as I do my own file system. See <a href="http://www.gwern.net/About#long-site">Gwern</a>, especially the quote by Julian Assange, on why a simple format, good organization, and control over content help writing survive.</li>
+<li>I have complete control in the sense that I can create arbitrary scripts to turn the text files into published posts. For example, I can add footnotes, enable latex macros, enable comments, and automatically build a hierarchical <a href="../../../sitemap.html">sitemap</a> of all posts. I can make arbitrary macros for common patterns (ex. links to wikipedia pages) if I wanted to. Moreover, I can write the scripts in Haskell!</li>
 <li>There are many beautiful blogs and websites written in Haskell, for example, <a href="http://colah.github.io">Chris Olah’s blog</a> and <a href="http://www.gwern.net/">Gwern’s site</a>. Much of the design on this blog is copied from Chris Olah’s blog and <a href="https://github.com/oinkina">oinkina</a>.</li>
 </ol>
-<p>In the rest of this post, I’ll detail how I set up the blog. This is still very much a work in progress! Many people have written excellent tutorials already, so I will give links to their articles rather than re-explaining.</p>
-<p>It took me a long time to set up the blog, mainly because there were a lot of features I wanted to add, and I had to look for instructions on many different sites. I hope this post will be a useful “directory” on how to add various features.</p>
-<h2 id="setting-up-hakyll">Setting up Hakyll</h2>
-<ol type="1">
-<li>First install the <a href="https://www.haskell.org/downloads">Haskell Platform</a> if you haven’t already.</li>
-<li><p>Next install <a href="https://jaspervdj.be/hakyll/tutorials/01-installation.html">Hakyll</a> using cabal. Initialize a default Hakyll website (the command below initializes the site in directory “my-site”).</p>
-<pre><code>cabal install hakyll
-hakyll-init my-site</code></pre></li>
-<li><p>Read through the Hakyll tutorials to understand how it works.</p></li>
-</ol>
-<p>On Windows, when trying to run ./site in Cygwin, I got the error <a href="https://jaspervdj.be/hakyll/tutorials/faq.html">commitBuffer: invalid argument (invalid character)</a>. I solved this by running in Windows Powershell.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">chcp</span> 65001
-<span class="kw">./site</span> build</code></pre></div>
-<h2 id="site-design-using-bootstrap.js">Site design using Bootstrap.js</h2>
-<p>In Hakyll, the content of the site is kept separate from the site design. When you write posts, just write in Markdown and optionally specify some metadata like tags and date edited. In site.hs you’ll specify how to “wrap” html, etc. around those posts to create the actual pages on the site. Thus, Hakyll is very modular - you can easily change the site layout independently of the content.</p>
-<p>I chose a minimal theme (basically just to get the navigation bar). There’s much more you can do with Bootstrap; see the page for info.</p>
-<ol type="1">
-<li><a href="http://getbootstrap.com/getting-started/">Get bootstrap</a>.</li>
-<li>Unzip the files into the blog directory. (I unzipped them directly into folders css/, js/, and fonts/, but you can also put them as subdirectories in bootstrap/ if you prefer.)</li>
-<li>Modify the starter template, and saved it as default.html. The content of the pages will go into <code>$body$</code>. Note that I added a footer.</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">    <span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
-    <span class="kw">&lt;html&gt;</span>
- 
- 	<span class="kw">&lt;head&gt;</span>
- 	<span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span>
- 	<span class="kw">&lt;meta</span><span class="ot"> http-equiv=</span><span class="st">&quot;X-UA-Compatible&quot;</span><span class="ot"> content=</span><span class="st">&quot;IE=edge&quot;</span><span class="kw">&gt;</span>
- 	<span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content=</span><span class="st">&quot;width=device-width, initial-scale=1&quot;</span><span class="kw">&gt;</span>
- 	<span class="co">&lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&gt;</span>
- 
- 	<span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;description&quot;</span><span class="ot"> content=</span><span class="st">&quot;Holden Lee's Blog&quot;</span><span class="kw">&gt;</span>
- 	<span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;author&quot;</span><span class="ot"> content=</span><span class="st">&quot;Holden Lee&quot;</span><span class="kw">&gt;</span>
-     
- 	<span class="kw">&lt;title&gt;</span>$title$<span class="kw">&lt;/title&gt;</span>
- 
- 	<span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/css/bootstrap.min.css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span>
- 
- 	<span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/css/blog.css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span>
- 	<span class="kw">&lt;link</span><span class="ot"> href=</span><span class="st">&quot;/css/default.css&quot;</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="kw">&gt;</span>
- 	<span class="kw">&lt;/head&gt;</span>
- 
- 	<span class="kw">&lt;body&gt;</span>
- 
- 	<span class="co">&lt;!-- Navigation bar. navbar-inverse is black, navbar-default is white.--&gt;</span>
- 	<span class="co">&lt;!-- To make a button active (pressed), use &lt;li class=&quot;active&quot;&gt; --&gt;</span>
- 	<span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;header&quot;</span><span class="kw">&gt;</span>
- 	<span class="kw">&lt;nav</span><span class="ot"> class=</span><span class="st">&quot;navbar navbar-inverse navbar-fixed-top&quot;</span><span class="kw">&gt;</span>
-     <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span>
-     <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;navbar-header&quot;</span><span class="kw">&gt;</span>
-     <span class="kw">&lt;button</span><span class="ot"> type=</span><span class="st">&quot;button&quot;</span><span class="ot"> class=</span><span class="st">&quot;navbar-toggle collapsed&quot;</span><span class="ot"> data-toggle=</span><span class="st">&quot;collapse&quot;</span><span class="ot"> data-target=</span><span class="st">&quot;#navbar&quot;</span><span class="ot"> aria-expanded=</span><span class="st">&quot;false&quot;</span><span class="ot"> aria-controls=</span><span class="st">&quot;navbar&quot;</span><span class="kw">&gt;</span>
-     <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;sr-only&quot;</span><span class="kw">&gt;</span>Toggle navigation<span class="kw">&lt;/span&gt;</span>
-     <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;icon-bar&quot;</span><span class="kw">&gt;&lt;/span&gt;</span>
-     <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;icon-bar&quot;</span><span class="kw">&gt;&lt;/span&gt;</span>
-     <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;icon-bar&quot;</span><span class="kw">&gt;&lt;/span&gt;</span>
-     <span class="kw">&lt;/button&gt;</span>
-     <span class="kw">&lt;a</span><span class="ot"> class=</span><span class="st">&quot;navbar-brand&quot;</span><span class="ot"> href=</span><span class="st">&quot;/&quot;</span><span class="kw">&gt;</span>Holden's Blog<span class="kw">&lt;/a&gt;</span>
-     <span class="kw">&lt;/div&gt;</span>
-     <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;navbar&quot;</span><span class="ot"> class=</span><span class="st">&quot;collapse navbar-collapse&quot;</span><span class="kw">&gt;</span>
-     <span class="kw">&lt;ul</span><span class="ot"> class=</span><span class="st">&quot;nav navbar-nav&quot;</span><span class="kw">&gt;</span>
-     <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;/&quot;</span><span class="kw">&gt;</span>Home<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
-     <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;/sitemap.html&quot;</span><span class="kw">&gt;</span>Sitemap<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
-     <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;/about.html&quot;</span><span class="kw">&gt;</span>About<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
- 	<span class="co">&lt;!-- TODO: make this part a for loop over main pages --&gt;</span>
-     <span class="kw">&lt;/ul&gt;</span>
-     <span class="kw">&lt;/div&gt;</span>
-     <span class="kw">&lt;/div&gt;</span>
- 	<span class="kw">&lt;/nav&gt;</span>
- 	<span class="kw">&lt;/div&gt;</span>
- 
- 	$body$
- 
- 	<span class="co">&lt;!-- Footer --&gt;</span>
- 	<span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;footer&quot;</span><span class="kw">&gt;</span>
- 	<span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span>
-     Built with
-     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://jaspervdj.be/hakyll&quot;</span><span class="kw">&gt;</span>Hakyll<span class="kw">&lt;/a&gt;</span> 
-     using 
-     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://www.getbootstrap.com&quot;</span><span class="kw">&gt;</span>Bootstrap<span class="kw">&lt;/a&gt;</span>, 
-     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://www.mathjax.org&quot;</span><span class="kw">&gt;</span>MathJax<span class="kw">&lt;/a&gt;</span>, 
-     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://www.disqus.com&quot;</span><span class="kw">&gt;</span>Disqus<span class="kw">&lt;/a&gt;</span>,
-     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://highlightjs.org/&quot;</span><span class="kw">&gt;</span>Highlight.js<span class="kw">&lt;/a&gt;</span>, and 
-     <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://ignorethecode.net/blog/2010/04/20/footnotes/&quot;</span><span class="kw">&gt;</span>Footnotes.js<span class="kw">&lt;/a&gt;</span>
- 	<span class="kw">&lt;/div&gt;</span>
- 	<span class="kw">&lt;/div&gt;</span>
- 	<span class="kw">&lt;/body&gt;</span>
- 
- 	<span class="kw">&lt;/html&gt;</span>
- 
- 	<span class="co">&lt;!-- jQuery--&gt;</span>
- 	<span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
- 
- 	<span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
- 
- 	<span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;/js/bootstrap.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div>
-<h2 id="template-html-files">Template html files</h2>
-<p>How do we turn a post written in Markdown into actual webpage? First, we read the metadata (title, subtitle, tags, date) from the Markdown file and display them in a uniform manner. Create the file templates/post.html:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span>
-  <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;content&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;page header&quot;</span><span class="kw">&gt;</span>
-      <span class="kw">&lt;h1&gt;</span>$title$<span class="kw">&lt;/h1&gt;</span>
-    <span class="kw">&lt;/div&gt;</span>
-    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;info&quot;</span><span class="kw">&gt;</span>
-      $if(subtitle)$ <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;subtitle&quot;</span><span class="kw">&gt;&lt;p&gt;</span>$subtitle$<span class="kw">&lt;/p&gt;&lt;/div&gt;</span> $endif$
-      $if(date)$ 
-        <span class="kw">&lt;p&gt;</span>Posted: $date$ 
-          $if(modified)$, Modified: $modified$ $endif$
-	<span class="kw">&lt;/p&gt;</span>
-      $endif$
-      $if(tags)$ <span class="kw">&lt;p&gt;</span>Tags: $tags$<span class="kw">&lt;/p&gt;</span> $endif$
-    <span class="kw">&lt;/div&gt;</span>
-    
-  <span class="kw">&lt;/div&gt;</span>
+<h2 id="next-steps">Next steps</h2>
+<p>I plan to write a post on how I set up this blog. In the meantime I’m still working on setting up some features and improving the design. Any comments on the site (or bug reports, or pointers) are welcome.</p>
+<p>I’m currently using TiddlyWiki for my <a href="http://holdenlee.github.io">website</a>. Right now I have mixed feelings about TiddlyWiki - it’s a easy-to-update wiki with many great features, but doesn’t offer the simplicity and control that a Hakyll site does. I may change it in the future, but for time being I’ll keep it as it is.</p>
 
-  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;blog-main&quot;</span><span class="kw">&gt;</span>
-    $body$
-  <span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
-<p>Every page will be (further) wrapped by default.html which we defined above. Finally, I created stylesheets css/blog.css and css/default.css to specify how I want the headings, subtitles, etc. to look. (Actually, I mostly stole them from other sites.)</p>
-<p>I made a pattern to match the top level pages besides the main page. For convenience, I treat them the same way as posts are treated, except that they don’t have a subtitle, date, tags, etc. I hardcode their URLs into the navbar (though if you want to, you can loop over them instead and hence not have to change the html if you add new top-level pages).</p>
-<h2 id="tags-and-categories">Tags and Categories</h2>
-<p><a href="http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html">Javran’s post</a> gives a tutorial on adding tags.</p>
-<p>You can make categories the same way that you do tags. The difference is that each page is in only one category, determined by the subfolder that it is in.</p>
-<p>I wanted hierarchical categories, which is tricky to do. My code for this is not elegant right now, but it works to give a <a href="../../../sitemap.html">sitemap</a>.</p>
-<h2 id="latex-and-mathjax">LaTeX and MathJax</h2>
-<p>There are two things we have to do: parse text in between dollar signs as LaTeX, and then render the LaTeX in the actual page using MathJax. I got the following material from <a href="http://jdreaver.com/posts/2014-06-22-math-programming-blog-hakyll.html">JD Reaver’s post</a> and <a href="http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html">Travis Athoughies’s post</a>.</p>
-<ol type="1">
-<li><p>Tell Pandoc to parse text between dollar signs as math:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">pandocMathCompiler <span class="fu">=</span>
-	<span class="kw">let</span> mathExtensions <span class="fu">=</span> [<span class="dt">Ext_tex_math_dollars</span>, <span class="dt">Ext_tex_math_double_backslash</span>,
-		<span class="dt">Ext_latex_macros</span>]
-		defaultExtensions <span class="fu">=</span> writerExtensions defaultHakyllWriterOptions
-		newExtensions <span class="fu">=</span> foldr S.insert defaultExtensions mathExtensions
-		writerOptions <span class="fu">=</span> defaultHakyllWriterOptions {
-		                  writerReferenceLinks <span class="fu">=</span> <span class="dt">True</span>,
-						  writerHtml5 <span class="fu">=</span> <span class="dt">True</span>,
-						  writerHighlight <span class="fu">=</span> <span class="dt">True</span>,
-						  writerExtensions <span class="fu">=</span> newExtensions,
-						  writerHTMLMathMethod <span class="fu">=</span> <span class="dt">MathJax</span> <span class="st">&quot;&quot;</span>
-					    }
-	<span class="kw">in</span> pandocCompilerWith defaultHakyllReaderOptions writerOptions</code></pre></div></li>
-<li><p>In order for a web page to render LaTeX, it must link to the MathJax script.</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span>
-<span class="ot">    src=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div>
-Thus, to add MathJax functionality to all pages, add this add the end of default.html.</li>
-<li><p>The <a href="https://docs.mathjax.org/en/v2.5-latest/tex.html#defining-tex-macros">MathJax documentation</a> describes how to add packages and macros (so you can write <code>\R</code> for <code>\mathbb{R}</code>, for example). To do this, add a configuration file <code>MathJax/config/local/local.js</code>. The format is described in the link. Now modify the html code above to link to your configuration file. Note we must give the full, not relative, URL, so we set <code>siteURL</code> and add it to the context in site.hs. Then we change the link as follows:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span>
-<span class="ot">    src=</span><span class="st">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,$siteURL$/MathJax/config/local/local&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div></li>
-<li><p>TODO: script</p></li>
-</ol>
-<h2 id="code-highlighting">Code highlighting</h2>
-<p>Get <a href="https://highlightjs.org/download/">highlight.js</a> for all languages you will use, and put it in the folder highlight/ in the blog directory. Include the new css/js files in the pattern matches, and add the following script to default.html, changing the style as you’d like.</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;/highlight/styles/tomorrow-night-bright.css&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;/highlight/highlight.pack.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
-<span class="kw">&lt;script&gt;</span><span class="va">hljs</span>.<span class="at">initHighlightingOnLoad</span>()<span class="op">;&lt;</span><span class="ss">/script&gt;</span></code></pre></div>
-<p>To highlight code in posts, put name/abbreviation of the language at the start of the code block like this:</p>
-<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown"> ```haskell
-<span class="bn">    main = putStrLn &quot;Hello World!&quot;</span>
- ```</code></pre></div>
-<h2 id="footnotes">Footnotes</h2>
-<p><a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>, created by Lukas Mathis, shows the footnote when you hover over the number<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Once you have the js code, the procedure for adding this extension is standard: add a js file and include it in default.html:</p>
-<ol type="1">
-<li><p>Put the following into js/footnotes.js.</p>
-<pre class="js"><code>// this script requires jQuery
-$(document).ready(function() {
-    Footnotes.setup();
-});
-
-var Footnotes = {
-	footnotetimeout: false,
-    setup: function() {
-        var footnotelinks = $(&quot;a[rel='footnote']&quot;)
-
-        footnotelinks.unbind('mouseover',Footnotes.footnoteover);
-        footnotelinks.unbind('mouseout',Footnotes.footnoteoout);
-
-        footnotelinks.bind('mouseover',Footnotes.footnoteover);
-        footnotelinks.bind('mouseout',Footnotes.footnoteoout);
-    },
-    footnoteover: function() {
-        clearTimeout(Footnotes.footnotetimeout);
-        $('#footnotediv').stop();
-        $('#footnotediv').remove();
-
-        var id = $(this).attr('href').substr(1);
-        var position = $(this).offset();
-
-        var div = $(document.createElement('div'));
-        div.attr('id','footnotediv');
-        div.bind('mouseover',Footnotes.divover);
-        div.bind('mouseout',Footnotes.footnoteoout);
-
-        var el = document.getElementById(id);
-        div.html($(el).html());
-
-        div.css({
-            position:'absolute',
-            width:'400px',
-            opacity:0.9
-        });
-        $(document.body).append(div);
-
-        var left = position.left;
-        if(left + 420  &gt; $(window).width() + $(window).scrollLeft())
-            left = $(window).width() - 420 + $(window).scrollLeft();
-        var top = position.top+20;
-        if(top + div.height() &gt; $(window).height() + $(window).scrollTop())
-            top = position.top - div.height() - 15;
-        div.css({
-            left:left,
-            top:top
-        });
-    },
-    footnoteoout: function() {
-        Footnotes.footnotetimeout = setTimeout(function() {
-            $('#footnotediv').animate({
-                opacity: 0
-            }, 600, function() {
-                $('#footnotediv').remove();
-            });
-        },100);
-    },
-    divover: function() {
-        clearTimeout(Footnotes.footnotetimeout);
-        $('#footnotediv').stop();
-        $('#footnotediv').css({
-                opacity: 0.9
-        });
-    }
-}</code></pre></li>
-<li><p>Add this line to default.html:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;/js/footnotes.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></code></pre></div></li>
-<li><p>To add footnotes, write <code>[^f1]</code> at the location where you want the footnote, and then <code>[^f1]: footnote text</code> anytime later.</p></li>
-</ol>
-<h2 id="disqus-comments">Disqus comments</h2>
-<p>Disqus is an external comment management system that you can embed in your website.</p>
-<ol type="1">
-<li>Create an account at <a href="http://www.disqus.com">Disqus</a>. Follow the directions to add Disqus to the site.</li>
-<li><p>Here is the code to add to post.html. The page URL is the concatenation of <code>$siteURL$</code> and <code>$url$</code>.</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;disqus_thread&quot;</span><span class="kw">&gt;&lt;/div&gt;</span>
-<span class="kw">&lt;script&gt;</span>
-<span class="kw">var</span> disqus_config <span class="op">=</span> <span class="kw">function</span> () <span class="op">{</span>
-<span class="kw">this</span>.<span class="va">page</span>.<span class="at">url</span> <span class="op">=</span> $siteURL$$url$<span class="op">;</span> <span class="co">// Replace PAGE_URL with your page's canonical URL variable</span>
-<span class="kw">this</span>.<span class="va">page</span>.<span class="at">identifier</span> <span class="op">=</span> $url$<span class="op">;</span> <span class="co">// Replace PAGE_IDENTIFIER with your page's unique identifier variable</span>
-<span class="op">};</span>
-(<span class="kw">function</span>() <span class="op">{</span> <span class="co">// DON'T EDIT BELOW THIS LINE</span>
-<span class="kw">var</span> d <span class="op">=</span> document<span class="op">,</span> s <span class="op">=</span> <span class="va">d</span>.<span class="at">createElement</span>(<span class="st">'script'</span>)<span class="op">;</span>
-
-<span class="va">s</span>.<span class="at">src</span> <span class="op">=</span> <span class="st">'//holdenlee.disqus.com/embed.js'</span><span class="op">;</span>
-
-<span class="va">s</span>.<span class="at">setAttribute</span>(<span class="st">'data-timestamp'</span><span class="op">,</span> <span class="op">+</span><span class="kw">new</span> <span class="at">Date</span>())<span class="op">;</span>
-(<span class="va">d</span>.<span class="at">head</span> <span class="op">||</span> <span class="va">d</span>.<span class="at">body</span>).<span class="at">appendChild</span>(s)<span class="op">;</span>
-<span class="op">}</span>)()<span class="op">;</span>
-<span class="op">&lt;</span><span class="ss">/script&gt;</span>
-<span class="ss">&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/</span><span class="op">?</span>ref_noscript<span class="st">&quot; rel=&quot;</span>nofollow<span class="st">&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></div></li>
-</ol>
-<h2 id="github.io-integration">Github.io integration</h2>
-<p>The compiled html files should be kept separate from the uncompiled files, so by default Hakyll puts the compiled site in _site/. However, I don’t want the blog to be at <code>http://holdenlee.github.io/blog/_site/</code>, and I also want to put the uncompiled files on github. So I create a github repository called <code>blog</code>, make 2 branches <code>gh-pages</code> (which will be shown at http://holdenlee.github.io/blog) and <code>hakyll</code>. I maintain these branches in 2 directories on my computer, and have a script that copies <code>hakyll/_site/</code> to <code>blog</code> and pushes everything.</p>
-<p>In gitup2:</p>
-<pre><code>#!/bin/bash
-
-git add .
-git commit -a -m &quot;$1&quot;
-git push origin &quot;$2&quot;</code></pre>
-<p>In webup:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#!/bin/bash</span>
-
-<span class="kw">cp</span> -TRv hakyll/_site/ blog/
-<span class="kw">cd</span> hakyll
-<span class="kw">gitup2</span> <span class="st">&quot;</span><span class="ot">$1</span><span class="st">&quot;</span> hakyll
-<span class="kw">cd</span> ../blog
-<span class="kw">gitup2</span> <span class="st">&quot;</span><span class="ot">$1</span><span class="st">&quot;</span> gh-pages</code></pre></div>
-<p>Juan Pedro Villa has a <a href="http://www.stackbuilders.com/news/dr-hakyll-crea-una-pagina-de-github-con-hakyll-y-circleci">post</a> on how to integrate Hakyll with <a href="http://www.circleci.com">CircleCI</a>, which builds the site automatically every time you push to github (like the support that Github currently has for Jekyll). (I would like to use this, but am currently having trouble with getting the server to compile the Haskell files.)</p>
-<h2 id="social-media-buttons">Social media buttons</h2>
-<h2 id="additional-features">Additional features</h2>
-<p>There are many cool features I haven’t covered. I would like to add some of these in the future.</p>
-<ul>
-<li><a href>Auto-generated table of contents for each post</a> (cf. Wikipedia)</li>
-<li><a href>Shortcuts</a></li>
-<li>Analytics</li>
-</ul>
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>like this!<a href="#fnref1">↩</a></p></li>
-</ol>
-</section>
   </div>
-  
 
-  <div id="disqus_thread"></div>
+    
 
-  <div class="sharing">
+    <div class="sharing">
     <!-- facebook -->
-    <div class="fb-share-button" data-href="/posts/programming/haskell/hello-hakyll.html" data-layout="icon"></div>
-    <!-- google -->
-    <div class="g-plus" data-action="share"></div>
-    <!-- reddit -->
-    <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit1.gif" alt="submit to reddit" border="0" /> </a>
+    <div class="fb-share-button" data-href="http://holdenlee.github.io/blog/posts/programming/haskell/hello-hakyll.html" data-layout="button"></div>
     <!-- twitter -->
     <a href="https://twitter.com/share" class="twitter-share-button" {count}>Tweet</a>
+    <!-- google -->
+    <div class="g-plus" data-action="share" data-annotation="none"></div>
+    <!-- reddit -->
+    <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </div>
   

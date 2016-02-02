@@ -21,20 +21,26 @@
 
   <div class="blog-main">
     $body$
+
   </div>
-  $if(isPost)$
 
-  <div id="disqus_thread"></div>
+    $if(isPost)$
 
-  <div class="sharing">
+    <div class="sharing">
     <!-- facebook -->
-    <div class="fb-share-button" data-href=$url$ data-layout="icon"></div>
-    <!-- google -->
-    <div class="g-plus" data-action="share"></div>
-    <!-- reddit -->
-    <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit1.gif" alt="submit to reddit" border="0" /> </a>
+    <div class="fb-share-button" data-href=$siteURL$$url$ data-layout="button"></div>
     <!-- twitter -->
     <a href="https://twitter.com/share" class="twitter-share-button"{count}>Tweet</a>
+    <!-- google -->
+    <div class="g-plus" data-action="share" data-annotation="none"></div>
+    <!-- reddit -->
+    <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+
+    <div id="disqus_thread"></div>
+    $endif$
+
+
+  $if(isPost)$
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </div>
   $endif$

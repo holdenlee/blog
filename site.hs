@@ -107,7 +107,7 @@ main = hakyll $ do
       route idRoute
       compile $ do
         let mapCtx = constField "title" "Sitemap" <> basicCtx
-        let pt = debugShow $ makePostTree treeMap
+        let pt = makePostTree treeMap
         outline <- compileTree (blankTOCCtx <> postCtx) pt
         makeItem outline
           >>= loadAndApplyTemplate "templates/post.html" mapCtx
@@ -192,7 +192,7 @@ feedCompiler li renderer content tags =
         let feedCtx = tocCtx <> (postCtxWithTags tags) <>
                 bodyField "description"
         --take 10 most recent posts
-        posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/*" content
+        posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots (postPattern .&&. hasNoVersion) content
         renderer myFeedConfiguration feedCtx posts
 
 {-| Why use Atom? http://nullprogram.com/blog/2013/09/23/ -}

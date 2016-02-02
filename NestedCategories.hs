@@ -36,9 +36,9 @@ buildNestedCategories' = buildTagsWith getNestedCategory
 buildNestedCategories :: MonadMetadata m => Pattern -> (String -> Identifier) -> m ([([String], [Identifier])], Tags)
 buildNestedCategories pat f = do
   categories <- buildNestedCategories' pat f
-  let tagsMapList = debugSummary (\x -> "1:"++(show x)) $ nestCategories $ tagsMap categories
-  let tagsMap' = debugSummary (\x -> "2:"++(show x)) $ tagsMapList & ((mapped . _1) %~ joinPath)
-  let treeMap = debugSummary (\x -> "3:"++(show x)) $ treeCategories $ tagsMap categories
+  let tagsMapList = nestCategories $ tagsMap categories
+  let tagsMap' = tagsMapList & ((mapped . _1) %~ joinPath)
+  let treeMap = treeCategories $ tagsMap categories
   let treeMap' = M.toList $ M.fromList treeMap <> (M.map (const []) $ M.fromList tagsMapList)
   return (treeMap', categories{tagsMap = tagsMap'})
 

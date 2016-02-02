@@ -4,10 +4,14 @@ title: About
 
 I'm Holden Lee, a graduate student in math at Princeton. I started in Fall 2014. 
 
-My academic interests include:
+My main interest is in theoretical computer science, including:
 
-* Theoretical computer science
+* Complexity theory
+* Coding theory
 * Machine learning
+
+Other academic interests/hobbies include:
+
 * Functional programming
 * [Computerized mathematics](https://workflowy.com/s/jabfy5TOMg)
 * Number theory
