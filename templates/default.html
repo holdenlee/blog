@@ -31,17 +31,9 @@
   $endif$
 
   $if(isPost)$
-  <!-- Facebook -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-  <!-- Google -->
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- Extension : Share buttons @ http://www.sharethis.com/get-sharing-tools/# -->
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js">  </script>
+  <script type="text/javascript">stLight.options({publisher: "307929ab-483f-4a25-8ef0-76ff5bd12e05", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
   $endif$
 
 </head>

@@ -25,18 +25,12 @@
   </div>
 
     $if(isPost)$
-
-    <div class="sharing">
-    <!-- facebook -->
-    <div class="fb-share-button" data-href=$siteURL$$url$ data-layout="button"></div>
-    <!-- twitter -->
-    <a href="https://twitter.com/share" class="twitter-share-button"{count}>Tweet</a>
-    <!-- google -->
-    <div class="g-plus" data-action="share" data-annotation="none"></div>
-    <!-- reddit -->
-    <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
-
-    <div id="disqus_thread"></div>
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span> - See more at: http://www.sharethis.com/get-sharing-tools/#sthash.4HwqrA11.dpuf
     $endif$
 
 
