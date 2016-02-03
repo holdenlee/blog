@@ -1,6 +1,9 @@
 #!/bin/bash
 
 cygstart powershell "chcp 65001; ./site build"
+
+sleep 5
+
 cp -TRv _site/ ../blog/
 gitup2 "$1" hakyll
 cd ../blog
