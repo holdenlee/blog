@@ -23,6 +23,7 @@ Note that most of these are sketchy - use at your own risk. (*) means this is a 
 
 ## Other talks by date
 
+* ITCS 2016 ([notes for first half](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/itcs2016.pdf))
 * Restriction phenomenon, Larry Guth ([notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/10-19-larry-guth.pdf)) - 10/19/15
 * \*LLL lattice basis reduction algorithm ([notes](https://holdenlee.wordpress.com/2015/10/09/the-lll-lattice-basis-reduction-algorithm/), [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/lll.pdf)) - talk at Gems of TCS seminar 10/6/15
 * \*Barron's Theorem evades the curse of dimensionality ([post](https://holdenlee.wordpress.com/2015/08/05/barrons-theorem-neural-networks-evade-the-curse-of-dimensionality/), [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/barron1.pdf))

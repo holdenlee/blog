@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cygstart powershell "chcp 65001; ./site build"
+cp -TRv _site/ ../blog/
+gitup2 "$1" hakyll
+cd ../blog
+gitup2 "$1" gh-pages
