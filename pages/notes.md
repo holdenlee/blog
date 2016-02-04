@@ -10,8 +10,8 @@ Note that most of these are sketchy - use at your own risk. (*) means this is a 
 
 ## Current classes
 
-* [MAT529](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat529.pdf) (Topics in Analysis: Metric embeddings and geometric inequalities), [source](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/metric.zip).
-* [MAT597/PHY521](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat597.pdf) (Mathematical Physics), [source](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/physics.zip)
+* [MAT529](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat529.pdf) (Topics in Analysis: Metric embeddings and geometric inequalities), source on [github](https://github.com/holdenlee/mat529).
+* [MAT597/PHY521](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat597.pdf) (Mathematical Physics), source on [github](https://github.com/holdenlee/mat597)
 
 ## Recurring seminars
 
