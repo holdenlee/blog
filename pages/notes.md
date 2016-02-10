@@ -10,6 +10,8 @@ Note that most of these are sketchy - use at your own risk. (*) means this is a 
 
 ## Current classes
 
+I am collaborating on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](https://kiranvodrahalli.github.io/).
+
 * [MAT519](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat519.pdf) (Topics in Number Theory: Statistics of rational points on curves), source on [github](https://github.com/holdenlee/mat519)
 * [MAT529](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat529.pdf) (Topics in Analysis: Metric embeddings and geometric inequalities), source on [github](https://github.com/holdenlee/mat529).
 * [MAT597/PHY521](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat597.pdf) (Mathematical Physics), source on [github](https://github.com/holdenlee/mat597)
