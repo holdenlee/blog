@@ -19,9 +19,10 @@ I am collaborating on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](h
 ## Recurring seminars
 
 * Computer science and discrete mathematics (IAS) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/csdm.pdf)
+* Gems of TCS seminar (Tuesdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/gems_of_tcs.pdf)
 * Machine learning reading group [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/ml_seminar.pdf) 10/15 onwards
 * Mark Braverman's seminar (Tuesdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/braverman_seminar.pdf) 11/15 onwards
-* Gems of TCS seminar (Tuesdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/gems_of_tcs.pdf)
+* Probability and geometry, grad student and postdoc seminar (Wednesdays and Fridays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/prob_geo.pdf)
 * Simons meetings (monthly) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/simons.pdf) 9/15 onwards
 
 ## Other talks by date
