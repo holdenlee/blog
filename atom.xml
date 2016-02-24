@@ -8,8 +8,64 @@
         <name>Holden Lee</name>
         <email>oldheneel@gmail.com</email>
     </author>
-    <updated>2016-02-02T00:00:00Z</updated>
+    <updated>2016-02-23T00:00:00Z</updated>
     <entry>
+    <title>Welcome to Philosophocle!</title>
+    <link href="http://holdenlee.github.io/blog/posts/writing/philosophocle.html" />
+    <id>http://holdenlee.github.io/blog/posts/writing/philosophocle.html</id>
+    <published>2016-02-23T00:00:00Z</published>
+    <updated>2016-02-23T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Welcome to Philosophocle!</h1>
+    </div>
+    <div class="info">
+       <div class="subtitle"><p>A pinnacle of higher education</p></div> 
+       
+        <p>Posted: 2016-02-23 
+          , Modified: 2016-02-23 
+	</p>
+      
+       <p>Tags: <a href="/tags/fiction.html">fiction</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  
+
+  <div class="blog-main">
+    <p>I’m excited to start my (unpaid) job as webmaster of the Philosophocle blog <a href="philosophocle.tk" class="uri">philosophocle.tk</a>. Philosophocle is an institution of higher learning in a historically inwardly turned country that has sadly been neglected in current affairs. We hope that this blog will facilitate cultural exchange between Philosophocle and the wider world. Please read, subscribe, and share!</p>
+<p>Here is an excerpt of the first post, <a href="http://holdenlee.github.io/philosophocle/posts/the-street.html">The Street</a>.</p>
+<blockquote>
+<p>In Philosophocle, the street is lined with cafes and snackeries. Each advertises a different atmosphere. The high-class Starset has individual tables, uniformed waiters with silver-star badges, mochas drawn in the shape of maidens, and hot chocolate in tall glasses with swirly chocolate straws. The crowd-pleasing Delites offers bubble tea, self-serve yogurt machines with toppings, and mochis in tantalizing rows beneath cartoon pictures of themselves, the color of their filling leaking through their faces like a soft blush. <!--more--> Simplitea provides a tea bag, hot water, and a place to sit for 50 cents. At Delites you go with a group of friends - no one will pay attention to you if you go alone - but at Serendipiteas, you are ushered in to a random seat, facing someone you do not know. In Melli’s Flows the conversations never stop, hurried on by the always-present bubbling fountain (careful: the fish bite), and guests are encouraged to journey from table to table, with different h’ors d’oveures at each table to tempt (free with entrance ticket). <a href="http://holdenlee.github.io/philosophocle/posts/the-street.html">Read more.</a>.</p>
+</blockquote>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>Links and thoughts, 1/2016</title>
     <link href="http://holdenlee.github.io/blog/posts/monthly_summaries/1-16.html" />
     <id>http://holdenlee.github.io/blog/posts/monthly_summaries/1-16.html</id>
