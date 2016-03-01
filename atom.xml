@@ -1,51 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Mental Wilderness</title>
-    <link href="http://holdenlee.github.io/blog/atom.xml" rel="self" />
-    <link href="http://holdenlee.github.io/blog" />
-    <id>http://holdenlee.github.io/blog/atom.xml</id>
+    <title>Philosophocle</title>
+    <link href="http://holdenlee.github.io/philosophocle/atom.xml" rel="self" />
+    <link href="http://holdenlee.github.io/philosophocle" />
+    <id>http://holdenlee.github.io/philosophocle/atom.xml</id>
     <author>
-        <name>Holden Lee</name>
-        <email>oldheneel@gmail.com</email>
+        <name>Scholars of Philosophocle</name>
+        <email></email>
     </author>
-    <updated>2016-02-23T00:00:00Z</updated>
+    <updated>2016-02-29T00:00:00Z</updated>
     <entry>
-    <title>Welcome to Philosophocle!</title>
-    <link href="http://holdenlee.github.io/blog/posts/writing/philosophocle.html" />
-    <id>http://holdenlee.github.io/blog/posts/writing/philosophocle.html</id>
+    <title>Not a special day</title>
+    <link href="http://holdenlee.github.io/philosophocle/posts/leap-day.html" />
+    <id>http://holdenlee.github.io/philosophocle/posts/leap-day.html</id>
+    <published>2016-02-29T00:00:00Z</published>
+    <updated>2016-02-29T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Not a special day</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p class="subs">by Professor Whyse
+	</p>
+      
+       
+        <p class="subs">on 2016-02-29
+	</p>
+      
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <hr>
+
+  
+
+  <div class="blog-main">
+    <p>Fron has informed me that that today is a special day in the outside world called “leap day.” <!--more--> In every country besides ours, February has 28 days, except when it has 29 days, which happens every 4th year except every 100th year except every 400th year.</p>
+<p>“<em>29 days?</em>” Un asks, surprised and indignant, when I pass on the information to him. “Even when February earns an extra day, she still has fewer days than any other month?”</p>
+<p>Un finds such a custom symptomatic of the capitalistic and despotic tendencies of the outside world. A philosophy of inequality permeates their society so deeply that it manifests itself in their basic conception of time.</p>
+<p>“Like February, the poor stay poor,” Un says, “Once in a while they are given money or opportunity. And then? ‘Just kidding!’ as the Americans would say. Back to another 3 years of being <em>even shorter</em> than everyone else!”</p>
+<p>I of course challenge Un to demonstrate a link between foreign calendars and capitalism. After some well-spent hours on hemerological research, Un explains to me that the rulers of old, such as Augustus Caesar, had the habit of naming months after themselves, and stealing days from other months until their own namesake had 31 days. (They are quite foolish to believe that mortal humans can alter the flow of time in any way, for calendars are only artificial constructs. Time is a continuum, infinitely divisible and infinitely long, as beautiful, God-given, and untouchable by humans as the real numbers.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>) February, formerly the last month of the year, was the natural target of temporal theft.</p>
+<p>But, foreign reader, you must be wondering about our own calendary practices! In our calendary, all months have either 30 or 31 days, as is reasonable. This year, February has 30 days, as does its brother March. The intercalary (leap) day is shared among months as in a cooperative society; this year, May has the good fortune of having 31 days.</p>
+<p>Visitors often gripe about our system, staring dumbfoundedly at the discrepancy between the complimentary “Seasons of Philosophocle” calendars we offer them and their cell-phone clocks. Their frowns betray their thoughts: How dare a backwards society like ours inconvenience them with a date change! I beg to differ. It is us who are leading the way in egalitarianism, and the rest of the world refuses to follow.</p>
+<p>Some of our banks have caved to the pressure of the outside world. It seems that the date discrepancy has caused many glitches, including the loss of thousands of dollars, and investors going berserk on the phone while the bank tellers try unsuccessfully to give them a practical course in anger management. Here at Philosophocle, however, we are thankfully under no such financial pressure, and are free to pursue the higher fruits of intellectual endeavors.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Dave informs me that many physicists disagree. In particular, it may be possible for humans to be immortal by falling into “black holes”. This, however, does not sound like a pleasant experience.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
+
+  </div>
+
+    
+
+    <!-- Previous/next post-->
+    <div>
+    
+    
+    </div>
+    <br>
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Bloodfields</title>
+    <link href="http://holdenlee.github.io/philosophocle/posts/bloodfields.html" />
+    <id>http://holdenlee.github.io/philosophocle/posts/bloodfields.html</id>
+    <published>2016-02-26T00:00:00Z</published>
+    <updated>2016-02-26T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Bloodfields</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p class="subs">by Professor Whyse
+	</p>
+      
+       
+        <p class="subs">on 2016-02-26
+	</p>
+      
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <hr>
+
+  
+
+  <div class="blog-main">
+    <p>Dave, the techie, has created glasses that filter out non-red light. Thus, looking at the snowfields outside, we see fields of red that make us want to vomit. <!--more--> This reminds us that although snow insinuates itself as a symbol of purity and innocence, it is the cause of widespread death: many a family has met tragedy when their breadwinner dies in a snow-related traffic accident on eir way to work.</p>
+<p>These “blood-glasses” help us keep our focus, especially when we are feeling discouraged in our academic work: not only will we resist the hypnotic tendency to stare at the mounds of freshly-fallen snow and let our minds go blank, we will turn up our lips in disgust at the masochistic students building bloodmen (who will bleed to death slowly when the sun shines) outside, and aggressively close the window shades to avoid nausea, instead seeking refuge in our books.</p>
+<p>When I suggested to Dave that his invention would have been much more useful back in December, he told me that he, too, had been willfully blind to the dangers of snow until his father’s death. Despite the fact that the snow will soon melt, however, all his glasses have sold out, as many students reasoned that they would be cheaper now than at the beginning of next winter, just as The Shop of Forgotten Things marks up the prices of its umbrellas by 10% during rainy days. Dave reports that some of these students have found a secondary use of the glasses for the non-winter months ahead of us.</p>
+<p>“Blue light at night is harmful to our circadian rhythms,” Klarissa says, citing a research article on human biology, “so we use the glasses to study late while minimizing the effects on our sleep.”</p>
+<p>Dave apologizes for the shortage, and promises that before next winter, he will have manufactured many more such glasses.</p>
+
+  </div>
+
+    
+
+    <!-- Previous/next post-->
+    <div>
+    
+    
+    </div>
+    <br>
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Clarifications</title>
+    <link href="http://holdenlee.github.io/philosophocle/posts/clarifications.html" />
+    <id>http://holdenlee.github.io/philosophocle/posts/clarifications.html</id>
+    <published>2016-02-24T00:00:00Z</published>
+    <updated>2016-02-24T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Clarifications</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p class="subs">by Professor Whyse
+	</p>
+      
+       
+        <p class="subs">on 2016-02-24
+	</p>
+      
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <hr>
+
+  
+
+  <div class="blog-main">
+    <p>After my student, Fron, ran to my office excitedly yesterday evening, saying the weblog was up, I eagerly followed him to the computer lab. <!--more--> Many of our students were gathered around the screen. They watched me connect to the “Internet”, open the “browser”, and type in the “address” of our weblog.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>I was dismayed. Where was the introduction that I had mailed to our webmaster two weeks ago? Only after I had mailed the introduction did Fron inform me that it would be faster to send it over the Internet. This is what I did for the <a href="the-street.html">second post</a>. I typed it up and gave it to Fron, who told me with a frustrated look on his face that I was not supposed to type it with a typewriter, but a computer, or it would not get turned into bits to be sent over the Internet!</p>
+<p>I had closed my eyes and told Fron, “Breathe. Is it right for you to be frustrated at your professor? Given how many times professors have patiently explained things to you while possibly harboring unspoken thoughts about your lack of intelligence, could you not return the favor?”</p>
+<p>Fortunately, Fron is not Lisa, and was immediately chastised. He then proceeded to re-type the post and e-mail it. I believe Fron is a good student, even though he often gets caught in the spur of the moment. There is a reason that students in his year are called “sophomores.”</p>
+<p>After some discussion, we realized why my second post was up but not the first. I had communicated to the webmaster that my post was not to be published until he had received the other post as well. Fron, however, being more versed in electronic mail, had e-mailed a post of his own, before my handwritten post had arrived, triggering the webmaster’s criterion to publish prematurely. Together we decided to email the webmaster to clear up the confusion, and apologize for the lack of an introductory post.</p>
+<p>Our next topic of discussion was Fron’s post. “Of all the topics you could have weblogged about, why did you choose <a href="PHSS.html">PHSS</a>? And of all the wonderful shows we have on PHSS, why did you choose the unnamed radio hour? I find this narrowly focused article unrepresentative of our institution.”</p>
+<p>“But professor, Dr. Drim told us in Creative Writing class that it is always better to be specific than general, and that we should write about what moves us emotionally, rather than what we feel like is ‘representative’. There is no one article that can be representative of Philosophocle, because Philosophocle is made of disparate parts. (Perhaps we should change our motto to ‘pinnacles of higher education’?) How can we have true cultural exchange if we only exchange the parts that are ‘representative’?”</p>
+<p>I admitted that Fron had a point, and turned to the more pressing issue of the missing post. I suggested that the webmaster backdate the introductory post to be the first post. However, the webmaster informed me in the e-mail chat that he had not yet received the introductory post!</p>
+<p>“Professor,” Fron said over my shoulder, “Backdating is something that the outside world does, usually for financial gain. We do not want to associate ourselves with that, do we?”</p>
+<p>Once again I had to admit my student was right. It is uncertain when the introductory post will arrive. The webmaster has assured me he will put it up immediately after he receives it.</p>
+<p>I feel like I am behind the times. After some bargaining, Fron has agreed to teach me the basics of computers<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, in return for some tutoring in philosophy. I naturally agreed.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The use of such a familiar term around unfamiliar technology is comforting. I find the term “browser”, however, a misnomer, for it reminds me of the actions of zebras on the safari. Fron informed me that it is that other meaning of “browse” that is intended, namely, looking cursorily and non-seriously through documents. I object to this meaning because of its connotation: will foreign eyes look cursorily and non-seriously at the going-ons in our institution?<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>I told him that I had read a book on Computability Theory. However, he informed me that this was not relevant to actual computers.<a href="#fnref2">↩</a></p></li>
+</ol>
+</section>
+
+  </div>
+
+    
+
+    <!-- Previous/next post-->
+    <div>
+    
+    
+    </div>
+    <br>
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>PHSS</title>
+    <link href="http://holdenlee.github.io/philosophocle/posts/PHSS.html" />
+    <id>http://holdenlee.github.io/philosophocle/posts/PHSS.html</id>
     <published>2016-02-23T00:00:00Z</published>
     <updated>2016-02-23T00:00:00Z</updated>
     <summary type="html"><![CDATA[
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Welcome to Philosophocle!</h1>
+      <h1>PHSS</h1>
     </div>
     <div class="info">
-       <div class="subtitle"><p>A pinnacle of higher education</p></div> 
+      
        
-        <p>Posted: 2016-02-23 
-          , Modified: 2016-02-23 
+        <p class="subs">by Fron
 	</p>
       
-       <p>Tags: <a href="/tags/fiction.html">fiction</a></p> 
+       
+        <p class="subs">on 2016-02-23
+	</p>
+      
     </div>
     
   </div>
   <!--/div-->
 
+  <hr>
+
   
 
   <div class="blog-main">
-    <p>I’m excited to start my (unpaid) job as webmaster of the Philosophocle blog <a href="http://philosophocle.tk">philosophocle.tk</a>. Philosophocle is an institution of higher learning in a historically inwardly turned country that has sadly been neglected in current affairs. We hope that this blog will facilitate cultural exchange between Philosophocle and the wider world. Please read, subscribe, and share!</p>
-<p>Here is an excerpt of the first post, <a href="http://holdenlee.github.io/philosophocle/posts/the-street.html">The Street</a>.</p>
-<blockquote>
-<p>In Philosophocle, the street is lined with cafes and snackeries. Each advertises a different atmosphere. The high-class Starset has individual tables, uniformed waiters with silver-star badges, mochas drawn in the shape of maidens, and hot chocolate in tall glasses with swirly chocolate straws. The crowd-pleasing Delites offers bubble tea, self-serve yogurt machines with toppings, and mochis in tantalizing rows beneath cartoon pictures of themselves, the color of their filling leaking through their faces like a soft blush. <!--more--> Simplitea provides a tea bag, hot water, and a place to sit for 50 cents. At Delites you go with a group of friends - no one will pay attention to you if you go alone - but at Serendipiteas, you are ushered in to a random seat, facing someone you do not know. In Melli’s Flows the conversations never stop, hurried on by the always-present bubbling fountain (careful: the fish bite), and guests are encouraged to journey from table to table, with different h’ors d’oveures at each table to tempt (free with entrance ticket). <a href="http://holdenlee.github.io/philosophocle/posts/the-street.html">Read more.</a></p>
-</blockquote>
+    <p>Studying late at night, it can be tempting to turn on the radio to see what is playing on the school’s station, PHSS (pronounced, “fiss”). At 3 or 4 in the morning, the programs are often unconventional. <!--more--> One day it might be “Mocha moves dance music,” another day it might be one student’s sleepless soliloquy on the current state of the world, another day it might be “the sound of various things dropping, like pins, toilet paper rolls, and feathers,” on another, it might be a student reciting a book of “American Knock-knock jokes.” It is fascinating, during those early-morning nights when one feels that one is the only person alive in the world, to feel oneself on the periphery as one tunes in to the story of another’s life - or as much of it as can be inferred from the crackly soundwaves.</p>
+<p>I discovered these programs when, one night, grabbing my alarm-clock-cum-radio from my bedside table to check my remaining time to sleep before my early flight, accidentally hit the “on” switch. I soon forgot all about sleep as I listened to a mellifluous voice talking about various luminescent creatures in the deep sea. Those soundwaves have echoed in my head as I traveled from Philosophocle, and became a symbol for nostalgia: for in my travels abroad, I have never heard a voice so content with esoterica as the mysterious stranger on that radio whom I have never been able to identify.</p>
+<p>Since then I have been a follower of this unnamed radio hour, “programming” my radio to turn on for one hour and whisper into my pillow. Many times, some of the words warp into my dreams. Today, however, I was jolted awake by a voice unlike any I had heard previously, “You know what, no one is listening at this time of night anyway, so I can do whatever I want! I think I’m going to play this favorite tune of mine, it’s called armpit farting, by Yours Truly!” I need not describe the cacophony that followed; I had to shut off the radio and whisper “luminescent jellyfish” a few hundred times before I could fall asleep again.</p>
+<p>When I woke up, I prepared to let the radio program be a forgotten nightmare. Imagine my horror when, arriving at Introduction to Data Science just in time as the teacher started lecture (using the methods of the course, over a period of 20 days I had found the exact second I should leave the dorm to arrive on time to class 95% of the time), I found that the entire front row of students had started to engage in that vulgar activity, and the rest of the class was erupting in laughs, some genuine and some uneasy! I had always thought myself one of few that listened to the unnamed radio hour, but now I realize my error in believing that something so interesting could escape the attention of students who fed on soul-enlightening moments. (It is the same error of romanticizing that one is the only person in existence late at night.) The whole incident had become “viral,” and a quite many people had obtained recordings of the 11:58 performance, much to my dismay in the rest of the classes. I wished I could be as nonchalant as the professors, who knew that to object was the fan the flames of student ridicule (“throwing nuts from heaven”), but could only, alas, whisper “luminescent jellyfish” to myself.</p>
+<p>No one was happier about the incident than Yano, whose thesis had been “Virality as a natural phenomenon.” We had prided ourselves on the resistance of Philosophocle to the crass forms of virality that, in the outside, digitized world, was symptomatic of attention deficit disorder, temptation irresistance, and a general sense of modern meaninglessness, so Yano had little to write about until today, when he can be found dashing from classroom to dining area to common room with a recorder on hand, cataloguing the first viral outbreak as it occurred.</p>
 
   </div>
 
     
+
+    <!-- Previous/next post-->
+    <div>
+    
+    
+    </div>
+    <br>
 
     <!-- Extension : Sharing buttons @ www.sharethis.com -->
     <span class='st_facebook_large' displayText='Facebook'></span>
@@ -66,232 +300,58 @@
 ]]></summary>
 </entry>
 <entry>
-    <title>Links and thoughts, 1/2016</title>
-    <link href="http://holdenlee.github.io/blog/posts/monthly_summaries/1-16.html" />
-    <id>http://holdenlee.github.io/blog/posts/monthly_summaries/1-16.html</id>
-    <published>2016-02-02T00:00:00Z</published>
-    <updated>2016-02-02T00:00:00Z</updated>
+    <title>The Street</title>
+    <link href="http://holdenlee.github.io/philosophocle/posts/the-street.html" />
+    <id>http://holdenlee.github.io/philosophocle/posts/the-street.html</id>
+    <published>2016-02-22T00:00:00Z</published>
+    <updated>2016-02-22T00:00:00Z</updated>
     <summary type="html"><![CDATA[
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Links and thoughts, 1/2016</h1>
+      <h1>The Street</h1>
     </div>
     <div class="info">
       
        
-        <p>Posted: 2016-02-02 
-          , Modified: 2016-02-02 
+        <p class="subs">by Professor Whyse
 	</p>
       
-       <p>Tags: <a href="/tags/links.html">links</a></p> 
+       
+        <p class="subs">on 2016-02-22
+	</p>
+      
     </div>
     
   </div>
   <!--/div-->
 
-  
-
-  <div class="blog-main">
-    <p>Here’s a list of what I’ve read/listened to/watched the past month.</p>
-<p>(*) means particularly interesting, and (h) are links to personal highlights.</p>
-<p>I’m taking notes on the classes I’m attending this semester (tenatively MAT515, MAT597, and MAT519). They will be available under the “Notes” tab above.</p>
-<ul>
-<li>Rationality, Productivity, Life advice
-<ul>
-<li><a href="http://lesswrong.com/lw/dr/generalizing_from_one_example/">Generalizing from one example</a> (<a href="http://scrible.com/s/kzAym">h</a>)</li>
-<li><a href="http://scienceblogs.com/mixingmemory/2006/11/16/the-illusion-of-explanatory-de/">The illusion of explanatory depth</a> (<a href="http://scrible.com/s/61N66">h</a>), see also <a href="http://www.scotthyoung.com/blog/2015/12/22/illusion-of-explanatory-depth/">here</a>, <a href="http://www.yale.edu/cogdevlab/aarticles/IOED%20proofs.pdf%201.pdf">original paper</a></li>
-<li>I started using <a href="http://mnemosyne-proj.org/">Mnemosyne</a>, a flash-card tool that uses spaced repetition.
-<ul>
-<li><a href="https://nihongoperapera.com/mnemosyne.html">Using memory software to learn Japanese</a></li>
-<li>Why isn’t spaced repetition software more popular? <a href="http://qsdeutschland.de/en/why-isnt-spaced-repetition-software-more-popular/">Part 1</a>, <a href="http://qsdeutschland.de/en/why-isnt-spaced-repetition-software-more-popular-part-2/">Part 2</a></li>
-<li><a href="http://lesswrong.com/lw/juq/a_vote_against_spaced_repetition/">When is spaced repetition appropriate?</a></li>
-<li><a href="http://lesswrong.com/lw/dr/generalizing_from_one_example/">20 rules</a> (<a href="http://scrible.com/s/kzAym">h</a>) (I’m not sure I agree with all these. Use your judgment.)</li>
-<li>If you like a nice-looking web app instead, try <a href="http://www.memrise.com/">Memrise</a>.</li>
-</ul></li>
-<li>Life advice
-<ul>
-<li>(*) <a href="http://mindingourway.com/stop-trying-to-try-and-try/%20http://scrible.com/s/iHN0m">Stop trying to try and just try</a> (<a href="http://scrible.com/s/iHN0m">h</a>)</li>
-<li><a href="http://mindingourway.com/the-art-of-response/">The art of response</a> (<a href="http://scrible.com/s/iHN0m">h</a>)</li>
-<li><a href="http://www.cracked.com/blog/6-harsh-truths-that-will-make-you-better-person/">6 harsh truths that will make you a better person</a> (Summary: What you are is determined by what you do, and is important insofar as it determines what you do. Don’t say “deep inside me there’s a writer,” just write. The world is a needy place - it does no good to “need” things. Produce things of value. It’s easier to criticize than create - but a little bit of creation is far braver than a vast mountain of criticizing.)</li>
-<li><a href="http://qz.com/584874/you-probably-know-to-ask-yourself-what-do-i-want-heres-a-way-better-question/">Don’t ask yourself what do I want to do</a> <a href="http://scrible.com/s/4FN46">h</a> (Summary: Don’t ask what you’re passionate about, ask what struggles you’re willing to endure.)</li>
-<li><a href="http://markmanson.net/passion">Screw finding your passion</a></li>
-</ul></li>
-<li><a href="http://alexzhu.me/2015/06/22/the-vulnerability-in-giving-criticism/">“Giving honest negative feedback to someone we care about can actually be a huge display of vulnerability.”</a> (<a href="http://scrible.com/s/g3x2m">h</a>)</li>
-<li><a href="http://alexzhu.me/2015/04/06/materialism-vs-experientialism-is-a-wrong-dichotomy/">Materialism vs. experientialism is a wrong dichotomy</a> (<a href="http://scrible.com/s/g3N2m">h</a>)</li>
-<li><a href="https://www.quora.com/What-are-some-blogs-websites-I-would-like-if-I-like-The-Last-Psychiatrist">What are some blogs/websites I would like if I like The Last Psychiatrist?</a></li>
-<li>(*) <a href="http://www.scottaaronson.com/blog/?p=1820">Eigenmorality</a> A circular definition of morality isn’t vacuous - it defines morality as a fixed point, in much the same way that importance is defined by PageRank. What follows from this definition?</li>
-</ul></li>
-<li>Education
-<ul>
-<li><a href="https://tjzager.wordpress.com/2016/01/05/my-criteria-for-fact-based-apps/">Criteria for fact-based apps</a> What makes a app teaching multiplication facts, etc. good?</li>
-<li><a href="http://blog.mrmeyer.com/2016/problem-based-learning-needs-a-different-crux/">Problem-based learning needs a different crux</a> - Don’t try to “elicit the right question” - that’s mind control.</li>
-</ul></li>
-<li>Programming, Haskell
-<ul>
-<li><a href="http://degoes.net/articles/engineer-entrepreneur/">Dear Engineer: So, You Wanna Become an Entrepreneur?</a>, John A De Goes</li>
-<li><a href="http://degoes.net/articles/modern-fp/">Free monads as a modern architecture for FP</a></li>
-<li><a href="http://aaronlevin.ca/post/136494428283/extensible-effects-in-the-van-laarhoven-free-monad">Extensible Effects in the van Laarhoven Free Monad</a></li>
-<li><a href="https://superginbaby.wordpress.com/2015/04/08/teaching-haskell-to-a-10-year-old-day-1/">Teaching Haskell to a 10 year old</a></li>
-</ul></li>
-<li>Podcasts
-<ul>
-<li>Freakonomics Radio: <a href="http://freakonomics.com/2016/01/28/is-americas-education-problem-really-just-a-teacher-problem-a-freakonomics-radio-rebroadcast/">Is America’s education problem really just a teacher problem?</a> Instead of framing as “replace all bad teachers by good teachers,” ask makes teachers great and change the system to teach those qualities.</li>
-<li>IndieFeed
-<ul>
-<li><a href="http://indiefeedpp.libsyn.com/sarah-kay-the-table-game">Sarah Kay</a></li>
-<li><a href="http://indiefeedpp.libsyn.com/cristin-okeefe-aptowicz-the-end-of-it">The End of It</a></li>
-</ul></li>
-<li>(*) Reply-all/Radiolab: <a href="https://gimletmedia.com/episode/50-the-cathedral/">The Cathedral</a> A moving piece on the creation of <a href="http://www.thatdragoncancer.com/#home">That Dragon, Cancer</a>, a computer game based off a parent’s experience losing a child to cancer.</li>
-<li>TED Radio Hour
-<ul>
-<li><a href="http://www.npr.org/programs/ted-radio-hour/462178064/building-better-cities?showDate=2016-01-08">Building better cities</a>
-<ul>
-<li>Daniele Quercia talks about making an mapping app that focuses on the most beautiful parts of cities (found through crowdsourcing).</li>
-<li><p>Benjamin Barber and Kasim Reed talk about how mayors are the ones solving some of the most challenging social problems. Mayors are closer to the people (cities are closer to direct democracy), and focus on problem-solving rather than ideology. Barber created the <a href="http://www.globalparliamentofmayors.org/">Global Parliament of Mayors</a>. (<a href="http://scrible.com/s/01xOm">h1</a>, <a href="http://scrible.com/s/21xOm">h2</a>)</p>
-<blockquote>
-<p>Until you see a city how people who are most in need of help see it, you’re never going to reach them… And I think that if you don’t take care of the basics and do them very well -make sure that the finances of the city are well-run, make sure that you provide police services, pick up trash, fix potholes - that you will never be able to do anything aspirational. And once you take on those issues and solve them, the public will then allow you to spend resources on the things that you care about.</p>
-</blockquote></li>
-</ul></li>
-<li><a href="http://www.npr.org/programs/ted-radio-hour/368757408/courage?showDate=2016-01-15">Courage</a></li>
-</ul></li>
-<li>This American Life
-<ul>
-<li><a href="http://www.thisamericanlife.org/radio-archives/episode/576/say-yes-to-christmas">Say Yes to Christmas</a> Christmas improv</li>
-<li>(*) <a href="http://www.thisamericanlife.org/radio-archives/episode/577/something-only-i-can-see">Something only I can see</a> Particularly recommend Act 1 on how a muscular dystrophy patient found a connection between her genes and a famous athlete’s.</li>
-<li><a href="http://www.thisamericanlife.org/radio-archives/episode/198/how-to-win-friends-and-influence-people">How to win friends and influence people</a> In particular Act 3 on dressing as Superman.</li>
-<li><a href="http://www.thisamericanlife.org/radio-archives/episode/214/family-physics">Family physics</a></li>
-<li>(*) <a href="http://www.thisamericanlife.org/radio-archives/episode/545/if-you-dont-have-anything-nice-to-say-say-it-in-all-caps">If you don’t have anything nice to say, SAY IT ALL IN CAPS</a> Act 1 on a Internet troll’s repentance</li>
-<li>(*) <a href="http://www.thisamericanlife.org/radio-archives/episode/575/poetry-of-propaganda">Poetry of Propaganda</a> Act 1 on an ad campaign targeted to guerrillas to lay down their arms, including Christmas trees in the jungle. (cf. <a href="https://medium.com/@pericarus/paris-and-memetic-immunity-ed74b46a2a63#.vnor3bs2n">memetic immunity</a> from <a href="https://holdenlee.wordpress.com/2015/12/07/november-links-and-activities/">11-2015 links</a>)</li>
-</ul></li>
-<li>99 percent invisible
-<ul>
-<li><a href="http://99percentinvisible.org/episode/tube-benders/">193 Tube Benders</a> - On the art and symbolism of neon signs.</li>
-<li><a href="http://99percentinvisible.org/episode/tube-benders/">192 Pagodas and Dragon Gates</a> - How the architecture of Chinatown came to be.</li>
-<li><a href="http://99percentinvisible.org/article/least-resistance-desire-paths-can-lead-better-design/">Desire paths</a></li>
-</ul></li>
-<li>To keep my Chinese in practice, I decided to find some Chinese podcasts: <a href="http://www.fluentu.com/chinese/blog/2014/01/18/chinese-podcasts/">1</a>, <a href="https://www.quora.com/What-are-the-best-podcasts-for-learning-Mandarin">2</a>, <a href="http://chinesehacks.com/resources/web/the-question-of-chinese-language-podcasts/">3</a> I decided on:
-<ul>
-<li><a href="http://youngloveplay.blogspot.hk/">青春愛消遣</a> - An entertaining talk show from Taiwan</li>
-<li><a href="https://itunes.apple.com/us/podcast/ted-yan-jiang-zhong-wen-lang/id1062746362?mt=2">TED in Chinese</a></li>
-</ul></li>
-<li>Fun
-<ul>
-<li>(*) <a href="http://undertale.com/">Undertale</a> is an AMAZING game. It has amazing story and character, great gameplay, good humor, inventive mechanics, and lots of easter eggs. Most interestingly, it subverts the RPG genre of killing monsters, allowing a pacifist run that brings out the “true story” (on the flip side, there’s a genocide run…) AND people have turned the boss battles into Stepmania:
-<ul>
-<li><a href="https://www.youtube.com/watch?v=n_TQJpJ9Vbk">Spider dance</a> (<a href="http://www.mediafire.com/download/o38bue4z20t75fj/Spider+Dance+SM5+%5BTaroNuke%5D.zip">download</a>)</li>
-<li><a href="https://www.youtube.com/watch?v=0kGi9LE21dU">Megalovania</a>, (<a href="http://www.mediafire.com/download/2wodo9hq95wfqop/Megalovania+SM5+%5BTaroNuke%5D.zip">download</a>)</li>
-<li><a href="https://www.youtube.com/watch?v=b4XpLFeQF8c">Metal crusher</a> (<a href="http://www.mediafire.com/download/ch5m2ozo4kxei54/Metal+Crusher+SM5+%5BTaroNuke%5D.zip">download</a>)</li>
-</ul></li>
-<li>Participated in the <a href="http://huntception.com/">MIT Mystery Hunt</a>. <a href="http://huntception.com/puzzle/identify_sort_index_solve/">A math puzzle we enjoyed</a>, <a href="http://huntception.com/puzzle/replication/">a math puzzle we did not enjoy</a>.</li>
-<li><a href="http://pnis.co/scinews/vol3/cake_cut_algorithm.html">A satire of cake-cutting</a></li>
-<li>Vi Hart!
-<ul>
-<li><a href="https://vimeo.com/147403169">Shepard Tones</a></li>
-<li><a href="https://vimeo.com/147908916">Float: A puzzle game for VR</a></li>
-</ul></li>
-<li>(*) <a href="http://mathwithbaddrawings.com/2016/01/20/the-number-line-a-journey/">The number line: A Journey</a></li>
-</ul></li>
-<li>Other
-<ul>
-<li><a href="http://qz.com/586941/whats-eating-silicon-valley/">What’s eating Silicon Valley?</a></li>
-<li><a href="http://slatestarcodex.com/2015/12/08/book-review-hive-mind/">Hive Mind</a></li>
-<li><a href="http://blogs.scientificamerican.com/beautiful-minds/the-difference-between-extraversion-and-extroversion/">Extraversion vs. Extroversion</a></li>
-<li><a href="http://www.sciencealert.com/scientists-discover-a-new-way-to-cook-rice-that-could-halve-the-calories">A new way to cook rice that halves the calories</a></li>
-<li><a href="http://elitedaily.com/social-news/bernie-sanders-ice-cream-ben-jerrys/1341550/">Bernie Sanders ice cream</a></li>
-<li>Learned about <a href="https://www.technologyreview.com/s/422511/the-fantastical-promise-of-reversible-computing/">reversible computing</a> (<a href="https://en.wikipedia.org/wiki/Reversible_computing">wikipedia</a>)</li>
-<li><a href="http://www.smithsonianmag.com/history/why-footbinding-persisted-china-millennium-180953971/">Why foot-binding persisted in China for over a millenium</a></li>
-<li>Random professor stalking: <a href="https://www.math.upenn.edu/~ghrist/index.html">Robert Ghrist</a> - Funny Little Calculus Book; Elementary Applied Topology</li>
-</ul></li>
-</ul></li>
-<li>Books I read/am reading
-<ul>
-<li><a href="https://www.goodreads.com/book/show/13642710-nexus?ac=1&amp;from_search=1">Nexus, Ramez Naam</a> - An incredible exploration of what happens when we can program our own minds. One of the big themes is the decision between technological freedom and censorship. 5 stars.</li>
-<li><a href="https://www.goodreads.com/book/show/27304.Buddha?ac=1&amp;from_search=1">Buddha, Karen Armstrong</a> - A great intro to Buddhism. 4 stars.</li>
-<li><a href="https://www.goodreads.com/book/show/94486.The_Invention_of_Morel?ac=1&amp;from_search=1">The Invention of Morel, Adolfo Bioy Casares</a> - 3 stars.</li>
-<li><a href="https://www.goodreads.com/book/show/109588.The_Great_Conversation?ac=1&amp;from_search=1">The Great Conversation, Normal Melchert</a> - A comprehensive and clear overview of Western philosophy. I’m taking <a href="https://workflowy.com/s/wL3CyEXpHY#/298b0d4456a6">notes</a>. (I took this as a recommendation for a philosophy textbook from <a href="http://lesswrong.com/lw/3gu/the_best_textbooks_on_every_subject/">the best textbooks on every topic</a>.)</li>
-<li><a href="https://www.goodreads.com/book/show/3730120-in-the-land-of-invented-languages?ac=1&amp;from_search=1">In the Land of Invented Languages, Arika Okrent</a></li>
-<li><a href="https://www.goodreads.com/book/show/209574.The_Heart_of_the_Buddha_s_Teaching?ac=1&amp;from_search=1">The Heart of the Buddha’s Teaching, Thich Nhat Hanh</a></li>
-<li>Short stories I liked from 1/2016 issue of Science Fiction and Fantasy:
-<ul>
-<li>The White Piano, David Gerrold</li>
-<li>Caspar D. Luckinbill, What are you going to do?, Nick Wolven</li>
-<li>Robot from the future, Terry Bisson</li>
-</ul></li>
-</ul></li>
-</ul>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Hello Hakyll!</title>
-    <link href="http://holdenlee.github.io/blog/posts/programming/haskell/hello-hakyll.html" />
-    <id>http://holdenlee.github.io/blog/posts/programming/haskell/hello-hakyll.html</id>
-    <published>2016-02-01T00:00:00Z</published>
-    <updated>2016-02-01T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Hello Hakyll!</h1>
-    </div>
-    <div class="info">
-       <div class="subtitle"><p>Moving from Wordpress to Hakyll</p></div> 
-       
-        <p>Posted: 2016-02-01 
-          , Modified: 2016-02-02 
-	</p>
-      
-       <p>Tags: <a href="/tags/haskell.html">haskell</a>, <a href="/tags/blogging.html">blogging</a>, <a href="/tags/web%20design.html">web design</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
+  <hr>
 
   
 
   <div class="blog-main">
-    <h2 id="why-hakyll">Why Hakyll?</h2>
-<p>I’ve decided to switch blogging platforms from Wordpress to <a href="https://jaspervdj.be/hakyll/">Hakyll</a>, a website generation platform that can be customized using Haskell. All previous posts will remain on <a href="http://holdenlee.wordpress.com/">Wordpress site</a>, but the site will no longer be updated.</p>
-<p>The following two blog posts articulate some of my reasons for switching to Hakyll:</p>
-<ul>
-<li><a href="http://karpathy.github.io/2014/07/01/switching-to-jekyll/">Why switch from Wordpress to Jekyll?</a></li>
-<li><a href="http://mark.reid.name/blog/switching-to-hakyll.html">Why switch from Jekyll to Hakyll?</a></li>
-</ul>
-<p>The main reason is that I want to have complete control over the content:</p>
-<ol type="1">
-<li>I want to edit blog posts as text (markdown) files on my computer, rather than inside an editor in the browser. Firstly, it’s simpler to edit them as text files. Relying on a formatting toolbar for editing posts (lists, bold, quotes, etc.) can be frustrating: often the bulleted lists get corrupted and I have to mess with the html to fix them). In Markdown, I can do all the basic formatting very simply, without having to click something external to the text, or work directly with html.</li>
-<li>Having blog posts as simple files means it is easy to import and export material that I write, or convert it to a different format as I wish. I can organize blog posts as I do my own file system. See <a href="http://www.gwern.net/About#long-site">Gwern</a>, especially the quote by Julian Assange, on why a simple format, good organization, and control over content help writing survive.</li>
-<li>I have complete control in the sense that I can create arbitrary scripts to turn the text files into published posts. For example, I can add footnotes, enable latex macros, enable comments, and automatically build a hierarchical <a href="/sitemap.html">sitemap</a> of all posts. I can make arbitrary macros for common patterns (ex. links to wikipedia pages) if I wanted to. Moreover, I can write the scripts in Haskell!</li>
-<li>There are many beautiful blogs and websites written in Haskell, for example, <a href="http://colah.github.io">Chris Olah’s blog</a> and <a href="http://www.gwern.net/">Gwern’s site</a>. Much of the design on this blog is copied from Chris Olah’s blog and <a href="https://github.com/oinkina">oinkina</a>.</li>
+    <p>In Philosophocle, the street is lined with cafes and snackeries. Each advertises a different atmosphere. The high-class Starset has individual tables, uniformed waiters with silver-star badges, mochas drawn in the shape of maidens, and hot chocolate in tall glasses with swirly chocolate straws. The crowd-pleasing Delites offers bubble tea, self-serve yogurt machines with toppings, and mochis in tantalizing rows beneath cartoon pictures of themselves, the color of their filling leaking through their faces like a soft blush. <!--more--> Simplitea provides a tea bag, hot water, and a place to sit for 50 cents. At Delites you go with a group of friends - no one will pay attention to you if you go alone - but at Serendipiteas, you are ushered in to a random seat, facing someone you do not know. In Melli’s Flows the conversations never stop, hurried on by the always-present bubbling fountain (careful: the fish bite), and guests are encouraged to journey from table to table, with different h’ors d’oveures at each table to tempt (free with entrance ticket).</p>
+<p>There are tea houses to suit every taste - for the poor and the rich, for those who enjoy talking about the weather<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> to those who enjoy talking about ancient philosophy, world problems, or the most vulnerable yearning parts of one’s soul. (There is one for quick romances as well, Impassioatta.) I would suggest consulting the Unofficial Guide to Tea, released by the Students for Students Club at the University, but it is not updated as often as the teahouses change managers or compete to put up new menus, so it is easy to fall out of date. On the plus side, there has been a recent influx of art majors on the Committee, and they have decided to represent the major flavors of tea and coffee at the different teahouses with characters, which they give personalities - Green at The Leafy Bough is a gentleman in a suit, who will proffer you napkins before you ask for them, as opposed to Silk at Melli’s, a smooth-talking man in a rainbow shirt whose hands are always moving, as opposed to Matcha at Delites, a plump little girl who will tell you all about the newest episodes of the current anime that is sweeping those into Eastern culture.</p>
+<p>Recently there has been a new addition. The Electric Eel, it is called, and it looks like it has been dropped here from another continent. It has an imported neon sign that flashes, its mascot eel alternating between blue and electric yellow. It is taking a lot of business away from the other teahouses. They dim their lights, turn on fog machines during the evenings, and serve iced tea rather than hot tea. If you ask me, they dilute the tea with too many ice cubes, but a lot of people seem to like clinking them around in their glasses. There is a dance floor, with strips of light flowing around the walls. There is some guy there who gives dance lessons, not the kind of ballroom dancing you do with a partner, but a dance you do individually. I hear that it is amazing, people lined up in rows trying to copy the Great Danzini as they creak their joints in 360 degrees of movement and the “disco ball” alternately spotlights different amateur dancers. No one knows whether there is one Danzini or three or ten, behind his mask - how can one man stay up dancing every night for so many hours? He never talks. He gets lots of tips.</p>
+<p>I am not so sure about the Electric Eel. Some of us think it is a bad influence from the Continent, where such things are called “nightclubs” and are home to uncontrolled lewdness (Impassionatta, on the other hand, is quite controlled.). But we of course let the students have their fun, as long as they are not violent.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Talking about the weather at Philosophocle is a very serious matter! For it is impossible to reduce the state of the weather to a word like “cloudy” or “sunny,” the emotions of the sky are more variegated than the emotions of people, being so much vaster in scope.<a href="#fnref1">↩</a></p></li>
 </ol>
-<h2 id="next-steps">Next steps</h2>
-<p>I plan to write a post on how I set up this blog. In the meantime I’m still working on setting up some features and improving the design. Any comments on the site (or bug reports, or pointers) are welcome.</p>
-<p>I’m currently using TiddlyWiki for my <a href="http://holdenlee.github.io">website</a>. Right now I have mixed feelings about TiddlyWiki - it’s a easy-to-update wiki with many great features, but doesn’t offer the simplicity and control that a Hakyll site does. I may change it in the future, but for time being I’ll keep it as it is.</p>
+</section>
 
   </div>
 
     
+
+    <!-- Previous/next post-->
+    <div>
+    
+    
+    </div>
+    <br>
 
     <!-- Extension : Sharing buttons @ www.sharethis.com -->
     <span class='st_facebook_large' displayText='Facebook'></span>
