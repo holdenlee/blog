@@ -24,9 +24,11 @@ I am collaborating on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](h
 * Mark Braverman's seminar (Tuesdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/braverman_seminar.pdf) 11/15 onwards
 * Probability and geometry, grad student and postdoc seminar (Wednesdays and Fridays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/prob_geo.pdf)
 * Simons meetings (monthly) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/simons.pdf) 9/15 onwards
+* PACM seminar (Mondays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/pacm_colloquium.pdf)
 
 ## Other talks by date
 
+* Wilks lecture 2016, [On computational thinking, inferential thinking, and data science](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/wilks2016.pdf) by Michael Jordan
 * ITCS 2016 ([notes for first half](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/itcs2016.pdf))
 * Restriction phenomenon, Larry Guth ([notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/10-19-larry-guth.pdf)) - 10/19/15
 * \*LLL lattice basis reduction algorithm ([notes](https://holdenlee.wordpress.com/2015/10/09/the-lll-lattice-basis-reduction-algorithm/), [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/lll.pdf)) - talk at Gems of TCS seminar 10/6/15
