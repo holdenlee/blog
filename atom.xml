@@ -1,66 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Research Notebook</title>
-    <link href="http://holdenlee.github.io/notebook/atom.xml" rel="self" />
-    <link href="http://holdenlee.github.io/notebook" />
-    <id>http://holdenlee.github.io/notebook/atom.xml</id>
+    <title>Mental Wilderness</title>
+    <link href="http://holdenlee.github.io/blog/atom.xml" rel="self" />
+    <link href="http://holdenlee.github.io/blog" />
+    <id>http://holdenlee.github.io/blog/atom.xml</id>
     <author>
         <name>Holden Lee</name>
         <email>oldheneel@gmail.com</email>
     </author>
-    <updated>2016-03-26T00:00:00Z</updated>
+    <updated>2016-02-23T00:00:00Z</updated>
     <entry>
-    <title>Non-negative matrix factorization</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/machine_learning/NMF.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/machine_learning/NMF.html</id>
-    <published>2016-03-26T00:00:00Z</published>
-    <updated>2016-03-26T00:00:00Z</updated>
+    <title>Welcome to Philosophocle!</title>
+    <link href="http://holdenlee.github.io/blog/posts/writing/philosophocle.html" />
+    <id>http://holdenlee.github.io/blog/posts/writing/philosophocle.html</id>
+    <published>2016-02-23T00:00:00Z</published>
+    <updated>2016-02-23T00:00:00Z</updated>
     <summary type="html"><![CDATA[
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Non-negative matrix factorization</h1>
+      <h1>Welcome to Philosophocle!</h1>
     </div>
     <div class="info">
-      
+       <div class="subtitle"><p>A pinnacle of higher education</p></div> 
        
-        <p>Posted: 2016-03-26 
-          , Modified: 2016-03-26 
+        <p>Posted: 2016-02-23 
+          , Modified: 2016-02-23 
 	</p>
       
-       <p>Tags: <a href="/tags/NMF.html">NMF</a></p> 
+       <p>Tags: <a href="/tags/fiction.html">fiction</a></p> 
     </div>
     
   </div>
   <!--/div-->
 
-  <div class="toc"> <ul>
- <li><a href="#problem">Problem</a></li>
- <li><a href="#previous-work">Previous work</a></li>
- <li><a href="#open-problems-directions">Open problems, directions</a></li>
- </ul> </div>
+  
 
   <div class="blog-main">
-    <p>Notes: See S3 in 598D, Ch. 1 in Moitra’s notes, and Rong Ge’s thesis.</p>
-<h2 id="problem">Problem</h2>
-<p>Given <span class="math inline">\(M\)</span>, write <span class="math inline">\(M=AW\)</span>, <span class="math inline">\(A,W\ge 0\)</span>.</p>
-<p>Say <span class="math inline">\(M\)</span> is <strong>separable</strong> if it has a NMF <span class="math inline">\(M=AW\)</span>, and for every column <span class="math inline">\(i\)</span> of <span class="math inline">\(A\)</span>, there is a row where there is a single nonzero entry and it is in column <span class="math inline">\(i\)</span>.</p>
-<h2 id="previous-work">Previous work</h2>
-<p>Hardness</p>
-<ul>
-<li>If there exists a <span class="math inline">\(n^{o(r)}\)</span> time algorithm, then there exists a <span class="math inline">\(2^{o(n)}\)</span> algorithm for 3SAT.</li>
-</ul>
-<p>Algorithms</p>
-<ul>
-<li>[AGKM12, M14] Given that the rank equals the nonnegative rank, there is a <span class="math inline">\(n^{O(r)}\)</span> time algorithm for NMF. (Relies on solving polynomial inequalities.)</li>
-<li>[AGKM12] Under separability, NMF can be solved in polynomial time in <span class="math inline">\(n\)</span>. (Use the geometry.)</li>
-<li>[AGM14] Dictionary learning</li>
-</ul>
-<h2 id="open-problems-directions">Open problems, directions</h2>
-<ul>
-<li>Give an algorithm for approximate NMF. (Suppose <span class="math inline">\(\ve{M-AW}_F^2\le \ep\ve{M}_F^2\)</span>.)</li>
-</ul>
-<p>(What is the prediction task?)</p>
+    <p>I’m excited to start my (unpaid) job as webmaster of the Philosophocle blog <a href="http://philosophocle.tk">philosophocle.tk</a>. Philosophocle is an institution of higher learning in a historically inwardly turned country that has sadly been neglected in current affairs. We hope that this blog will facilitate cultural exchange between Philosophocle and the wider world. Please read, subscribe, and share!</p>
+<p>Here is an excerpt of the first post, <a href="http://holdenlee.github.io/philosophocle/posts/the-street.html">The Street</a>.</p>
+<blockquote>
+<p>In Philosophocle, the street is lined with cafes and snackeries. Each advertises a different atmosphere. The high-class Starset has individual tables, uniformed waiters with silver-star badges, mochas drawn in the shape of maidens, and hot chocolate in tall glasses with swirly chocolate straws. The crowd-pleasing Delites offers bubble tea, self-serve yogurt machines with toppings, and mochis in tantalizing rows beneath cartoon pictures of themselves, the color of their filling leaking through their faces like a soft blush. <!--more--> Simplitea provides a tea bag, hot water, and a place to sit for 50 cents. At Delites you go with a group of friends - no one will pay attention to you if you go alone - but at Serendipiteas, you are ushered in to a random seat, facing someone you do not know. In Melli’s Flows the conversations never stop, hurried on by the always-present bubbling fountain (careful: the fish bite), and guests are encouraged to journey from table to table, with different h’ors d’oveures at each table to tempt (free with entrance ticket). <a href="http://holdenlee.github.io/philosophocle/posts/the-street.html">Read more.</a></p>
+</blockquote>
 
   </div>
 
@@ -85,1033 +66,228 @@
 ]]></summary>
 </entry>
 <entry>
-    <title>[AGMM15] Simple, efficient, and neural algorithms for sparse coding</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/machine_learning/AGMM15.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/machine_learning/AGMM15.html</id>
-    <published>2016-03-25T00:00:00Z</published>
-    <updated>2016-03-25T00:00:00Z</updated>
+    <title>Links and thoughts, 1/2016</title>
+    <link href="http://holdenlee.github.io/blog/posts/monthly_summaries/1-16.html" />
+    <id>http://holdenlee.github.io/blog/posts/monthly_summaries/1-16.html</id>
+    <published>2016-02-02T00:00:00Z</published>
+    <updated>2016-02-02T00:00:00Z</updated>
     <summary type="html"><![CDATA[
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>[AGMM15] Simple, efficient, and neural algorithms for sparse coding</h1>
+      <h1>Links and thoughts, 1/2016</h1>
     </div>
     <div class="info">
       
        
-        <p>Posted: 2016-03-25 
-          , Modified: 2016-03-25 
+        <p>Posted: 2016-02-02 
+          , Modified: 2016-02-02 
 	</p>
       
-       <p>Tags: <a href="/tags/dictionary%20learning.html">dictionary learning</a>, <a href="/tags/sparse%20coding.html">sparse coding</a></p> 
+       <p>Tags: <a href="/tags/links.html">links</a></p> 
     </div>
     
   </div>
   <!--/div-->
 
-  <div class="toc"> <ul>
- <li><a href="#problemmodel-and-assumptions">Problem/Model and Assumptions</a></li>
- <li><a href="#algorithm">Algorithm</a><ul>
- <li><a href="#instantiation">Instantiation</a><ul>
- <li><a href="#version-1">Version 1</a></li>
- <li><a href="#version-2">Version 2</a></li>
- <li><a href="#instantiation-1">Instantiation</a></li>
- </ul></li>
- </ul></li>
- <li><a href="#approximate-gradient-descent">Approximate gradient descent</a></li>
- <li><a href="#theorems">Theorems</a></li>
- <li><a href="#proofs">Proofs</a><ul>
- <li><a href="#initialization">Initialization</a></li>
- </ul></li>
- <li><a href="#birds-eye-view">Bird’s eye view</a></li>
- <li><a href="#questions">Questions</a></li>
- </ul> </div>
+  
 
   <div class="blog-main">
-    <h2 id="problemmodel-and-assumptions">Problem/Model and Assumptions</h2>
-<p>Given many independent samples <span class="math inline">\(y=A^*x^*+N\)</span>, recover <span class="math inline">\((A^*,x^*)\)</span>. Here,</p>
+    <p>Here’s a list of what I’ve read/listened to/watched the past month.</p>
+<p>(*) means particularly interesting, and (h) are links to personal highlights.</p>
+<p>I’m taking notes on the classes I’m attending this semester (tenatively MAT515, MAT597, and MAT519). They will be available under the “Notes” tab above.</p>
+<ul>
+<li>Rationality, Productivity, Life advice
+<ul>
+<li><a href="http://lesswrong.com/lw/dr/generalizing_from_one_example/">Generalizing from one example</a> (<a href="http://scrible.com/s/kzAym">h</a>)</li>
+<li><a href="http://scienceblogs.com/mixingmemory/2006/11/16/the-illusion-of-explanatory-de/">The illusion of explanatory depth</a> (<a href="http://scrible.com/s/61N66">h</a>), see also <a href="http://www.scotthyoung.com/blog/2015/12/22/illusion-of-explanatory-depth/">here</a>, <a href="http://www.yale.edu/cogdevlab/aarticles/IOED%20proofs.pdf%201.pdf">original paper</a></li>
+<li>I started using <a href="http://mnemosyne-proj.org/">Mnemosyne</a>, a flash-card tool that uses spaced repetition.
+<ul>
+<li><a href="https://nihongoperapera.com/mnemosyne.html">Using memory software to learn Japanese</a></li>
+<li>Why isn’t spaced repetition software more popular? <a href="http://qsdeutschland.de/en/why-isnt-spaced-repetition-software-more-popular/">Part 1</a>, <a href="http://qsdeutschland.de/en/why-isnt-spaced-repetition-software-more-popular-part-2/">Part 2</a></li>
+<li><a href="http://lesswrong.com/lw/juq/a_vote_against_spaced_repetition/">When is spaced repetition appropriate?</a></li>
+<li><a href="http://lesswrong.com/lw/dr/generalizing_from_one_example/">20 rules</a> (<a href="http://scrible.com/s/kzAym">h</a>) (I’m not sure I agree with all these. Use your judgment.)</li>
+<li>If you like a nice-looking web app instead, try <a href="http://www.memrise.com/">Memrise</a>.</li>
+</ul></li>
+<li>Life advice
+<ul>
+<li>(*) <a href="http://mindingourway.com/stop-trying-to-try-and-try/%20http://scrible.com/s/iHN0m">Stop trying to try and just try</a> (<a href="http://scrible.com/s/iHN0m">h</a>)</li>
+<li><a href="http://mindingourway.com/the-art-of-response/">The art of response</a> (<a href="http://scrible.com/s/iHN0m">h</a>)</li>
+<li><a href="http://www.cracked.com/blog/6-harsh-truths-that-will-make-you-better-person/">6 harsh truths that will make you a better person</a> (Summary: What you are is determined by what you do, and is important insofar as it determines what you do. Don’t say “deep inside me there’s a writer,” just write. The world is a needy place - it does no good to “need” things. Produce things of value. It’s easier to criticize than create - but a little bit of creation is far braver than a vast mountain of criticizing.)</li>
+<li><a href="http://qz.com/584874/you-probably-know-to-ask-yourself-what-do-i-want-heres-a-way-better-question/">Don’t ask yourself what do I want to do</a> <a href="http://scrible.com/s/4FN46">h</a> (Summary: Don’t ask what you’re passionate about, ask what struggles you’re willing to endure.)</li>
+<li><a href="http://markmanson.net/passion">Screw finding your passion</a></li>
+</ul></li>
+<li><a href="http://alexzhu.me/2015/06/22/the-vulnerability-in-giving-criticism/">“Giving honest negative feedback to someone we care about can actually be a huge display of vulnerability.”</a> (<a href="http://scrible.com/s/g3x2m">h</a>)</li>
+<li><a href="http://alexzhu.me/2015/04/06/materialism-vs-experientialism-is-a-wrong-dichotomy/">Materialism vs. experientialism is a wrong dichotomy</a> (<a href="http://scrible.com/s/g3N2m">h</a>)</li>
+<li><a href="https://www.quora.com/What-are-some-blogs-websites-I-would-like-if-I-like-The-Last-Psychiatrist">What are some blogs/websites I would like if I like The Last Psychiatrist?</a></li>
+<li>(*) <a href="http://www.scottaaronson.com/blog/?p=1820">Eigenmorality</a> A circular definition of morality isn’t vacuous - it defines morality as a fixed point, in much the same way that importance is defined by PageRank. What follows from this definition?</li>
+</ul></li>
+<li>Education
+<ul>
+<li><a href="https://tjzager.wordpress.com/2016/01/05/my-criteria-for-fact-based-apps/">Criteria for fact-based apps</a> What makes a app teaching multiplication facts, etc. good?</li>
+<li><a href="http://blog.mrmeyer.com/2016/problem-based-learning-needs-a-different-crux/">Problem-based learning needs a different crux</a> - Don’t try to “elicit the right question” - that’s mind control.</li>
+</ul></li>
+<li>Programming, Haskell
+<ul>
+<li><a href="http://degoes.net/articles/engineer-entrepreneur/">Dear Engineer: So, You Wanna Become an Entrepreneur?</a>, John A De Goes</li>
+<li><a href="http://degoes.net/articles/modern-fp/">Free monads as a modern architecture for FP</a></li>
+<li><a href="http://aaronlevin.ca/post/136494428283/extensible-effects-in-the-van-laarhoven-free-monad">Extensible Effects in the van Laarhoven Free Monad</a></li>
+<li><a href="https://superginbaby.wordpress.com/2015/04/08/teaching-haskell-to-a-10-year-old-day-1/">Teaching Haskell to a 10 year old</a></li>
+</ul></li>
+<li>Podcasts
+<ul>
+<li>Freakonomics Radio: <a href="http://freakonomics.com/2016/01/28/is-americas-education-problem-really-just-a-teacher-problem-a-freakonomics-radio-rebroadcast/">Is America’s education problem really just a teacher problem?</a> Instead of framing as “replace all bad teachers by good teachers,” ask makes teachers great and change the system to teach those qualities.</li>
+<li>IndieFeed
+<ul>
+<li><a href="http://indiefeedpp.libsyn.com/sarah-kay-the-table-game">Sarah Kay</a></li>
+<li><a href="http://indiefeedpp.libsyn.com/cristin-okeefe-aptowicz-the-end-of-it">The End of It</a></li>
+</ul></li>
+<li>(*) Reply-all/Radiolab: <a href="https://gimletmedia.com/episode/50-the-cathedral/">The Cathedral</a> A moving piece on the creation of <a href="http://www.thatdragoncancer.com/#home">That Dragon, Cancer</a>, a computer game based off a parent’s experience losing a child to cancer.</li>
+<li>TED Radio Hour
+<ul>
+<li><a href="http://www.npr.org/programs/ted-radio-hour/462178064/building-better-cities?showDate=2016-01-08">Building better cities</a>
+<ul>
+<li>Daniele Quercia talks about making an mapping app that focuses on the most beautiful parts of cities (found through crowdsourcing).</li>
+<li><p>Benjamin Barber and Kasim Reed talk about how mayors are the ones solving some of the most challenging social problems. Mayors are closer to the people (cities are closer to direct democracy), and focus on problem-solving rather than ideology. Barber created the <a href="http://www.globalparliamentofmayors.org/">Global Parliament of Mayors</a>. (<a href="http://scrible.com/s/01xOm">h1</a>, <a href="http://scrible.com/s/21xOm">h2</a>)</p>
+<blockquote>
+<p>Until you see a city how people who are most in need of help see it, you’re never going to reach them… And I think that if you don’t take care of the basics and do them very well -make sure that the finances of the city are well-run, make sure that you provide police services, pick up trash, fix potholes - that you will never be able to do anything aspirational. And once you take on those issues and solve them, the public will then allow you to spend resources on the things that you care about.</p>
+</blockquote></li>
+</ul></li>
+<li><a href="http://www.npr.org/programs/ted-radio-hour/368757408/courage?showDate=2016-01-15">Courage</a></li>
+</ul></li>
+<li>This American Life
+<ul>
+<li><a href="http://www.thisamericanlife.org/radio-archives/episode/576/say-yes-to-christmas">Say Yes to Christmas</a> Christmas improv</li>
+<li>(*) <a href="http://www.thisamericanlife.org/radio-archives/episode/577/something-only-i-can-see">Something only I can see</a> Particularly recommend Act 1 on how a muscular dystrophy patient found a connection between her genes and a famous athlete’s.</li>
+<li><a href="http://www.thisamericanlife.org/radio-archives/episode/198/how-to-win-friends-and-influence-people">How to win friends and influence people</a> In particular Act 3 on dressing as Superman.</li>
+<li><a href="http://www.thisamericanlife.org/radio-archives/episode/214/family-physics">Family physics</a></li>
+<li>(*) <a href="http://www.thisamericanlife.org/radio-archives/episode/545/if-you-dont-have-anything-nice-to-say-say-it-in-all-caps">If you don’t have anything nice to say, SAY IT ALL IN CAPS</a> Act 1 on a Internet troll’s repentance</li>
+<li>(*) <a href="http://www.thisamericanlife.org/radio-archives/episode/575/poetry-of-propaganda">Poetry of Propaganda</a> Act 1 on an ad campaign targeted to guerrillas to lay down their arms, including Christmas trees in the jungle. (cf. <a href="https://medium.com/@pericarus/paris-and-memetic-immunity-ed74b46a2a63#.vnor3bs2n">memetic immunity</a> from <a href="https://holdenlee.wordpress.com/2015/12/07/november-links-and-activities/">11-2015 links</a>)</li>
+</ul></li>
+<li>99 percent invisible
+<ul>
+<li><a href="http://99percentinvisible.org/episode/tube-benders/">193 Tube Benders</a> - On the art and symbolism of neon signs.</li>
+<li><a href="http://99percentinvisible.org/episode/tube-benders/">192 Pagodas and Dragon Gates</a> - How the architecture of Chinatown came to be.</li>
+<li><a href="http://99percentinvisible.org/article/least-resistance-desire-paths-can-lead-better-design/">Desire paths</a></li>
+</ul></li>
+<li>To keep my Chinese in practice, I decided to find some Chinese podcasts: <a href="http://www.fluentu.com/chinese/blog/2014/01/18/chinese-podcasts/">1</a>, <a href="https://www.quora.com/What-are-the-best-podcasts-for-learning-Mandarin">2</a>, <a href="http://chinesehacks.com/resources/web/the-question-of-chinese-language-podcasts/">3</a> I decided on:
+<ul>
+<li><a href="http://youngloveplay.blogspot.hk/">青春愛消遣</a> - An entertaining talk show from Taiwan</li>
+<li><a href="https://itunes.apple.com/us/podcast/ted-yan-jiang-zhong-wen-lang/id1062746362?mt=2">TED in Chinese</a></li>
+</ul></li>
+<li>Fun
+<ul>
+<li>(*) <a href="http://undertale.com/">Undertale</a> is an AMAZING game. It has amazing story and character, great gameplay, good humor, inventive mechanics, and lots of easter eggs. Most interestingly, it subverts the RPG genre of killing monsters, allowing a pacifist run that brings out the “true story” (on the flip side, there’s a genocide run…) AND people have turned the boss battles into Stepmania:
+<ul>
+<li><a href="https://www.youtube.com/watch?v=n_TQJpJ9Vbk">Spider dance</a> (<a href="http://www.mediafire.com/download/o38bue4z20t75fj/Spider+Dance+SM5+%5BTaroNuke%5D.zip">download</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=0kGi9LE21dU">Megalovania</a>, (<a href="http://www.mediafire.com/download/2wodo9hq95wfqop/Megalovania+SM5+%5BTaroNuke%5D.zip">download</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=b4XpLFeQF8c">Metal crusher</a> (<a href="http://www.mediafire.com/download/ch5m2ozo4kxei54/Metal+Crusher+SM5+%5BTaroNuke%5D.zip">download</a>)</li>
+</ul></li>
+<li>Participated in the <a href="http://huntception.com/">MIT Mystery Hunt</a>. <a href="http://huntception.com/puzzle/identify_sort_index_solve/">A math puzzle we enjoyed</a>, <a href="http://huntception.com/puzzle/replication/">a math puzzle we did not enjoy</a>.</li>
+<li><a href="http://pnis.co/scinews/vol3/cake_cut_algorithm.html">A satire of cake-cutting</a></li>
+<li>Vi Hart!
+<ul>
+<li><a href="https://vimeo.com/147403169">Shepard Tones</a></li>
+<li><a href="https://vimeo.com/147908916">Float: A puzzle game for VR</a></li>
+</ul></li>
+<li>(*) <a href="http://mathwithbaddrawings.com/2016/01/20/the-number-line-a-journey/">The number line: A Journey</a></li>
+</ul></li>
+<li>Other
+<ul>
+<li><a href="http://qz.com/586941/whats-eating-silicon-valley/">What’s eating Silicon Valley?</a></li>
+<li><a href="http://slatestarcodex.com/2015/12/08/book-review-hive-mind/">Hive Mind</a></li>
+<li><a href="http://blogs.scientificamerican.com/beautiful-minds/the-difference-between-extraversion-and-extroversion/">Extraversion vs. Extroversion</a></li>
+<li><a href="http://www.sciencealert.com/scientists-discover-a-new-way-to-cook-rice-that-could-halve-the-calories">A new way to cook rice that halves the calories</a></li>
+<li><a href="http://elitedaily.com/social-news/bernie-sanders-ice-cream-ben-jerrys/1341550/">Bernie Sanders ice cream</a></li>
+<li>Learned about <a href="https://www.technologyreview.com/s/422511/the-fantastical-promise-of-reversible-computing/">reversible computing</a> (<a href="https://en.wikipedia.org/wiki/Reversible_computing">wikipedia</a>)</li>
+<li><a href="http://www.smithsonianmag.com/history/why-footbinding-persisted-china-millennium-180953971/">Why foot-binding persisted in China for over a millenium</a></li>
+<li>Random professor stalking: <a href="https://www.math.upenn.edu/~ghrist/index.html">Robert Ghrist</a> - Funny Little Calculus Book; Elementary Applied Topology</li>
+</ul></li>
+</ul></li>
+<li>Books I read/am reading
+<ul>
+<li><a href="https://www.goodreads.com/book/show/13642710-nexus?ac=1&amp;from_search=1">Nexus, Ramez Naam</a> - An incredible exploration of what happens when we can program our own minds. One of the big themes is the decision between technological freedom and censorship. 5 stars.</li>
+<li><a href="https://www.goodreads.com/book/show/27304.Buddha?ac=1&amp;from_search=1">Buddha, Karen Armstrong</a> - A great intro to Buddhism. 4 stars.</li>
+<li><a href="https://www.goodreads.com/book/show/94486.The_Invention_of_Morel?ac=1&amp;from_search=1">The Invention of Morel, Adolfo Bioy Casares</a> - 3 stars.</li>
+<li><a href="https://www.goodreads.com/book/show/109588.The_Great_Conversation?ac=1&amp;from_search=1">The Great Conversation, Normal Melchert</a> - A comprehensive and clear overview of Western philosophy. I’m taking <a href="https://workflowy.com/s/wL3CyEXpHY#/298b0d4456a6">notes</a>. (I took this as a recommendation for a philosophy textbook from <a href="http://lesswrong.com/lw/3gu/the_best_textbooks_on_every_subject/">the best textbooks on every topic</a>.)</li>
+<li><a href="https://www.goodreads.com/book/show/3730120-in-the-land-of-invented-languages?ac=1&amp;from_search=1">In the Land of Invented Languages, Arika Okrent</a></li>
+<li><a href="https://www.goodreads.com/book/show/209574.The_Heart_of_the_Buddha_s_Teaching?ac=1&amp;from_search=1">The Heart of the Buddha’s Teaching, Thich Nhat Hanh</a></li>
+<li>Short stories I liked from 1/2016 issue of Science Fiction and Fantasy:
+<ul>
+<li>The White Piano, David Gerrold</li>
+<li>Caspar D. Luckinbill, What are you going to do?, Nick Wolven</li>
+<li>Robot from the future, Terry Bisson</li>
+</ul></li>
+</ul></li>
+</ul>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Hello Hakyll!</title>
+    <link href="http://holdenlee.github.io/blog/posts/programming/haskell/hello-hakyll.html" />
+    <id>http://holdenlee.github.io/blog/posts/programming/haskell/hello-hakyll.html</id>
+    <published>2016-02-01T00:00:00Z</published>
+    <updated>2016-02-01T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Hello Hakyll!</h1>
+    </div>
+    <div class="info">
+       <div class="subtitle"><p>Moving from Wordpress to Hakyll</p></div> 
+       
+        <p>Posted: 2016-02-01 
+          , Modified: 2016-02-02 
+	</p>
+      
+       <p>Tags: <a href="/tags/haskell.html">haskell</a>, <a href="/tags/blogging.html">blogging</a>, <a href="/tags/web%20design.html">web design</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  
+
+  <div class="blog-main">
+    <h2 id="why-hakyll">Why Hakyll?</h2>
+<p>I’ve decided to switch blogging platforms from Wordpress to <a href="https://jaspervdj.be/hakyll/">Hakyll</a>, a website generation platform that can be customized using Haskell. All previous posts will remain on <a href="http://holdenlee.wordpress.com/">Wordpress site</a>, but the site will no longer be updated.</p>
+<p>The following two blog posts articulate some of my reasons for switching to Hakyll:</p>
+<ul>
+<li><a href="http://karpathy.github.io/2014/07/01/switching-to-jekyll/">Why switch from Wordpress to Jekyll?</a></li>
+<li><a href="http://mark.reid.name/blog/switching-to-hakyll.html">Why switch from Jekyll to Hakyll?</a></li>
+</ul>
+<p>The main reason is that I want to have complete control over the content:</p>
 <ol type="1">
-<li><span class="math inline">\(A^*\in \R^{n\times m}\)</span> is a fixed matrix. We assume:
-<ul>
-<li><span class="math inline">\(A\)</span> has unit norm columns.</li>
-<li>(Norm is like that of a random matrix) <span class="math inline">\(\ve{A^*}=O\pa{\sfc{m}{n}}\)</span>.</li>
-<li><span class="math inline">\(A\)</span> is <span class="math inline">\(\mu\)</span>-incoherent, i.e., <span class="math inline">\(\an{A_i,A_j}\le \fc{\mu}{\sqrt n}\)</span>.</li>
-</ul></li>
-<li><span class="math inline">\(x^*\)</span> is drawn from a sparse distribution. Specifically, <span class="math inline">\(x^*\sim D\)</span> where
-<ul>
-<li>Always, <span class="math inline">\(\Supp(x^*)\le k\)</span>.</li>
-<li><span class="math inline">\(\Pj(i\in S)=\Te\pf{k}{m}\)</span>.</li>
-<li><span class="math inline">\(\Pj(i,j\in S) = \Te\pf{k^2}{m^2}\)</span>.</li>
-<li><span class="math inline">\(\E[x_i^*|x_j^*\ne 0]=0\)</span> (why do we care about the conditioning here?) and <span class="math inline">\(\E[x_i^{*2}| x_i^*\ne0]=1\)</span>.</li>
-<li>When <span class="math inline">\(x_i^*\ne 0\)</span>, <span class="math inline">\(|x_i^*|\ge C\)</span> for some constant <span class="math inline">\(C\le 1\)</span>. (This is an unreasonable assumption, but it makes sure the thresholding doesn’t cut off actual coordinates.)</li>
-<li>Conditioned on the support, the nonzero entries are pairwise independent and subgaussian. Subgaussian means <span class="math inline">\(\exists C,v&gt;0, \Pj(|X|&gt;t)\le Ce^{-vt^2}\)</span> or equivalently <span class="math inline">\(\exists b, \E e^{tX}\le e^{b^2t^2/2}\)</span>.</li>
-</ul></li>
-<li>The noise <span class="math inline">\(N\)</span> is Gaussian and independent.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
+<li>I want to edit blog posts as text (markdown) files on my computer, rather than inside an editor in the browser. Firstly, it’s simpler to edit them as text files. Relying on a formatting toolbar for editing posts (lists, bold, quotes, etc.) can be frustrating: often the bulleted lists get corrupted and I have to mess with the html to fix them). In Markdown, I can do all the basic formatting very simply, without having to click something external to the text, or work directly with html.</li>
+<li>Having blog posts as simple files means it is easy to import and export material that I write, or convert it to a different format as I wish. I can organize blog posts as I do my own file system. See <a href="http://www.gwern.net/About#long-site">Gwern</a>, especially the quote by Julian Assange, on why a simple format, good organization, and control over content help writing survive.</li>
+<li>I have complete control in the sense that I can create arbitrary scripts to turn the text files into published posts. For example, I can add footnotes, enable latex macros, enable comments, and automatically build a hierarchical <a href="/sitemap.html">sitemap</a> of all posts. I can make arbitrary macros for common patterns (ex. links to wikipedia pages) if I wanted to. Moreover, I can write the scripts in Haskell!</li>
+<li>There are many beautiful blogs and websites written in Haskell, for example, <a href="http://colah.github.io">Chris Olah’s blog</a> and <a href="http://www.gwern.net/">Gwern’s site</a>. Much of the design on this blog is copied from Chris Olah’s blog and <a href="https://github.com/oinkina">oinkina</a>.</li>
 </ol>
-<h2 id="algorithm">Algorithm</h2>
-<p>The algorithm is alternating minimization. In alternating minimization, we want to minimize a function <span class="math inline">\(f(x,y)\)</span>. It is difficult to minimize with respect to <span class="math inline">\((x,y)\)</span> together (e.g., because <span class="math inline">\(f\)</span> is nonconvex when taken as a joint function of <span class="math inline">\(x,y\)</span>) but easy to minimize with respect to <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> while keeping the other fixed (e.g., because <span class="math inline">\(f\)</span> is convex in <span class="math inline">\(x\)</span> and in <span class="math inline">\(y\)</span>). Alternate between</p>
-<ul>
-<li>minimizing with respect to <span class="math inline">\(x\)</span>, and</li>
-<li>minimizing with respect to <span class="math inline">\(y\)</span>.</li>
-</ul>
-<p>For example, we can take gradient steps.</p>
-<p>There are no results for general nonconvex <span class="math inline">\(f\)</span>; theoretical results tend to be ad hoc (for specific <span class="math inline">\(f\)</span>). AGMM make a general technique that can be used to analyze alternating minimization algorithms, <strong>approximate gradient descent</strong>.</p>
-<h3 id="instantiation">Instantiation</h3>
-<h4 id="version-1">Version 1</h4>
-<p>The algorithm is</p>
-<ul>
-<li>Input: initial guess <span class="math inline">\(A^0\)</span>, step size <span class="math inline">\(\eta\)</span>.</li>
-<li>At step <span class="math inline">\(s\)</span>, take <span class="math inline">\(p\)</span> samples <span class="math inline">\(y^{(i)}\)</span> and let
-<ul>
-<li>(Decode) Let <span class="math inline">\(x^{(i)}=1_{\ge \fc C2}((A^s)^Ty^{(i)})\)</span>.</li>
-<li>(Update)
-\begin{align}
-\wh g^s &amp;=\rc p \sumo ip (y^{(i)} - A^{(s)}x^{(i)}) \sign(x^{(i)})^T\\
-A^{s+1} &amp;= A^s - \eta \wh g^s
-\end{align}</li>
-</ul></li>
-</ul>
-<p>The decoding step is doing a minimization with respect to <span class="math inline">\(x\)</span><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Intuitively, since <span class="math inline">\(A^*\)</span> is incoherent (random-like), <span class="math inline">\((A^*)^TA^*\approx I\)</span>, so multiplying by <span class="math inline">\((A^*)^T\)</span> has the effect of inverting. The threshold acts as a denoiser.</p>
-<p>Note that we don’t quite take the gradient step: the gradient is <span class="math inline">\(2(y^{(i)} - Ax^{(i)})^T x^{(i)}\)</span>; we only take the sign of <span class="math inline">\(x^{(i)}\)</span>.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
-<p>(There’s no regularization here?)</p>
-<h4 id="version-2">Version 2</h4>
-<p>A better version of the above is to use gradient descent (Olshausen-Field), rather than just the sign of the difference. Let <span class="math inline">\(A'=A - \eta g\)</span> where <span class="math inline">\(g=\E [(y-Ax) x^T]\)</span>. The complication is that this may not prserver <span class="math inline">\((\de,2)\)</span>-nearness, so the update rule is replaced by</p>
-\begin{align}
-\wh g^s &amp;=\rc p \sumo ip (y^{(i)} - A^{(s)}x^{(i)}) \sign(x^{(i)})^T\\
-A^{s+1} &amp;= \Proj_B(A^s - \eta \wh g^s)
-\end{align}
-<p>where <span class="math inline">\(B\)</span> is the set of <span class="math inline">\((\de_0,2)\)</span>-close matrices to <span class="math inline">\(A^*\)</span>.</p>
-<h4 id="instantiation-1">Instantiation</h4>
-<p>The algorithms above require a matrix that is <span class="math inline">\(O^*\prc{\log n}\)</span>-close to the true matrix. Algorithm 3 gives such a matrix.</p>
-<ul>
-<li>Set <span class="math inline">\(L=\phi\)</span>.</li>
-<li>While <span class="math inline">\(|L|&lt;m\)</span> choose samples <span class="math inline">\(u,v\)</span>. (We will need <span class="math inline">\(p_1\)</span> of these samples.)
-<ul>
-<li>Set <span class="math inline">\(\wh M_{u,v} - \EE_{i\in p_2}\)</span> y<sup>{(i)}y</sup>{(i)T}$. (Average over <span class="math inline">\(p_2\)</span> fresh samples.)</li>
-<li>Compute the top two singular values <span class="math inline">\(\si_1,\si_2\)</span> and top singular vector <span class="math inline">\(z\)</span> of <span class="math inline">\(\wh M_{u,v}\)</span>.</li>
-<li>If <span class="math inline">\(\si_1\ge \Om\pf{k}{m}, \si_2&lt;O^*\pf{k}{m\log m}\)</span>, and <span class="math inline">\(\pm z\)</span> is not within distance <span class="math inline">\(\rc{\log m}\)</span> of any vector in <span class="math inline">\(L\)</span>, add <span class="math inline">\(z\)</span> to <span class="math inline">\(L\)</span>.</li>
-</ul></li>
-<li>Let <span class="math inline">\(z\in L\)</span> be the columns of <span class="math inline">\(\wt A\)</span>. Let <span class="math inline">\(A=\Proj_B\wt A\)</span>.</li>
-</ul>
-<h2 id="approximate-gradient-descent">Approximate gradient descent</h2>
-<p>A general condition for a “descent”-type algorithm to work is that we make a step correlated with the direction to the optimum each time.</p>
-<p><strong>Definition</strong>: <span class="math inline">\(g\)</span> is <span class="math inline">\((\al,\be,\ep)\)</span>-correlated with <span class="math inline">\(z^*\)</span> if <span class="math display">\[\an{g,z-z^*} \ge \al\ve{z-z^*}^2 + \be \ve{g}^2 - \ep.\]</span></p>
-<p>An algorithm which makes correlated steps has geometric convergence. For example, gradient descent on strongly convex, smooth functions gives geometric convergence.</p>
-<p><strong>Proposition</strong>: If <span class="math inline">\(f\)</span> is <span class="math inline">\(2\al\)</span>-strongly convex and <span class="math inline">\(\rc{2\be}\)</span>-smooth, then <span class="math inline">\(\nb f(z)\)</span> is <span class="math inline">\((\al,\be,0)\)</span>-correlated with <span class="math inline">\(z^*\)</span>.</p>
-<em>Proof</em>: Note that <span class="math inline">\(L\)</span>-smooth means <span class="math inline">\(f(x) - f(x^*) \ge \rc{2L} \ve{\nb f(x)}^2\)</span> (cf. gradient descent lemma). Then
-\begin{align}
-\an{g,x-x^*} &amp;\ge f(x)-f(x^*) + \al\ve{x-x^*}^2\\
-&amp;\ge \be \ve{\nb f}^2 + \al\ve{x-x^*}^2.
-\end{align}
-<p><strong>Theorem</strong> (Theorem 6): If <span class="math inline">\(g\)</span> is <span class="math inline">\((\al,\be,\ep)\)</span>-correlated with <span class="math inline">\(z^*\)</span> and <span class="math inline">\(z'=z-\eta g\)</span> and <span class="math inline">\(0&lt;\eta\le 2\be\)</span>, then <span class="math display">\[\ve{z'-z^*}^2 \le (1-2\al \eta)\ve{z-z^*}^2 + 2\eta \ep.\]</span> If <span class="math inline">\(z_{t+1}=z_t - \eta g_t\)</span> and each <span class="math inline">\(g_t\)</span> is <span class="math inline">\((\al,\be,\ep)\)</span>-correlated with <span class="math inline">\(z^*\)</span>, <span class="math display">\[\ve{z_t-z^*}^2\le (1-\al \eta)^t \ve{z_0-z^*}^2.\]</span></p>
-<p>(Note the usual gradient step size for <span class="math inline">\(\rc{2\be}\)</span>-smooth functions is <span class="math inline">\(2\be\)</span>.)</p>
-<em>Proof</em>: Break up <span class="math inline">\(z'-z^* = (z-z^*) - \eta g\)</span> in order to use the correlation.
-\begin{align}
-\ve{z'-z^*}^2 &amp;=\ve{z-z^*} - 2\an{z-z^*, \eta g} + \eta^2\ve{g}^2\\
-&amp;\le \ve{z-z^*}^2 - 2\eta (\al\ve{z-z^*}^2+\be \ve{g}^2-\ep) + \eta^2\ve{g}^2\\
-&amp;= (1-2\eta \al)\ve{z-z^*}^2 +\ub{ \eta (\eta - 2\be) \ve{g}^2}{\le 0} + 2\eta \ep.
-\end{align}
-<p>In actuality, we’ll need a weaker form of this, “<span class="math inline">\((\al,\be,\ep_s)\)</span>-correlated with high probability” (Definition 38). There is an analogue of the theorem in this setting (Theorem 40).</p>
-<h2 id="theorems">Theorems</h2>
-<ul>
-<li>Theorem 2, 9 give the convergence of the main alternating minimization algorithm for sparse coding, given good initialization. Theorem 14 is the simpler case where we have an infinite number of samples in each step (so we can actually minimize in <span class="math inline">\(A\)</span> at each step, rather than just take a step towards the minimum). We show Theorem 14.</li>
-<li>Theorem 3, 13 give the convergence of a more sophisticated algorithm which achieves better additive error.</li>
-<li>Theorem 4, 19 give an algorithm to initialize <span class="math inline">\(A\)</span> (using SVD).</li>
-</ul>
-<p>Say <span class="math inline">\(A\)</span> is <span class="math inline">\((\de,\ka)\)</span>-near to <span class="math inline">\(A^*\)</span> if</p>
-<ul>
-<li>there is a permutation <span class="math inline">\(\pi\in S_m\)</span> and <span class="math inline">\(\si:[m]\to \{\pm1\}\)</span> such that <span class="math inline">\(\ve{\si(i)A_{\pi(i)}-A_i^*}\le \de\)</span> for all <span class="math inline">\(i\)</span>.</li>
-<li><span class="math inline">\(\ve{A-A^*}\le \ka \ve{A^*}\)</span>.</li>
-</ul>
-<p>In detail: Let <span class="math inline">\(\de = O^*\prc{\log n}\)</span>. (Here <span class="math inline">\(x=O^*(y)\)</span> means there exists <span class="math inline">\(c\)</span> such that the statement is true for <span class="math inline">\(x\le cy\)</span>.<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>)</p>
-<ul>
-<li>(Theorem 14, 9) Suppose <span class="math inline">\(A^0\)</span> is <span class="math inline">\((2\de,2)\)</span>-near to <span class="math inline">\(A^*\)</span> and <span class="math inline">\(\eta = \Te\pf{m}{k}\)</span>. If each update step uses an infinite (<span class="math inline">\(\wt \Om(mk)\)</span>) samples, there is <span class="math inline">\(0&lt;\tau&lt;\rc2\)</span> such that <span class="math display">\[\ve{A_i^s - A_i^*}^2\le \ve{A_i^0 - A_i^*}^2 + \begin{cases}O\pf{k^2}{n^2}&amp;\\
-O\pf{k}n&amp;\\\end{cases},\]</span> respectively.<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></li>
-<li>(Theorem 13) We can improve the algorithm to get additive error <span class="math inline">\(n^{-\om(1)}\)</span>.</li>
-<li>(Theorem 19) If the instantiation algorithm is given <span class="math inline">\(p_1=\wt\Om(m)\)</span> and <span class="math inline">\(p_2=\wt\Om(mk)\)</span> fresh samples, and
-<ul>
-<li><span class="math inline">\(A^*\)</span> is <span class="math inline">\(\mu=O^*\pf{\sqrt n}{k(\log n)^3}\)</span>-incoherent,</li>
-<li><span class="math inline">\(m=O(n)\)</span></li>
-<li><span class="math inline">\(\ve{A^*} \le O\pa{\sfc{m}{n}}\)</span>, then w.h.p. <span class="math inline">\(A\)</span> is <span class="math inline">\((O^*\prc{\log n},2)\)</span>-near to <span class="math inline">\(A^*\)</span>.</li>
-</ul></li>
-</ul>
-<h2 id="proofs">Proofs</h2>
-<p>We cheat in this proof; for the correct version see Appendix D. We calculate <span class="math inline">\(\E g\)</span>, the expected value of the gradient step, and pretend that is the actual gradient step (this is OK for infinite sample size). For the real version, we’d have to consider concentration around <span class="math inline">\(\E g\)</span>.</p>
-<p>The strategy is to show that step is correlated with the actual minimum, and then use the theorem on approximate gradient descent. First, we need to show that the minimum <span class="math inline">\(x\)</span> will have the right support with high probability.</p>
-<ul>
-<li>(Lemma 10, 23) Suppose <span class="math inline">\(A\)</span> is <span class="math inline">\(\de\)</span>-close to <span class="math inline">\(A^*\)</span>. Then with high probability over <span class="math inline">\(y=A^*x^*\)</span> (randomness is over <span class="math inline">\(x\sim D\)</span>), <span class="math display">\[\sign(1_{\ge \fc C2} (A^Ty)) = \sign(x^*).\]</span> (Decoding gives the right sign. This uses crucially that <span class="math inline">\(A\)</span> is already close enough.) We rely on the assumption that when <span class="math inline">\(x_i\ne 0\)</span>, it is bounded away on 0. (It would be interesting to remove this condition.)
-<ul>
-<li><strong>Lemma</strong>: If <span class="math inline">\(\fc{\mu}{\sqrt{n}}\le \rc{2k}\)</span> and <span class="math inline">\(k=\Om^*(\log m)\)</span> and <span class="math inline">\(\de=O^*\prc{\sqrt{\log m}}\)</span>, then w.h.p over <span class="math inline">\(x^*\)</span>, <span class="math inline">\(S:=\Supp(x^*)=\set{i}{|\an{A_i, y}|&gt;\fc C2}\)</span>, and <span class="math inline">\(\sign(\an{A_i,y})=\sign(x_i^*)\)</span>. <em>Proof</em>: Write <span class="math display">\[\an{A_i, A^*x^*}=\ub{\an{A_i,A_i^*}x_i^*}{\ad\ge 1-\fc{\de^2}2} + \sum_{j\ne i} \ub{\an{A_i,A_j^*}}{(\cdot)^2 \le 2\mu^2 + \an{A_i-A_i^*,A_j^*}}x_j^*\]</span> where we use closeness of <span class="math inline">\(A_i,A_i^*\)</span> and incoherence of <span class="math inline">\(A^*\)</span>. The sum is <span class="math display">\[\le 2\mu^2 + \ve{A_{S\be \{i\}}^{*T}(A_i-A_i^*)}^2.\]</span> Bound <span class="math inline">\(\ve{A_{S\bs\{i\}}}^2\)</span> by bounding <span class="math display">\[\ve{A_{S\bs\{i\}}}^2 =\sqrt{\ve{A_{S\bs\{i\}}^TA_{S\bs\{i\}}}} \le \sqrt{1+k\fc{\mu}{2\sqrt n}}.\]</span></li>
-</ul></li>
-<li>(Lemma 11) Now derive an expression for the expected value of the next value of <span class="math inline">\(A\)</span>. Let <span class="math inline">\(A'=A-\eta g\)</span>. We write it in the form <span class="math inline">\(\al (A-A^*)+\pat{error terms}\)</span>.
-<ul>
-<li><strong>Lemma</strong>: Let <span class="math inline">\(A'=A-\eta g\)</span>. Then <span class="math display">\[\E g_i = p_iq_i (\ub{\an{A_i' , A_i^*}}{=:\la_i}A_i - A_i^*+O\pf{k}n).\]</span><a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> <em>Proof</em>: With high probability, <span class="math inline">\(g\)</span> has the right sign as <span class="math inline">\(x\)</span>, so in calculating the expected value, we can assume it always has the right sign—its support is always <span class="math inline">\(\Supp(x)\)</span>. Then we can restrict to the support of <span class="math inline">\(x\)</span>. We separate the term <span class="math inline">\(i\)</span> because that will have the main contribution (recall incoherence means <span class="math inline">\(AA^T \approx I\)</span>).
-\begin{align}
-\E g_i &amp;= \E[(y-Ax)\sgn(x_i)]\\
-&amp;\approx \E[(y-A_SA_S^Ty) \sgn(x_i)]\\
-&amp;=\E[(I-A_SA_S^T)A^* x \sgn(x_i)]\\
-&amp;=\E[(I-A_iA_i^T)A^* x \sgn(x_i)] - \E[A_{S\bs\{i\}} A_{S\bs\{i\}}^T A^* x \sgn(x_i)]\\
-&amp;= \ub{\E[x_i^*\sgn(x_i^*)|S]}{p_i} \ub{\Pj(i\in S)}{q_i} (I-A_iA_i^T) A_i^* - p_i A_{-i} \diag(\ub{\Pj(i,j\in S)}{q_{i,j}}) A_{-i} A_i^*.
-\end{align}
-The error is <span class="math inline">\(\ve{A_{-i}}^2\max\fc{q_{ij}}{q_i} = \fc mn O\pf km = O\pf kn\)</span>, as needed.</li>
-</ul></li>
-<li>(Lemma 15-18) Bound the error term to show that at each step of the algorithm, the step is correlated, and maintains nearness.
-<ul>
-<li>Lemma 11 gives the following. Let <span class="math inline">\(k=p_iq_i\)</span>. We show the bound indicated below. <span class="math display">\[\E g_i  = \ub{p_iq_i}{=:k}(A_i - A^*) + \ub{p_iq_i ((1-\la_i) A_i + \ep_i + \ga)}{\ved \le \fc k4 \ve{A_i - A_i^*} + \ze}\]</span> where <span class="math inline">\(\ze=O\pf{k^2}{mn}\)</span>. Then <span class="math display">\[\an{g_i,A_i-A_i^*} \ge k\ve{A_i - A_i^*}^2 - \fc k4 \ve{A_i - A_i^*}^2 - \ze\ve{A_i - A_i^*}.\]</span> Using the inequality <span class="math inline">\(ax^2-bx \ge cx^2 + \fc{b^2}{4(a-c)}\)</span> with <span class="math inline">\(a=\fc 34k\)</span>, <span class="math inline">\(b=\ze\)</span>, <span class="math inline">\(c=\fc k4\)</span>, we get this is <span class="math inline">\(\ge \rc 4 k\ve{A_i-A_i^*}^2 + \fc{\ze^2}{2k}\)</span>.</li>
-<li>Thus <span class="math inline">\(\E g_i\)</span> is <span class="math inline">\((\Om\pf km, \Om\pf mk, O\pf{k^3}{mn^2})\)</span>-correlated with <span class="math inline">\(A^*\)</span>. The last term comes from <span class="math inline">\(\fc{\ep}{\al} = \fc{k^3/(mn^2)}{k/m}\)</span>.</li>
-<li>Note we need to maintain nearness in order to apply the estimates that gave correlation. (Where do we use 2-nearness in Lemma 11?) We show nearness is preserved. The natural way to decompose <span class="math inline">\(A_i'\)</span> is as follows.
-\begin{align}
-\E(A_i' - A_i^*) &amp;= \E[(A_i' - A_i)+(A_i-A_i^*)]\\
-&amp;=-\eta p_iq_i (\la_i^s A_i^s - A_i^*+\ep_i +\ga) + A_i - A_i^*\\
-&amp;=\diag(1-\eta p_iq_i) (A_i-A_i^*) + (1-\la_i) \eta p_iq_i A_i - \eta p_iq_i(\ep_i+\ga).
-\end{align}
-Now bound the two error terms by bounding the spectral norm.</li>
-</ul></li>
-<li>Finish.
-<ul>
-<li>At each step the step is <span class="math inline">\((\Om\pf{k}m,\Om \pf mk, O\pf{k^3}{mn^2})\)</span>-correlated with <span class="math inline">\(A_i^*\)</span>. By the approximate gradient descent theorem, this gives the result.</li>
-</ul></li>
-</ul>
-<h3 id="initialization">Initialization</h3>
-<ul>
-<li>(Lemma 20) Write <span class="math inline">\(M_{u,v}=\EE[\an{u,y}\an{v,y}yy^T]\)</span> as a main term plus error terms. (Why does this only give up to <span class="math inline">\(\rc{\log n}\)</span>?) <span class="math display">\[ M_{u,v} = \sum_{i\in U\cap V} q_ic_i\be_i\be_i' A_i^*,A_i^{*T}+E_1+E_2+E_3\]</span> where <span class="math inline">\(\be = A^{*T},\be'=A^{*T}v,q_i=\Pj(i\in S), c_i=\E[x_i^{*4}|i\nin S]\)</span>, <span class="math inline">\(U=\Supp(u),V=\Supp(v)\)</span>. The main term comes from the indices in ths support of both vectors. To calculate this, expand in terms of <span class="math inline">\(x_i^*\)</span>, and note that because they have mean 0, the terms that contribute are <span class="math inline">\(x_i^{*4},x_i^{*2}x_j^{*2}\)</span>. Bound the spectral norm of <span class="math inline">\(E_1+E_2+E_3\)</span> by <span class="math inline">\(O^*\pf{k}{m\log n}\)</span>.
-<ul>
-<li>(Lemma 36) If <span class="math inline">\(U\cap V=\{i\}\)</span>, then the top singular vector of <span class="math inline">\(M_{u,v}\)</span> is <span class="math inline">\(O^*\prc{\log n}\)</span>-close to <span class="math inline">\(A_i^*\)</span>. Proof: Use Wedin’s Theorem. (Let <span class="math inline">\(v_1(A)\)</span> be the top eigenvector of <span class="math inline">\(A\)</span>. If <span class="math inline">\(\de=|\la_1(A)-\la_2(A)|\)</span>, then <span class="math inline">\(\sin(\angle (v_1(A), v_1(A+E)))\le \fc{\ve{E}_2}{\de}\)</span>.)</li>
-<li>(Lemma 37) If there is a gap between the largest and second largest singular values as in the algorithm, then w.h.p. <span class="math inline">\(u,v\)</span> share a unique dictionary element. (Proof uses Weyl’s Theorem, HJ90—check this out.)</li>
-<li>Finally, <span class="math inline">\(\Pj(|U\cap V|=\{i\}) = \Om\pf{k^2}{m^2}\)</span>.</li>
-</ul></li>
-</ul>
-<h2 id="birds-eye-view">Bird’s eye view</h2>
-<ul>
-<li>Main technique: Alternating minimization. Crystallize out a weaker form of gradient descent, what is <em>actually</em> needed.</li>
-<li>Threshold to denoise and cancel out the vectors that are 0.</li>
-<li>For initialization, try to find the columns as the largest eigenvector of some matrix (SVD). Which matrix? <span class="math inline">\(\E\an{y,u}\an{y,v}yy^T\)</span>, because intuitively the large singular values will correspond to indices shared by <span class="math inline">\(u,v\)</span>, and with good probability <span class="math inline">\(u,v\)</span> have only one index in common in their support.</li>
-</ul>
-<h2 id="questions">Questions</h2>
-<ul>
-<li>Presence of multiple local minima?</li>
-</ul>
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>What is the magnitude? I think this is responsible for the <span class="math inline">\(\ga\)</span>’s that appear, but which are swept under the rug.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Is it the minimum?<a href="#fnref2">↩</a></p></li>
-<li id="fn3"><p>Is this important, or just for simplicity of analysis?<a href="#fnref3">↩</a></p></li>
-<li id="fn4"><p>This is to disambiguate from the other meaning of <span class="math inline">\(O\)</span>, which is “whenever <span class="math inline">\(x\le cy\)</span> for some <span class="math inline">\(c\)</span>, there are constants such that the result holds.”<a href="#fnref4">↩</a></p></li>
-<li id="fn5"><p>Are we implicitly reordering the columns here?<a href="#fnref5">↩</a></p></li>
-<li id="fn6"><p>Do we need concentration too?<a href="#fnref6">↩</a></p></li>
-</ol>
-</section>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Sum of squares</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/complexity/sos.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/complexity/sos.html</id>
-    <published>2016-03-24T00:00:00Z</published>
-    <updated>2016-03-24T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Sum of squares</h1>
-    </div>
-    <div class="info">
-      
-       
-        <p>Posted: 2016-03-24 
-          , Modified: 2016-03-24 
-	</p>
-      
-       <p>Tags: <a href="/tags/SoS.html">SoS</a>, <a href="/tags/SDP.html">SDP</a>, <a href="/tags/maxcut.html">maxcut</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  <div class="toc"> <ul>
- <li><a href="#introduction">Introduction</a></li>
- <li><a href="#definitions">Definitions</a><ul>
- <li><a href="#equivalence">Equivalence</a></li>
- </ul></li>
- <li><a href="#sum-of-squares-as-semidefinite-programs">Sum-of-squares as semidefinite programs</a></li>
- <li><a href="#exercises">Exercises</a><ul>
- <li><a href="#chapter-1">Chapter 1</a></li>
- <li><a href="#chapter-2">Chapter 2</a></li>
- </ul></li>
- <li><a href="#misc.">Misc.</a></li>
- </ul> </div>
-
-  <div class="blog-main">
-    <p>Reference: Barak’s notes. Barak and Steurer’s survey.</p>
-<h2 id="introduction">Introduction</h2>
-<p>“Sum-of-squares” is an algorithm that attempts to find feasible solutions to systems of polynomial inequalities, or a proof that there is no solution. It is widely applicable because many computational problems can naturally be put into the form of polynomial inequalities (ex. <span class="math inline">\(k\)</span>-SAT can be encoded with degree <span class="math inline">\(k\)</span>). The degree <span class="math inline">\(d\)</span> of sum-of-squares is a tunable parameter; the algorithm runs in <span class="math inline">\(n^d\)</span> time. We can look at</p>
-<ul>
-<li>lower bounds: sum-of-squares of degree <span class="math inline">\(d\)</span> cannot solve a certain problem. This is necessary, e.g., to show a problem has no polynomial-time algorithm - but very little is known about lower bounds even though sum-of-squares is a <em>single</em> algorithm, not a class of algorithms!</li>
-<li>upper bounds: use sum-of-squares of higher constant degree (e.g., <span class="math inline">\(d=4\)</span>) to get better approximation algorithms, etc.</li>
-</ul>
-<p>Why is SoS a natural notion?</p>
-<ul>
-<li><span class="math inline">\(d=1\)</span> is linear programming, <span class="math inline">\(d=2\)</span> is semidefinite programming, and <span class="math inline">\(d=n\)</span> is brute-force-search. Everything in the middle is “dark matter” which we don’t understand. In many cases it seems like you don’t get better algorithms by looking t <span class="math inline">\(d&gt;2\)</span>, but there are also exceptions. Compare to how most natural problems seem to be either polynomial time or NP-hard/conjectured exponential time. By Ladner’s Theorem (time hierarchy) there are problems of essentially any time complexity, but these aren’t natural.</li>
-<li>The quest for optimal algorithms: In complexity theory the hope is to find a property <span class="math inline">\(P\)</span> such that easy problems have property <span class="math inline">\(P\)</span> while hard problems do not. Even more ambitiously, one hopes for a <em>single</em> “optimal algorithm” for all problems in a large class, in the sense that when a problem has an efficient algorithm, then this single optimal algorithm will solve it. SoS comes the closest to being such an algorithm. (Thus it’s interesting to see what kinds of techniques are encompassed by the SoS framework, i.e., what facts have “SoS proofs”, because then they will be solvable by the SoS algorithm.)</li>
-</ul>
-<h2 id="definitions">Definitions</h2>
-<p>There are many equivalent notions of sum-of-squares; we give 4. The first definition introduces an algorithm that searches for a pseudo-expectation operator; on the boolean cube this is essentially equivalent to a pseudo-distribution. We also give equivalences to a sum-of-squares proof and sum-of-squares representation.</p>
-<p>In the next section we will motivate these definitions and show equivalences.</p>
-<p>Let <span class="math inline">\(x=(x_1,\ldots, x_n)\)</span> and <span class="math inline">\(\R[x]_{\le d}\)</span> denote polynomials in <span class="math inline">\(x_1,\ldots, x_n\)</span> of degree <span class="math inline">\(\le d\)</span>.</p>
-<ol type="1">
-<li>(Convex optimization) A degree-<span class="math inline">\(l\)</span> pseudo-expectation operator satisfying <span class="math inline">\(p_1=\cdots =p_m=0\)</span>, where <span class="math inline">\(\deg p_i\le d, 2d\mid l\)</span>, is a bilinear form <span class="math inline">\(M:\R[x]_{\le l/2}\times \R[x]_{\le l/2}\to \R\)</span> such that
-<ul>
-<li>(Normalization) <span class="math inline">\(M(1,1)=1\)</span>.</li>
-<li>(Consistency) If <span class="math inline">\(p,q,r,s\in \R[x]_{\le l/2}\)</span> and <span class="math inline">\(pq=rs\)</span>, then <span class="math inline">\(M(p,q)=M(r,s)\)</span>.</li>
-<li>(Non-negativity) <span class="math inline">\(M(p,p)\ge 0\)</span>.</li>
-<li>(Feasibility) For all <span class="math inline">\(p_i\)</span> and <span class="math inline">\(q\in \R[x]_{\le l/2-d}\)</span>, <span class="math inline">\(M(p_iq,p)=0\)</span>. In other words, <span class="math inline">\(M\)</span> is a positive semidefinite quadratic form that, as a bilinear form, factors through <span class="math inline">\((\R[x]/\an{p_i})_{\le l}\)</span>, <span class="math display">\[\R[x]_{\le l/2}\times \R[x]_{\le l/2} \to (\R[x]/\an{p_i})_{\le l} \to \R.\]</span> The degree-<span class="math inline">\(l\)</span> SoS algorithm is the algorithm that solves the feasibility problem for this semidefinite program.</li>
-</ul></li>
-<li>(Pseudo-expectation) For a function <span class="math inline">\(\mu:\{\pm 1\}^n\to \R\)</span> <span class="math display">\[\wt{\EE_\mu} p(x) = \sum_x \mu(x)p(x).\]</span> We say <span class="math inline">\(\mu\)</span> is a degree-<span class="math inline">\(l\)</span> <strong>pseudo-expectation</strong> if
-<ul>
-<li>(Normalization) <span class="math inline">\(\sum_x\mu(x)=1\)</span>.</li>
-<li>(Restricted non-negativity) For all <span class="math inline">\(p\in \R[x]_{\le l/2}\)</span>, <span class="math inline">\(\wt{\EE_\mu} p(x) \ge 0\)</span>.</li>
-</ul></li>
-<li>(Sum-of-square refutation) A <strong>sum-of-squares refutation</strong> for the system of polynomial equations <span class="math inline">\(p_i\ge 0\)</span><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> is a proof of <span class="math inline">\(-1\ge 0\)</span> from deduction system starting with <span class="math inline">\(p_i\ge 0\)</span> with the following rules
-<ul>
-<li><span class="math inline">\(p\ge 0, q\ge 0\vDash p+q\ge 0\)</span>.</li>
-<li><span class="math inline">\(p\ge 0, q\ge 0\vDash pq\ge 0\)</span>.</li>
-<li><span class="math inline">\(\vDash p^2\ge 0\)</span>. It is degree <span class="math inline">\(l\)</span> if the <em>syntactic</em> degree of each expression is at most <span class="math inline">\(l\)</span>. (Explain.)</li>
-</ul></li>
-<li>(Sum-of-square representation) A degree-<span class="math inline">\(l\)</span> <strong>sum-of-squares representation</strong> for the infeasibility of <span class="math inline">\(p_1=0,\ldots, p_m=0\)</span> is <span class="math display">\[\sum_i p_i q_i = 1+\sum_i r_i^2, \quad \deg(p_i),\deg(r_i)\le l.\]</span></li>
-</ol>
-<h3 id="equivalence">Equivalence</h3>
-<p>1$$2: See exercise 1.7.</p>
-<p>2$$3: This is the SOS Theorem. It encompasses the Positivstellensatz, which says that every unsatisfiable system of equalities has a finite degre proof of unsatisfiability. (See exercise 1.14, 15 for part of the theorem.)</p>
-<p>3$$4: See exercise 1.11.</p>
-<h2 id="sum-of-squares-as-semidefinite-programs">Sum-of-squares as semidefinite programs</h2>
-<p>The most common use of sum-of-squares is in SDP relaxations of combinatorial problems, as follows. Let <span class="math inline">\(f\)</span> be a convex function. The goal is to find <span class="math display">\[
-\min_{x\in \{-1,1\}^n}f(x).
-\]</span> One way to relax this is to write <span class="math inline">\(f(x)=g(x^Tx/n)\)</span>, and find <span class="math display">\[
-\min_{M\succeq 0, M_{ii}=1} g(M).
-\]</span> This is a relaxation because if <span class="math inline">\(x\)</span> is the optimal solution to the first problem, <span class="math inline">\(x^Tx/n\)</span> is a feasible point for the second problem achieving the same value.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
-<p>Think of <span class="math inline">\(M_{ii}=1\)</span> as degree-2 constraints that shrink the space we’re minizing over to be closer to just the set <span class="math inline">\(\set{x^Tx/n}{x\in \{-1,1\}^n}\)</span>.</p>
-<p>Note this is the degree-2 SoS relaxation of this problem! The degree-<span class="math inline">\(l\)</span> SoS relaxation is the optimization problem <span class="math display">\[\min_{M\text{ pseudo-expectation satisfying }x_i^2=1} h(M)\]</span> (note we showed that the set of pseudo-expectations is convex; it is defined by <span class="math inline">\(M\succeq 0\)</span> and some linear equations). (<span class="math inline">\(x_i^2=1\)</span> corresponds to <span class="math inline">\(M_{ii}=1\)</span>.) In the equation above we thought of <span class="math inline">\(M\)</span> as a bilinear form on <span class="math inline">\(\R^n\times \R^n = \R[x]_{=1}\times \R[x]_{=1}\)</span>; here we’re just adding 1 to the vector space to get <span class="math inline">\(\R[x]_{\le 1}\times \R[x]_{\le 1}\)</span> and stipulating <span class="math inline">\(M(1,1)=1\)</span>, which doesn’t change anything.</p>
-<p>(If <span class="math inline">\(f\)</span> is a linear function <span class="math inline">\(f(x_1,\ldots, x_n,x_1^2,x_1x_2,\ldots, x_1^3,\ldots)\)</span>, then <span class="math inline">\(g(M)\)</span> is the function <span class="math inline">\(f(M(x_1,1),\ldots, M(x_n,1), M(x_1,x_1),\ldots)\)</span>.</p>
-<p>For example, the degree-4 SoS relaxation would correspond to optimizing over <span class="math inline">\((\R^2,\R^1,\R)^{\ot 2}\)</span>, where the solutions corresponding to solutions of the original problem are in the form <span class="math inline">\((x^{\ot 2},x,1)^{\ot 2},x\in \{-1,1\}^n\)</span>. For $M<span class="math inline">\((\R^2,\R^1,\R)^{\ot 2}\)</span>, the solutions satisfy equations like <span class="math inline">\(M_{ii,jk}=1, M_{i,ij}=1\)</span>, etc.—corresponding to multiples of polynomials <span class="math inline">\(x_i^2-1\)</span>.</p>
-<h2 id="exercises">Exercises</h2>
-<h3 id="chapter-1">Chapter 1</h3>
-<ol type="1">
-<li></li>
-<li>Use linearity.</li>
-<li><span class="math inline">\(M(p,p)\ge 0\)</span> is semidefiniteness; all the other constraints are linear.</li>
-<li></li>
-<li>Let <span class="math inline">\(p=\sum_{y\ne y^0} \prod_i (x_i-y_i)^2\)</span>; note <span class="math inline">\(p(y^0)\ne 0\)</span>. Then <span class="math inline">\(\wt{\EE_{x\sim \mu}} [p(x)^2] = \mu(y^0)p(y^0)\)</span>. Thus <span class="math inline">\(\mu(y^0)\ge 0\)</span>.</li>
-<li>Note the problem should say “degree <span class="math inline">\(l\)</span> polynomials”. Write <span class="math inline">\(\mu(x)\)</span> as a multilinear polynomial. First, mod out by <span class="math inline">\(x_i^2-x_i\)</span>. Now note that for every degree <span class="math inline">\(\ge l+1\)</span> monomial <span class="math inline">\(x^L\)</span>, in <span class="math inline">\(\wt{\EE_{x\sim x^L}} q(x)\)</span>, if <span class="math inline">\(\deg q\le l\)</span> is a monomial, then one term will be uncancelled and average out to 0. Now use linearity.</li>
-<li>The map is <span class="math inline">\(\mu \mapsto ((p,q) \mapsto \wt{\EE_\mu pq})\)</span>. We have <span class="math inline">\(\sum \mu(x) (x_i^2-1)pq=0\)</span>. (Where do we use 6?)</li>
-<li></li>
-<li>?</li>
-<li>?</li>
-<li>Induct to say that at each stage, we have an expression in the form <span class="math inline">\(\sum r_i^2 + \sum q_ip_i\)</span>. At the end we get <span class="math inline">\(\sum r_i^2 + \sum q_ip_i = -1\ge 0\)</span>, which re-arranges to a SoS representation.</li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ol>
-<h3 id="chapter-2">Chapter 2</h3>
-<ol type="1">
-<li>Imitate the proof of CS. We have <span class="math inline">\(\wt{\EE_{\mu}} t^2P^2-2tPQ+Q^2\)</span>. Now set the discriminant to be <span class="math inline">\(\le 0\)</span>.</li>
-</ol>
-<h2 id="misc.">Misc.</h2>
-<ul>
-<li>SoS in universal learning (Paul Christiano)</li>
-</ul>
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>There is another way to relax this kind of problem, by changing the values <span class="math inline">\(x_i\)</span> could take from <span class="math inline">\(\pm1\)</span> to vectors, like in Goemans-Williamson. We don’t consider this kind of relaxation here. (Though we can do GW here too…?)<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>There is another way to relax this kind of problem, by changing the values <span class="math inline">\(x_i\)</span> could take from <span class="math inline">\(\pm1\)</span> to vectors, like in Goemans-Williamson. We don’t consider this kind of relaxation here. (Though we can do GW here too…?)<a href="#fnref2">↩</a></p></li>
-</ol>
-</section>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Thoughts on LDC's</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/coding/ldc-ideas.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/coding/ldc-ideas.html</id>
-    <published>2016-03-24T00:00:00Z</published>
-    <updated>2016-03-24T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Thoughts on LDC's</h1>
-    </div>
-    <div class="info">
-      
-       
-        <p>Posted: 2016-03-24 
-          , Modified: 2016-03-24 
-	</p>
-      
-       <p>Tags: <a href="/tags/LDC.html">LDC</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  <div class="toc"></div>
-
-  <div class="blog-main">
-    
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Thoughts on LDC's</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/coding/3-21-16.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/coding/3-21-16.html</id>
-    <published>2016-03-21T00:00:00Z</published>
-    <updated>2016-03-21T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Thoughts on LDC's</h1>
-    </div>
-    <div class="info">
-      
-       
-        <p>Posted: 2016-03-21 
-          , Modified: 2016-03-21 
-	</p>
-      
-       <p>Tags: <a href="/tags/LDC.html">LDC</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  <div class="toc"> <ul>
- <li><a href="#zeevs-thoughts">Zeev’s thoughts</a></li>
- </ul> </div>
-
-  <div class="blog-main">
-    <h2 id="zeevs-thoughts">Zeev’s thoughts</h2>
-<p>I was thinking a bit about the 2 query case (proving lower bounds). If we define the decoding map for 2-LCC we get a quadratic map Q from R^n to R^n sending the codewords (in +-1) to themselves. Now, the Jacobian of this map can be written (I think) as a combination of permutation matrices with coefficients that are the x_i. Using standard matrix chernoff/Bernstein bounds (see here: http://users.cms.caltech.edu/~jtropp/books/Tro14-Introduction-Matrix-FnTML-rev.pdf) I think you can show that the Jacobian has tiny norm almost everywhere. Which means that, to contain all the codewords, the image of Q must look very `spiky’ (it has small volume but contains a code). But then I started thinking that maybe we can use the fact that it is a low degree mapping to show that it cannot be too spiky. A quick google search came up with this paper:</p>
-<p>http://www.math.lsa.umich.edu/~barvinok/product.pdf</p>
-<p>Which is not exactly what we need, but seems in the right direction (and uses tools we already discussed before). If it works, this has some chance to generalize to degree 3 maps as well (not using the same tools but maybe something more sophisticated from real AG).</p>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>LSTM Programming</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/machine_learning/neural_nets/lstm_code.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/machine_learning/neural_nets/lstm_code.html</id>
-    <published>2016-03-19T00:00:00Z</published>
-    <updated>2016-03-19T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>LSTM Programming</h1>
-    </div>
-    <div class="info">
-      
-       
-        <p>Posted: 2016-03-19 
-          , Modified: 2016-03-19 
-	</p>
-      
-       <p>Tags: <a href="/tags/programming.html">programming</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  
-
-  <div class="blog-main">
-    <h2 id="math">Math</h2>
-<p>Here are the equations for LSTM.</p>
-\begin{align}
-f_t&amp;=\si(W_f \coltwo{h_{t-1}}{x_t} + b_f)\\
-i_t&amp;=\si(W_i \coltwo{h_{t-1}}{x_t} + b_i)\\
-\wt{C}_t &amp;= \tanh (W_C\coltwo{h_{t-1}}{x_t}+b_C)\\
-C_t &amp;= f_t \odot C_{t-1} + i_t \odot \wt{C}_t\\
-o_t &amp;= \si(W_o\coltwo{h_{t-1}}{x_t} + b_o)\\
-h_t &amp;= o_t\odot \tanh(C_t)\\
-\wh y &amp;= \text{softmax}(Wh_t + b).
-\end{align}
-<p>References:</p>
-<ul>
-<li>http://colah.github.io/posts/2015-08-Understanding-LSTMs/</li>
-<li>http://colah.github.io/posts/2015-09-NN-Types-FP/</li>
-</ul>
-<h2 id="lstm-layer">LSTM layer</h2>
-<p>We define functions</p>
-<ul>
-<li><code>step_lstm</code> :: <span class="math inline">\(\R^n\times \R^m\times \R^m \to \R^m\times \R^m\)</span> sending <span class="math display">\[(i_t, C_{t-1}, h_{t-1}) \mapsto (C_t, h_t).\]</span></li>
-<li><code>sequence_lstm</code> :: <span class="math inline">\((\R^n)^s \times \R^m\times \R^m \to (\R^m)^s\)</span> sending <span class="math display">\[((i_t)_{t=1}^T, C_0, h_0)\mapsto (h_t)_{t=1}^T.\]</span> (This is essentially “scanl” of step_lstm.)</li>
-<li><code>step_multiple_lstm</code> :: <span class="math inline">\((\R^n)^k\times (\R^m)^k \times (\R^m)^k \to (\R^m)^k \times (\R^m)^k\)</span>. The mapped vrsion of step_lstm. This we can implement efficiently as a matrix multiplication.</li>
-<li><code>sequence_multiple_lstm</code> :: <span class="math inline">\(((\R^n)^s)^k\times (\R^m)^k \times (\R^m)^k \to (\R^m)^k \times (\R^m)^k \to ((\R^m)^s)^k\)</span>. There are two ways to write this:
-<ul>
-<li>As the mapped version of <code>sequence_lstm</code> (i.e., scan, then map).</li>
-<li>As the scanned version of <code>step_multiple</code> (i.e., map, then scan). This is more efficient since we can implement the “map” as a matrix multiplication.</li>
-</ul></li>
-</ul>
-<p>(Actually these functions will involve the parameters as well, which we omitted here.)</p>
-<h3 id="implementation">Implementation</h3>
-<p>Define <code>step_lstm1</code> by</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> step_lstm1(x, C, h, Wf, bf, Wi, bi, WC, bC, Wo, bo):
-    hx <span class="op">=</span> T.concatenate([h,x]) <span class="co">#dimension m+n</span>
-    f <span class="op">=</span> sigmoid(T.dot(hx, Wf) <span class="op">+</span> bf) <span class="co">#dimension m</span>
-    i <span class="op">=</span> sigmoid(T.dot(hx, Wi) <span class="op">+</span> bi) <span class="co">#dimension m</span>
-    C_add <span class="op">=</span> T.tanh(T.dot(hx, WC) <span class="op">+</span> bC) <span class="co">#dimension m</span>
-    C1 <span class="op">=</span> f <span class="op">*</span> C <span class="op">+</span> i <span class="op">*</span> C_add <span class="co">#dimension m</span>
-    o <span class="op">=</span> sigmoid(T.dot(hx, Wo) <span class="op">+</span> bo) <span class="co">#dimension m</span>
-    h1 <span class="op">=</span> o <span class="op">*</span> T.tanh(C1) <span class="co">#dimension m</span>
-    <span class="cf">return</span> [C1, h1] <span class="co">#dimension 2m</span></code></pre></div>
-<p>Now define <code>step_lstm</code> as the version with parameters grouped together.</p>
-<pre class="py"><code>def step_lstm(x, C, h, tparams): 
-    Wf, bf, Wi, bi, WC, bC, Wo, bo = unpack_params(tparams, [&quot;Wf&quot;, &quot;bf&quot;, &quot;Wi&quot;, &quot;bi&quot;, &quot;WC&quot;, &quot;bC&quot;, &quot;Wo&quot;, &quot;bo&quot;])
-    return step_lstm1(x, C, h, Wf, bf, Wi, bi, WC, bC, Wo, bo)</code></pre>
-<p>To define <code>sequence_lstm</code> we use Theano’s can function. The arguments are</p>
-<ul>
-<li><code>fn</code> is the function</li>
-<li><code>outputs_info</code> are the initial values in the recursion</li>
-<li><code>non_sequences</code> are fixed values that are not involved in the recursion.</li>
-</ul>
-<p>Thus to create a scanned function like so</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">scan' ::</span> ((a,b,c) <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> c <span class="ot">-&gt;</span> [b]
-scan' f a's init fixed <span class="fu">=</span></code></pre></div>
-<p>we call</p>
-<pre class="py"><code>theano.scan(fn=f, sequences=a's, outputs_info=init, non_sequences=fixed)</code></pre>
-<p>Note here a, b, c can encompass multiple arguments, in which case you pass a list to <code>sequences</code>, <code>outputs_info</code>, and <code>non_sequences</code>. However, a, b, c must appear in that order.</p>
-<pre class="py"><code>def sequence_lstm(C0, h0, xs, tparams):.
-    Wf, bf, Wi, bi, WC, bC, Wo, bo = unpack_params(tparams, [&quot;Wf&quot;, &quot;bf&quot;, &quot;Wi&quot;, &quot;bi&quot;, &quot;WC&quot;, &quot;bC&quot;, &quot;Wo&quot;, &quot;bo&quot;])
-    #the function fn should have arguments in the following order:
-    #sequences, outputs_info (accumulators), non_sequences
-    #(x, C, h, Wf, bf, Wi, bi, WC, bC, Wo, bo)
-    ([C_vals, h_vals], updates) = theano.scan(fn=step_lstm1,
-                                          sequences = xs, 
-                                          outputs_info=[C0, h0], #initial values of the memory/accumulator
-                                          non_sequences=[Wf, bf, Wi, bi, WC, bC, Wo, bo], #fixed parameters
-                                          strict=True)
-    return [C_vals, h_vals]</code></pre>
-<p>Note this will map automatically; to define <code>sequence_multiple_lstm</code> all we have to do is swap two axes.</p>
-<p>(Note on Theano list in scan.)</p>
-<h2 id="neural-net-functions">Neural net functions</h2>
-<p>A vanilla neural net layer is</p>
-<pre class="py"><code>def nn_layer1(x, W, b):
-    return x * W + b
-
-def nn_layer(x, tparams):
-    W, b = unpack_params(tparams, [&quot;W&quot;, &quot;b&quot;])
-    return nn_layer1(x, W, b)</code></pre>
-<p>We define functions</p>
-<ul>
-<li><code>nn_layer</code> :: <span class="math inline">\(\R^n\times \R^n\)</span></li>
-<li><code>logloss</code> :: <span class="math inline">\(\R^n\times \R^n\)</span> given by <span class="math display">\[\text{logloss}(x,y) = -\sum_i x_i \ln' (y_i)\]</span> where we use <code>corrected_log</code>, <span class="math inline">\(\ln'(y) = \ln(\max(10^{-6}, x))\)</span> to avoid blowup at small probabilities.</li>
-</ul>
-<p>Now we can combine these with our LSTM to make the evaluation, prediction, and loss function. Evaluation will give the probabilities of each output, prediction will give the output with max probability, and loss is the logloss on the expected and actual outcomes. We also include a accuracy function that outputs 1 if the prediction is correct and 0 otherwise.</p>
-<p>Note <code>fns_lstm</code> returns a list of Theano variables (depending on the input lists/parameters) representing the activations, predictions, losses and accuracy. We haven’t compiled these variables into a function yet.</p>
-<!--
-We include a flag saying if we just want the output for the last in the sequence, or every time step. We also want versions that are mapped over sequences (to do them in batch).
--->
-<p>(Add code here)</p>
-<p>Some other functions:</p>
-<ul>
-<li><code>init_params_with_f_lstm(n,m,f,g)</code></li>
-<li><code>train_lstm</code></li>
-<li><code>weight_decay</code> :: <span class="math inline">\(\R\)</span> -&gt; Dict String TheanoVars -&gt; [String] -&gt; <span class="math inline">\(\R\)</span>. For the parameters in the list, sum the squares of their norms and multiply by the decay constant.</li>
-</ul>
-<p>(A further speedup is to concatenate the matrices.)</p>
-<h2 id="data-processing-functions">Data processing functions</h2>
-<p>We’ll keep parameters in a dictionary, and unpack them as needed.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> unpack_params(tparams, li):
-    <span class="cf">return</span> [tparams[name] <span class="cf">for</span> name <span class="op">in</span> li]</code></pre></div>
-<ul>
-<li><code>wrap_theano_dict</code> and <code>unwrap_theano_dict</code>.</li>
-<li><code>get_minibatches_idx</code> (::Int -&gt; Int -&gt; Bool -&gt; [(Int, [Int])]) will give an enumerated list of minibatch indices, given <code>n</code>, the size of the list, and <code>minibatch_size</code>. It will make a minibatch out of the remainder.</li>
-<li><code>oneHot(choices, n)</code> gives a way to encode one-hot vectors within Theano.</li>
-</ul>
-<h2 id="optimization-functions">Optimization functions</h2>
-<p>These are taken from…</p>
-<p>The arguments of each are</p>
-<ul>
-<li>lr: learning rate</li>
-<li>tparams: dictionary of parameters (not Theano variables)</li>
-<li>grads: gradient of function to optimize</li>
-<li>cost:</li>
-<li>args: args to cost function (e.g., neural net inputs)</li>
-</ul>
-<p>Retrns</p>
-<ul>
-<li><code>f_grad_shared</code></li>
-<li><code>f_update</code></li>
-</ul>
-<p>What does the train function need?</p>
-<ul>
-<li>Epochs: An epoch is going through all the data once. Stop after <code>patience</code> number of epochs have passed without progress, or after <code>max_epochs</code>.</li>
-<li>Optimizer
-<ul>
-<li>Cost function to optimize
-<ul>
-<li>Arguments to cost function</li>
-</ul></li>
-</ul></li>
-<li>Batch:
-<ul>
-<li>batch size during training</li>
-<li>batch size for validation</li>
-</ul></li>
-<li>Initial parameters</li>
-<li>Frequency (after how many updates do you…)
-<ul>
-<li>validate?</li>
-<li>save data? (to where?)</li>
-</ul></li>
-<li>Data (train, validation, test): What’s the difference between validation and test?</li>
-<li>Batch-maker: Given the data, make a list of batches. One epoch consists of going through all the batches.</li>
-</ul>
-<!-- Scraps
-while I wait for someone to write a frontend in haskell...
--->
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>[ALLMR16] RAND-WALK: A latent variable model approach to word embeddings</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/machine_learning/nlp/randwalk.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/machine_learning/nlp/randwalk.html</id>
-    <published>2016-03-15T00:00:00Z</published>
-    <updated>2016-03-15T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>[ALLMR16] RAND-WALK: A latent variable model approach to word embeddings</h1>
-    </div>
-    <div class="info">
-      
-       
-        <p>Posted: 2016-03-15 
-          , Modified: 2016-03-15 
-	</p>
-      
-       <p>Tags: <a href="/tags/nlp.html">nlp</a>, <a href="/tags/word%20embeddings.html">word embeddings</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  <div class="toc"> <ul>
- <li><a href="#task">Task</a></li>
- <li><a href="#previous-work-observed-phenomena">Previous work, observed phenomena</a><ul>
- <li><a href="#mysteries">Mysteries</a></li>
- </ul></li>
- <li><a href="#model">Model</a></li>
- <li><a href="#explanation">Explanation</a></li>
- <li><a href="#algorithm">Algorithm</a></li>
- <li><a href="#followup">Followup</a></li>
- </ul> </div>
-
-  <div class="blog-main">
-    <h2 id="task">Task</h2>
-<p>Given a corpus (a long sequence of words, e.g. the text of Wikipedia) to learn from, answer analogy questions such as ?:queen::man:woman.</p>
-<h2 id="previous-work-observed-phenomena">Previous work, observed phenomena</h2>
-<p>The usual approach is to learn “word vectors.”</p>
-<p>Define a context of a word <span class="math inline">\(w\)</span> in the corpus to be the two words (say) on either side of <span class="math inline">\(w\)</span>. (Thus, for a context <span class="math inline">\(\chi=(w_{-2},w_{-1},w_1,w_2)\)</span>, <span class="math inline">\(\Pj(\chi|w)\)</span> means the probability of observing the words of <span class="math inline">\(\chi\)</span> in a window of length 2, given that the middle word is <span class="math inline">\(w\)</span>.) (Mikolov)</p>
-<p>Pennington et al. and Levy and Goldberg posit the following approach.</p>
-<ul>
-<li>Model: If <span class="math inline">\(a:b::c:d\)</span> is an analogy, then <span class="math display">\[ \fc{\Pj(\chi|a)}{\Pj(\chi|b)} \approx \fc{\Pj(\chi|a)}{\Pj(\chi|b)}.\]</span></li>
-<li>Thus, the solution to the analogy <span class="math inline">\(?:b::c:d\)</span>$ is <span class="math display">\[ \amin_w \sum_\chi \pa{ \ln \pf{\Pj(\chi|w)}{\Pj(\chi|b)} - \ln \pf{\Pj(\chi|c)}{\Pj(\chi|d)} }^2.\]</span></li>
-<li>Define probability-mutual-information <span class="math display">\[ PMI(w,\chi) = \ln \pf{\Pj(w,\chi)}{\Pj(w)\Pj(\chi)} = \ln \pf{\Pj(\chi|w)}{\Pj(\chi)}.\]</span> Let <span class="math inline">\(C\)</span> be the set of possible contexts. For a word <span class="math inline">\(w\)</span>, let <span class="math inline">\(v_w\)</span> be the vector indexed by contexts <span class="math inline">\(\chi \in C\)</span>, <!--containing the empirical estimate of PMI from the corpus,
-    $$ v_w(\chi)= \wh{PMI}(w,\chi) = \ln \pf{\wh \Pj(w,\chi)}{\wh \Pj(w)\wh \Pj(\chi)} = \ln \pf{\wh \Pj(\chi|w)}{\wh \Pj(\chi)}.$$--> <span class="math display">\[ v_w(\chi)= {PMI}(w,\chi) = \ln \pf{ \Pj(w,\chi)}{\Pj(w) \Pj(\chi)} = \ln \pf{ \Pj(\chi|w)}{\Pj(\chi)}.\]</span> Under this embedding, the summand equals <span class="math inline">\(v_a-v_b-v_c+v_d\)</span>. To find <span class="math inline">\(a\)</span>, solve <span class="math display">\[ \amin_a \ve{v_a-v_b-v_c+v_d}^2.\]</span></li>
-<li>Algorithm: GloVe (global vector) method (Pennington) Let <span class="math inline">\(X_{w,w'}\)</span> be the co-occurrence for words <span class="math inline">\(w,w'\)</span>. Find low-dimensional <span class="math inline">\(\wt v_w, \wt v_{w'}, \wt b_w, \wt b_{w'}\)</span> to minimize <span class="math display">\[ \sum_{w,w'} f(X_{w,w'}) (\an{\wt v_w, \wt v_{w'}} - \wt b_w- \wt b_{w'} - \ln X_{w,w'})^2\]</span> for some function <span class="math inline">\(f\)</span>. They choose <span class="math inline">\(f(x) = \min\bc{\pf{x}{x_{\max}}^{.75}, 1}, x_{\max}=100\)</span> from experiments.</li>
-</ul>
-<p>(How to optimize this?)</p>
-<h3 id="mysteries">Mysteries</h3>
-<ol type="1">
-<li>There is a disconnect between the definition of <span class="math inline">\(v_w\)</span> and the estimate <span class="math inline">\(\wt v_w\)</span>. Namely, the <span class="math inline">\(v_w\)</span> are vectors giving the PMI with all <em>contexts</em> while <span class="math inline">\(\wt v_w\)</span> are the vectors such that <span class="math inline">\(\an{\wt v_w,\wt v_{w'}}\)</span> give the <em>word-word co-occurences</em>. Why do the learned <span class="math inline">\(\wt v_w\)</span> help in solving analogies? Why is the optimization problem in the algorithm a good proxy?</li>
-<li>Why is this method stable to noise? <!--Why would we suspect noise is bad?--></li>
-</ol>
-<h2 id="model">Model</h2>
-<p>Let the dimension of the underlying space be <span class="math inline">\(d\)</span>.</p>
-<ul>
-<li>There are <span class="math inline">\(n\)</span> words <span class="math inline">\(w\)</span> in the dictionary <span class="math inline">\(W\)</span>, and they are associated with vectors <span class="math inline">\(v_w\in \R^d\)</span>.
-<ul>
-<li>The vectors <span class="math inline">\(v_w\)</span> are iid generated by <span class="math inline">\(v=s\cdot \wh v\)</span> where <!--$\wh v$ is uniform on the sphere and -->
-<ul>
-<li><span class="math inline">\(\wh v\sim N(0,I_d)\)</span>,</li>
-<li><span class="math inline">\(s\)</span> is a random scalar with <span class="math inline">\(\si^2\le d\)</span> and <span class="math inline">\(|s|\le \ka \sqrt d\)</span> for some constant <span class="math inline">\(\ka\)</span>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
-</ul></li>
-</ul></li>
-<li>At each time <span class="math inline">\(t\in \N\)</span>, there is a context vector <span class="math inline">\(c_t\in \R^d\)</span>.
-<ul>
-<li>The vectors <span class="math inline">\(c_t\)</span> follow a random walk, satisfying the following:
-<ul>
-<li>(Uniform stationary distribution) The stationary distribution is <span class="math inline">\([-\rc{\sqrt d},\rc{\sqrt d}]^d\)</span>.</li>
-<li>(Small drift) The drift in the context vector is <span class="math inline">\(\ve{c_{t+1}-c_t}_1\le \rc{\ln n}\)</span>. (There are more complicated general conditions under which the theorems work; take this for simplicity.) <!--  * (small drift) $\ve{\De_t}_1\le \rc{\ln n}$.
-*--></li>
-</ul></li>
-</ul></li>
-<li>At each time <span class="math inline">\(t\)</span>, word <span class="math inline">\(w\)</span> is emitted with probability
-\begin{align}
-\Pj[w|c_t] &amp;= \rc{Z_{c_t}} \exp(\an{v_w,c_t})\\
-\text{where} Z_{c}:&amp;= \sum_w \exp(\an{v_w,c}).
-\end{align}</li>
-</ul>
-<h2 id="explanation">Explanation</h2>
-<p>Let <span class="math inline">\(\Pj(w,w')\)</span> be the probability that <span class="math inline">\(w,w'\)</span> appear consecutively at time <span class="math inline">\(t,t+1\)</span> when <span class="math inline">\(c_t\sim U_{[-\rc{\sqrt d},\rc{\sqrt d}]^d}\)</span> is drawn from the stationary distribution. Then the following hold.</p>
-<strong>Theorem 1</strong>: With high probability over choice of <span class="math inline">\(v_w\)</span>’s,
-\begin{align}
-\forall &amp;w,w', &amp;
-\ln \Pj (w,w')&amp;\approx \rc{2d}|v_w+v_w'|^2 - 2\lg Z - o(1)\\
-\forall &amp; w,&amp;
-\lg \Pj(w) &amp;\approx \rc{2d} |v_w|^2 - \lg Z -o(1)\\
-\therefore &amp;&amp; \lg \fc{\Pj[w,w']}{\Pj[w]\Pj[w']} &amp;\approx \rc d \an{v_w,v_w'}\pm o(1).
-\end{align}
-<p>This is exactly the PMI, so the theorem “explains” Mystery 1.</p>
-<p><em>Proof idea</em>:</p>
-<p>Let <span class="math inline">\(c\)</span> be the context vector at time <span class="math inline">\(t\)</span> and <span class="math inline">\(c'\)</span> be the vector at time <span class="math inline">\(t+1\)</span>.</p>
-<ol type="1">
-<li>The main difficulty is that <span class="math inline">\(Z_c\)</span> is intractable to compute. However, because the <span class="math inline">\(v_w\)</span> are random (or isotropic), so <span class="math inline">\(Z_c\)</span> concentrates around its mean, and we can approximate it by a constant <span class="math inline">\(Z\)</span> (Theorem 2 in the paper).</li>
-<li>Because drift is small, we can make the approximation <span class="math inline">\(c'\approx c\)</span>. Then
-\begin{align}
-\Pj(w,w') &amp;= \int_{c,c'} \Pj(w|c)\Pj(w'|c_{t+1})\Pj(c,c')\,dc\,dc'\\
-&amp;\sim \rc{Z^2} \EE_{c} \exp(\an{v_w+v_w',c})\\
-&amp;\sim \rc{Z^2}\exp\pf{|v_w+v_{w'}|^2}{2}
-\end{align}
-using some calculus in the last step (exercise). <!--check this--></li>
-</ol>
-<p>The calculation for <span class="math inline">\(\Pj(w)\)</span> is even simpler.</p>
-<h2 id="algorithm">Algorithm</h2>
-<p>What algorithm does the theory suggest to estimate the <span class="math inline">\(v_w\)</span>’s?</p>
-<p>It suggests minimizing an objective as in GloVe. The weights <span class="math inline">\(f_{w,w'}\)</span> re selected to compensate noise in <span class="math inline">\(X_{w,w'}\)</span>; when <span class="math inline">\(X_{w,w'}\)</span> is on the average larger, it has lower variance, and the weight <span class="math inline">\(f_{w,w'}\)</span> is larger.</p>
-<p>(What improvement does it suggest?)</p>
-<h2 id="followup">Followup</h2>
-<ul>
-<li>Polysemy</li>
-<li>Weighted SVD (Yuanzhi Li)</li>
-</ul>
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>The results in the paper are stated as “with high probability over the choice of <span class="math inline">\(v_w\)</span>”. This can probably be relaxed to “For all <span class="math inline">\(v_w\)</span> that are isotropic”, where <strong>isotropic</strong> means <span class="math inline">\(\EE_w [v_wv_w^T]\)</span> has all eigenvalues in <span class="math inline">\([1,1+\de]\)</span>.<a href="#fnref1">↩</a></p></li>
-</ol>
-</section>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Thoughts on LDC's</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/coding/3-14-16.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/coding/3-14-16.html</id>
-    <published>2016-03-14T00:00:00Z</published>
-    <updated>2016-03-14T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Thoughts on LDC's</h1>
-    </div>
-    <div class="info">
-      
-       
-        <p>Posted: 2016-03-14 
-          , Modified: 2016-03-14 
-	</p>
-      
-       <p>Tags: <a href="/tags/LDC.html">LDC</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  <div class="toc"> <ul>
- <li><a href="#section">3-14-16</a></li>
- </ul> </div>
-
-  <div class="blog-main">
-    <h2 id="section">3-14-16</h2>
-<ul>
-<li>Why the lower bound for 3-query LCC’s doesn’t extend to LDC’s.</li>
-<li>We aren’t using anything about the form of <span class="math inline">\(\phi\)</span> other than small dual Gowers uniformity…</li>
-<li>An interpretation of the AP differences <span class="math inline">\(y\)</span>: it fails to be an LDC if you can’t arbitrarily specify the (relative) density of AP’s in those directions.</li>
-<li>A MVC is linear on <span class="math inline">\(\F_p\)</span>, not <span class="math inline">\(\Z/m\)</span>. The coefficients and evaluations are in <span class="math inline">\(\F_p\)</span> even though the vectors aren’t. (Could we do better with codes on <span class="math inline">\(\Z/m\)</span>?) A linear code on <span class="math inline">\(\F_p\)</span> can be converted to a code on <span class="math inline">\(\F_2\)</span> but it loses linearity.
-<ul>
-<li>However, a MVC is NOT captured by the “query at an AP formalism.” Although the codeword index space is <span class="math inline">\(\F_p^N\)</span>, we’re not using that group structure for querying. Rather, we’re using the group structure of <span class="math inline">\(\F_p^{\times N}\)</span>. So it could still be possible to prove a lower bound querying AP’s.</li>
-<li>That is false, it IS captured. The group can be different! There is a group, and there is a field. Two different things!</li>
-</ul></li>
-<li>Q4.14 in “APs and LDCs”: When <span class="math inline">\(N\)</span> grows large, there doesn’t even exist a degree 1 polynomial for which this holds. This doesn’t seem promising; the only interesting case is for <span class="math inline">\(n\)</span> constant or small.</li>
-<li>Variations on the poly method:
-<ul>
-<li>How to use it for small finite fields? (In Kakeya, <span class="math inline">\(p\to \iy\)</span>.)</li>
-<li>How about considering polynomials with multiple outputs, ex. <span class="math inline">\(\F_p^n\to \F_p^{n-2}\)</span> to capture vanishing on a plane?</li>
-</ul></li>
-<li>To study: Guth’s course. Does the idea for the plane/regulus theorem help in thinking about <span class="math inline">\(\de\)</span>-SG configurations and LDC’s?</li>
-</ul>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Type and Cotype</title>
-    <link href="http://holdenlee.github.io/notebook/posts/math/analysis/metric/type.html" />
-    <id>http://holdenlee.github.io/notebook/posts/math/analysis/metric/type.html</id>
-    <published>2016-03-14T00:00:00Z</published>
-    <updated>2016-03-14T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Type and Cotype</h1>
-    </div>
-    <div class="info">
-      
-       
-        <p>Posted: 2016-03-14 
-          , Modified: 2016-03-14 
-	</p>
-      
-       <p>Tags: <a href="/tags/none.html">none</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  
-
-  <div class="blog-main">
-    <ol type="1">
-<li>Say that <span class="math inline">\(X\)</span> has <strong>type</strong> <span class="math inline">\(p\)</span> if there exists <span class="math inline">\(C&gt;0\)</span> such that for every <span class="math inline">\(n, y_1,\ldots, y_n\in X\)</span>, [ _{{1}^n} _XC^{p}. ]
-<ul>
-<li>This is always true for <span class="math inline">\(p=1\)</span> by the triangle inquality.</li>
-<li>The RHS decreases as <span class="math inline">\(p\)</span> increases.</li>
-<li>Let <span class="math inline">\(T_p(X)\)</span> be the infimum of valid <span class="math inline">\(T\)</span>.</li>
-<li><span class="math inline">\(X\)</span> has <strong>nontrivial type</strong> if it has type <span class="math inline">\(&gt;1\)</span>.</li>
-</ul></li>
-<li>Say that <span class="math inline">\(X\)</span> has <strong>cotype</strong> <span class="math inline">\(r\)</span> if there exists <span class="math inline">\(C&gt;0\)</span> such that for every <span class="math inline">\(n, x_1,\ldots, x_n\in Y\)</span>, [ _{{1}^n} _YC^{p}. ]
-<ul>
-<li>This is always true for <span class="math inline">\(p=\iy\)</span> by Jensen.</li>
-<li>Let <span class="math inline">\(C_r(X)\)</span> be the infimum of valid <span class="math inline">\(C\)</span>.</li>
-<li><span class="math inline">\(X\)</span> has <strong>finite cotype</strong> if it has type <span class="math inline">\(&lt;\iy\)</span>.</li>
-</ul></li>
-</ol>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Neural nets basics</title>
-    <link href="http://holdenlee.github.io/notebook/posts/tcs/machine_learning/neural_nets/basics.html" />
-    <id>http://holdenlee.github.io/notebook/posts/tcs/machine_learning/neural_nets/basics.html</id>
-    <published>2016-03-13T00:00:00Z</published>
-    <updated>2016-03-13T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Neural nets basics</h1>
-    </div>
-    <div class="info">
-      
-       
-        <p>Posted: 2016-03-13 
-          , Modified: 2016-03-13 
-	</p>
-      
-       <p>Tags: <a href="/tags/neural%20net.html">neural net</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  
-
-  <div class="blog-main">
-    <h2 id="types">Types</h2>
-<ul>
-<li>neural net (vanilla)</li>
-<li>convolutional neural net</li>
-<li>recurrent neural nets
-<ul>
-<li>LSTM</li>
-</ul></li>
-<li>A <strong>Boltzmann machine</strong> has joint distribution of two adjacent layers to be <span class="math inline">\(\exp(x^TAh)\)</span>. If it has only two layers it is reversible, i.e., <span class="math inline">\(\Pj(x|h),\Pj(h|x)\)</span> are both easy to calculate. (A regularized version would be <span class="math inline">\(\exp(x^TAh - hh^T)\)</span>. (?))
-<ul>
-<li>A <strong>DBM</strong> stacks these units (so that the probability of a configuration is now <span class="math inline">\(\exp\pa{\sum x_i^TA_ix^{i+1}}\)</span>). It loses reversibility.</li>
-<li>This is a graphical model. It’s a probability distribution rather than a deterministic function as in a vanilla neural net.</li>
-</ul></li>
-</ul>
-<h2 id="functions">Functions</h2>
-<ul>
-<li>RELU <span class="math inline">\((x\ge 0) x\)</span>.</li>
-</ul>
-<h2 id="features">Features</h2>
-<ul>
-<li>Dropout
-<ul>
-<li>On nodes: zero out each node in a layer with probability <span class="math inline">\(1-\rh\)</span>.</li>
-</ul></li>
-</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>I plan to write a post on how I set up this blog. In the meantime I’m still working on setting up some features and improving the design. Any comments on the site (or bug reports, or pointers) are welcome.</p>
+<p>I’m currently using TiddlyWiki for my <a href="http://holdenlee.github.io">website</a>. Right now I have mixed feelings about TiddlyWiki - it’s a easy-to-update wiki with many great features, but doesn’t offer the simplicity and control that a Hakyll site does. I may change it in the future, but for time being I’ll keep it as it is.</p>
 
   </div>
 
