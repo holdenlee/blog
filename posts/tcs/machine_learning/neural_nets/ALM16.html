@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Holden Lee's Research Notebook">
+  <meta name="author" content="Holden Lee">
+    
+  <title>[ALM16] WHY ARE DEEP NETS REVERSIBLE: A SIMPLE THEORY, WITH IMPLICATIONS FOR TRAINING</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="../../../../css/blog.css" rel="stylesheet">
+  <link href="../../../../css/default.css" rel="stylesheet">
+
+  <!-- Extension : Footnotes -->
+  <link href="../../../../footnotes/css/footnotes.css" rel="stylesheet">
+
+  <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+  
+
+</head>
+
+<body>
+
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../">Notebook</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../../">Home</a></li>
+          <li><a href="../../../../sitemap.html">Sitemap</a></li>
+<!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
+<!-- TODO: make this part a for loop over main pages -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+<!-- Content -->
+<!--div id="content">
+  <h1>Mental Wilderness</h1>-->
+
+
+
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>[ALM16] WHY ARE DEEP NETS REVERSIBLE: A SIMPLE THEORY, WITH IMPLICATIONS FOR TRAINING</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p>Posted: 2016-03-13 
+          , Modified: 2016-03-13 
+	</p>
+      
+       <p>Tags: <a href="../../../../tags/neural%20net.html">neural net</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <div class="toc"> <ul>
+ <li><a href="#summary">Summary</a></li>
+ <li><a href="#model">Model</a><ul>
+ <li><a href="#boltzmann-machine">Boltzmann machine</a></li>
+ <li><a href="#layer-neural-net">1-layer neural net</a></li>
+ <li><a href="#multi-layer-neural-net">Multi-layer neural net</a></li>
+ </ul></li>
+ <li><a href="#theorems-and-proof-sketches">Theorems and proof sketches</a><ul>
+ <li><a href="#baby-theorem">Baby theorem</a></li>
+ <li><a href="#reversibility-of-one-layer-nets-with-dropout-and-relu">Reversibility of one-layer nets with dropout and ReLU</a></li>
+ <li><a href="#reversibility-for-2-layers">Reversibility for 2+ layers</a></li>
+ </ul></li>
+ <li><a href="#experiments">Experiments</a></li>
+ <li><a href="#questions">Questions</a></li>
+ </ul> </div>
+
+  <div class="blog-main">
+    <p>Arora, Sanjeev, Yingyu Liang, and Tengyu Ma. “Why are deep nets reversible: A simple theory, with implications for training.” arXiv preprint arXiv:1511.05653 (2015).</p>
+<p>http://arxiv.org/pdf/1511.05653</p>
+<h2 id="summary">Summary</h2>
+<p>Consider a feedforward net with input <span class="math inline">\(x\)</span> and output <span class="math inline">\(h\)</span>. ALM give a model under which a neural net can be said to be predicting the output distribution. This also gives a theoretical explanation of why it’s possible to use a neural net to do the following: given <span class="math inline">\(h\)</span>, generate some <span class="math inline">\(x\)</span> that could have given rise to that <span class="math inline">\(h\)</span> (cf. neural net dreams).</p>
+<p>Their theoretical explanation has two important ingredients for theoretical explanations:</p>
+<ol type="1">
+<li>It specifies a joint distribution of <span class="math inline">\(x,h\)</span>. (Specifying <span class="math inline">\(x|h\)</span> may also be good enough).</li>
+<li>It gives a proof that the deep net does compute the most likely <span class="math inline">\(h\)</span> given <span class="math inline">\(x\)</span> (in some sense, up to some error).</li>
+</ol>
+<h2 id="model">Model</h2>
+<p>(See <a href="basics.html">neural net basics</a>.)</p>
+<p>We want to model (input, output) by a probability distribution, and prove that a neural net is predicting the output given the input, with respect to that probability distribution.</p>
+<h3 id="boltzmann-machine">Boltzmann machine</h3>
+<p>A <strong>Boltzmann machine</strong> is a joint distribution of random variables <span class="math inline">\(x,h \in \R^{m\times n}\)</span> given by <span class="math display">\[\Pj(x,h) \approx \exp(-x^TAh + \pat{regularization}).\]</span> It is reversible because <span class="math inline">\(\Pj(x|h),\Pj(h|x)\)</span> are both easy to calculate. (Deep Boltzmann machines are much less nice—they lose reversibility.)</p>
+<p>Compare this to a 2-layer neural net. Note a Boltzmann machine is a probabilistic model, not a neural net. A neural net and a Boltzmann machine both model the relationship between an input vector and an output vector, but do it differently: A neural net deterministically computes an output as a function of its input, while a Boltzmann machine gives a probability distribution on (input, output). A Boltzmann machine is trivially reversible; our hope is that a neural net is also reversible. <!-- How are these models related? A Boltzmann machine is one of the most natural generative models for neural nets; one hope is that a neural net is predicting a distribution given by a Boltzmann machine.
+Note by this reversibility, there is not much to prove --></p>
+<p>Think of <span class="math inline">\(x\)</span> as the observed layer and <span class="math inline">\(h\)</span> as the hidden layer. (For example, think of it as the middle layer of an autoencoder. Because we’re not considering any layers put on top of <span class="math inline">\(h\)</span>, we also think of it as the output.)</p>
+<p>We don’t worry about learning (ex. gradient descent) here. We just consider a neural net statically.</p>
+<!-- Note we're *not* actually using the Boltzmann machine model.-->
+<h3 id="layer-neural-net">1-layer neural net</h3>
+<p>The model is the following. Key aspects of the model are modeling weights by random matrices<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, hypothesizing/enforcing sparsity, and allowing dropout (this is a standard training technique, so we want the theoretical results to hold in this setting).<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<p>Here <span class="math inline">\(x\in \R^n,h\in \R^m\)</span> and <span class="math inline">\(m&lt;n\)</span>. The hidden layer has fewer nodes, so the forward map <span class="math inline">\(x\mapsto h\)</span> is many-to-one. This is necessary if we want to be able to reconstruct <span class="math inline">\(h\)</span> from <span class="math inline">\(x\)</span> with high probability.</p>
+<ul>
+<li>Generate <span class="math inline">\(h\sim D_h\)</span> where <span class="math inline">\(D_h\)</span> is any distribution on <span class="math inline">\(\R^n_{\ge 0}\)</span> satisfying the following: With <span class="math inline">\(1-\text{neg}(n)\)</span> probability,
+<ul>
+<li>(Sparsity) <span class="math inline">\(\ve{h}_0\le k\)</span>.</li>
+<li>(No coordinate much larger than the average) <span class="math inline">\(\ve{h}_{\iy}\le \be \ve{h}\)</span> where <span class="math inline">\(\be = O\sfc{\ln k}{k}\)</span>.</li>
+</ul></li>
+<li>Let <span class="math inline">\(W\in \R^{n\times m}\)</span> be a matrix with random <span class="math inline">\(N(0,1)\)</span> entries.</li>
+<li>Generate the observed variable by <span class="math display">\[ x \sim r(\al W h)\odot n_{\rh}, \]</span> where
+<ul>
+<li><span class="math inline">\(n_{\rh}\)</span> is a vector of iid draws from Bernoulli<span class="math inline">\((\rh)\)</span>, and <span class="math inline">\(\odot\)</span> is componentwise multiplication, i.e., entries are zeroed out with probability <span class="math inline">\(1-\rh\)</span>.</li>
+<li><span class="math inline">\(\al=\fc{2}{\rh n}\)</span>, so that it normalizes the effect of dropout. (Why factor of 2?)</li>
+</ul></li>
+</ul>
+<p>The feedforward neural net does the following operation. For some <span class="math inline">\(b\)</span>,</p>
+<ul>
+<li>Given <span class="math inline">\(x\)</span>, compute <span class="math inline">\(\hat h = r(W^Tx+b)\)</span>, where <span class="math inline">\(r(x)=\sgn(x)\cdot (x\ge 0)\)</span><a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> is the <strong>ReLU (rectified linear unit)</strong> function.
+<ul>
+<li>If we’re using dropout (with parameter <span class="math inline">\(\rc2\)</span>, say), replace <span class="math inline">\(x\)</span> by <span class="math inline">\(x \odot n_{\rc 2}\)</span> before doing this.</li>
+</ul></li>
+</ul>
+<p>The hope is that <span class="math inline">\(\hat h \approx h\)</span>. Why do we take the matrix in the proposed inverse map to be <span class="math inline">\(W^T\)</span>? For random matrices, the transpose is like an inverse, because <span class="math inline">\(\ve{W^TW-I}_2\)</span> will be small.</p>
+<h3 id="multi-layer-neural-net">Multi-layer neural net</h3>
+<p>Let <span class="math inline">\(W_t,\ldots, W_1\)</span> be random matrices. Basically just iterate the construction <span class="math inline">\(t\)</span> times in both the generative model and the feedforward net (from <span class="math inline">\(h^{(t)}\)</span> get <span class="math inline">\(h^{(t-1)},\ldots, h^{(0)}=x\)</span> and from <span class="math inline">\(x\)</span> generate <span class="math inline">\(\wh h^{(1)}, \ldots , \wh h^{(t)}\)</span>). In the dropout case, do dropout on each layer.</p>
+<h2 id="theorems-and-proof-sketches">Theorems and proof sketches</h2>
+<h3 id="baby-theorem">Baby theorem</h3>
+<p>To get an idea of why reversibility might hold, let’s consider a random one-layer neural net without nonlinearities (or bias), which is just multiplying by a random matrix. In this case <span class="math inline">\(x=\rc nWh\)</span>, <span class="math inline">\(\wh h = W^Tx=\rc n W^TWh\)</span>.</p>
+<p><strong>Theorem (Baby version)</strong>: Let <span class="math inline">\(h\in \{0,1\}^m\)</span> be fixed, <span class="math inline">\(m&lt;n\)</span>. Suppose <span class="math inline">\(W\in \R^{n\times m}\)</span> has <span class="math inline">\(N(0,1)\)</span> entries. Then for any polynomial <span class="math inline">\(p(n)\)</span> there is <span class="math inline">\(C\)</span> so that <span class="math display">\[\Pj_{W}\ba{\ve{W^TWh - h}_{\iy}\le C\ln(mn)\sfc{m}{n}}\ge 1-\rc{p(n)}.\]</span></p>
+<em>Proof</em>: We have
+\begin{align}
+(W^TWh)_i &amp;= (w_{i\bullet})^TW h\\
+&amp;=\rc n (w_{i\bullet})^T w_{i\bullet}h + \ub{\rc n\sum_{j\ne i} (w_{i\bullet})^T w_{j\bullet} h}{\text{noise}}\\
+&amp;=\rc n (w_{i\bullet})^T w_{i\bullet} h +  \rc n\sum_{k=1}^m w_{ik} \sum_{j\ne i} W_{jk} h_k.
+\end{align}
+<p>By Chernoff, <span class="math inline">\(\rc n w_{i\bullet}^T w_{i\bullet}\)</span>, as a sum of <span class="math inline">\(n\)</span> variables distributed as <span class="math inline">\(\chi_1^2\)</span>, is <span class="math inline">\(\rc{\sqrt{n}}\)</span>-concentrated around 1. There are <span class="math inline">\(&lt;mn\)</span> terms in the noise term, so it is <span class="math inline">\(\fc{\sqrt{mn}}{n}\)</span> concentrated around 0 (a little work is needed here—details left to the reader). Thus we get <span class="math inline">\(\sfc{m}{n}\)</span>-concentration around 0.</p>
+<p>If we bound by <span class="math inline">\(\ln(mn)\)</span> times this quantity, then we can use the union bound to finish. <span class="math inline">\(\square\)</span></p>
+<p>Before moving on, we note two things.</p>
+<ol type="1">
+<li>To get a good bound here, we need <span class="math inline">\(n\gg m\)</span>, i.e., the hidden layer needs to be much smaller. Often this is not true in practice.</li>
+<li>We get a <span class="math inline">\(L^{\iy}\)</span> bound which naively doesn’t give a good <span class="math inline">\(L^2\)</span> bound.</li>
+</ol>
+<p>The key next step is to assume that <span class="math inline">\(h\)</span> is sparse. It turns out then having a sigmoid function (ReLU) can be naturally interpreted as picking out the nonzero coordinates, ``recovering&quot; the sparse <span class="math inline">\(h\)</span>. Thus, <em>thresholding has a denoising effect</em>. This allows better recovery (in the <span class="math inline">\(L^2\)</span> norm).</p>
+<h3 id="reversibility-of-one-layer-nets-with-dropout-and-relu">Reversibility of one-layer nets with dropout and ReLU</h3>
+<p><strong>Theorem 2.3</strong>: (Formulation in appendix A.) Let <span class="math inline">\(W,h,x\)</span> be generated as in the model. Suppose <span class="math inline">\(k\)</span> is such that <span class="math inline">\(k&lt;\rh n&lt;k^2\)</span> (the number of non-dropped entries greater than the minimum sparsity, but also not too much). Then <span class="math display">\[
+\ab{\Pj_{x,h,W}\ba{\ve{r(W^T x+b) - h}^2\le \wt O\pf{k}{\rh n}\ve{h}^2}} \ge 1-\rc{\poly(n)}.
+\]</span></p>
+<p><em>Proof (Theorem 2.3)</em>:</p>
+<ol type="1">
+<li><p><strong>Lemma 2.5</strong>: For <span class="math inline">\(\de=\wt O\prc{\sqrt m}\)</span>, <span class="math display">\[\Pj_{W,h,x}\ba{\ve{W^Tx - h}_\iy\le \de\ve{h}^2} \ge 1-\rc{\poly(n)}.\]</span></p>
+<em>Proof of (2.5)<span class="math inline">\(\implies\)</span>(2.3):</em> If we used the naive <span class="math inline">\(L^\iy-L^2\)</span> bound, we get that w.h.p. the <span class="math inline">\(L^2\)</span> norm is at most <span class="math inline">\(m(\de\ve{h})^2 = \wt O\pf{m\ve{h}^2}{t}\)</span>, which is too large. We need to use sparsity to get a good bound. The idea is to zero out the entries with <span class="math inline">\(h_i=0\)</span> by adding a bias term <span class="math inline">\(b\)</span> and thresholding using <span class="math inline">\(r\)</span>. The <span class="math inline">\(L^{\iy}\)</span> bound in Lemma 2.3 tells us the offset necessary to zero out the entries where <span class="math inline">\(h_i=0\)</span>, <span class="math inline">\(b=-\de \ve{h}_1\)</span>. With this value of <span class="math inline">\(b\)</span>,
+\begin{align}
+h_i&amp;=0 &amp;\implies ((W^Tx)_i+b_i)&amp;\in [-2\de \ve{h},0]&amp;\implies \hat h_i&amp;=r((W^T)x_i + b_i) &amp;= h_i = 0\\
+h_i&amp;\ne 0 &amp; \implies |\wt h_i-h_i| &amp;\le 2\de\ve{h}.
+\end{align}
+Square and multiply by <span class="math inline">\(k\)</span>.</li>
+<li><em>Proof of Lemma 2.5:</em> We have
+\begin{align}
+x_j &amp;= r\pa{\al \sumo im W_{ji} h_i} (n_\rh)_j\\
+\hat h_i &amp;= \sumo jn (W^T)_{ij} x_j\\
+&amp;= \sumo jn \ub{W_{ji} r\pa{\al \sumo km W_{jk} h_k}}{=:Z_j} (n_\rh)_j.
+\end{align}
+As before, think of the sum inside <span class="math inline">\(r\)</span> as a main term plus noise: <span class="math display">\[\sumo km W_{jk} h_k = W_{ji} h_i + \sum_{k\ne i} W_{jk} h_k.\]</span> We want to compute <span class="math inline">\(\E[\hat h_i|h]\)</span>. To do this we need to understand the distribution of expressions that look like <span class="math inline">\(Z_j\)</span>.
+<ul>
+<li><strong>Lemma (Technical)</strong>: Let <span class="math inline">\(w\sim N(0,1), \xi \sim N(0,\si^2), \si=\Om(1), 0\le h\le \ln \si\)</span>. Then
+\begin{align}
+\EE_{w,\xi} [w\cdot r(wh+\xi)] &amp; = \fc h2 \pm \wt O\prc{\si^3}\\
+\EE_{w,\xi} [w^2\cdot r(wh+\xi)] &amp; \le 3h^2 + \si^2.
+\end{align}
+<em>Proof:</em> To calculate the expectation, take the integral over <span class="math inline">\(\xi\)</span> first and then <span class="math inline">\(w\)</span>. <span class="math inline">\(w,\xi\)</span> are Gaussians, so we can evaluate the expectation <span class="math display">\[ \E[\E[w\cdot r(wh+\xi)|w]] = \fc{h}2+\E[G(w)]\]</span> for some calculable error <span class="math inline">\(G\)</span>. Estimate <span class="math inline">\(G\)</span> with its Taylor expansion (of degree 4). Now calculate <span class="math inline">\(\E[G(w)]\)</span> by estimating it for values below and above a cutoff. Using the lemma on the terms and noting <span class="math inline">\(\E\ve{n_j}_0=\rh n\)</span>, and the normalizing constant <span class="math inline">\(\al=\fc{2}{\rh n}\)</span>, we have <span class="math display">\[ \E[\wh h_i|h] = h_i \pm \wt O\prc{k^{\fc 32}}.\]</span></li>
+<li>Show that <span class="math inline">\(\wh h_i|h_i\)</span> concentrates with high probability. The <span class="math inline">\(Z_j\)</span> are independent so we can use a version of Matrix Bernstein. Technically it seems we have to use a version for subexponential random variables, in terms of Orlicz norms, and check that <span class="math inline">\(Z_j\)</span> hve small norm in expectation. See Theorem D1.</li>
+</ul></li>
+</ol>
+<!--Write
+\begin{align}
+x_j &= r(W_{ji} h_i + \ub{\sum_{l=1}^m W_{jl} h_l}{=:\eta_j}) (j\in T),\\
+h_i &= \sum_{j=1}^n W_{ji}x_j
+\end{align}
+where $T$ is the set of non-zeroed out coordinates. We have $h_i = $. 
+We want to show this is close to $h_j$ with high probability. 
+-->
+<h3 id="reversibility-for-2-layers">Reversibility for 2+ layers</h3>
+<p><strong>Theorem </strong>: Similar theorems hold for 2 and 3 layers, in a weaker sense.</p>
+<p>(I haven’t gone through this.)</p>
+<h2 id="experiments">Experiments</h2>
+<p>The theory gives a way to improve training. Take a labeled data point <span class="math inline">\(x\)</span>, use the current feedforward net to compute the label <span class="math inline">\(h\)</span>, and use the <strong>shadow distribution</strong> <span class="math inline">\(p(x|h)\)</span> to create a synthetic data point <span class="math inline">\(\wt x\)</span>, and use <span class="math inline">\((\wt x,z)\)</span> as a training pair.</p>
+<h2 id="questions">Questions</h2>
+<ul>
+<li>How realistic is the sparsity assumption? How realistic is the model?</li>
+<li>Can we use Boltzmann machines as the model instead?</li>
+<li>What complications come up for 2+ layers? Is there a proof for any constant number of layers without loss?</li>
+</ul>
+<!---
+Show that feedforward deep nets compute z|x in this model. (You can define this by
+MLE, MAP, etc.)
+-->
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Because we use properties such as eigenvalue concentration, this suggests that the theorem will still hold for “random-like” matrices, i.e., matrices having these properties.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Dropout encourages all of the nodes to learn useful features, because the neural net will essentially rely on a subset of them to make a prediction. (Think of nodes as taking a “majority vote” over inputs; dropout makes sure this still works even if you only take a subset.)<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>We use the notation <span class="math inline">\((P)=\begin{cases} 1,&amp;P\text{ true}\\ 0,&amp;P\text{ false}. \end{cases}\)</span><a href="#fnref3">↩</a></p></li>
+</ol>
+</section>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    Built with
+    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+    using 
+    <a href="http://www.getbootstrap.com">Bootstrap</a>, 
+    <a href="http://www.disqus.com">Disqus</a>,
+    <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>,
+    <a href="http://highlightjs.org/">Highlight.js</a>, 
+    <a href="http://www.mathjax.org">MathJax</a>, 
+    and <a href="http://www.sharethis.com">ShareThis</a>.
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- SCRIPTS -->
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../../../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Extension : Highlight.js @ https://highlightjs.org/ -->
+<!-- Syntax highlighting tomorrow-night-bright, agate-->
+<link rel="stylesheet" href="../../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../../highlight/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
+
+<!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<script src="../../../../footnotes/js/footnotes.js"></script>
+
+<!-- Extension : Disqus @ http://disqus.com -->
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../../disqus/js/disqus.js"></script>
+
+
+
+<!-- Extension : Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73261814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

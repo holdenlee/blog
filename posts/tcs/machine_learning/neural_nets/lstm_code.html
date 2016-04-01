@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Holden Lee's Research Notebook">
+  <meta name="author" content="Holden Lee">
+    
+  <title>LSTM Programming</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="../../../../css/blog.css" rel="stylesheet">
+  <link href="../../../../css/default.css" rel="stylesheet">
+
+  <!-- Extension : Footnotes -->
+  <link href="../../../../footnotes/css/footnotes.css" rel="stylesheet">
+
+  <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+  
+
+</head>
+
+<body>
+
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../">Notebook</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../../">Home</a></li>
+          <li><a href="../../../../sitemap.html">Sitemap</a></li>
+<!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
+<!-- TODO: make this part a for loop over main pages -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+<!-- Content -->
+<!--div id="content">
+  <h1>Mental Wilderness</h1>-->
+
+
+
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>LSTM Programming</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p>Posted: 2016-03-19 
+          , Modified: 2016-03-19 
+	</p>
+      
+       <p>Tags: <a href="../../../../tags/programming.html">programming</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  
+
+  <div class="blog-main">
+    <h2 id="math">Math</h2>
+<p>Here are the equations for LSTM.</p>
+\begin{align}
+f_t&amp;=\si(W_f \coltwo{h_{t-1}}{x_t} + b_f)\\
+i_t&amp;=\si(W_i \coltwo{h_{t-1}}{x_t} + b_i)\\
+\wt{C}_t &amp;= \tanh (W_C\coltwo{h_{t-1}}{x_t}+b_C)\\
+C_t &amp;= f_t \odot C_{t-1} + i_t \odot \wt{C}_t\\
+o_t &amp;= \si(W_o\coltwo{h_{t-1}}{x_t} + b_o)\\
+h_t &amp;= o_t\odot \tanh(C_t)\\
+\wh y &amp;= \text{softmax}(Wh_t + b).
+\end{align}
+<p>References:</p>
+<ul>
+<li>http://colah.github.io/posts/2015-08-Understanding-LSTMs/</li>
+<li>http://colah.github.io/posts/2015-09-NN-Types-FP/</li>
+</ul>
+<h2 id="lstm-layer">LSTM layer</h2>
+<p>We define functions</p>
+<ul>
+<li><code>step_lstm</code> :: <span class="math inline">\(\R^n\times \R^m\times \R^m \to \R^m\times \R^m\)</span> sending <span class="math display">\[(i_t, C_{t-1}, h_{t-1}) \mapsto (C_t, h_t).\]</span></li>
+<li><code>sequence_lstm</code> :: <span class="math inline">\((\R^n)^s \times \R^m\times \R^m \to (\R^m)^s\)</span> sending <span class="math display">\[((i_t)_{t=1}^T, C_0, h_0)\mapsto (h_t)_{t=1}^T.\]</span> (This is essentially “scanl” of step_lstm.)</li>
+<li><code>step_multiple_lstm</code> :: <span class="math inline">\((\R^n)^k\times (\R^m)^k \times (\R^m)^k \to (\R^m)^k \times (\R^m)^k\)</span>. The mapped vrsion of step_lstm. This we can implement efficiently as a matrix multiplication.</li>
+<li><code>sequence_multiple_lstm</code> :: <span class="math inline">\(((\R^n)^s)^k\times (\R^m)^k \times (\R^m)^k \to (\R^m)^k \times (\R^m)^k \to ((\R^m)^s)^k\)</span>. There are two ways to write this:
+<ul>
+<li>As the mapped version of <code>sequence_lstm</code> (i.e., scan, then map).</li>
+<li>As the scanned version of <code>step_multiple</code> (i.e., map, then scan). This is more efficient since we can implement the “map” as a matrix multiplication.</li>
+</ul></li>
+</ul>
+<p>(Actually these functions will involve the parameters as well, which we omitted here.)</p>
+<h3 id="implementation">Implementation</h3>
+<p>Define <code>step_lstm1</code> by</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> step_lstm1(x, C, h, Wf, bf, Wi, bi, WC, bC, Wo, bo):
+    hx <span class="op">=</span> T.concatenate([h,x]) <span class="co">#dimension m+n</span>
+    f <span class="op">=</span> sigmoid(T.dot(hx, Wf) <span class="op">+</span> bf) <span class="co">#dimension m</span>
+    i <span class="op">=</span> sigmoid(T.dot(hx, Wi) <span class="op">+</span> bi) <span class="co">#dimension m</span>
+    C_add <span class="op">=</span> T.tanh(T.dot(hx, WC) <span class="op">+</span> bC) <span class="co">#dimension m</span>
+    C1 <span class="op">=</span> f <span class="op">*</span> C <span class="op">+</span> i <span class="op">*</span> C_add <span class="co">#dimension m</span>
+    o <span class="op">=</span> sigmoid(T.dot(hx, Wo) <span class="op">+</span> bo) <span class="co">#dimension m</span>
+    h1 <span class="op">=</span> o <span class="op">*</span> T.tanh(C1) <span class="co">#dimension m</span>
+    <span class="cf">return</span> [C1, h1] <span class="co">#dimension 2m</span></code></pre></div>
+<p>Now define <code>step_lstm</code> as the version with parameters grouped together.</p>
+<pre class="py"><code>def step_lstm(x, C, h, tparams): 
+    Wf, bf, Wi, bi, WC, bC, Wo, bo = unpack_params(tparams, [&quot;Wf&quot;, &quot;bf&quot;, &quot;Wi&quot;, &quot;bi&quot;, &quot;WC&quot;, &quot;bC&quot;, &quot;Wo&quot;, &quot;bo&quot;])
+    return step_lstm1(x, C, h, Wf, bf, Wi, bi, WC, bC, Wo, bo)</code></pre>
+<p>To define <code>sequence_lstm</code> we use Theano’s can function. The arguments are</p>
+<ul>
+<li><code>fn</code> is the function</li>
+<li><code>outputs_info</code> are the initial values in the recursion</li>
+<li><code>non_sequences</code> are fixed values that are not involved in the recursion.</li>
+</ul>
+<p>Thus to create a scanned function like so</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">scan' ::</span> ((a,b,c) <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> c <span class="ot">-&gt;</span> [b]
+scan' f a's init fixed <span class="fu">=</span></code></pre></div>
+<p>we call</p>
+<pre class="py"><code>theano.scan(fn=f, sequences=a's, outputs_info=init, non_sequences=fixed)</code></pre>
+<p>Note here a, b, c can encompass multiple arguments, in which case you pass a list to <code>sequences</code>, <code>outputs_info</code>, and <code>non_sequences</code>. However, a, b, c must appear in that order.</p>
+<pre class="py"><code>def sequence_lstm(C0, h0, xs, tparams):.
+    Wf, bf, Wi, bi, WC, bC, Wo, bo = unpack_params(tparams, [&quot;Wf&quot;, &quot;bf&quot;, &quot;Wi&quot;, &quot;bi&quot;, &quot;WC&quot;, &quot;bC&quot;, &quot;Wo&quot;, &quot;bo&quot;])
+    #the function fn should have arguments in the following order:
+    #sequences, outputs_info (accumulators), non_sequences
+    #(x, C, h, Wf, bf, Wi, bi, WC, bC, Wo, bo)
+    ([C_vals, h_vals], updates) = theano.scan(fn=step_lstm1,
+                                          sequences = xs, 
+                                          outputs_info=[C0, h0], #initial values of the memory/accumulator
+                                          non_sequences=[Wf, bf, Wi, bi, WC, bC, Wo, bo], #fixed parameters
+                                          strict=True)
+    return [C_vals, h_vals]</code></pre>
+<p>Note this will map automatically; to define <code>sequence_multiple_lstm</code> all we have to do is swap two axes.</p>
+<p>(Note on Theano list in scan.)</p>
+<h2 id="neural-net-functions">Neural net functions</h2>
+<p>A vanilla neural net layer is</p>
+<pre class="py"><code>def nn_layer1(x, W, b):
+    return x * W + b
+
+def nn_layer(x, tparams):
+    W, b = unpack_params(tparams, [&quot;W&quot;, &quot;b&quot;])
+    return nn_layer1(x, W, b)</code></pre>
+<p>We define functions</p>
+<ul>
+<li><code>nn_layer</code> :: <span class="math inline">\(\R^n\times \R^n\)</span></li>
+<li><code>logloss</code> :: <span class="math inline">\(\R^n\times \R^n\)</span> given by <span class="math display">\[\text{logloss}(x,y) = -\sum_i x_i \ln' (y_i)\]</span> where we use <code>corrected_log</code>, <span class="math inline">\(\ln'(y) = \ln(\max(10^{-6}, x))\)</span> to avoid blowup at small probabilities.</li>
+</ul>
+<p>Now we can combine these with our LSTM to make the evaluation, prediction, and loss function. Evaluation will give the probabilities of each output, prediction will give the output with max probability, and loss is the logloss on the expected and actual outcomes. We also include a accuracy function that outputs 1 if the prediction is correct and 0 otherwise.</p>
+<p>Note <code>fns_lstm</code> returns a list of Theano variables (depending on the input lists/parameters) representing the activations, predictions, losses and accuracy. We haven’t compiled these variables into a function yet.</p>
+<!--
+We include a flag saying if we just want the output for the last in the sequence, or every time step. We also want versions that are mapped over sequences (to do them in batch).
+-->
+<p>(Add code here)</p>
+<p>Some other functions:</p>
+<ul>
+<li><code>init_params_with_f_lstm(n,m,f,g)</code></li>
+<li><code>train_lstm</code></li>
+<li><code>weight_decay</code> :: <span class="math inline">\(\R\)</span> -&gt; Dict String TheanoVars -&gt; [String] -&gt; <span class="math inline">\(\R\)</span>. For the parameters in the list, sum the squares of their norms and multiply by the decay constant.</li>
+</ul>
+<p>(A further speedup is to concatenate the matrices.)</p>
+<h2 id="data-processing-functions">Data processing functions</h2>
+<p>We’ll keep parameters in a dictionary, and unpack them as needed.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> unpack_params(tparams, li):
+    <span class="cf">return</span> [tparams[name] <span class="cf">for</span> name <span class="op">in</span> li]</code></pre></div>
+<ul>
+<li><code>wrap_theano_dict</code> and <code>unwrap_theano_dict</code>.</li>
+<li><code>get_minibatches_idx</code> (::Int -&gt; Int -&gt; Bool -&gt; [(Int, [Int])]) will give an enumerated list of minibatch indices, given <code>n</code>, the size of the list, and <code>minibatch_size</code>. It will make a minibatch out of the remainder.</li>
+<li><code>oneHot(choices, n)</code> gives a way to encode one-hot vectors within Theano.</li>
+</ul>
+<h2 id="optimization-functions">Optimization functions</h2>
+<p>These are taken from…</p>
+<p>The arguments of each are</p>
+<ul>
+<li>lr: learning rate</li>
+<li>tparams: dictionary of parameters (not Theano variables)</li>
+<li>grads: gradient of function to optimize</li>
+<li>cost:</li>
+<li>args: args to cost function (e.g., neural net inputs)</li>
+</ul>
+<p>Retrns</p>
+<ul>
+<li><code>f_grad_shared</code></li>
+<li><code>f_update</code></li>
+</ul>
+<p>What does the train function need?</p>
+<ul>
+<li>Epochs: An epoch is going through all the data once. Stop after <code>patience</code> number of epochs have passed without progress, or after <code>max_epochs</code>.</li>
+<li>Optimizer
+<ul>
+<li>Cost function to optimize
+<ul>
+<li>Arguments to cost function</li>
+</ul></li>
+</ul></li>
+<li>Batch:
+<ul>
+<li>batch size during training</li>
+<li>batch size for validation</li>
+</ul></li>
+<li>Initial parameters</li>
+<li>Frequency (after how many updates do you…)
+<ul>
+<li>validate?</li>
+<li>save data? (to where?)</li>
+</ul></li>
+<li>Data (train, validation, test): What’s the difference between validation and test?</li>
+<li>Batch-maker: Given the data, make a list of batches. One epoch consists of going through all the batches.</li>
+</ul>
+<!-- Scraps
+while I wait for someone to write a frontend in haskell...
+-->
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    Built with
+    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+    using 
+    <a href="http://www.getbootstrap.com">Bootstrap</a>, 
+    <a href="http://www.disqus.com">Disqus</a>,
+    <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>,
+    <a href="http://highlightjs.org/">Highlight.js</a>, 
+    <a href="http://www.mathjax.org">MathJax</a>, 
+    and <a href="http://www.sharethis.com">ShareThis</a>.
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- SCRIPTS -->
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../../../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Extension : Highlight.js @ https://highlightjs.org/ -->
+<!-- Syntax highlighting tomorrow-night-bright, agate-->
+<link rel="stylesheet" href="../../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../../highlight/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
+
+<!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<script src="../../../../footnotes/js/footnotes.js"></script>
+
+<!-- Extension : Disqus @ http://disqus.com -->
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../../disqus/js/disqus.js"></script>
+
+
+
+<!-- Extension : Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73261814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

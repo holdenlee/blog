@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Holden Lee's Research Notebook">
+  <meta name="author" content="Holden Lee">
+    
+  <title>[AO15] Linear coupling</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="../../../../css/blog.css" rel="stylesheet">
+  <link href="../../../../css/default.css" rel="stylesheet">
+
+  <!-- Extension : Footnotes -->
+  <link href="../../../../footnotes/css/footnotes.css" rel="stylesheet">
+
+  <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+  
+
+</head>
+
+<body>
+
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../">Notebook</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../../">Home</a></li>
+          <li><a href="../../../../sitemap.html">Sitemap</a></li>
+<!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
+<!-- TODO: make this part a for loop over main pages -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+<!-- Content -->
+<!--div id="content">
+  <h1>Mental Wilderness</h1>-->
+
+
+
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>[AO15] Linear coupling</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p>Posted: 2016-03-06 
+          , Modified: 2016-03-06 
+	</p>
+      
+       <p>Tags: <a href="../../../../tags/gradient.html">gradient</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  
+
+  <div class="blog-main">
+    <h2 id="gradient-descent">Gradient Descent</h2>
+<p><strong>Definition</strong>: A convex function is <span class="math inline">\(L\)</span>-smooth if <span class="math display">\[ f(y) \le \blu{f(x)+\an{\nb f(x),y-x}}+\redd{\fc L2 \ve{y-x}^2}\]</span> or equivalently <span class="math display">\[ \ve{\nb f(x)-\nb f(y)}_*\le L\ve{x-y}.\]</span></p>
+<p>Assume <span class="math inline">\(f\)</span> is <span class="math inline">\(L\)</span>-smooth.</p>
+<ul>
+<li>Update:
+\begin{align}
+x_{k+1} &amp;= \amin_y \ba{\fc{L}{2} \ve{y-x_k}^2 + \an{\nb f(x),y-x_k}}\\
+&amp;= x_k - \rc{L}\nb f(x_k)&amp;\text{for $\ell_2$ norm}.
+\end{align}</li>
+<li><strong>Lemma</strong>: <span class="math display">\[f(x')\le f(x)  - \fc{\ve{\nb f(x)}_*^2}{2L}.\]</span></li>
+<li>Guarantee: Let <span class="math inline">\(R=\max_{x:f(x)\le f(x_0)}\ve{x-x^*}_*\)</span>. <span class="math display">\[f(x_T)-f(x^*) \le O\pf{LR^2}{T}.\]</span> Obtain an <span class="math inline">\(\ep\)</span>-approximation in <span class="math inline">\(\fc{LR^2}{\ep}\)</span> steps.</li>
+</ul>
+<h3 id="proof">Proof</h3>
+<p>See also <a href="GD.html">gradient descent</a>.</p>
+<ul>
+<li>Bound the difference from optimal by the distance to the optimal times the gradient (using convexity and CS).</li>
+<li>Bound the gradient by the progress.</li>
+<li>Now let <span class="math inline">\(D_k = f(x_k)-f(x^*)\)</span>. Measure progress by <span class="math inline">\(\rc{D_k}\)</span> whose differences telescope.</li>
+</ul>
+\begin{align}
+\ub{f(x_k)-f(x^*)}{D_k}&amp;\le \an{\nb f(x_k),x_k-x^*} \le \ve{\nb f(x_k)} \ve{x_k-x^*}\le \sqrt{2L}\ub{(f(x_k)-f(x_{k+1}))}{D_k-D_{k+1}}R\\
+\rc{D_{k+1}}-\rc{D_k} &amp;\ge \rc{2LR^2}\fc{D_k}{D_{k+1}} \ge \rc{2LR^2}\\
+\implies \rc{D_T}&amp;\ge T.
+\end{align}
+<h2 id="mirror-descent">Mirror descent</h2>
+<strong>Definition</strong>: <span class="math inline">\(w(x):Q\to \R\)</span> (<span class="math inline">\(Q\)</span> convex) is a <strong>distance generating function</strong> if the following holds. Then define <strong>Bregman divergence</strong> as follows. For all <span class="math inline">\(x\in Q\bs \pl Q, y\in Q\)</span>,
+\begin{align}
+w(y) &amp;\ge w(x) + \an{\nb w(x),y-x} + \rc2\ve{x-y}^2\\
+\end{align}
+<p>Note we can replace the gradient by a subgradient below.</p>
+<ul>
+<li>Update:
+\begin{align}
+ \wt x &amp;= \text{Mirr}(\al\nb f(x))\\
+ \text{where }\text{Mirr}_x(\xi) &amp;= \amin_{y\in Q} V_x(y)+\an{\xi,y-x}.
+ \end{align}</li>
+<li><strong>Lemma</strong>: For all <span class="math inline">\(u\)</span>,
+\begin{align}
+\al (f(x_k)-f(u))
+&amp;\le \al\an{\nb f(x_k),x_k-u}\\
+&amp;\le \fc{\al^2}2\ve{\nb f(x_k)}^2 +V_{x_k}(u) - V_{x_{k+1}}(u)\\
+&amp;=  \fc{\al^2}2\ve{\nb f(x_k)}^2 +\rc 2 \ve{z_k-u}^2 -\rc2 \ve{z_{k+1}-u}^2 &amp; \text{for }\ell^2.
+\end{align}
+Generalization:
+\begin{align}
+\al (f(x_k)-f(u))
+&amp;\le \al\an{\nb f(x_k),x_k-u}\\
+&amp;\le \fc{\al^2}2\ve{\nb f(x_k)}^2 +V_{x_k}(u) - V_{x_{k+1}}(u)
+\end{align}</li>
+<li>Guarantee: When <span class="math inline">\(V_{x_0}(x^*)\le \Te, \ve{\nb f(x)}_*\le \rh\)</span> everywhere, <span class="math display">\[ f(\ol x) - f(x^*) \le \fc{\sqrt{2\Te}\rh}{\sqrt T}.\]</span> Obtain an <span class="math inline">\(\ep\)</span>-approximation in <span class="math inline">\(\fc{2\Te\rh^2}{\ep^2}\)</span> steps.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+\begin{align}
+w(y) &amp;= \rc2 \ve{y}_2^2\\
+V_x(y) &amp;= \rc2\ve{x-y}_2^2\\
+w(y) &amp;= \sum_i y_i \ln y_i &amp;\text{w.r.t. }\ell_1\text{ over }\De\\
+V_x(y) &amp;= \sum_{y_i} \ln \pf{y_i}{x_i} \ge \prc{x-y}_1^2.
+\end{align}
+<h3 id="intuition">Intuition</h3>
+<p>Note for <span class="math inline">\(\ved_2\)</span> MD is the same as GD except for a factor <span class="math inline">\(\al\)</span>.</p>
+<p>Note 3 formulations of mirror descent.</p>
+<ol type="1">
+<li>Above.</li>
+<li>Set <span class="math display">\[\nb w(x_{k+1}) \leftarrow  \nb w(x_k) - \al \nb f(x_{k}).\]</span> (By this we mean take the value of <span class="math inline">\(x_{k+1}\)</span> that makes this true.)</li>
+<li><strong>Regularized follow the leader (RFTL)</strong>: Take <span class="math display">\[x_{k+1} = \amin_y w(y)+ \al \an{y, \sum_{i=0}^k \nb f(x_i)}.\]</span></li>
+</ol>
+<p>(1)<span class="math inline">\(\iff\)</span>(2): The min is when the gradient is 0.</p>
+(2)<span class="math inline">\(\iff\)</span>(3): The min is when the gradient is 0. Write this out for <span class="math inline">\(k,k-1\)</span>and subtract.
+\begin{align}
+\nb w(x_{k+1}) + \al \sum_{i=0}^k \nb f(x_i) &amp;=0\\
+\nb w(x_k) + \al \sum_{i=0}^{k-1} \nb f(x_i) &amp;=0\\
+\nb w(x_{k+1})-w(x_k) + \nb f(x_k)&amp;=0
+\end{align}
+<h2 id="coupling">Coupling</h2>
+<h3 id="unconstrained-version-qr">Unconstrained version (Q=R)</h3>
+<ul>
+<li>Update:
+\begin{align}
+\label{eq:weighted}
+x_{k+1} &amp;= \tau z_k + (1-\tau) y_k\\
+y_{k+1} &amp;= \text{Grad}(x_{k+1})\\
+z_{k+1} &amp;= \text{Mirr}_{z_k}(\al \nb f(x_{k+1})).
+\end{align}</li>
+<li><strong>Lemma</strong>: If <span class="math inline">\(\rc{1-\tau}{\tau}=\al L\)</span>, then <span class="math display">\[
+\al \an{\nb f(x_{k+1}), x_{k+1}-u} \le \al^2L (f(y_k)-f(y_{k+1}))+V_{z_k}(u) - V_{z_{k+1}}(u).
+\]</span></li>
+<li>Guarantee: <span class="math display">\[f(\ol x) - f(x^*) \le \fc{\sqrt{2\Te}\rh}{T}.\]</span> Starting at <span class="math inline">\(f(x_0)-f(x^*)\le d\)</span>, <span class="math inline">\(V_{x_0}(x^*)\le \Te)\)</span>, in <span class="math inline">\(T=4\sfc{L\Te}{d}\)</span> steps, obtain <span class="math inline">\(f(\ol x)-f(x^*)\le \fc d2\)</span>. Hence, get an <span class="math inline">\(\ep\)</span>-approximate solution in <span class="math inline">\(O(\sfc{L\Te}{\ep})\)</span> iterations.</li>
+</ul>
+<h2 id="proof-1">Proof</h2>
+<ol type="1">
+<li>Why the weird definition for <span class="math inline">\(x_{k+1}\)</span>? If we defined <span class="math inline">\(z_{k+1}=\text{Mirr}_{x_{k+1}}(\al \nb f(x_{k+1}))\)</span>, the expressions involve <span class="math inline">\(x_{k+1},z_{k+1}\)</span> and do not telescope.</li>
+<li>Thus, do the mirror descent starting from <span class="math inline">\(z_k\)</span> instead. If we try to bound the regret now,
+\begin{align}
+\al \an{\nb f(x_{k+1}), x_{k+1}-u} &amp;\le \fc{\al^2}{2} \ve{\nb f(x_k)}^2 + V_{x_{k+1}}(u) - V_{z_{k+1}}(u)\\
+&amp;\le \al^2 L (\nb f(x_{k+1}) - \nb f(y_{k+1})) + V_{x_{k+1}}(u) - V_{z_{k+1}}(u).
+\end{align}
+which still does not telescope.</li>
+<li>We want <span class="math inline">\(z_k\)</span> to take the place of <span class="math inline">\(x_{k+1}\)</span>.</li>
+<li>Now write the real as the fake regret plus another term.</li>
+</ol>
+\begin{align}
+\al \an{\nb f(x_{k+1}), z_{k}-u} &amp; \le \fc{\al^2}{2} \ve{\nb f(x_k)}^2 + V_{z_k}(u) - V_{z_{k+1}}(u)\\
+&amp;\le \al^2 L (\nb f(x_{k+1}) - \nb f(y_{k+1})) + V_{z_k}(u) - V_{z_{k+1}}(u) \label{eq:lem3-2}\\
+\al \an{\nb f(x_{k+1}),x_{k+1}-u}
+&amp;\le \al \an{\nb f(x_{k+1}), z_{k}-u} + \al \an{\nb f(x_{k+1}), x_{k+1}-z_k}\\
+&amp;\le \al \an{\nb f(x_{k+1}), z_{k}-u} + \fc{(1-\tau)\al}{\tau} \an{\nb f(x_{k+1}), y_{k}-x_{k+1}}&amp;\text{by \eqref{eq:weighted}}\\
+&amp;\le \al^2 L (\nb f(x_{k+1}) - \nb f(y_{k+1})) + V_{z_k}(u) - V_{z_{k+1}}(u) + \fc{(1-\tau)\al}{\tau}\an{\nb f(x_{k+1}), y_k-x_{k+1}}&amp;\eqref{eq:lem3-2},\text{ convexity}\\
+&amp;\le \al^2L(f(y_{k})-f(y_{k+1})) + V_{z_k}(u) - V_{z_{k+1}(u)}.
+\end{align}
+<p>Telescoping, balancing <span class="math inline">\(\al^2Ld=\Te\implies \al = \sfc{\Te}{Ld}\)</span>, we get error <span class="math inline">\(\fc{2\sqrt{L\Te d}}{T}\)</span>. It takes <span class="math inline">\(T=4\sfc{L\Te}{d}\)</span> steps to halve error from <span class="math inline">\(\fc d2\)</span>, and <span class="math inline">\(O\pa{\sfc{L\Te}{\ep}}\)</span> time to go to <span class="math inline">\(\ep\)</span> error.</p>
+<h2 id="index-cards">Index cards:</h2>
+<ul>
+<li>Gradient lemma</li>
+<li>Gradient guarantee</li>
+<li>DGF and Bregman divergence</li>
+<li>Mirror step</li>
+<li>Mirror lemma</li>
+<li>Mirror guarantee</li>
+<li>Linear coupling</li>
+<li>Linear coupling lemma</li>
+<li>Linear coupling guarantee</li>
+</ul>
+<h2 id="page-notes">Page notes</h2>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li>estimation sequence? Thought experiment. Cutoff <span class="math inline">\(K\)</span> for <span class="math inline">\(\ve{\nb f(x)}_2\)</span>. Equate gradient and mirror: <span class="math display">\[\fc{\ep L}{K^2}=\fc{K^2}{\ep^2}.\]</span></li>
+<li></li>
+<li>Gradient descent guarantee. <span class="math inline">\(f(x_T)-f(x^*) \le O\pf{L\ve{x_0-x^*}_2^2}{T}\)</span>. Distance generating function, Bregman divergence.</li>
+</ol>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    Built with
+    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+    using 
+    <a href="http://www.getbootstrap.com">Bootstrap</a>, 
+    <a href="http://www.disqus.com">Disqus</a>,
+    <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>,
+    <a href="http://highlightjs.org/">Highlight.js</a>, 
+    <a href="http://www.mathjax.org">MathJax</a>, 
+    and <a href="http://www.sharethis.com">ShareThis</a>.
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- SCRIPTS -->
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../../../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Extension : Highlight.js @ https://highlightjs.org/ -->
+<!-- Syntax highlighting tomorrow-night-bright, agate-->
+<link rel="stylesheet" href="../../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../../highlight/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
+
+<!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<script src="../../../../footnotes/js/footnotes.js"></script>
+
+<!-- Extension : Disqus @ http://disqus.com -->
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../../disqus/js/disqus.js"></script>
+
+
+
+<!-- Extension : Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73261814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

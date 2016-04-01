@@ -10,20 +10,20 @@
   <meta name="description" content="Holden Lee's Research Notebook">
   <meta name="author" content="Holden Lee">
     
-  <title>Posts in category "math"</title>
+  <title>Recursive Fourier Sampling</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
   <!-- Custom styles for this template -->
-  <link href="../../css/blog.css" rel="stylesheet">
-  <link href="../../css/default.css" rel="stylesheet">
+  <link href="../../../css/blog.css" rel="stylesheet">
+  <link href="../../../css/default.css" rel="stylesheet">
 
   <!-- Extension : Footnotes -->
-  <link href="../../footnotes/css/footnotes.css" rel="stylesheet">
+  <link href="../../../footnotes/css/footnotes.css" rel="stylesheet">
 
   <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
   
@@ -44,12 +44,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../">Notebook</a>
+        <a class="navbar-brand" href="../../../">Notebook</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="../../">Home</a></li>
-          <li><a href="../../sitemap.html">Sitemap</a></li>
+          <li><a href="../../../">Home</a></li>
+          <li><a href="../../../sitemap.html">Sitemap</a></li>
 <!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
 <!-- TODO: make this part a for loop over main pages -->
         </ul>
@@ -66,12 +66,16 @@
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Posts in category "math"</h1>
+      <h1>Recursive Fourier Sampling</h1>
     </div>
     <div class="info">
       
+       
+        <p>Posted: 2016-02-29 
+          , Modified: 2016-02-29 
+	</p>
       
-      
+       <p>Tags: <a href="../../../tags/none.html">none</a></p> 
     </div>
     
   </div>
@@ -80,37 +84,47 @@
   
 
   <div class="blog-main">
-    <ul>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/type.html">Type and Cotype</a> (2016-03-14)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/probability/random_matrices/concentration.html">Matrix concentration</a> (2016-03-13)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/algebra/linear/perron-frobenius.html">Perron-Frobenius Theorem</a> (2016-03-03)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/MAT529.html">MAT529 notes</a> (2016-02-29)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/calculus/formulas.html">Calculus formulas</a> (2016-02-27)
-        </li>
-    
-</ul>
-
-
+    <h2 id="definition">Definition</h2>
+<h3 id="fs">FS</h3>
+<p><span class="math inline">\(FS_n:B^{2^{n+1}} \to \{0,1,*\}\)</span> is defined by <span class="math display">\[
+FS_n(f,g)=\begin{cases}
+g(s),&amp;\text{if }\exists s\in B^n, f(x)=x\cdot s\\
+*,&amp;\text{else.}
+\end{cases}
+\]</span> <span class="math inline">\(FS_n^g\)</span> is where <span class="math inline">\(g\)</span> is fixed.</p>
+<h3 id="rfs">RFS</h3>
+<p>Define by recurrence</p>
+\begin{align}
+RFS_{n,1}(s,g)&amp;=g(s)\\
+RFS_{n,h}&amp;: B^{n2^{n(h-1)} +\sumo j{h-1}} \to \{0,1,*\}\\
+RFS_{n,h}(R_0,\ldots, R_{2^n-1},g) &amp;=\begin{cases}
+g(s),&amp;\exists s\in B^n, \forall \si\in B^n, RFS_{n,h-1}(R_\si)=\si \cdot s\\
+*,&amp;\text{else}.
+\end{cases}\\
+\pat{Example}\; RFS_{n,2}(R_0,\ldots, R_{2^n-1},g) &amp;=\begin{cases}
+g(s),&amp;\exists s\in B^n, \forall \si\in B^n, g(R_\si) = \si \cdot s\\
+*,&amp;\text{else}.
+\end{cases}
+\end{align}
 
   </div>
 
     
 
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
 
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
   
 </div>
 
@@ -138,12 +152,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Extension : Highlight.js @ https://highlightjs.org/ -->
 <!-- Syntax highlighting tomorrow-night-bright, agate-->
-<link rel="stylesheet" href="../../highlight/css/tomorrow-night-bright.css">
-<script src="../../highlight/js/highlight.pack.js"></script>
+<link rel="stylesheet" href="../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../highlight/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
@@ -151,10 +165,13 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
 
 <!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
-<script src="../../footnotes/js/footnotes.js"></script>
+<script src="../../../footnotes/js/footnotes.js"></script>
 
 <!-- Extension : Disqus @ http://disqus.com -->
 <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../disqus/js/disqus.js"></script>
+
 
 
 <!-- Extension : Google Analytics -->

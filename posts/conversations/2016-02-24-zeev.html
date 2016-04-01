@@ -10,7 +10,7 @@
   <meta name="description" content="Holden Lee's Research Notebook">
   <meta name="author" content="Holden Lee">
     
-  <title>Posts in category "math"</title>
+  <title>Conversation with Zeev 2-24-16</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -66,51 +66,62 @@
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Posts in category "math"</h1>
+      <h1>Conversation with Zeev 2-24-16</h1>
     </div>
     <div class="info">
       
+       
+        <p>Posted: 2016-02-27 
+          , Modified: 2016-02-27 
+	</p>
       
-      
+       <p>Tags: <a href="../../tags/none.html">none</a></p> 
     </div>
     
   </div>
   <!--/div-->
 
-  
+  <div class="toc"> <ul>
+ <li><a href="#circuit-lower-bounds-and-extractors">Circuit lower bounds and extractors</a></li>
+ <li><a href="#rigid-matrices">Rigid matrices</a></li>
+ </ul> </div>
 
   <div class="blog-main">
-    <ul>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/type.html">Type and Cotype</a> (2016-03-14)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/probability/random_matrices/concentration.html">Matrix concentration</a> (2016-03-13)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/algebra/linear/perron-frobenius.html">Perron-Frobenius Theorem</a> (2016-03-03)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/MAT529.html">MAT529 notes</a> (2016-02-29)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/calculus/formulas.html">Calculus formulas</a> (2016-02-27)
-        </li>
-    
+    <h2 id="circuit-lower-bounds-and-extractors">Circuit lower bounds and extractors</h2>
+<ul>
+<li>The graph-theoretic argument applied to linear circuits reduces finding hard functions to finding rigid matrices.</li>
 </ul>
-
-
+<p>We can reduce the rigidity problem to finding extractors for a certain class of a certain type.</p>
+<p>Find extractors where * sources are: uniform over <span class="math inline">\(\fc n2\)</span>-dimensional (or <span class="math inline">\(\ep n\)</span>) subspaces <span class="math inline">\(V\subeq \F_p^n\)</span> such that <span class="math inline">\(V\)</span> has low-weight (sparse, <span class="math inline">\(n^\ep\)</span>) basis. (Actually, we can also consider average sparsity.) * The extractor is linear <span class="math inline">\(E:\F_p^n\to \F_p^{\fc n4}\)</span>.</p>
+<p>We know deterministic extractors for affine sources, however, here they have to be linear.</p>
+<p>Claim: Let <span class="math inline">\(A\)</span> be such that <span class="math inline">\(O=eA\)</span>. Then <span class="math inline">\(A\)</span> is rigid.</p>
+<p><em>Proof</em>: <span class="math inline">\(A\)</span> has rank <span class="math inline">\(\ge \fc{3n}4\)</span>. Suppose <span class="math inline">\(A=L+S\)</span> where <span class="math inline">\(L\)</span> has <span class="math inline">\(&lt;\fc n4\)</span>-rank and <span class="math inline">\(S\)</span> is <span class="math inline">\(s\)</span>-sparse. <span class="math inline">\(O=EA=EL+ES\)</span> so <span class="math inline">\(-EL=ES\)</span>. However, <span class="math inline">\(-EL\)</span> has low rank and <span class="math inline">\(ES\)</span> has high rank (<span class="math inline">\(\fc n4\)</span>) as <span class="math inline">\(E\)</span> is an extractor.</p>
+<p>Note it suffices to find a condenser; all we need is that <span class="math inline">\(\dim(\spn_s(E(S,s)))=\fc n4\)</span>.</p>
+<p>(cf. no <span class="math inline">\(2s\)</span> columns of <span class="math inline">\(E\)</span> are linearly dependent.)</p>
+<h2 id="rigid-matrices">Rigid matrices</h2>
+<p>Find a small family of rigid matrices. Ex. if you only require linear randomness, then just wire them up too to get a lower bound.</p>
+<p>Gabizon-Raz, Affine extractors: give a family of Vandermonde matrices <span class="math inline">\((x^{ij})\)</span>, <span class="math inline">\(x\in [n^3]\)</span> (?). The hope is to get arithmetic lower bounds. Problem: the degree is too large, so the bounds are trivial. Try to lower the degree.</p>
+<p>Best lower bounds for arithmetic circuits: for <span class="math inline">\(x_1^n,\ldots, x_n^n\)</span>, get <span class="math inline">\(n\lg n\)</span>. Use Bezout: use the highest degree of an algebraic variety made from the polynomials as a complexity measure, need to get to <span class="math inline">\(d^n\)</span>, so need <span class="math inline">\(n\ln d\)</span> steps.</p>
+<p>Zach Remscrim has a nice recent paper.</p>
 
   </div>
 
     
 
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
 
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
   
 </div>
 
@@ -155,6 +166,9 @@
 
 <!-- Extension : Disqus @ http://disqus.com -->
 <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../disqus/js/disqus.js"></script>
+
 
 
 <!-- Extension : Google Analytics -->

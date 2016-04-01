@@ -10,20 +10,20 @@
   <meta name="description" content="Holden Lee's Research Notebook">
   <meta name="author" content="Holden Lee">
     
-  <title>Posts in category "math"</title>
+  <title>Non-negative matrix factorization</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
   <!-- Custom styles for this template -->
-  <link href="../../css/blog.css" rel="stylesheet">
-  <link href="../../css/default.css" rel="stylesheet">
+  <link href="../../../css/blog.css" rel="stylesheet">
+  <link href="../../../css/default.css" rel="stylesheet">
 
   <!-- Extension : Footnotes -->
-  <link href="../../footnotes/css/footnotes.css" rel="stylesheet">
+  <link href="../../../footnotes/css/footnotes.css" rel="stylesheet">
 
   <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
   
@@ -44,12 +44,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../">Notebook</a>
+        <a class="navbar-brand" href="../../../">Notebook</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="../../">Home</a></li>
-          <li><a href="../../sitemap.html">Sitemap</a></li>
+          <li><a href="../../../">Home</a></li>
+          <li><a href="../../../sitemap.html">Sitemap</a></li>
 <!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
 <!-- TODO: make this part a for loop over main pages -->
         </ul>
@@ -66,51 +66,67 @@
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Posts in category "math"</h1>
+      <h1>Non-negative matrix factorization</h1>
     </div>
     <div class="info">
       
+       
+        <p>Posted: 2016-03-26 
+          , Modified: 2016-03-26 
+	</p>
       
-      
+       <p>Tags: <a href="../../../tags/NMF.html">NMF</a></p> 
     </div>
     
   </div>
   <!--/div-->
 
-  
+  <div class="toc"> <ul>
+ <li><a href="#problem">Problem</a></li>
+ <li><a href="#previous-work">Previous work</a></li>
+ <li><a href="#open-problems-directions">Open problems, directions</a></li>
+ </ul> </div>
 
   <div class="blog-main">
-    <ul>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/type.html">Type and Cotype</a> (2016-03-14)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/probability/random_matrices/concentration.html">Matrix concentration</a> (2016-03-13)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/algebra/linear/perron-frobenius.html">Perron-Frobenius Theorem</a> (2016-03-03)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/MAT529.html">MAT529 notes</a> (2016-02-29)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/calculus/formulas.html">Calculus formulas</a> (2016-02-27)
-        </li>
-    
+    <p>Notes: See S3 in 598D, Ch. 1 in Moitra’s notes, and Rong Ge’s thesis.</p>
+<h2 id="problem">Problem</h2>
+<p>Given <span class="math inline">\(M\)</span>, write <span class="math inline">\(M=AW\)</span>, <span class="math inline">\(A,W\ge 0\)</span>.</p>
+<p>Say <span class="math inline">\(M\)</span> is <strong>separable</strong> if it has a NMF <span class="math inline">\(M=AW\)</span>, and for every column <span class="math inline">\(i\)</span> of <span class="math inline">\(A\)</span>, there is a row where there is a single nonzero entry and it is in column <span class="math inline">\(i\)</span>.</p>
+<h2 id="previous-work">Previous work</h2>
+<p>Hardness</p>
+<ul>
+<li>If there exists a <span class="math inline">\(n^{o(r)}\)</span> time algorithm, then there exists a <span class="math inline">\(2^{o(n)}\)</span> algorithm for 3SAT.</li>
 </ul>
-
-
+<p>Algorithms</p>
+<ul>
+<li>[AGKM12, M14] Given that the rank equals the nonnegative rank, there is a <span class="math inline">\(n^{O(r)}\)</span> time algorithm for NMF. (Relies on solving polynomial inequalities.)</li>
+<li>[AGKM12] Under separability, NMF can be solved in polynomial time in <span class="math inline">\(n\)</span>. (Use the geometry.)</li>
+<li>[AGM14] Dictionary learning</li>
+</ul>
+<h2 id="open-problems-directions">Open problems, directions</h2>
+<ul>
+<li>Give an algorithm for approximate NMF. (Suppose <span class="math inline">\(\ve{M-AW}_F^2\le \ep\ve{M}_F^2\)</span>.)</li>
+</ul>
+<p>(What is the prediction task?)</p>
 
   </div>
 
     
 
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
 
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
   
 </div>
 
@@ -138,12 +154,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Extension : Highlight.js @ https://highlightjs.org/ -->
 <!-- Syntax highlighting tomorrow-night-bright, agate-->
-<link rel="stylesheet" href="../../highlight/css/tomorrow-night-bright.css">
-<script src="../../highlight/js/highlight.pack.js"></script>
+<link rel="stylesheet" href="../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../highlight/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
@@ -151,10 +167,13 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
 
 <!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
-<script src="../../footnotes/js/footnotes.js"></script>
+<script src="../../../footnotes/js/footnotes.js"></script>
 
 <!-- Extension : Disqus @ http://disqus.com -->
 <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../disqus/js/disqus.js"></script>
+
 
 
 <!-- Extension : Google Analytics -->

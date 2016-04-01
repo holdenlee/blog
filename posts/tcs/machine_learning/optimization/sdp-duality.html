@@ -10,20 +10,20 @@
   <meta name="description" content="Holden Lee's Research Notebook">
   <meta name="author" content="Holden Lee">
     
-  <title>Posts in category "math"</title>
+  <title>SDP duality</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
   <!-- Custom styles for this template -->
-  <link href="../../css/blog.css" rel="stylesheet">
-  <link href="../../css/default.css" rel="stylesheet">
+  <link href="../../../../css/blog.css" rel="stylesheet">
+  <link href="../../../../css/default.css" rel="stylesheet">
 
   <!-- Extension : Footnotes -->
-  <link href="../../footnotes/css/footnotes.css" rel="stylesheet">
+  <link href="../../../../footnotes/css/footnotes.css" rel="stylesheet">
 
   <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
   
@@ -44,12 +44,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../">Notebook</a>
+        <a class="navbar-brand" href="../../../../">Notebook</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="../../">Home</a></li>
-          <li><a href="../../sitemap.html">Sitemap</a></li>
+          <li><a href="../../../../">Home</a></li>
+          <li><a href="../../../../sitemap.html">Sitemap</a></li>
 <!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
 <!-- TODO: make this part a for loop over main pages -->
         </ul>
@@ -66,12 +66,16 @@
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Posts in category "math"</h1>
+      <h1>SDP duality</h1>
     </div>
     <div class="info">
       
+       
+        <p>Posted: 2016-03-04 
+          , Modified: 2016-03-04 
+	</p>
       
-      
+       <p>Tags: <a href="../../../../tags/SDP.html">SDP</a>, <a href="../../../../tags/duality.html">duality</a></p> 
     </div>
     
   </div>
@@ -80,37 +84,50 @@
   
 
   <div class="blog-main">
-    <ul>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/type.html">Type and Cotype</a> (2016-03-14)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/probability/random_matrices/concentration.html">Matrix concentration</a> (2016-03-13)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/algebra/linear/perron-frobenius.html">Perron-Frobenius Theorem</a> (2016-03-03)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/MAT529.html">MAT529 notes</a> (2016-02-29)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/calculus/formulas.html">Calculus formulas</a> (2016-02-27)
-        </li>
-    
-</ul>
-
-
+    <p><a href="duality.html">Duality</a></p>
+<h2 id="summary">Summary</h2>
+<p>The following SDP’s are dual: <span class="math display">\[
+\max_{X\succeq 0,\an{A_i,X}=b_i}\an{C,X} \lra \min_{\nu, \sum \nu_iA_i\succeq C} \nu^Tb.
+\]</span> (When are they equal? When there is a strictly feasible point.)</p>
+<h2 id="derivation">Derivation</h2>
+<ol type="1">
+<li>First write as a convex program. Replace the condition <span class="math inline">\(X\succeq 0\)</span> by <span class="math display">\[
+ \la_{\min}(X)=\min_{\Tr(A)=1, A\succeq 0}\an{A,X}\ge 0.
+ \]</span> (Use (2) in <a href="duality.html">duality</a>.)</li>
+<li>Simplify, using minimax as a key step.
+\begin{align}
+ g(\la,\nu) &amp;= \max_X(\an{C,X} + \la \min_{\Tr(A)=1, A\succeq 0}\an{A,X} - \sum \nu_i (\an{A_i,X}-b_i)\\
+ &amp;=\max_X\min_{\Tr(A)=1}\an{\ub{C-\sum \nu_iA_i}{Z}+\la A,X} + \nu^Tb\\
+ &amp;=\max_X\min_{\Tr(A)=\la}\an{Z + A,X} + \nu^Tb\\
+ &amp;= \min_{\Tr(A)=\la}\max_X \an{Z+A,X}\\
+ &amp;=\pa{\begin{cases}
+ 0,&amp;\Tr(Z)=-\la, Z\preceq 0\\
+ \iy,&amp;\text{else.}
+ \end{cases}}-\nu^Tb
+ \end{align}
+using minimax, then noting the inside <span class="math inline">\(\max\)</span> forces the condition <span class="math inline">\(Z=-A\)</span>.</li>
+<li>Taking <span class="math inline">\(\min\)</span> of this, <span class="math inline">\(Z\preceq 0\)</span> turns into a constraint.</li>
+</ol>
+<p>See <a href="http://www.eecs.berkeley.edu/~wainwrig/ee227a/SDP_Duality.pdf">notes</a>.</p>
 
   </div>
 
     
 
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
 
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
   
 </div>
 
@@ -138,12 +155,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Extension : Highlight.js @ https://highlightjs.org/ -->
 <!-- Syntax highlighting tomorrow-night-bright, agate-->
-<link rel="stylesheet" href="../../highlight/css/tomorrow-night-bright.css">
-<script src="../../highlight/js/highlight.pack.js"></script>
+<link rel="stylesheet" href="../../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../../highlight/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
@@ -151,10 +168,13 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
 
 <!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
-<script src="../../footnotes/js/footnotes.js"></script>
+<script src="../../../../footnotes/js/footnotes.js"></script>
 
 <!-- Extension : Disqus @ http://disqus.com -->
 <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../../disqus/js/disqus.js"></script>
+
 
 
 <!-- Extension : Google Analytics -->

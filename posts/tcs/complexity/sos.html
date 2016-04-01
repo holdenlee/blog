@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Holden Lee's Research Notebook">
+  <meta name="author" content="Holden Lee">
+    
+  <title>Sum of squares</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="../../../css/blog.css" rel="stylesheet">
+  <link href="../../../css/default.css" rel="stylesheet">
+
+  <!-- Extension : Footnotes -->
+  <link href="../../../footnotes/css/footnotes.css" rel="stylesheet">
+
+  <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+  
+
+</head>
+
+<body>
+
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../">Notebook</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../">Home</a></li>
+          <li><a href="../../../sitemap.html">Sitemap</a></li>
+<!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
+<!-- TODO: make this part a for loop over main pages -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+<!-- Content -->
+<!--div id="content">
+  <h1>Mental Wilderness</h1>-->
+
+
+
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Sum of squares</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p>Posted: 2016-03-24 
+          , Modified: 2016-03-24 
+	</p>
+      
+       <p>Tags: <a href="../../../tags/SoS.html">SoS</a>, <a href="../../../tags/SDP.html">SDP</a>, <a href="../../../tags/maxcut.html">maxcut</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <div class="toc"> <ul>
+ <li><a href="#introduction">Introduction</a></li>
+ <li><a href="#definitions">Definitions</a><ul>
+ <li><a href="#equivalence">Equivalence</a></li>
+ </ul></li>
+ <li><a href="#sum-of-squares-as-semidefinite-programs">Sum-of-squares as semidefinite programs</a></li>
+ <li><a href="#exercises">Exercises</a><ul>
+ <li><a href="#chapter-1">Chapter 1</a></li>
+ <li><a href="#chapter-2">Chapter 2</a></li>
+ </ul></li>
+ <li><a href="#misc.">Misc.</a></li>
+ </ul> </div>
+
+  <div class="blog-main">
+    <p>Reference: Barak’s notes. Barak and Steurer’s survey.</p>
+<h2 id="introduction">Introduction</h2>
+<p>“Sum-of-squares” is an algorithm that attempts to find feasible solutions to systems of polynomial inequalities, or a proof that there is no solution. It is widely applicable because many computational problems can naturally be put into the form of polynomial inequalities (ex. <span class="math inline">\(k\)</span>-SAT can be encoded with degree <span class="math inline">\(k\)</span>). The degree <span class="math inline">\(d\)</span> of sum-of-squares is a tunable parameter; the algorithm runs in <span class="math inline">\(n^d\)</span> time. We can look at</p>
+<ul>
+<li>lower bounds: sum-of-squares of degree <span class="math inline">\(d\)</span> cannot solve a certain problem. This is necessary, e.g., to show a problem has no polynomial-time algorithm - but very little is known about lower bounds even though sum-of-squares is a <em>single</em> algorithm, not a class of algorithms!</li>
+<li>upper bounds: use sum-of-squares of higher constant degree (e.g., <span class="math inline">\(d=4\)</span>) to get better approximation algorithms, etc.</li>
+</ul>
+<p>Why is SoS a natural notion?</p>
+<ul>
+<li><span class="math inline">\(d=1\)</span> is linear programming, <span class="math inline">\(d=2\)</span> is semidefinite programming, and <span class="math inline">\(d=n\)</span> is brute-force-search. Everything in the middle is “dark matter” which we don’t understand. In many cases it seems like you don’t get better algorithms by looking t <span class="math inline">\(d&gt;2\)</span>, but there are also exceptions. Compare to how most natural problems seem to be either polynomial time or NP-hard/conjectured exponential time. By Ladner’s Theorem (time hierarchy) there are problems of essentially any time complexity, but these aren’t natural.</li>
+<li>The quest for optimal algorithms: In complexity theory the hope is to find a property <span class="math inline">\(P\)</span> such that easy problems have property <span class="math inline">\(P\)</span> while hard problems do not. Even more ambitiously, one hopes for a <em>single</em> “optimal algorithm” for all problems in a large class, in the sense that when a problem has an efficient algorithm, then this single optimal algorithm will solve it. SoS comes the closest to being such an algorithm. (Thus it’s interesting to see what kinds of techniques are encompassed by the SoS framework, i.e., what facts have “SoS proofs”, because then they will be solvable by the SoS algorithm.)</li>
+</ul>
+<h2 id="definitions">Definitions</h2>
+<p>There are many equivalent notions of sum-of-squares; we give 4. The first definition introduces an algorithm that searches for a pseudo-expectation operator; on the boolean cube this is essentially equivalent to a pseudo-distribution. We also give equivalences to a sum-of-squares proof and sum-of-squares representation.</p>
+<p>In the next section we will motivate these definitions and show equivalences.</p>
+<p>Let <span class="math inline">\(x=(x_1,\ldots, x_n)\)</span> and <span class="math inline">\(\R[x]_{\le d}\)</span> denote polynomials in <span class="math inline">\(x_1,\ldots, x_n\)</span> of degree <span class="math inline">\(\le d\)</span>.</p>
+<ol type="1">
+<li>(Convex optimization) A degree-<span class="math inline">\(l\)</span> pseudo-expectation operator satisfying <span class="math inline">\(p_1=\cdots =p_m=0\)</span>, where <span class="math inline">\(\deg p_i\le d, 2d\mid l\)</span>, is a bilinear form <span class="math inline">\(M:\R[x]_{\le l/2}\times \R[x]_{\le l/2}\to \R\)</span> such that
+<ul>
+<li>(Normalization) <span class="math inline">\(M(1,1)=1\)</span>.</li>
+<li>(Consistency) If <span class="math inline">\(p,q,r,s\in \R[x]_{\le l/2}\)</span> and <span class="math inline">\(pq=rs\)</span>, then <span class="math inline">\(M(p,q)=M(r,s)\)</span>.</li>
+<li>(Non-negativity) <span class="math inline">\(M(p,p)\ge 0\)</span>.</li>
+<li>(Feasibility) For all <span class="math inline">\(p_i\)</span> and <span class="math inline">\(q\in \R[x]_{\le l/2-d}\)</span>, <span class="math inline">\(M(p_iq,p)=0\)</span>. In other words, <span class="math inline">\(M\)</span> is a positive semidefinite quadratic form that, as a bilinear form, factors through <span class="math inline">\((\R[x]/\an{p_i})_{\le l}\)</span>, <span class="math display">\[\R[x]_{\le l/2}\times \R[x]_{\le l/2} \to (\R[x]/\an{p_i})_{\le l} \to \R.\]</span> The degree-<span class="math inline">\(l\)</span> SoS algorithm is the algorithm that solves the feasibility problem for this semidefinite program.</li>
+</ul></li>
+<li>(Pseudo-expectation) For a function <span class="math inline">\(\mu:\{\pm 1\}^n\to \R\)</span> <span class="math display">\[\wt{\EE_\mu} p(x) = \sum_x \mu(x)p(x).\]</span> We say <span class="math inline">\(\mu\)</span> is a degree-<span class="math inline">\(l\)</span> <strong>pseudo-expectation</strong> if
+<ul>
+<li>(Normalization) <span class="math inline">\(\sum_x\mu(x)=1\)</span>.</li>
+<li>(Restricted non-negativity) For all <span class="math inline">\(p\in \R[x]_{\le l/2}\)</span>, <span class="math inline">\(\wt{\EE_\mu} p(x) \ge 0\)</span>.</li>
+</ul></li>
+<li>(Sum-of-square refutation) A <strong>sum-of-squares refutation</strong> for the system of polynomial equations <span class="math inline">\(p_i\ge 0\)</span><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> is a proof of <span class="math inline">\(-1\ge 0\)</span> from deduction system starting with <span class="math inline">\(p_i\ge 0\)</span> with the following rules
+<ul>
+<li><span class="math inline">\(p\ge 0, q\ge 0\vDash p+q\ge 0\)</span>.</li>
+<li><span class="math inline">\(p\ge 0, q\ge 0\vDash pq\ge 0\)</span>.</li>
+<li><span class="math inline">\(\vDash p^2\ge 0\)</span>. It is degree <span class="math inline">\(l\)</span> if the <em>syntactic</em> degree of each expression is at most <span class="math inline">\(l\)</span>. (Explain.)</li>
+</ul></li>
+<li>(Sum-of-square representation) A degree-<span class="math inline">\(l\)</span> <strong>sum-of-squares representation</strong> for the infeasibility of <span class="math inline">\(p_1=0,\ldots, p_m=0\)</span> is <span class="math display">\[\sum_i p_i q_i = 1+\sum_i r_i^2, \quad \deg(p_i),\deg(r_i)\le l.\]</span></li>
+</ol>
+<h3 id="equivalence">Equivalence</h3>
+<p>1$$2: See exercise 1.7.</p>
+<p>2$$3: This is the SOS Theorem. It encompasses the Positivstellensatz, which says that every unsatisfiable system of equalities has a finite degre proof of unsatisfiability. (See exercise 1.14, 15 for part of the theorem.)</p>
+<p>3$$4: See exercise 1.11.</p>
+<h2 id="sum-of-squares-as-semidefinite-programs">Sum-of-squares as semidefinite programs</h2>
+<p>The most common use of sum-of-squares is in SDP relaxations of combinatorial problems, as follows. Let <span class="math inline">\(f\)</span> be a convex function. The goal is to find <span class="math display">\[
+\min_{x\in \{-1,1\}^n}f(x).
+\]</span> One way to relax this is to write <span class="math inline">\(f(x)=g(x^Tx/n)\)</span>, and find <span class="math display">\[
+\min_{M\succeq 0, M_{ii}=1} g(M).
+\]</span> This is a relaxation because if <span class="math inline">\(x\)</span> is the optimal solution to the first problem, <span class="math inline">\(x^Tx/n\)</span> is a feasible point for the second problem achieving the same value.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<p>Think of <span class="math inline">\(M_{ii}=1\)</span> as degree-2 constraints that shrink the space we’re minizing over to be closer to just the set <span class="math inline">\(\set{x^Tx/n}{x\in \{-1,1\}^n}\)</span>.</p>
+<p>Note this is the degree-2 SoS relaxation of this problem! The degree-<span class="math inline">\(l\)</span> SoS relaxation is the optimization problem <span class="math display">\[\min_{M\text{ pseudo-expectation satisfying }x_i^2=1} h(M)\]</span> (note we showed that the set of pseudo-expectations is convex; it is defined by <span class="math inline">\(M\succeq 0\)</span> and some linear equations). (<span class="math inline">\(x_i^2=1\)</span> corresponds to <span class="math inline">\(M_{ii}=1\)</span>.) In the equation above we thought of <span class="math inline">\(M\)</span> as a bilinear form on <span class="math inline">\(\R^n\times \R^n = \R[x]_{=1}\times \R[x]_{=1}\)</span>; here we’re just adding 1 to the vector space to get <span class="math inline">\(\R[x]_{\le 1}\times \R[x]_{\le 1}\)</span> and stipulating <span class="math inline">\(M(1,1)=1\)</span>, which doesn’t change anything.</p>
+<p>(If <span class="math inline">\(f\)</span> is a linear function <span class="math inline">\(f(x_1,\ldots, x_n,x_1^2,x_1x_2,\ldots, x_1^3,\ldots)\)</span>, then <span class="math inline">\(g(M)\)</span> is the function <span class="math inline">\(f(M(x_1,1),\ldots, M(x_n,1), M(x_1,x_1),\ldots)\)</span>.</p>
+<p>For example, the degree-4 SoS relaxation would correspond to optimizing over <span class="math inline">\((\R^2,\R^1,\R)^{\ot 2}\)</span>, where the solutions corresponding to solutions of the original problem are in the form <span class="math inline">\((x^{\ot 2},x,1)^{\ot 2},x\in \{-1,1\}^n\)</span>. For $M<span class="math inline">\((\R^2,\R^1,\R)^{\ot 2}\)</span>, the solutions satisfy equations like <span class="math inline">\(M_{ii,jk}=1, M_{i,ij}=1\)</span>, etc.—corresponding to multiples of polynomials <span class="math inline">\(x_i^2-1\)</span>.</p>
+<h2 id="exercises">Exercises</h2>
+<h3 id="chapter-1">Chapter 1</h3>
+<ol type="1">
+<li></li>
+<li>Use linearity.</li>
+<li><span class="math inline">\(M(p,p)\ge 0\)</span> is semidefiniteness; all the other constraints are linear.</li>
+<li></li>
+<li>Let <span class="math inline">\(p=\sum_{y\ne y^0} \prod_i (x_i-y_i)^2\)</span>; note <span class="math inline">\(p(y^0)\ne 0\)</span>. Then <span class="math inline">\(\wt{\EE_{x\sim \mu}} [p(x)^2] = \mu(y^0)p(y^0)\)</span>. Thus <span class="math inline">\(\mu(y^0)\ge 0\)</span>.</li>
+<li>Note the problem should say “degree <span class="math inline">\(l\)</span> polynomials”. Write <span class="math inline">\(\mu(x)\)</span> as a multilinear polynomial. First, mod out by <span class="math inline">\(x_i^2-x_i\)</span>. Now note that for every degree <span class="math inline">\(\ge l+1\)</span> monomial <span class="math inline">\(x^L\)</span>, in <span class="math inline">\(\wt{\EE_{x\sim x^L}} q(x)\)</span>, if <span class="math inline">\(\deg q\le l\)</span> is a monomial, then one term will be uncancelled and average out to 0. Now use linearity.</li>
+<li>The map is <span class="math inline">\(\mu \mapsto ((p,q) \mapsto \wt{\EE_\mu pq})\)</span>. We have <span class="math inline">\(\sum \mu(x) (x_i^2-1)pq=0\)</span>. (Where do we use 6?)</li>
+<li></li>
+<li>?</li>
+<li>?</li>
+<li>Induct to say that at each stage, we have an expression in the form <span class="math inline">\(\sum r_i^2 + \sum q_ip_i\)</span>. At the end we get <span class="math inline">\(\sum r_i^2 + \sum q_ip_i = -1\ge 0\)</span>, which re-arranges to a SoS representation.</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<h3 id="chapter-2">Chapter 2</h3>
+<ol type="1">
+<li>Imitate the proof of CS. We have <span class="math inline">\(\wt{\EE_{\mu}} t^2P^2-2tPQ+Q^2\)</span>. Now set the discriminant to be <span class="math inline">\(\le 0\)</span>.</li>
+</ol>
+<h2 id="misc.">Misc.</h2>
+<ul>
+<li>SoS in universal learning (Paul Christiano)</li>
+</ul>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>There is another way to relax this kind of problem, by changing the values <span class="math inline">\(x_i\)</span> could take from <span class="math inline">\(\pm1\)</span> to vectors, like in Goemans-Williamson. We don’t consider this kind of relaxation here. (Though we can do GW here too…?)<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>There is another way to relax this kind of problem, by changing the values <span class="math inline">\(x_i\)</span> could take from <span class="math inline">\(\pm1\)</span> to vectors, like in Goemans-Williamson. We don’t consider this kind of relaxation here. (Though we can do GW here too…?)<a href="#fnref2">↩</a></p></li>
+</ol>
+</section>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    Built with
+    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+    using 
+    <a href="http://www.getbootstrap.com">Bootstrap</a>, 
+    <a href="http://www.disqus.com">Disqus</a>,
+    <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>,
+    <a href="http://highlightjs.org/">Highlight.js</a>, 
+    <a href="http://www.mathjax.org">MathJax</a>, 
+    and <a href="http://www.sharethis.com">ShareThis</a>.
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- SCRIPTS -->
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Extension : Highlight.js @ https://highlightjs.org/ -->
+<!-- Syntax highlighting tomorrow-night-bright, agate-->
+<link rel="stylesheet" href="../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../highlight/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
+
+<!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<script src="../../../footnotes/js/footnotes.js"></script>
+
+<!-- Extension : Disqus @ http://disqus.com -->
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../disqus/js/disqus.js"></script>
+
+
+
+<!-- Extension : Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73261814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

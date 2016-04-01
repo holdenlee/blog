@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Holden Lee's Research Notebook">
+  <meta name="author" content="Holden Lee">
+    
+  <title>Algorithms</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="../../../css/blog.css" rel="stylesheet">
+  <link href="../../../css/default.css" rel="stylesheet">
+
+  <!-- Extension : Footnotes -->
+  <link href="../../../footnotes/css/footnotes.css" rel="stylesheet">
+
+  <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+  
+
+</head>
+
+<body>
+
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../">Notebook</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../">Home</a></li>
+          <li><a href="../../../sitemap.html">Sitemap</a></li>
+<!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
+<!-- TODO: make this part a for loop over main pages -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+<!-- Content -->
+<!--div id="content">
+  <h1>Mental Wilderness</h1>-->
+
+
+
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Algorithms</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p>Posted: 2016-03-03 
+          , Modified: 2016-03-03 
+	</p>
+      
+       <p>Tags: <a href="../../../tags/LDC.html">LDC</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <div class="toc"> <ul>
+ <li><a href="#summary">Summary</a></li>
+ <li><a href="#proofs-and-intuition">Proofs and intuition</a></li>
+ <li><a href="#further-questions">Further questions</a></li>
+ <li><a href="#generalities">Generalities</a><ul>
+ <li><a href="#applications">Applications</a></li>
+ </ul></li>
+ </ul> </div>
+
+  <div class="blog-main">
+    <h2 id="summary">Summary</h2>
+<p>(Taken from lecture 11 of algorithms)</p>
+<ol type="1">
+<li>Given <span class="math inline">\(\ep\)</span> there are <span class="math inline">\(e^{c_\ep d}\)</span> vectors in <span class="math inline">\(\R^d\)</span> that are almost orthogonal (up to <span class="math inline">\(\ep\)</span>). In fact, a random collection of vectors will do.</li>
+<li>(Johnson-Lindenstrauss) Given <span class="math inline">\(n\)</span> points <span class="math inline">\(z_i\in \R^n\)</span>, there is a projection onto <span class="math inline">\(m=C_1\fc{\ln n}{\ep^2}\)</span> dimensions such that the metric restricted to the points is almost preserved: <span class="math inline">\(d(u_i,u_j)\in [1,1+\ep]d(z_i,z_j)\)</span>.</li>
+</ol>
+<h2 id="proofs-and-intuition">Proofs and intuition</h2>
+<ol type="1">
+<li>Choose vectors in <span class="math inline">\(\{-1,1\}^d\)</span> at random and normalize. By Chernoff, <span class="math inline">\(\Pj(|\cos \te_{x,y}|&gt;\sfc{\ln (2c)}{n})&lt;\rc c\)</span>. We can choose <span class="math inline">\(\sqrt{c}\)</span> vectors such that this doesn’t hold between any pair.</li>
+<li>The choice of <span class="math inline">\(m\)</span> is so we can use Chernoff and union. Choose <span class="math inline">\(x^i\in \{\pm 1\}\sfc{1+\ep}{m}\)</span> randomly, take the linear mapping <span class="math inline">\(z\mapsto z[x^1\quad \cdots \quad x^m]\)</span>. Now use Chernoff and union bound.</li>
+</ol>
+<p>Distance being preserved up to <span class="math inline">\(\ep\)</span> is the same as saying that <span class="math display">\[|\an{Mv_i,Mv_j} -\an{v_i,v_j}|\le \ep \ve{v_i}\ve{v_j}.\]</span> This is good for vectors with large <span class="math inline">\(L^1/L^2\)</span> ratio, and not good for sparse vectors.</p>
+<h2 id="further-questions">Further questions</h2>
+<ul>
+<li>Derandomizing JL.</li>
+</ul>
+<h2 id="generalities">Generalities</h2>
+<p>Because many algorithms rely on finding a closest neighbor—nearest neighbor, minimum spanning tree, point location etc.—have a running time depending upon exp(d).</p>
+<p>In machine learning and statistics sometimes the term refers to the fact that available data is too sparse in high dimensions; it takes exp(d) amount of data (say, points on the sphere)to ensure that each new sample is close to an existing sample</p>
+<p>Blessing of dimensionality. This refers to the fact that many phenomena become much clearer and easier to think about in high dimensions because one can use simple rules of thumb (e.g., Chernoff bounds, measure concentration) which don’t hold in low dimensions.</p>
+<h3 id="applications">Applications</h3>
+<p>Suppose we wish to hash high-dimensional vectors so that nearby vectors tend to hash into the same bucket. To do this we can do a random projection into say the cube in 5 dimensions. We discretise the cube into smaller cubes of size <span class="math inline">\(\ep\)</span>. Then there are 1/<span class="math inline">\(\ep^5\)</span> smaller cubes; these can be the buckets.</p>
+<p>Can reduce dimension while keeping the margin!</p>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    Built with
+    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+    using 
+    <a href="http://www.getbootstrap.com">Bootstrap</a>, 
+    <a href="http://www.disqus.com">Disqus</a>,
+    <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>,
+    <a href="http://highlightjs.org/">Highlight.js</a>, 
+    <a href="http://www.mathjax.org">MathJax</a>, 
+    and <a href="http://www.sharethis.com">ShareThis</a>.
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- SCRIPTS -->
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Extension : Highlight.js @ https://highlightjs.org/ -->
+<!-- Syntax highlighting tomorrow-night-bright, agate-->
+<link rel="stylesheet" href="../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../highlight/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
+
+<!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<script src="../../../footnotes/js/footnotes.js"></script>
+
+<!-- Extension : Disqus @ http://disqus.com -->
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../disqus/js/disqus.js"></script>
+
+
+
+<!-- Extension : Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73261814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

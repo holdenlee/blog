@@ -10,20 +10,20 @@
   <meta name="description" content="Holden Lee's Research Notebook">
   <meta name="author" content="Holden Lee">
     
-  <title>Posts in category "math"</title>
+  <title>Thoughts on LDC's</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
   <!-- Custom styles for this template -->
-  <link href="../../css/blog.css" rel="stylesheet">
-  <link href="../../css/default.css" rel="stylesheet">
+  <link href="../../../css/blog.css" rel="stylesheet">
+  <link href="../../../css/default.css" rel="stylesheet">
 
   <!-- Extension : Footnotes -->
-  <link href="../../footnotes/css/footnotes.css" rel="stylesheet">
+  <link href="../../../footnotes/css/footnotes.css" rel="stylesheet">
 
   <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
   
@@ -44,12 +44,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../">Notebook</a>
+        <a class="navbar-brand" href="../../../">Notebook</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="../../">Home</a></li>
-          <li><a href="../../sitemap.html">Sitemap</a></li>
+          <li><a href="../../../">Home</a></li>
+          <li><a href="../../../sitemap.html">Sitemap</a></li>
 <!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
 <!-- TODO: make this part a for loop over main pages -->
         </ul>
@@ -66,51 +66,63 @@
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Posts in category "math"</h1>
+      <h1>Thoughts on LDC's</h1>
     </div>
     <div class="info">
       
+       
+        <p>Posted: 2016-03-14 
+          , Modified: 2016-03-14 
+	</p>
       
-      
+       <p>Tags: <a href="../../../tags/LDC.html">LDC</a></p> 
     </div>
     
   </div>
   <!--/div-->
 
-  
+  <div class="toc"> <ul>
+ <li><a href="#section">3-14-16</a></li>
+ </ul> </div>
 
   <div class="blog-main">
-    <ul>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/type.html">Type and Cotype</a> (2016-03-14)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/probability/random_matrices/concentration.html">Matrix concentration</a> (2016-03-13)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/algebra/linear/perron-frobenius.html">Perron-Frobenius Theorem</a> (2016-03-03)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/analysis/metric/MAT529.html">MAT529 notes</a> (2016-02-29)
-        </li>
-    
-        <li>
-            <a href="../../posts/math/calculus/formulas.html">Calculus formulas</a> (2016-02-27)
-        </li>
-    
+    <h2 id="section">3-14-16</h2>
+<ul>
+<li>Why the lower bound for 3-query LCC’s doesn’t extend to LDC’s.</li>
+<li>We aren’t using anything about the form of <span class="math inline">\(\phi\)</span> other than small dual Gowers uniformity…</li>
+<li>An interpretation of the AP differences <span class="math inline">\(y\)</span>: it fails to be an LDC if you can’t arbitrarily specify the (relative) density of AP’s in those directions.</li>
+<li>A MVC is linear on <span class="math inline">\(\F_p\)</span>, not <span class="math inline">\(\Z/m\)</span>. The coefficients and evaluations are in <span class="math inline">\(\F_p\)</span> even though the vectors aren’t. (Could we do better with codes on <span class="math inline">\(\Z/m\)</span>?) A linear code on <span class="math inline">\(\F_p\)</span> can be converted to a code on <span class="math inline">\(\F_2\)</span> but it loses linearity.
+<ul>
+<li>However, a MVC is NOT captured by the “query at an AP formalism.” Although the codeword index space is <span class="math inline">\(\F_p^N\)</span>, we’re not using that group structure for querying. Rather, we’re using the group structure of <span class="math inline">\(\F_p^{\times N}\)</span>. So it could still be possible to prove a lower bound querying AP’s.</li>
+<li>That is false, it IS captured. The group can be different! There is a group, and there is a field. Two different things!</li>
+</ul></li>
+<li>Q4.14 in “APs and LDCs”: When <span class="math inline">\(N\)</span> grows large, there doesn’t even exist a degree 1 polynomial for which this holds. This doesn’t seem promising; the only interesting case is for <span class="math inline">\(n\)</span> constant or small.</li>
+<li>Variations on the poly method:
+<ul>
+<li>How to use it for small finite fields? (In Kakeya, <span class="math inline">\(p\to \iy\)</span>.)</li>
+<li>How about considering polynomials with multiple outputs, ex. <span class="math inline">\(\F_p^n\to \F_p^{n-2}\)</span> to capture vanishing on a plane?</li>
+</ul></li>
+<li>To study: Guth’s course. Does the idea for the plane/regulus theorem help in thinking about <span class="math inline">\(\de\)</span>-SG configurations and LDC’s?</li>
 </ul>
-
-
 
   </div>
 
     
 
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
 
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
   
 </div>
 
@@ -138,12 +150,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Extension : Highlight.js @ https://highlightjs.org/ -->
 <!-- Syntax highlighting tomorrow-night-bright, agate-->
-<link rel="stylesheet" href="../../highlight/css/tomorrow-night-bright.css">
-<script src="../../highlight/js/highlight.pack.js"></script>
+<link rel="stylesheet" href="../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../highlight/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
@@ -151,10 +163,13 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
 
 <!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
-<script src="../../footnotes/js/footnotes.js"></script>
+<script src="../../../footnotes/js/footnotes.js"></script>
 
 <!-- Extension : Disqus @ http://disqus.com -->
 <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../disqus/js/disqus.js"></script>
+
 
 
 <!-- Extension : Google Analytics -->

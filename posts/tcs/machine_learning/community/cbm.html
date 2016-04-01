@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Holden Lee's Research Notebook">
+  <meta name="author" content="Holden Lee">
+    
+  <title>Censored block model</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="../../../../css/blog.css" rel="stylesheet">
+  <link href="../../../../css/default.css" rel="stylesheet">
+
+  <!-- Extension : Footnotes -->
+  <link href="../../../../footnotes/css/footnotes.css" rel="stylesheet">
+
+  <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+  
+
+</head>
+
+<body>
+
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../">Notebook</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../../">Home</a></li>
+          <li><a href="../../../../sitemap.html">Sitemap</a></li>
+<!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
+<!-- TODO: make this part a for loop over main pages -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+<!-- Content -->
+<!--div id="content">
+  <h1>Mental Wilderness</h1>-->
+
+
+
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Censored block model</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p>Posted: 2016-02-28 
+          , Modified: 2016-02-28 
+	</p>
+      
+       <p>Tags: <a href="../../../../tags/research.html">research</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <div class="toc"> <ul>
+ <li><a href="#summary">Summary</a><ul>
+ <li><a href="#literature">Literature</a></li>
+ </ul></li>
+ <li><a href="#necessity">Necessity</a></li>
+ <li><a href="#sdp-relaxation">SDP relaxation</a><ul>
+ <li><a href="#formulation">Formulation</a></li>
+ <li><a href="#random-graph">Random graph</a></li>
+ <li><a href="#fixed-graph">Fixed graph</a></li>
+ </ul></li>
+ <li><a href="#thoughts-fixing-a-graph">Thoughts: Fixing a graph</a></li>
+ </ul> </div>
+
+  <div class="blog-main">
+    <h2 id="summary">Summary</h2>
+<p>Model: Graph <span class="math inline">\(G\)</span> is given. Each node is iid red/blue with probability <span class="math inline">\(\rc2\)</span>. An edge is labeled <span class="math display">\[\begin{cases}+&amp;\text{nodes same color}\\-&amp;\text{nodes different color}\end{cases}.\]</span> Each edge is flipped independently with probability <span class="math inline">\(\rc2\)</span>.</p>
+<p>Question: Under what conditions of <span class="math inline">\(G\)</span> can the communities be recovered (up to sign)</p>
+<ul>
+<li>exactly with high (<span class="math inline">\(1-o(1)\)</span>) probability?</li>
+<li>with correlation tending to 1? (whp, the number of correctly classified nodes is <span class="math inline">\(1-o(1)\)</span>)</li>
+<li>weakly (with <span class="math inline">\(\rc2+\Om(1)\)</span> correlation)?</li>
+</ul>
+<p>Past work:</p>
+<ul>
+<li>[ABSS14] For exact recovery
+<ul>
+<li>Necessary: <span class="math inline">\(C_\ep \ln n\)</span> average degree.</li>
+<li>For random graphs <span class="math inline">\(G(n, p)\)</span>, <span class="math inline">\(p\ge \fc{2C_\ep\ln n}{n}\)</span> is sufficient. (Factor of 2 gap, later closed by [HWX14])<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
+<li>Algorithm is SDP relaxation. Sufficient criteria for it to work is that there is a constant spectral gap in the graph. Up to constants, this is the same as having a large Cheeger constant.</li>
+<li>Spectral criteria are not necessary: for example, for 2 complete graphs with a <span class="math inline">\(\ln n\)</span> sized cut, recovery is possible.</li>
+</ul></li>
+<li>Strong recovery
+<ul>
+<li>[YP14] give a spectral algorithm.</li>
+</ul></li>
+<li>Weak recovery - ?
+<ul>
+<li>For the grid graph, recovery with correlation <span class="math inline">\((1-Cp^2)\)</span> is optimal, <a href="GRSY15.html">GRSY15</a>.</li>
+</ul></li>
+<li>Open: What is the SNR-distortion curve[^q4](what is this?) for 2-CBM? What is the limit for recover in the general (asymmetric) CBM?</li>
+</ul>
+<h3 id="literature">Literature</h3>
+<ul>
+<li>[ABBS14] DECODING BINARY NODE LABELS FROM CENSORED EDGE MEASUREMENTS: PHASE TRANSITION AND EFFICIENT RECOVERY</li>
+<li>[HWX14] Achieving Exact Cluster Recovery Threshold via Semidefinite Programming</li>
+<li><a href="GRSY15.html">GRSY15</a> How Hard is Inference for Structured Prediction?</li>
+<li>[YP14] Accurate Community Detection in the Stochastic Block Model via Spectral Algorithms</li>
+<li>[Ban15] RANDOM LAPLACIAN MATRICES AND CONVEX RELAXATIONS</li>
+</ul>
+<h2 id="necessity">Necessity</h2>
+<p>Exact recovery occurs with high probability only if <span class="math inline">\(\fc{d}{\ln n} ge 2\fc{1-\fc{3\tau}2}{(1-2\ep)^2}\)</span>.</p>
+<p>Proof idea: If more than half of the edges coming out of a node are noisy, then we fail. If the average degree is small, find a large independent set—nodes whose incident edges do not overlap. Now multiply.</p>
+<h2 id="sdp-relaxation">SDP relaxation</h2>
+<h3 id="formulation">Formulation</h3>
+<p>Let <span class="math inline">\(\rh_{ij}\)</span> be the edge labels. Relax <span class="math display">\[ \min_{g_i\in \{\pm 1\}} \sum_{ij\in E}(g_i-\rh_{ij}g_j)^2 \]</span> to <span class="math display">\[\max_{X_{ii}=1,X\succeq0}\Tr(WX),\; W=A_G-2A_H\]</span> where <span class="math inline">\(A_G\)</span> is the adjacency matrix of <span class="math inline">\(G\)</span> and <span class="math inline">\(A_H\)</span> is the graph where the <span class="math inline">\(-1\)</span>’s are.</p>
+<p>(Details: we want <span class="math inline">\(\max \rh_{ij}g_ig_j = \max_{g\in \{\pm 1\}^n}Wgg^T\)</span>; now replace <span class="math inline">\(gg^T\)</span> with <span class="math inline">\(X\)</span>.)</p>
+<p>By duality, this is <span class="math display">\[\le \min_{\sum \nu_i E_{ii} \succeq W}\sum \nu_i = \min_{Q\succeq W} \Tr(Q).\]</span></p>
+<p>WLOG, we can take the solution to be <span class="math inline">\(W=11^T\)</span>.</p>
+By <a href="SDP-duality.html">SDP duality</a>, <span class="math inline">\(X=11^T\)</span> is the optimal solution iff
+\begin{align}
+\Tr(Q)&amp;=\Tr(W11^T)\\
+\Tr(11^T(Q-W))&amp;=0.
+\end{align}
+<p>I’m pretty confused here.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> If <span class="math inline">\(L_G-2L_H\succeq0\)</span> then we can let <span class="math inline">\(Q=D_G-2D_H\)</span>. Claim: If <span class="math inline">\(L_G-2L_H\succeq 0\)</span> and <span class="math inline">\(\la_2(L_G-2L_H)&gt;0\)</span> then the unique solution is <span class="math inline">\(gg^T\)</span>. The first condition makes sure that <span class="math inline">\(gg^T\)</span> is an optimal solution, the second makes sure it is unique. (Proof: The gap between a solution <span class="math inline">\(X\)</span> and <span class="math inline">\(Q\)</span> is <span class="math inline">\(\Tr((Q-W)X)\)</span>. (We can multiply <span class="math inline">\(Q\)</span> by <span class="math inline">\(X\)</span> because <span class="math inline">\(X_{ii}=1\)</span> and <span class="math inline">\(Q\)</span> is diagonal. The second smallest eigenvalue of <span class="math inline">\(Q-W\)</span> needs to be <span class="math inline">\(&gt;0\)</span> for there to be unique <span class="math inline">\(X\)</span> making this 0.)</p>
+<h3 id="random-graph">Random graph</h3>
+<p>For a randomly chosen <span class="math inline">\(H\subeq G\)</span>, what is <span class="math inline">\(\Pj(L_G-2L_H\succeq0)\)</span> large? Write this as a sum of random matrices with expectation 0: <span class="math display">\[
+L_G-2L_H = \sum_{i&lt;j} \al_{ij} \La_{ij}, \quad \al_{ij}=\begin{cases}0,&amp;wp(1-p)\\1,&amp;wp(p(1-\ep))\\-1&amp;wp(p\ep)\end{cases}.
+\]</span> Now use matrix Bernstein <span class="math display">\[
+\Pj(\la_{\max}(A)\ge t) \le ne^{-\fc{t^2/2}{\si^2+Rt/3}}.
+\]</span> For <span class="math inline">\(|ep\to \rc2\)</span>, get the bound that when <span class="math inline">\(\fc{d}{\ln n}\ge 4\fc{1+\de}{(1-2\ep)^2}+o\prc{(1-2\ep)^2}\)</span>, get exact recovery w.p. <span class="math inline">\(\ge 1-n^{-\de}\)</span>.</p>
+<h3 id="fixed-graph">Fixed graph</h3>
+<p><span class="math inline">\(G\)</span> is now fixed; all the randomness comes from <span class="math inline">\(A_H\)</span>. The eigenvalues of <span class="math inline">\(G\)</span> enter in. See Theorem 5.3. Notably, we need <span class="math inline">\(\la_{\max}\)</span> to be bounded away from 1 (?). This is equivalent up to parameters to having the Cheeger constant be lower-bounded by a constant.</p>
+<h2 id="thoughts-fixing-a-graph">Thoughts: Fixing a graph</h2>
+<p>Suggestion: Let <span class="math inline">\(X\)</span> be the node colors and <span class="math inline">\(Y_\ep\)</span> be the observed edges. Consider the entropy <span class="math inline">\(H(X|Y_\ep)\)</span>. This is like a measure of connectivity “on average.” Ex. When <span class="math inline">\(\ep=0\)</span>, this measures the number of components. Think of it as a average-case Cheeger: rather than look at the proportionally minimal cut, we’re looking at an average cut size. (Related is the probability of success for ML decoding, which is <span class="math inline">\(\E_{X,Y_\ep}P(X|Y)\)</span>.)</p>
+<p>Thoughts: Any nontrivial partition <span class="math inline">\(A\sqcup B= V\)</span> of the vertices is associated with a cut. For a set <span class="math inline">\(S\)</span>, let <span class="math inline">\(X_S\)</span> be <span class="math inline">\(X\)</span> with the colors of vertices in <span class="math inline">\(S\)</span> flipped. Given observed <span class="math inline">\(Y_\ep\)</span>, <span class="math inline">\(P(X_S|Y_\ep)\ge P(X|Y_\ep)\)</span> iff most of the edges of the cut <span class="math inline">\((A,V\bs A)\)</span> are flipped. Thus, the ML decoding is the <span class="math inline">\(X\)</span> such that in no cut is the majority of the edges wrong.</p>
+Let <span class="math inline">\(G_C\)</span> be the (good) event that the majority of edges of cut <span class="math inline">\(C\)</span> are correct. Letting <span class="math inline">\(|C|\)</span> be the number of edges in the cut,
+\begin{align}
+P\pa{\bigwedge_C G_C} &amp; \ge \prod P(G_C) &amp; \text{Correlation inequality} \\
+&amp; = \prod_C P(\Binom(|C|, 1-\ep) &gt; \fc{|C|}2)\\
+&amp; = \prod_C (1-e^{-K_\ep|C|})\\
+&amp; \ge 1-\sum_C e^{-K_\ep|C|}.
+\end{align}
+<p>(By Chernoff, we can take <span class="math inline">\(K_\ep = \fc{(\ep-\rc2)^2}{2\ep(1-\ep)}\)</span>.)</p>
+<p>Question: is there an efficient algorithm to approximate <span class="math inline">\(\sum_C e^{-K|C|}\)</span>? By Karger’s algorithm, we can estimate the number of minimum cuts. By sampling, we can estimate the number of cuts of some size if it’s <span class="math inline">\(&gt;\rc{\poly}\)</span> proportion. But what about all cuts in between?</p>
+<p>Note: The inequalities are not close to sharp because the events are very correlated when the cuts overlap a lot. Somehow it should be more affected by small cuts which <em>don’t</em> share a lot of edges in common.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>How? The paper talks about SBM not CBM.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Where does the second equation come from? The claim is complementary slackness. But that seems to give <span class="math inline">\(\Tr(W+Q)=0\)</span>.<a href="#fnref2">↩</a></p></li>
+</ol>
+</section>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    Built with
+    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+    using 
+    <a href="http://www.getbootstrap.com">Bootstrap</a>, 
+    <a href="http://www.disqus.com">Disqus</a>,
+    <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>,
+    <a href="http://highlightjs.org/">Highlight.js</a>, 
+    <a href="http://www.mathjax.org">MathJax</a>, 
+    and <a href="http://www.sharethis.com">ShareThis</a>.
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- SCRIPTS -->
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../../../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Extension : Highlight.js @ https://highlightjs.org/ -->
+<!-- Syntax highlighting tomorrow-night-bright, agate-->
+<link rel="stylesheet" href="../../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../../highlight/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
+
+<!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<script src="../../../../footnotes/js/footnotes.js"></script>
+
+<!-- Extension : Disqus @ http://disqus.com -->
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../../disqus/js/disqus.js"></script>
+
+
+
+<!-- Extension : Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73261814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

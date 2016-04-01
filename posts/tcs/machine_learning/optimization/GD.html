@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Holden Lee's Research Notebook">
+  <meta name="author" content="Holden Lee">
+    
+  <title>Gradient descent</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="../../../../css/blog.css" rel="stylesheet">
+  <link href="../../../../css/default.css" rel="stylesheet">
+
+  <!-- Extension : Footnotes -->
+  <link href="../../../../footnotes/css/footnotes.css" rel="stylesheet">
+
+  <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+  
+
+</head>
+
+<body>
+
+<!-- Navigation bar. navbar-inverse is black, navbar-default is white.-->
+<!-- To make a button active (pressed), use <li class="active"> -->
+<div id="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../">Notebook</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../../">Home</a></li>
+          <li><a href="../../../../sitemap.html">Sitemap</a></li>
+<!-- TODO: Distinguish between PAPERS, RESEARCH QUESTIONS, BOOKS -->
+<!-- TODO: make this part a for loop over main pages -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>
+<!-- Content -->
+<!--div id="content">
+  <h1>Mental Wilderness</h1>-->
+
+
+
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Gradient descent</h1>
+    </div>
+    <div class="info">
+      
+       
+        <p>Posted: 2016-03-04 
+          , Modified: 2016-03-04 
+	</p>
+      
+       <p>Tags: <a href="../../../../tags/gradient.html">gradient</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  
+
+  <div class="blog-main">
+    <p>(See 10/15 notebook for detailed notes.)</p>
+<h2 id="summary">Summary</h2>
+<table style="width:25%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Algorithm</th>
+<th style="text-align: left;">General</th>
+<th style="text-align: left;"><span class="math inline">\(\al\)</span>-strongly convex</th>
+<th style="text-align: left;"><span class="math inline">\(\be\)</span>-smooth</th>
+<th style="text-align: left;"><span class="math inline">\(\ga\)</span>-convex</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Gradient descent</td>
+<td style="text-align: left;"><span class="math inline">\(\rc{\sqrt{T}}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\rc{\al T}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\fc{\be}T\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(e^{-\ga T}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accelerated gradient descent</td>
+<td style="text-align: left;"><span class="math inline">\(\fc{d}{T}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\rc{\al T^2}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\fc{\be}{T^2}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(e^{-\sqrt{\ga} T}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gradient-descent-main-points">Gradient descent main points</h3>
+<ul>
+<li>What is the general framework?
+<ol type="1">
+<li>Pick a descent direction <span class="math inline">\(\De x\)</span>.</li>
+<li>Choose a step size <span class="math inline">\(\tau&gt;0\)</span>: <span class="math display">\[x^{(t+1)} \leftarrow x+\tau \De x.\]</span></li>
+<li>Continue until stop criterion.</li>
+</ol></li>
+<li>What is vanilla (one shot) gradient descent?
+<ul>
+<li>Gradient descent lemma: Suppose <span class="math inline">\(f\)</span> is convex and <span class="math inline">\(L\)</span>-smooth, <span class="math inline">\(\ve{\nb f(x)-\nb f(y)}\le L\ve{x-y}\)</span>.
+\begin{align}
+ x':&amp;=x-\rc L \nb f(x)\\
+ \implies f(x')&amp;\le f(x) - \rc{2L}\ve{\nb f(x)}^2.
+ \end{align}</li>
+<li>There’s no guarantee on smoothness unless we assume <span class="math inline">\(f\)</span> is <span class="math inline">\(l\)</span>-strongly convex, <span class="math inline">\(\ve{\nb f(x)-\nb f(y)}\le l\ve{x-y}\)</span>. Let <span class="math inline">\(\ka=\fc{L}{l}, t = \fc{2}{L+l}\)</span>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> Then linear convergence holds:
+\begin{align}
+ \ve{x_{k+1}-x^*} \le \pf{\ka-1}{\ka+1} \ve{x_k-x^*}
+ \end{align}</li>
+</ul></li>
+<li>What is gradient descent with backtracking?
+<ul>
+<li>Parameters <span class="math inline">\(\al\in (0,0.5)\)</span>, step size, <span class="math inline">\(\be\in (0,1)\)</span> scaling factor.</li>
+<li>Choose <span class="math inline">\(\De x=\nb f(x)\)</span>.</li>
+<li>Choose <span class="math inline">\(\tau\)</span> by backtracking: Set <span class="math inline">\(t=1\)</span>. While <span class="math inline">\(f(x+t\De x)&gt;f(x)+\al \nb f^T\De x\)</span>, <span class="math display">\[\De x\leftarrow \al \De x.\]</span></li>
+<li>Lemma: suppose <span class="math inline">\(mI \preceq \nb^2 f \preceq MI\)</span>. Then <span class="math display">\[\fc{f(x_t)-f(p^*)}{f(x_{t-1})-f(p^*)}\le 1-\min\bc{\fc{2\al \be m}{M}, 2m\al}.\]</span></li>
+</ul></li>
+<li></li>
+</ul>
+<h2 id="proofs">Proofs</h2>
+<p>Gradient descent lemma: Let <span class="math inline">\(D=\nb f(x)\)</span>. Move to origin. Upper bound is <span class="math display">\[f(x) \le \fc{L}2 x^2 + Dx.\]</span> The minimum is at <span class="math inline">\(-\fc{D}{L}\)</span> and is <span class="math inline">\(\fc{-b^2}{4a} = -\fc{D^2}{2L}.\)</span></p>
+<p>For strongly convex: Choose <span class="math inline">\(s\)</span> to maximize the minimum progress in terms of <span class="math inline">\(x\)</span>. <span class="math display">\[\fc{s-\rc{l}}{\rc{l}} = \fc{\rc L-s}{\rc L} \implies s = \fc{2}{L+l}.\]</span></p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Think of this as the harmonic average of how much to move to get to the minima of the upper and lower-bounding quadratics.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    Built with
+    <a href="http://jaspervdj.be/hakyll">Hakyll</a> 
+    using 
+    <a href="http://www.getbootstrap.com">Bootstrap</a>, 
+    <a href="http://www.disqus.com">Disqus</a>,
+    <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/">Footnotes.js</a>,
+    <a href="http://highlightjs.org/">Highlight.js</a>, 
+    <a href="http://www.mathjax.org">MathJax</a>, 
+    and <a href="http://www.sharethis.com">ShareThis</a>.
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- SCRIPTS -->
+<!-- jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="../../../../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Extension : Highlight.js @ https://highlightjs.org/ -->
+<!-- Syntax highlighting tomorrow-night-bright, agate-->
+<link rel="stylesheet" href="../../../../highlight/css/tomorrow-night-bright.css">
+<script src="../../../../highlight/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Extension : MathJax @ https://docs.mathjax.org/en/v2.5-latest/tex.html -->
+<!-- MathJax/config/local/local.js contains macros. Need to provide entire URL-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://holdenlee.github.io/notebook/MathJax/config/local/local"></script>
+
+<!-- Extension : Footnotes @ http://ignorethecode.net/blog/2010/04/20/footnotes/ -->
+<script src="../../../../footnotes/js/footnotes.js"></script>
+
+<!-- Extension : Disqus @ http://disqus.com -->
+<!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../../disqus/js/disqus.js"></script>
+
+
+
+<!-- Extension : Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73261814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
