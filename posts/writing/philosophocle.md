@@ -6,7 +6,7 @@ modified: 2016-02-23
 tags: fiction
 ---
 
-I'm excited to start my (unpaid) job as webmaster of the Philosophocle blog [philosophocle.tk](http://philosophocle.tk). Philosophocle is an institution of higher learning in a historically inwardly turned country that has sadly been neglected in current affairs. We hope that this blog will facilitate cultural exchange between Philosophocle and the wider world. Please read, subscribe, and share!
+I'm excited to start my (unpaid) job as webmaster of the Philosophocle blog [philosophocle.tk](http://holdenlee.github.io/philosophocle). Philosophocle is an institution of higher learning in a historically inwardly turned country that has sadly been neglected in current affairs. We hope that this blog will facilitate cultural exchange between Philosophocle and the wider world. Please read, subscribe, and share!
 
 Here is an excerpt of the first post, [The Street](http://holdenlee.github.io/philosophocle/posts/the-street.html).
 
