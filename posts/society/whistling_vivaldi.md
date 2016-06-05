@@ -129,7 +129,7 @@ Identity threat is *diffuse*: one knows that a variety of negative things could 
 
 From *In the Name of Identity: Violence and the Need to Belong*, Amin Maalouf argues that people can commit crimes in the name of an identity under siege, that they would never do for themselves.
 
-> People often see themselves in terms of whichever one of their allegiances is most under attack. And sometimes, when a person doesn't have the strenght to defent that allegiance, he hides it... [until] it invades the person's whole identity.
+> People often see themselves in terms of whichever one of their allegiances is most under attack. And sometimes, when a person doesn't have the strength to defend that allegiance, he hides it... [until] it invades the person's whole identity.
 
 When we are threatened is when we are most aware of being a particular kind of person.[^f1] We are not as aware of positive identity contingencies.
 
