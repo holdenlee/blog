@@ -8,7 +8,7 @@ toc: True
 
 These are my notes on [Whistling Vivaldi: And Other Clues to How Stereotypes Affect Us](https://www.goodreads.com/book/show/6649312-whistling-vivaldi?ac=1&from_search=true) by Claude Steele.
 
-The book is very revealing, showing through many careful experimental studies how stereotypes have wide-ranging effects beyond our conscious awareness---for example, how just simply *being* in a society where there are stereotypes can depress academic performance of black students or math scores of female students. (Incidentally, this makes a strong for affirmative action in certain cases.) Moreover, there are easy ways in which we can counteract these stereotypes. 
+The book is very revealing, showing through many careful experimental studies how stereotypes have wide-ranging effects beyond our conscious awareness---for example, how just simply *being* in a society where there are stereotypes can depress academic performance of black students or math scores of female students. (Incidentally, this makes a strong argument for affirmative action in certain cases.) Moreover, it proposes several steps we can take counteract these stereotypes. 
 
 # 1 An introduction: at the root of identity
 
