@@ -12,8 +12,6 @@ Below are stories/poems I have finished and information about ones that I am wor
 *Read about [cloud fairies](https://docs.google.com/document/d/1tDXD1nF9M2cK8uascZlKAdFNIRPiNbEcbqePb8SH7_0/edit?usp=sharing).*
 </center>
 
-
-
 Also check out my [deviant art](http://holdenlee.deviantart.com/).
 
 (\*) Personal pick.

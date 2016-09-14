@@ -8,9 +8,9 @@ This page contains notes for current classes, seminars and talks. For more math 
 
 Note that most of these are sketchy - use at your own risk. (*) means this is a talk I gave.
 
-## Current classes
+## Spring 2016 classes
 
-I am collaborating on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](https://kiranvodrahalli.github.io/).
+I collaborated on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](https://kiranvodrahalli.github.io/).
 
 * [MAT519](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat519.pdf) (Topics in Number Theory: Statistics of rational points on curves), source on [github](https://github.com/holdenlee/mat519)
 * [MAT529](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/mat529.pdf) (Topics in Analysis: Metric embeddings and geometric inequalities), source on [github](https://github.com/holdenlee/mat529).
@@ -19,10 +19,10 @@ I am collaborating on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](h
 ## Recurring seminars
 
 * Computer science and discrete mathematics (IAS) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/csdm.pdf)
-* Gems of TCS seminar (Tuesdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/gems_of_tcs.pdf)
+* Gems of TCS seminar (Wednesdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/gems_of_tcs.pdf)
 * Machine learning reading group [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/ml_seminar.pdf) 10/15 onwards
-* Mark Braverman's seminar (Tuesdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/braverman_seminar.pdf) 11/15 onwards
-* Probability and geometry, grad student and postdoc seminar (Wednesdays and Fridays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/prob_geo.pdf)
+* Mark Braverman's seminar [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/braverman_seminar.pdf) 11/15 onwards
+* Probability and geometry, grad student and postdoc seminar (Spring 2016, Wednesdays and Fridays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/prob_geo.pdf)
 * Simons meetings (monthly) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/simons.pdf) 9/15 onwards
 * PACM seminar (Mondays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/pacm_colloquium.pdf)
 
