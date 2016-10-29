@@ -4,7 +4,7 @@ title: Notes
 
 # Math/CS notes
 
-This page contains notes for current classes, seminars and talks. For more math notes (including the number theory textbook, class notes, math contest materials, etc.), see the [notes page on my website](https://dl.dropboxusercontent.com/u/27883775/web/math/notes.htm). Most of the source code is available on [github](https://github.com/holdenlee/mathnotes). (If it's not, email me.) To compile the source you'll need the [LaTeX template files](https://github.com/holdenlee/templates) (see the readme for instructions).
+This page contains notes for current classes, seminars and talks. For more math notes (including the number theory textbook, class notes, math contest materials, etc.), see the [notes page on my website](http://holdenlee.github.io/#Math%20notes). Most of the source code is available on [github](https://github.com/holdenlee/mathnotes). (If it's not, email me.) To compile the source you'll need the [LaTeX template files](https://github.com/holdenlee/templates) (see the readme for instructions).
 
 Note that most of these are sketchy - use at your own risk. (*) means this is a talk I gave.
 
