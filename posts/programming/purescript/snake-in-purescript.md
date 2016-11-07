@@ -1,8 +1,8 @@
 ---
 title: Snake in Purescript
 subtitle: How to program a simple game in Purescript
-published: 2016-11-04
-modified: 2016-11-04
+published: 2016-11-06
+modified: 2016-11-06
 tags: purescript, programming, functional programming, game
 showTOC: True
 inline: True

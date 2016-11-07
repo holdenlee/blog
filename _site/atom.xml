@@ -8,13 +8,13 @@
         <name>Holden Lee</name>
         <email>oldheneel@gmail.com</email>
     </author>
-    <updated>2016-11-04T00:00:00Z</updated>
+    <updated>2016-11-06T00:00:00Z</updated>
     <entry>
     <title>Snake in Purescript</title>
     <link href="http://holdenlee.github.io/blog/posts/programming/purescript/snake-in-purescript.html" />
     <id>http://holdenlee.github.io/blog/posts/programming/purescript/snake-in-purescript.html</id>
-    <published>2016-11-04T00:00:00Z</published>
-    <updated>2016-11-04T00:00:00Z</updated>
+    <published>2016-11-06T00:00:00Z</published>
+    <updated>2016-11-06T00:00:00Z</updated>
     <summary type="html"><![CDATA[
 <div class="container">
   <div id="content">
@@ -24,8 +24,8 @@
     <div class="info">
        <div class="subtitle"><p>How to program a simple game in Purescript</p></div> 
        
-        <p>Posted: 2016-11-04 
-          , Modified: 2016-11-04 
+        <p>Posted: 2016-11-06 
+          , Modified: 2016-11-06 
 	</p>
       
        <p>Tags: <a href="/tags/purescript.html">purescript</a>, <a href="/tags/programming.html">programming</a>, <a href="/tags/functional%20programming.html">functional programming</a>, <a href="/tags/game.html">game</a></p> 
