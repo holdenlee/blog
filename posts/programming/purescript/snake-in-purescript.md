@@ -8,6 +8,8 @@ showTOC: True
 inline: True
 ---
 
+# Introduction
+
 * Play the game [here](https://holdenlee.github.io/purescript-games/html/SnakeS.html). 
 * Check out the code on [github](https://github.com/holdenlee/purescript-games). 
 	* The code for `Snake.purs` is [here](https://github.com/holdenlee/purescript-games/blob/master/src/Snake.purs).
