@@ -35,6 +35,7 @@
   <!--/div-->
 
   <div class="toc"> <ul>
+ <li><a href="#introduction">Introduction</a></li>
  <li><a href="#getting-started">Getting started</a></li>
  <li><a href="#imports">Imports</a></li>
  <li><a href="#the-model-update-view-signal-architecture">The Model-Update-View-Signal Architecture</a></li>
@@ -50,7 +51,8 @@
  </ul> </div>
 
   <div class="blog-main">
-    <ul>
+    <h2 id="introduction">Introduction</h2>
+<ul>
 <li>Play the game <a href="https://holdenlee.github.io/purescript-games/html/SnakeS.html">here</a>.</li>
 <li>Check out the code on <a href="https://github.com/holdenlee/purescript-games">github</a>.
 <ul>
