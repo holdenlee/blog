@@ -145,9 +145,9 @@
 <h2 id="getting-started">Getting started</h2>
 <p>First follow the instructions <a href="http://www.purescript.org/learn/getting-started/">here</a> to install Purescript.</p>
 <p>Start a new project by</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> basic-games
-<span class="kw">cd</span> basic-games
-<span class="kw">pulp</span> init</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> basic-games
+<span class="bu">cd</span> basic-games
+<span class="ex">pulp</span> init</code></pre></div>
 <p>Create a file <code>Snake.purs</code> in <code>src/</code>.</p>
 <h2 id="imports">Imports</h2>
 <p>First, the imports.</p>
@@ -174,7 +174,7 @@
 <span class="kw">import </span><span class="dt">Signal.Time</span> (<span class="dt">Time</span>, second, every)
 <span class="kw">import </span><span class="dt">Test.QuickCheck.Gen</span> <span class="co">-- for randomness</span></code></pre></div>
 <p>You will need to install all these packages. You can install them one at a time via</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">bower</span> install <span class="kw">&lt;</span>package-name<span class="kw">&gt;</span> --save</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bower</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span> --save</code></pre></div>
 <p>or copy the <code>bower.json</code> file <a href="https://github.com/holdenlee/purescript-games/blob/master/bower.json">here</a> and do <code>bower install</code> to install all of them at once.</p>
 <h2 id="the-model-update-view-signal-architecture">The Model-Update-View-Signal Architecture</h2>
 <p>We break our program into the following parts. (For more information, see the <a href="http://guide.elm-lang.org/architecture/">Elm architecture tutorial</a>.)</p>
@@ -483,9 +483,9 @@ main <span class="fu">=</span>
 <p>The version I linked to has a few extra lines of code so that pressing SPACE restarts the game; the additions are in <a href="https://github.com/holdenlee/purescript-games/blob/master/src/SnakeS.purs">SnakeS.purs</a>, at the bottom.</p>
 <h2 id="building">Building</h2>
 <p>To build the project, run</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> dist
-<span class="kw">pulp</span> build
-<span class="kw">pulp</span> browserify -m Snake/index.js <span class="kw">&gt;&gt;</span> dist/Snake.js</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> dist
+<span class="ex">pulp</span> build
+<span class="ex">pulp</span> browserify -m Snake/index.js <span class="op">&gt;&gt;</span> dist/Snake.js</code></pre></div>
 <p>Browserify creates a javascript file with all the javascript libraries included. We need a html file to host the javascript. Create <code>html/index.html</code> with a canvas of the appropriate dimensions:</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
 <span class="kw">&lt;html&gt;</span>
