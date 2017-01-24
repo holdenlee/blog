@@ -18,6 +18,8 @@ I collaborated on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](https
 
 ## Recurring seminars
 
+Simons Institute: Foundations of Machine Learning [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/simons_ml.pdf)
+
 * Computer science and discrete mathematics (IAS) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/csdm.pdf)
 * Gems of TCS seminar (Wednesdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/gems_of_tcs.pdf)
 * Learning deeply reading group (Thursdays) [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/ldrg.pdf)
