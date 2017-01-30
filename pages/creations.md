@@ -27,6 +27,7 @@ Also check out my [deviant art](http://holdenlee.deviantart.com/).
 * **Return to Taiwan** ([googledoc](https://drive.google.com/open?id=1IGDg4XNOCJd3xLftfrouAhJTYisRFaNBJZau0Up9wVc), [Word doc](http://holdenlee.github.io/writing/Return%20to%20Taiwan.docx)) (4/2013) - *"We're so glad you returned to Taiwan," they all said, like it was where I belonged, like I had been born there too, not just my parents. They waved tearfully, and Liangliang asked, "When's the next time you'll return to Taiwan?" Because "going to Taiwan" didn't have the same ring to it... I returned to Taiwan again, unexpectedly, during the winter of sixth grade. Permanently.*
 * **Two Sides of the River** ([googledoc](https://drive.google.com/open?id=19ihkgA8G8Mnsz4gFj7nR96-Pf1GJb6ijbxEIXG1zGJQ)) (4/2013)
 * (\*) [**A Random Collection**](https://drive.google.com/open?id=18A_6ZOsK3jvo4ILt8zGJZyifIL7g_EBLtpvyGdNwd54) (3/2014) - A collage of articles about a fictional mathematician.
+* (\*) [**Goodnight Mel**](https://docs.google.com/document/d/1Pxs_3NstJrN3YwTQBmLDaLNwBJv6FBGzF23zDpFY0UI/edit) - A couple moves into a house haunted by a girl who plays strange music.
 * **Three**: coming soon.
 
 # Poetry
