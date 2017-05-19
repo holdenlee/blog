@@ -7,7 +7,7 @@ title: Creations
 Below are stories/poems I have finished and information about ones that I am working on, in chronological order. I'd love to hear comments (including criticisms)! Just comment on the googledocs or send me an email at [oldheneel@gmail.com](mailto:oldheneel@gmail.com). If you would like to preview and give feedback on work-in-progress, please join the [Holden's Readers googlegroup](https://groups.google.com/forum/#!forum/holden-readers).
 
 <center>
-<img src="https://www.dropbox.com/s/6r1e2vkklwipt27/wifloflos.jpg">
+<img src="/images/wifloflos.jpg">
 
 *Read about [cloud fairies](https://docs.google.com/document/d/1sAF1ijUXiyCclrEly-UL9o7leuumVkaXwdeYmrzVv5Q).*
 </center>
