@@ -7,9 +7,9 @@ title: Creations
 Below are stories/poems I have finished and information about ones that I am working on, in chronological order. I'd love to hear comments (including criticisms)! Just comment on the googledocs or send me an email at [oldheneel@gmail.com](mailto:oldheneel@gmail.com). If you would like to preview and give feedback on work-in-progress, please join the [Holden's Readers googlegroup](https://groups.google.com/forum/#!forum/holden-readers).
 
 <center>
-<img src="https://dl.dropboxusercontent.com/u/27883775/wifloflos.jpg">
+<img src="https://www.dropbox.com/s/6r1e2vkklwipt27/wifloflos.jpg">
 
-*Read about [cloud fairies](https://docs.google.com/document/d/1tDXD1nF9M2cK8uascZlKAdFNIRPiNbEcbqePb8SH7_0/edit?usp=sharing).*
+*Read about [cloud fairies](https://docs.google.com/document/d/1sAF1ijUXiyCclrEly-UL9o7leuumVkaXwdeYmrzVv5Q).*
 </center>
 
 Also check out my [deviant art](http://holdenlee.deviantart.com/).
@@ -29,6 +29,7 @@ Also check out my [deviant art](http://holdenlee.deviantart.com/).
 * (\*) [**A Random Collection**](https://drive.google.com/open?id=18A_6ZOsK3jvo4ILt8zGJZyifIL7g_EBLtpvyGdNwd54) (3/2014) - A collage of articles about a fictional mathematician.
 * (\*) [**Goodnight Mel**](https://docs.google.com/document/d/1Pxs_3NstJrN3YwTQBmLDaLNwBJv6FBGzF23zDpFY0UI/edit) (1/2017) - A couple moves into a house haunted by a girl who plays strange music.
 * **Three**: coming soon.
+* (\*) [**Cloud fairies**](https://docs.google.com/document/d/1sAF1ijUXiyCclrEly-UL9o7leuumVkaXwdeYmrzVv5Q) - A myth about cloud fairies.
 
 # Poetry
 
