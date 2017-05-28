@@ -107,7 +107,7 @@ main = hakyll $ do
       route idRoute
       compile $ do
         let mapCtx = constField "title" "Sitemap" <> basicCtx
-        outline <- compileTree (blankTOCCtx <> postCtx) pt
+        outline <- compileTree "published" (blankTOCCtx <> postCtx) pt
         makeItem outline
           >>= loadAndApplyTemplate "templates/post.html" mapCtx
           >>= loadAndApplyTemplate "templates/default.html" mapCtx

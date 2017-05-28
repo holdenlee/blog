@@ -59,8 +59,8 @@ removeTrailingSlash :: String -> String
 removeTrailingSlash = reverse . (\li -> if head li == '/' then tail li else li) . reverse
 
 --type FunTree l b = (l, M.Map l (b,[l]))
-compileTree :: Context String -> FunTree [String] [Identifier] -> Compiler String
-compileTree ctx p@(rt, m) = do
+compileTree :: String -> Context String -> FunTree [String] [Identifier] -> Compiler String
+compileTree field ctx p@(rt, m) = do
   let (li, ls') = m M.! rt -- :: ([Identifier], [[String]])
   let ls = sortBy (\x y -> compare (map (map toLower) x) (map (map toLower) y)) ls'
   --note we must put `.&&. hasNoVersion`, otherwise it tries and fails to load the toc.
@@ -68,10 +68,10 @@ compileTree ctx p@(rt, m) = do
 --  listItemTitles <- forM listItemString (flip getMetadataField "title" . itemIdentifier)
   --sort by first
 --  let listItemStringSorted = map snd $ sortBy (\x y -> compare (map toLower $ fst x) (map toLower $ fst y)) $ zip listItemTitles listItemString
-  listItemStringSorted <- sortByField (map toLower) "title" listItemString
+  listItemStringSorted <- sortByField (map toLower) field listItemString
 --(flip loadAllSnapshots) "content"  $ foldl (.||.) "" (map (fromGlob . toFilePath) li)
   postItems <- applyTemplateList postItemTemplate ctx listItemStringSorted
-  childrenListStrings <- mapM (compileTree ctx) (map (,m) ls)
+  childrenListStrings <- mapM (compileTree field ctx) (map (,m) ls)
   let childrenOutline = mconcat $ zipWith (\catPath str -> printf "<li><b>%s</b> %s </li>" (last catPath) str) ls childrenListStrings
   -- \catPath str -> "<li><b>"++(last catPath)++"</b>"++postItems++"</li>"
   return ("<ul class=\"collapsibleList\">"++childrenOutline++postItems++"</ul>")
