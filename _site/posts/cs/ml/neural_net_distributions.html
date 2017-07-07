@@ -10,7 +10,7 @@
   <meta name="description" content="Holden Lee's Blog">
   <meta name="author" content="Holden Lee">
     
-  <title>Posts in category "cs\ml"</title>
+  <title>On the ability of neural nets to express distributions (at COLT 2017)</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,13 @@
 
   <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
   
+  <link href="../../../disqus/css/inlineDisqussions.css" rel="stylesheet">
+  
 
+  
+  <!-- Extension : Share buttons @ http://www.sharethis.com/get-sharing-tools/# -->
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js">  </script>
+  <script type="text/javascript">stLight.options({publisher: "307929ab-483f-4a25-8ef0-76ff5bd12e05", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
   
 
 </head>
@@ -71,43 +77,64 @@
 <div class="container">
   <div id="content">
     <div class="page header">
-      <h1>Posts in category "cs\ml"</h1>
+      <h1>On the ability of neural nets to express distributions (at COLT 2017)</h1>
     </div>
     <div class="info">
+       <div class="subtitle"><p>Holden Lee, Rong Ge, Tengyu Ma, Andrej Risteski, Sanjeev Arora</p></div> 
+       
+        <p>Posted: 2017-07-07 
+          , Modified: 2017-07-07 
+	</p>
       
-      
-      
+       <p>Tags: <a href="../../../tags/machine%20learning.html">machine learning</a>, <a href="../../../tags/paper.html">paper</a>, <a href="../../../tags/neural%20network.html">neural network</a></p> 
     </div>
     
   </div>
   <!--/div-->
 
-  
+  <div class="toc"> <ul>
+ <li><a href="#abstract">Abstract</a></li>
+ <li><a href="#paper">Paper</a></li>
+ <li><a href="#poster">Poster</a></li>
+ <li><a href="#slides">Slides</a></li>
+ </ul> </div>
 
   <div class="blog-main">
-    <ul>
-    
-        <li>
-            <a href="../../../posts/cs/ml/neural_net_distributions.html">On the ability of neural nets to express distributions (at COLT 2017)</a> (2017-07-07): <span class="italic">Holden Lee, Rong Ge, Tengyu Ma, Andrej Risteski, Sanjeev Arora</span> 
-        </li>
-    
-        <li>
-            <a href="../../../posts/cs/ml/simons_ml_interactive.html">Interactive Learning (Simons Workshop)</a> (2017-02-13): <span class="italic">Notes</span> 
-        </li>
-    
-        <li>
-            <a href="../../../posts/cs/ml/simons_ml_bootcamp.html">Foundations of Machine Learning Boot Camp (Simons Workshop)</a> (2017-01-23): <span class="italic">Notes</span> 
-        </li>
-    
+    <p>Page to be updated; check back soon.</p>
+<h2 id="abstract">Abstract</h2>
+<p>Deep neural nets have caused a revolution in many classification tasks. A related ongoing revolution–also theoretically not understood–concerns their ability to serve as generative models for complicated types of data such as images and texts. These models are trained using ideas like variational autoencoders and Generative Adversarial Networks.</p>
+<p>We take a first cut at explaining the expressivity of multilayer nets by giving a sufficient criterion for a function to be approximable by a neural network with <span class="math inline">\(n\)</span> hidden layers. A key ingredient is Barron’s Theorem [Barron1993], which gives a Fourier criterion for approximability of a function by a neural network with 1 hidden layer. We show that a composition of n functions which satisfy certain Fourier conditions (“Barron functions”) can be approximated by a <span class="math inline">\(n+1\)</span>-layer neural network.</p>
+<p>For probability distributions, this translates into a criterion for a probability distribution to be approximable in Wasserstein distance–a natural metric on probability distributions–by a neural network applied to a fixed base distribution (e.g., multivariate gaussian). Building up recent lower bound work, we also give an example function that shows that composition of Barron functions is more expressive than Barron functions alone.</p>
+<h2 id="paper">Paper</h2>
+<p>The paper is available here: <a href="https://arxiv.org/abs/1702.07028">Arxiv page</a>, <a href="https://arxiv.org/pdf/1702.07028">pdf</a>.</p>
+<h2 id="poster">Poster</h2>
+<ul>
+<li>Poster to be uploaded.</li>
 </ul>
-
-
+<h2 id="slides">Slides</h2>
+<ul>
+<li>Slides to be uploaded.</li>
+</ul>
+<p>Thoughts, questions, typos? Leave a comment below.</p>
 
   </div>
 
     
 
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class="st_facebook_large" displayText="Facebook"></span>
+    <span class="st_twitter_large" displayText="Tweet"></span>
+    <span class="st_googleplus_large" displayText="Google +"></span>
+    <span class="st_reddit_large" displayText="Reddit"></span>
+    <span class="st__large" displayText></span>
 
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
   
 </div>
 
@@ -152,6 +179,12 @@
 
 <!-- Extension : Disqus @ http://disqus.com -->
 <!-- Extension : InlineDisqussions @ https://github.com/tsi/inlineDisqussions -->
+
+<script src="../../../disqus/js/disqus.js"></script>
+
+<script src="../../../disqus/js/inlineDisqussions.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../disqus/css/inlineDisqussions.css" />
+
 
 
 <!-- Extension : Google Analytics -->
