@@ -8,8 +8,80 @@
         <name>Holden Lee</name>
         <email>oldheneel@gmail.com</email>
     </author>
-    <updated>2017-05-01T00:00:00Z</updated>
+    <updated>2017-07-07T00:00:00Z</updated>
     <entry>
+    <title>On the ability of neural nets to express distributions (at COLT 2017)</title>
+    <link href="http://holdenlee.github.io/blog/posts/cs/ml/neural_net_distributions.html" />
+    <id>http://holdenlee.github.io/blog/posts/cs/ml/neural_net_distributions.html</id>
+    <published>2017-07-07T00:00:00Z</published>
+    <updated>2017-07-07T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>On the ability of neural nets to express distributions (at COLT 2017)</h1>
+    </div>
+    <div class="info">
+       <div class="subtitle"><p>Holden Lee, Rong Ge, Tengyu Ma, Andrej Risteski, Sanjeev Arora</p></div> 
+       
+        <p>Posted: 2017-07-07 
+          , Modified: 2017-07-07 
+	</p>
+      
+       <p>Tags: <a href="/tags/machine%20learning.html">machine learning</a>, <a href="/tags/paper.html">paper</a>, <a href="/tags/neural%20network.html">neural network</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <div class="toc"> <ul>
+ <li><a href="#abstract">Abstract</a></li>
+ <li><a href="#paper">Paper</a></li>
+ <li><a href="#poster">Poster</a></li>
+ <li><a href="#slides">Slides</a></li>
+ </ul> </div>
+
+  <div class="blog-main">
+    <p>Page to be updated; check back soon.</p>
+<h2 id="abstract">Abstract</h2>
+<p>Deep neural nets have caused a revolution in many classification tasks. A related ongoing revolution–also theoretically not understood–concerns their ability to serve as generative models for complicated types of data such as images and texts. These models are trained using ideas like variational autoencoders and Generative Adversarial Networks.</p>
+<p>We take a first cut at explaining the expressivity of multilayer nets by giving a sufficient criterion for a function to be approximable by a neural network with <span class="math inline">\(n\)</span> hidden layers. A key ingredient is Barron’s Theorem [Barron1993], which gives a Fourier criterion for approximability of a function by a neural network with 1 hidden layer. We show that a composition of n functions which satisfy certain Fourier conditions (“Barron functions”) can be approximated by a <span class="math inline">\(n+1\)</span>-layer neural network.</p>
+<p>For probability distributions, this translates into a criterion for a probability distribution to be approximable in Wasserstein distance–a natural metric on probability distributions–by a neural network applied to a fixed base distribution (e.g., multivariate gaussian). Building up recent lower bound work, we also give an example function that shows that composition of Barron functions is more expressive than Barron functions alone.</p>
+<h2 id="paper">Paper</h2>
+<p>The paper is available here: <a href="https://arxiv.org/abs/1702.07028">Arxiv page</a>, <a href="https://arxiv.org/pdf/1702.07028">pdf</a>.</p>
+<h2 id="poster">Poster</h2>
+<ul>
+<li>Poster to be uploaded.</li>
+</ul>
+<h2 id="slides">Slides</h2>
+<ul>
+<li>Slides to be uploaded.</li>
+</ul>
+<p>Thoughts, questions, typos? Leave a comment below.</p>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>Thoughts and links, 3-4/2017</title>
     <link href="http://holdenlee.github.io/blog/posts/monthly_summaries/2017-4.html" />
     <id>http://holdenlee.github.io/blog/posts/monthly_summaries/2017-4.html</id>
@@ -1281,100 +1353,6 @@ main <span class="fu">=</span>
 <ul>
 <li><a href="https://www.goodreads.com/book/show/37380.The_Heart_is_a_Lonely_Hunter">The Heart is a Lonely Hunter, Carson McCullers</a>: McCullers gets in the head of the characters in a natural/free-flow way, so it’s easy to resonate with their hopes/fear/anger/etc.; she weaves their perspectives/lives together very well into a vibrant world. It feels very in touch with humanity. A lot on how people connect/don’t connect/hang their hearts on each other. People are lonely. End is sad, makes me think.</li>
 <li>I’m continuing to read <a href="https://www.goodreads.com/book/show/109588.The_Great_Conversation?ac=1&amp;from_search=true">The Great Conversation: A historical introduction to philosophy</a>. <a href="https://workflowy.com/s/wL3CyEXpHY#/83fe67c598f6">Notes</a>.</li>
-</ul></li>
-</ul>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Links and thoughts, 6-7/2016</title>
-    <link href="http://holdenlee.github.io/blog/posts/monthly_summaries/7-16.html" />
-    <id>http://holdenlee.github.io/blog/posts/monthly_summaries/7-16.html</id>
-    <published>2016-08-12T00:00:00Z</published>
-    <updated>2016-08-12T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Links and thoughts, 6-7/2016</h1>
-    </div>
-    <div class="info">
-       <div class="subtitle"><p>Functional programming for the masses, rationalist and science fiction, fungi</p></div> 
-       
-        <p>Posted: 2016-08-12 
-          , Modified: 2016-08-12 
-	</p>
-      
-       <p>Tags: <a href="/tags/links.html">links</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  
-
-  <div class="blog-main">
-    <p>See all the links for this month for <a href="https://workflowy.com/s/wL3CyEXpHY#/d1a52d188a8f?q=%232016-6">June</a> and <a href="https://workflowy.com/s/wL3CyEXpHY#/d1a52d188a8f?q=%232016-7">July</a>. (See <a href="4-16.html">April’s post</a> for an explanation of the organization.) Here are some highlights.</p>
-<ul>
-<li>Programming: Some posts about bringing functional programming to a broader audience.
-<ul>
-<li><a href="https://cdsmith.wordpress.com/2016/05/22/codeworlds-big-decisions/">Codeworld’s big decisions</a> <a href="http://scrible.com/s/gDB24">h</a>: C.D. Smith collects lessons learned from years of teaching functional programming to middle school students. He describes how he modified Haskell to make a consciously-designed, beginner-friendly “Codeworld”. The resemblance of functional programming to mathematics means it can be used to teach mathematics more effectively—students get to test their intuitions about functions with immediate feedback.</li>
-<li><a href="http://elm-lang.org/blog/farewell-to-frp">Elm: Farewell to FRP</a>: The Elm programming language has changed a lot from 0.16 to 0.17.
-<ul>
-<li>Evan Czaplicki explains his design decisions in <a href="http://www.elmbark.com/2016/03/16/mainstream-elm-user-focused-design">making Elm more mainstream</a>. A large part is the focus on <a href="http://guide.elm-lang.org/interop/">interop</a>.</li>
-</ul></li>
-</ul></li>
-<li>Art from 4-D objects:
-<ul>
-<li>I went to a talk by <a href="http://www.segerman.org/">Henry Segerman</a> where he talked about making sculptures of 4-dimensional objects.</li>
-<li><a href="http://hypernom.com/">Hypernom</a></li>
-<li><a href="http://monkeys.hypernom.com/">Quaternion monkeys</a></li>
-</ul></li>
-<li><a href="http://www.5lovelanguages.com/">5 love languages</a>: Understand the different styles people have of expressing and interpreting love.</li>
-<li><p>Scott Aaronson answers the call of <a href="http://www.scottaaronson.com/blog/?p=2777">Daddy, why didn’t you blog about Trump?</a> <a href="http://scrible.com/s/ifRw4">h</a></p>
-<blockquote>
-<p>I think people support Trump for the same reason why second-graders support the class clown who calls the teacher a fart-brain to her face. It’s not that the class literally agrees that the teacher’s cranium is filled with intestinal gases, or considers that an important question to raise. It’s simply that the clown had the guts to stand up to this scolding authority figure who presumes to tell the class every day what they are and aren’t allowed to think.</p>
-</blockquote></li>
-<li><a href="https://www.technologyreview.com/s/602025/how-vector-space-mathematics-reveals-the-hidden-sexism-in-language/">How vector space mathematics reveals the hidden sexism in language</a></li>
-<li>Fungi
-<ul>
-<li><a href="http://www.thisiscolossal.com/2016/07/steve-axford-macro-mushrooms/?utm_source=feedly&amp;utm_medium=webfeeds">Photos of fungi</a></li>
-<li><a href="http://www.radiolab.org/story/from-tree-to-shining-tree/">From tree to shining tree (Radiolab)</a>: Fungi form a vast underground trade and communications network for trees in the forest (Avatar, anyone?).</li>
-</ul></li>
-<li>Rationalist fiction
-<ul>
-<li><a href="http://lesswrong.com/lw/3m/rationalist_fiction/">Elizier Yudkowsky on rationalist fiction</a></li>
-<li><a href="http://yudkowsky.tumblr.com/writing">How to write intelligent characters</a></li>
-<li><a href="http://slatestarcodex.com/2015/10/15/it-was-you-who-made-my-blue-eyes-blue/">It was you who made my blue eyes blue (SlateStarCodex)</a>: A story based on the classic blue-eyed islander puzzle.</li>
-</ul></li>
-<li>Books: I’ve been reading a lot of science fiction lately.
-<ul>
-<li><a href="https://www.goodreads.com/book/show/77566.Hyperion">Hyperion, Dan Simmons</a></li>
-<li><a href="https://www.goodreads.com/book/show/12364440-the-world-of-null-a">The world of Null-A, A.E. van Vogt</a> (Recommended from the “rationalist fiction” post above)</li>
-<li><a href="https://www.goodreads.com/book/show/226004.A_Deepness_in_the_Sky">A deepness in the sky, Vernor Vinge</a>: My favorite in this batch of books.</li>
-<li><a href="https://www.goodreads.com/book/show/18630.The_Player_of_Games">The player of games, Ian Banks</a></li>
-<li><a href="https://www.goodreads.com/book/show/242472.The_Black_Swan">The black swan: the impact of the highly improbable, Nassim Taleb</a></li>
-<li><a href="https://www.goodreads.com/book/show/26831944-the-age-of-em?ac=1&amp;from_search=true">The Age of Em, Robin Hanson</a>: Extensively thought-out predictions about a future world with emulated minds. If you don’t want to read the whole book, you can listen to a Review the Future <a href="http://reviewthefuture.com/?p=628">podcast episode on the book</a>. <a href="https://workflowy.com/#/63d84ca41913">Notes in progress</a>.</li>
 </ul></li>
 </ul>
 
