@@ -10,6 +10,8 @@ inline: True
 
 Page to be updated; check back soon.
 
+Shortlink: http://tiny.cc/hlcolt17
+
 # Abstract
 
 Deep neural nets have caused a revolution in many classification tasks. A related ongoing revolution--also theoretically not understood--concerns their ability to serve as generative models for complicated types of data such as images and texts. These models are trained using ideas like variational autoencoders and Generative Adversarial Networks. 
@@ -21,11 +23,13 @@ Building up recent lower bound work, we also give an example function that shows
 
 # Paper
 
-The paper is available here: [Arxiv page](https://arxiv.org/abs/1702.07028), [pdf](https://arxiv.org/pdf/1702.07028).
+* [Arxiv page](https://arxiv.org/abs/1702.07028)
+* [PDF](https://arxiv.org/pdf/1702.07028).
 
 # Poster
 
-* Poster to be uploaded.
+* [Powerpoint](https://www.dropbox.com/s/rjkc0u6estet9sz/barron_poster.pptx?dl=0)
+* [PDF](https://www.dropbox.com/s/4niwh4hkro6n882/barron_poster.pdf?dl=0)
 
 # Slides
 
