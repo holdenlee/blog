@@ -8,9 +8,7 @@ showTOC: True
 inline: True
 ---
 
-Page to be updated; check back soon.
-
-Shortlink: http://tiny.cc/hlcolt17
+Shortlink: [http://tiny.cc/hlcolt17](http://tiny.cc/hlcolt17)
 
 # Abstract
 
@@ -24,7 +22,7 @@ Building up recent lower bound work, we also give an example function that shows
 # Paper
 
 * [Arxiv page](https://arxiv.org/abs/1702.07028)
-* [PDF](https://arxiv.org/pdf/1702.07028).
+* [PDF](https://arxiv.org/pdf/1702.07028)
 
 # Poster
 
@@ -33,6 +31,11 @@ Building up recent lower bound work, we also give an example function that shows
 
 # Slides
 
-* Slides to be uploaded.
+* [Slides](https://www.dropbox.com/s/lioa0e7wc8s8g3e/barron_presentation.pdf?dl=0)
+* [Transcript](https://workflowy.com/s/wL3CyEXpHY#/e7b2a09e6a24)
+
+# Background
+
+[Expository note](https://www.dropbox.com/s/4du02wdl58aaghk/barron1.pdf?dl=0) on Barron's Theorem.
 
 Thoughts, questions, typos? Leave a comment below.
