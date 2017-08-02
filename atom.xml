@@ -39,7 +39,7 @@
   <div class="blog-main">
     <p>Here are notes for my talk “Crash course in complex analysis” for the Gems of TCS seminar.</p>
 <ul>
-<li>For a crash course, see the first chapter in my notes on analytic number theory, <a href="http://tiny.cc/annt" class="uri">http://tiny.cc/annt</a>. Proof sketechs are in the <a href="https://www.dropbox.com/s/k2qf4oy754ln8og/complex_handwritten_notes.pdf?dl=0">handwritten notes</a>.</li>
+<li>For a crash course, see the first chapter in my notes on analytic number theory, <a href="http://tiny.cc/annt" class="uri">http://tiny.cc/annt</a>. Proof sketches are in the <a href="https://www.dropbox.com/s/k2qf4oy754ln8og/complex_handwritten_notes.pdf?dl=0">handwritten notes</a>.</li>
 <li>For applications, see notes <a href="https://www.dropbox.com/s/fn854rj0j98ij6d/complex_cs.pdf?dl=0">here</a>.</li>
 </ul>
 <p><strong>Abstract</strong>: Calculus on the complex numbers has an entirely different attitude from calculus on the reals. The additional structure of the complex numbers greatly enriches the theory of differentiable functions. I will cover (the many variants of) Cauchy’s Theorem, power (Laurent) series, and various inequalities (Hadamard three-lines and three-circles). I’ll give some applications including convergence rates for polynomial approximations and numerical integration, and a recent application to population recovery.</p>
