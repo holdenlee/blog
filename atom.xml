@@ -8,8 +8,65 @@
         <name>Holden Lee</name>
         <email>oldheneel@gmail.com</email>
     </author>
-    <updated>2017-07-07T00:00:00Z</updated>
+    <updated>2017-08-02T00:00:00Z</updated>
     <entry>
+    <title>Crash Course in Complex Analysis</title>
+    <link href="http://holdenlee.github.io/blog/posts/math/analysis/complex_cs.html" />
+    <id>http://holdenlee.github.io/blog/posts/math/analysis/complex_cs.html</id>
+    <published>2017-08-02T00:00:00Z</published>
+    <updated>2017-08-02T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Crash Course in Complex Analysis</h1>
+    </div>
+    <div class="info">
+       <div class="subtitle"><p>geared towards computer scientists</p></div> 
+       
+        <p>Posted: 2017-08-02 
+          , Modified: 2017-08-02 
+	</p>
+      
+       <p>Tags: <a href="/tags/complex%20analysis.html">complex analysis</a>, <a href="/tags/crash%20course.html">crash course</a>, <a href="/tags/numerical%20analysis.html">numerical analysis</a>, <a href="/tags/numerical%20integration.html">numerical integration</a>, <a href="/tags/polynomials.html">polynomials</a>, <a href="/tags/Chebyshev%20polynomials.html">Chebyshev polynomials</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <div class="toc"></div>
+
+  <div class="blog-main">
+    <p>Here are notes for my talk “Crash course in complex analysis” for the Gems of TCS seminar.</p>
+<ul>
+<li>For a crash course, see the first chapter in my notes on analytic number theory, .</li>
+<li>For applications, see notes <a href="https://www.dropbox.com/s/fn854rj0j98ij6d/complex_cs.pdf?dl=0">here</a>.</li>
+</ul>
+<p><em>Abstract</em>: Calculus on the complex numbers has an entirely different attitude from calculus on the reals. The additional structure of the complex numbers greatly enriches the theory of differentiable functions. I will cover (the many variants of) Cauchy’s Theorem, power (Laurent) series, and various inequalities (Hadamard three-lines and three-circles). I’ll give some applications including convergence rates for polynomial approximations and numerical integration, and a recent application to population recovery.</p>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>On the ability of neural nets to express distributions (at COLT 2017)</title>
     <link href="http://holdenlee.github.io/blog/posts/cs/ml/neural_net_distributions.html" />
     <id>http://holdenlee.github.io/blog/posts/cs/ml/neural_net_distributions.html</id>
@@ -1226,142 +1283,6 @@ main <span class="fu">=</span>
 <li>I am learning Esperanto! I’m following the lessons at <a href="http://lernu.net/">Lernu</a> and the podcast on <a href="http://melburno.org.au/3ZZZradio/">3ZZZ</a>.</li>
 <li><a href="https://www.goodreads.com/book/show/101869.The_Atrocity_Archives?ac=1&amp;from_search=true">The Atrocity Archives (The Laundry Files)</a>: Funny horror/spy/hacker adventure story in a world where advanced math can call up Cthulhu-like demons and also, there is lots of paperwork.</li>
 <li><a href="http://www.hbo.com/westworld">Westworld (TV series)</a>: New science fiction/Western TV series</li>
-</ul>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Links and thoughts, 8-9/2016</title>
-    <link href="http://holdenlee.github.io/blog/posts/monthly_summaries/9-16.html" />
-    <id>http://holdenlee.github.io/blog/posts/monthly_summaries/9-16.html</id>
-    <published>2016-10-03T00:00:00Z</published>
-    <updated>2016-10-03T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Links and thoughts, 8-9/2016</h1>
-    </div>
-    <div class="info">
-       <div class="subtitle"><p>With lots of podcasts</p></div> 
-       
-        <p>Posted: 2016-10-03 
-          , Modified: 2016-10-03 
-	</p>
-      
-       <p>Tags: <a href="/tags/links.html">links</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  
-
-  <div class="blog-main">
-    <p>See all the links for this month for <a href="https://workflowy.com/s/wL3CyEXpHY#/d1a52d188a8f?q=%232016-8">August</a> and <a href="https://workflowy.com/s/wL3CyEXpHY#/d1a52d188a8f?q=%232016-9">September</a>. (See <a href="4-16.html">April’s post</a> for an explanation of the organization.) Here are some highlights.</p>
-<ul>
-<li>Podcasts
-<ul>
-<li><a href="http://freakonomics.com/podcast/uber-economists-dream/">Why Uber is an Economist’s dream (Freakonomics)</a></li>
-<li><a href="http://www.npr.org/podcasts/510307/invisibilia">Invisibilia</a>, about the invisible forces that control human behavior - ideas, beliefs, assumptions and emotions. I started listening to it this month and really like it.
-<ul>
-<li><a href="http://www.npr.org/programs/invisibilia/485603559/flip-the-script?showDate=2016-07-15">7/15/16 Flip the script</a>: Noncomplementary behavior - a peaceful solution to terrorism</li>
-<li><a href="http://www.npr.org/programs/invisibilia/485605882/the-secret-emotional-life-of-clothes?showDate=2016-07-22">7/22/16 The secret emotional life of clothes</a>: A formative experience with the power of clothes in a Nazi concentration camp</li>
-</ul></li>
-<li>Radiolab
-<ul>
-<li><a href="http://www.radiolab.org/story/invisible-girl/">The Girl Who Doesn’t Exist</a>: Attempting to join society without a birth certificate.</li>
-<li><a href="http://www.thisamericanlife.org/radio-archives/episode/596/becoming-a-badger">596 Becoming a badger</a>: The grass smells different after rain, like switching the music to Mozart.</li>
-</ul></li>
-<li>Rationally speaking
-<ul>
-<li><a href="http://rationallyspeakingpodcast.org/show/rs-167-samuel-arbesman-on-why-technology-is-becoming-too-com.html">167 Samuel Arbesman on “Why technology is becoming too complex”</a></li>
-<li><a href="http://rationallyspeakingpodcast.org/show/rs-168-don-moore-on-overconfidence.html">168 Dan Moore on “Overconfidence”</a></li>
-</ul></li>
-<li><a href="https://gimletmedia.com/episode/74-making-friends/">Making friends (Reply All)</a>: On tulpas, intelligent companions imagined into existence. See also <a href="https://www.reddit.com/r/Tulpas/">/r/Tulpas</a>.</li>
-<li><a href="http://reviewthefuture.com/?p=665">Can capitalism survive an “economic singularity?” (Review the future)</a>: Transitioning from a work-based economy and culture, universal basic income, speciation into the gods and the useless.</li>
-<li>Strangers
-<ul>
-<li><a href="http://www.storycentral.org/love-hurts-two-years-later/">Love hurts - Two years later</a></li>
-<li><a href="https://soundcloud.com/kcrwstrangers/matjames-and-tyler-flee-flood-float">Matjames and Tyler: Free, Flood, Float</a></li>
-</ul></li>
-<li>The Allusionist, on deciphering ancient languages
-<ul>
-<li><a href="http://www.theallusionist.org/allusionist/rosetta">42 The key part I: Rosetta</a></li>
-<li><a href="http://www.theallusionist.org/allusionist/vestiges">43 The key part II: Vestiges</a>: monolingualism is a byproduct of the nation-state</li>
-</ul></li>
-<li><a href="http://thememorypalace.us/2012/12/dreamland/">Dreamland (The Memory Palace)</a></li>
-<li><a href="http://www.writingexcuses.com/">Writing Excuses</a> - a podcast that teaches fiction writing
-<ul>
-<li><a href="http://www.writingexcuses.com/2016/09/11/11-37-casting-your-book-with-gama-martinez/">11.37 Casting your book, with Gama Martinez</a></li>
-</ul></li>
-<li><a href="http://99percentinvisible.org/episode/making-up-ground/">Making up ground (99% invisible)</a>: San Francisco built from ships; Singapore stealing sand; islands for the rich</li>
-</ul></li>
-<li><a href="http://david-peter.de/cube-composer/">Cube composer</a>: A puzzle game inspired by functional programming</li>
-<li><a href="http://www.lifehack.org/articles/productivity/100-incredible-things-learned-watching-70-hours-ted-talks-last-week.html">100 incredible things I learned watching TED talks</a>
-<ul>
-<li><a href="http://www.ted.com/talks/eric_x_li_a_tale_of_two_political_systems/transcript?language=en#t-971005">63. There may be another way to run a successful, modern economy: the Chinese way</a> <a href="http://scrible.com/s/m7RS4">h</a></li>
-<li><a href="http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles">74. Since more and more websites are trying to tailor their content to you, you may get caught up in a digital “filter bubble” and not get “exposed to information that could challenge or broaden your worldview”.</a> <a href="http://scrible.com/s/kfBS4">h</a></li>
-</ul></li>
-<li><p><a href="http://degoes.net/articles/amoralism-101">Amoralism 101 (John A De Goes)</a> <a href="http://scrible.com/s/4Awm6">h</a></p>
-<blockquote>
-<p>Personally, I believe that’s why moral language developed: a way to extract something you want from others by talking about your desires as if they were objective facts of the physical universe.</p>
-</blockquote></li>
-<li><a href="http://malcolmocean.com/2014/12/hugging-strangers-in-airports/">Hugging strangers in airports (Malcolm Ocean)</a> <a href="http://scrible.com/s/0IMCm">h</a></li>
-<li><a href="https://usamo.wordpress.com/2016/08/13/against-the-research-vs-olympiads-mantra/">Against the research vs. olympiads mantra (Power Overwhelming)</a> <a href="http://scrible.com/s/kcwg6">h</a></li>
-<li><a href="https://secularsolstice.com/2016/08/23/redwood-ritual-dust-in-the-wind/">Redwood ritual: dust in the wind (Secular Solstice)</a></li>
-<li>Slatestarcodex
-<ul>
-<li><a href="http://slatestarcodex.com/2013/06/09/all-debates-are-bravery-debates/">All debates are bravery debates</a> <a href="http://scrible.com/s/mcMg6">h</a></li>
-<li><a href="http://slatestarcodex.com/2015/01/25/a-philosopher-walks-into-a-coffee-shop/">A philosopher walks into a coffee shop</a></li>
-</ul></li>
-<li><a href="https://thingofthings.wordpress.com/2016/08/26/heteronormativity-hurts-straight-people-too/">Heteronormativity hurts straight people too (Thing of things)</a></li>
-<li><a href="https://www.quantamagazine.org/20160712-hyperuniformity-found-in-birds-math-and-physics/">A Bird’s-Eye View of Nature’s Hidden Order (Quanta)</a></li>
-<li><a href="https://www.math.brown.edu/~res/farm.pdf">Life on the infinite farm</a></li>
-<li>Science fiction short stories
-<ul>
-<li><a href="http://hell.pl/szymon/Baen/The%20best%20of%20Jim%20Baens%20Universe/Vol%201%20Num%201/1932093001__17.htm">Light of other days</a></li>
-<li><a href="http://web.archive.org/web/20080718084442/http://lucis.net/stuff/clarke/star_clarke.html">The Star, Arthur Clarke</a></li>
-</ul></li>
-<li>Writing
-<ul>
-<li>Brandon Sanderson’s 3 laws
-<ul>
-<li><a href="http://brandonsanderson.com/sandersons-first-law/">1</a> <a href="http://scrible.com/s/0IM0C">h</a></li>
-<li><a href="http://brandonsanderson.com/sandersons-second-law/">2</a> <a href="http://scrible.com/s/2IM0C">h</a></li>
-<li><a href="http://brandonsanderson.com/sandersons-third-law-of-magic/">3</a> <a href="http://scrible.com/s/04w2C">h</a></li>
-</ul></li>
-<li><a href="https://www.reddit.com/r/writingprompts">Writing prompts reddit</a>
-<ul>
-<li><a href="https://www.reddit.com/r/WritingPrompts/comments/4xzz71/pi_you_swerve_to_avoid_a_squirrel_unknown_to_you/">Squirrel magic</a></li>
-<li><a href="https://www.reddit.com/r/WritingPrompts/comments/4y378t/wp_ever_since_you_were_little_you_could_read/">Ever since you were little you could read minds. You mastered it through the years, but one day you’re with your SO and you hear a second voice in their head.</a></li>
-</ul></li>
-</ul></li>
-<li>Books
-<ul>
-<li><a href="https://www.goodreads.com/book/show/37380.The_Heart_is_a_Lonely_Hunter">The Heart is a Lonely Hunter, Carson McCullers</a>: McCullers gets in the head of the characters in a natural/free-flow way, so it’s easy to resonate with their hopes/fear/anger/etc.; she weaves their perspectives/lives together very well into a vibrant world. It feels very in touch with humanity. A lot on how people connect/don’t connect/hang their hearts on each other. People are lonely. End is sad, makes me think.</li>
-<li>I’m continuing to read <a href="https://www.goodreads.com/book/show/109588.The_Great_Conversation?ac=1&amp;from_search=true">The Great Conversation: A historical introduction to philosophy</a>. <a href="https://workflowy.com/s/wL3CyEXpHY#/83fe67c598f6">Notes</a>.</li>
-</ul></li>
 </ul>
 
   </div>
