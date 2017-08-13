@@ -21,6 +21,7 @@
     <div class="page header">
       <h1>Crash Course in Complex Analysis</h1>
     </div>
+    
     <div class="info">
        <div class="subtitle"><p>geared towards computer scientists</p></div> 
        
@@ -78,6 +79,7 @@
     <div class="page header">
       <h1>On the ability of neural nets to express distributions (at COLT 2017)</h1>
     </div>
+    
     <div class="info">
        <div class="subtitle"><p>Holden Lee, Rong Ge, Tengyu Ma, Andrej Risteski, Sanjeev Arora</p></div> 
        
@@ -158,6 +160,7 @@
     <div class="page header">
       <h1>Thoughts and links, 3-4/2017</h1>
     </div>
+    
     <div class="info">
       
        
@@ -275,6 +278,7 @@
     <div class="page header">
       <h1>Thoughts and links, 1-2/2017</h1>
     </div>
+    
     <div class="info">
       
        
@@ -427,6 +431,7 @@
     <div class="page header">
       <h1>Interactive Learning (Simons Workshop)</h1>
     </div>
+    
     <div class="info">
        <div class="subtitle"><p>Notes</p></div> 
        
@@ -482,6 +487,7 @@
     <div class="page header">
       <h1>Goodnight Mel</h1>
     </div>
+    
     <div class="info">
        <div class="subtitle"><p>A ghost story</p></div> 
        
@@ -536,6 +542,7 @@
     <div class="page header">
       <h1>Foundations of Machine Learning Boot Camp (Simons Workshop)</h1>
     </div>
+    
     <div class="info">
        <div class="subtitle"><p>Notes</p></div> 
        
@@ -591,6 +598,7 @@
     <div class="page header">
       <h1>Thoughts and links, 11-12/2016</h1>
     </div>
+    
     <div class="info">
        <div class="subtitle"><p>Election in perspective, the year in ML</p></div> 
        
@@ -733,6 +741,7 @@
     <div class="page header">
       <h1>Snake in Purescript</h1>
     </div>
+    
     <div class="info">
        <div class="subtitle"><p>How to program a simple game in Purescript</p></div> 
        
@@ -1202,6 +1211,7 @@ main <span class="fu">=</span>
     <div class="page header">
       <h1>Thoughts and links, 10/2016</h1>
     </div>
+    
     <div class="info">
        <div class="subtitle"><p>And don't forget to (trade your) vote</p></div> 
        
