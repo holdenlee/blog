@@ -7,6 +7,17 @@ showTOC: True
 inline: True
 ---
 
+# Summary
+
+In this post I introduce Newcomb's Problem, a classical problem (and paradox) in decision theory. Although the problem may seem artificial, it is representative of a whole cluster of related problems of practical importance. 
+
+We can look at Newcomb-type problems from two angles. One, what does it say about how we should make decisions in our daily lives? 
+One one hand, Newcomb's problem is 
+
+ as well as a cluster of related problems.  
+
+
+
 Newcomb's Paradox is a classical problem in decision theory. There's a lot more you can do with it than argue with what the right answer is.
 
 My aim is to give a whole constellation of problems that it's related to (which modify the parameters), to disentangle the different threads that make it paradoxical (free will, causality, etc.). It leads naturally to a discussion of decision-making for individuals and for society if you think beyond the literal statements.
