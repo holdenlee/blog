@@ -18,9 +18,33 @@ I collaborated on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](https
 
 ## Recurring seminars
 
-Spring 2017: I'm attending the Simons Institute Program in Machine Learning. All my notes are available on the [Simons program wiki](http://simons.squidhive.net/Notes).
-<!--Foundations of Machine Learning [notes](https://dl.dropboxusercontent.com/u/27883775/wiki/math/pdfs/simons_ml.pdf)-->
-
+* [Simons Institute Program in Machine Learning](https://simons.berkeley.edu/programs/machinelearning2017) (Spring 2017) [all notes on github](https://github.com/holdenlee/simons-ml)
+	* Workshops
+		* [Foundations of machine learning](https://www.dropbox.com/s/cbwmt7i2o9p0ki0/simons_ml.pdf?dl=0)
+		* [Interactive learning](https://www.dropbox.com/s/mxbbdv8i11f63an/interactive_workshop.pdf?dl=0)
+		* [Representation learning](https://www.dropbox.com/s/oidebg69e9yfmiy/representation_workshop.pdf?dl=0)
+		* [Computational challenges](https://www.dropbox.com/s/t394ayjjl9picuw/comp_workshop.pdf?dl=0)
+	* Reading groups
+		* [Interactive learning](https://www.dropbox.com/s/i2hxnp79yh6djom/interactive.pdf?dl=0)
+		* [Representation learning](https://www.dropbox.com/s/d68tepx2x5h13at/representation.pdf?dl=0)
+		* Learning models of mathematical objects: [edited version](https://www.dropbox.com/s/qcpz2t8xmw66dl9/models.pdf?dl=0) (unfinished), [raw version](https://www.dropbox.com/s/t6m74uq4x3hsbv8/models.pdf?dl=0)
+		* [Langevin](https://www.dropbox.com/s/0f4f2sq8o1awdoc/langevin.pdf?dl=0)
+	* [Industry day talks](https://www.dropbox.com/s/i3hvt6vc66hjzcq/industry_day.pdf?dl=0)
+	* Talks
+		* [Sleeping](https://www.dropbox.com/s/jfs0q8wmz73cls9/sleeping.pdf?dl=0)
+		* [GANs](https://www.dropbox.com/s/4tbmu8motz0oa3w/gan.pdf?dl=0)
+		<!-- * [Binary neural networks](https://www.dropbox.com/s/qi22hm4zn790f3t/binary_nn.pdf?dl=0)-->
+		* [Contextual bandits](https://www.dropbox.com/s/eupuprlfnmqpu1c/contextual_bandits.pdf?dl=0)
+		* [Exchangeable graphs](https://www.dropbox.com/s/a6uxz0e1fqt4jd1/exchangeable_graphs.pdf?dl=0)
+		* [Geometric optimization](https://www.dropbox.com/s/jl1bcbmxvo3xo9i/geometric_optimization.pdf?dl=0)
+		* [Learning the RELU](https://www.dropbox.com/s/2tl7uixdubpd3jp/learn_relu.pdf?dl=0)
+		* [Linear regression](https://www.dropbox.com/s/u9fnxxq5vyf3dg3/linear_regression.pdf?dl=0)
+		* [Logistic regression](https://www.dropbox.com/s/pmtl7nw1zsx1v61/logistic.pdf?dl=0)
+		* [Metagrad](https://www.dropbox.com/s/7w821fq4n2al5w0/metagrad.pdf?dl=0)
+		* [Simulated annealing](https://www.dropbox.com/s/bzvewslrc71rw4k/simulated_annealing.pdf?dl=0)
+		* [Learning in the age of neural networks](https://www.dropbox.com/s/zkceqc0remzybbg/theory_nn.pdf?dl=0)
+		* [Open problems (Manfred Warmuth)](https://www.dropbox.com/s/ysu7f6k2ot24g9n/open_problems.pdf?dl=0)
+		* [ZigZag: efficient algorithms for adaptive online learning via decoupling](https://www.dropbox.com/s/7llhdcpywq6qqe4/zigzag.pdf?dl=0)
 * Computer science and discrete mathematics (IAS) [notes](https://www.dropbox.com/s/zfz5o40tidwqg31/csdm.pdf?dl=0)
 * Gems of TCS seminar (Wednesdays) [notes](https://www.dropbox.com/s/tfopv5t1utlfpgi/gems_of_tcs.pdf?dl=0)
 * Learning deeply reading group (Thursdays) [notes](https://www.dropbox.com/s/92a3auk8a9f24n1/ldrg.pdf?dl=0)
