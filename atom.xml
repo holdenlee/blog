@@ -8,8 +8,170 @@
         <name>Holden Lee</name>
         <email>oldheneel@gmail.com</email>
     </author>
-    <updated>2017-12-22T00:00:00Z</updated>
+    <updated>2018-08-15T00:00:00Z</updated>
     <entry>
+    <title>The Bookmaking Species, Ken Liu</title>
+    <link href="http://holdenlee.github.io/blog/posts/talks/the_bookmaking_species.html" />
+    <id>http://holdenlee.github.io/blog/posts/talks/the_bookmaking_species.html</id>
+    <published>2018-08-15T00:00:00Z</published>
+    <updated>2018-08-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>The Bookmaking Species, Ken Liu</h1>
+    </div>
+    
+    <div class="info">
+       <div class="subtitle"><p>The evolution of books; how form shapes narrative</p></div> 
+       
+        <p>Posted: 2018-08-15 
+          , Modified: 2016-08-15 
+	</p>
+      
+       <p>Tags: <a href="/tags/books.html">books</a>, <a href="/tags/writing.html">writing</a>, <a href="/tags/story.html">story</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  <div class="toc"> <ul>
+ <li><a href="#summary-and-takeaways">Summary and takeaways</a></li>
+ <li><a href="#history-of-books">History of books</a><ul>
+ <li><a href="#from-scroll-to-codex">From scroll to codex</a><ul>
+ <li><a href="#the-west">The West</a></li>
+ <li><a href="#east-asia">East Asia</a></li>
+ </ul></li>
+ </ul></li>
+ <li><a href="#how-structure-influences-narrative">How structure influences narrative</a><ul>
+ <li><a href="#webpages">Webpages</a></li>
+ <li><a href="#aside---books-in-the-legal-profession">Aside - books in the legal profession</a></li>
+ <li><a href="#e-books">E-books</a></li>
+ </ul></li>
+ <li><a href="#the-untapped-potential-of-electronic-reading-and-the-memex">The untapped potential of electronic reading, and the memex</a></li>
+ <li><a href="#questions-and-answers">Questions and answers</a></li>
+ </ul> </div>
+
+  <div class="blog-main">
+    <p>These notes are based on <a href="https://kenliu.name/">Ken Liu</a>’s lecture “The bookmaking species” at the Swiss Institute. I’ve loosely paraphrased and condensed his talks; any errors or misrepresentations are due to me.</p>
+<h2 id="summary-and-takeaways">Summary and takeaways</h2>
+<ul>
+<li>There’s a fascinating history behind the shift from scrolls to codices (the bound book format we are familiar with) that happened in both the West and East; it’s influenced by both technological and cultural/religious factors.</li>
+<li>The structure of a book, as well as economic, historical, and cultural factors of the times, shapes the stories that gets told. The types of stories evolve - for example, TV shows nowadays have more complex plots than ever before.</li>
+<li>The potential of electronic books for new types of storytelling, and better ways of recording and interacting with knowledge, has been largely untapped. Instead, e-books have mostly been formatted to imitate traditional books. As it is now, the Internet is a pale imitation of Vannevar Bush’s vision of the memex augmenting human intelligence.</li>
+<li>Storytellers (writers, film producers, etc.) like to think that their profession is one of the most immune to the machine learning/AI revolution. However, machine learning is already playing a part in helping artists cater to what the public desires, and its role will only increase in the future.</li>
+</ul>
+<h2 id="history-of-books">History of books</h2>
+<p>I’m interested in books as artifacts, the history of books, and how the type of book changes the story that is told.</p>
+<p>(One cool book is <a href="http://visual-editions.com/tree-of-codes">Tree of Codes</a> by Jonathan Foer, which creates a new book by cutting out pieces from an old book.)</p>
+<p>What is a book? The familiar bound and paginated book is only one type of book, known as the <strong>codex</strong>. Before that was the <strong>scroll</strong>. Books can come in many forms: the earliest were oracle bones, with characters written for divination; other forms are cuneiform, papyrus, bamboo strips, and Incan <a href="https://en.wikipedia.org/wiki/Quipu">quipus</a>. Now we have e-books. (I used them long before they were popular. The <a href="https://wiki.mobileread.com/wiki/Rocket_eBook">rocket e-book</a> was the earliest model. To download a good-sized book you had to plug in a phone cable and wait ten minutes).</p>
+<p>The scroll came before the codex, and for a long time was the only format, or the more prestigious format. Scrolls were considered more intellectual - for instance, diplomas were depicted as scrolls.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Dead_Sea_Scrolls">Dead Sea Scrolls</a> had aspects of the codex: the text was divided into pagelike columns, and so it could be folded concertina-style.</p>
+<p>Legend has it (probably apocryphal) that Julius Caesar was the first to fold scrolls because he wanted to take books with him during the first Gaelic War.</p>
+<h3 id="from-scroll-to-codex">From scroll to codex</h3>
+<p>How did the codex overtake the scroll? There are two main reasons, technological and cultural/religious, and a similar story played out in both the western and eastern world.</p>
+<h4 id="the-west">The West</h4>
+<p><strong>Technological:</strong> It wasn’t until 200-300 AD that the codex became dominant. It’s no accident that this coincided with Christianity becoming the state religion, and the dominant religion, in the Mediterranean.</p>
+<p>The codex had enormous advantage over the scroll as a medium for Christians to spread their teachings. A codex is a random access medium: you can instantly flip to any page. A codex allows innovations such as page numbers, indices, and tables of contents. Codices are easier to copy and produce. They are compact and portable, utilizing both sides of each page.</p>
+<p><strong>Cultural:</strong> But this is not the whole story. Codices existed before they became popular; why didn’t they become the standard given their obvious benefits?</p>
+<p>The earliest codices were formed from bundles of letters - people saved letters from loved ones who lived far away, and bound them together. Thus codices had a mundane association to them: they were not prestigious, nor philosophical, like scrolls; they were like paperback is to hardcover today.</p>
+<p>The Christian scriptures, however, were in the form of letters, so it was natural to follow the tradition of binding them into a codex. In addition, Christians wanted to distinguish themselves from Jews, whose holy book, the Torah, is the quintessential scroll.</p>
+<h4 id="east-asia">East Asia</h4>
+<p>The word for volume, 冊 is in the shape of two strips of bamboo bound together.</p>
+<p>As in the West, scrolls were the prestige format, seen as ancient and powerful (and still are - people do calligraphy on scrolls, not in codices). Paintings were done on scrolls. (In museums they are laid completely flat, to be viewed as static, unscrolled objects, but this is not how they were originally seen. They were unrolled so that viewers saw a window at a time.)</p>
+<p>The codex was invented in China in the 7th century AD.</p>
+<p><strong>Technological:</strong> The codex rose to prominence in the Tang dynasty, the era of classical poetry. Back then, composing poems was the way to show you were smart (like op-ed medium think pieces nowadays). You hoped that your poem would go viral, and be heard by government officials.</p>
+<p>To compose poems, people needed rhyming dictionaries, and codices are undoubtedly the right form for dictionaries. (Imagine trying to use a rhyming dictionary in a scroll format!)</p>
+<p><strong>Cultural/religious:</strong> One of the largest scale mass translations in ancient times was that of Buddhist texts from India into Chinese. The texts were written on palm leaves and bound using strings. As they were holy books, people wanted to preserve the format as closely as possible. China didn’t have palm leaves, but had plenty of paper - the Chinese analogue of palm leaves - so they made the texts into paper connected via string. The Chinese word for page was the same as the Chinese word for leaf (葉) until it got changed to 頁 in Republican times.</p>
+<h2 id="how-structure-influences-narrative">How structure influences narrative</h2>
+<p>A book is not merely the abstract set of words that is contains. The book as physical artifact influences the story that it tells. The modern novel is 350 pages long because 350 pages is a standard book size. Epic fantasies come in trilogies not for the reasons that authors come up with afterwards (the first book is the thesis, the second the antithesis, the third the synthesis) but because this is what publishers think what readers that. This trend originated with Lord of the Rings, which ironically was written as one long book and only split into three books because it was too large.</p>
+<p>E-books have given rise to lengths that were not popular before: both shorter novels (~40,000 words) which were not viable in the familiar format, and larger novels (600,000 to 1 million words) which can’t be bound into traditional books. There is no narratological reason that books have to be a certain length.</p>
+<p>The Chinese e-book market is dominated by very long serial novels. There is intense competitions between authors. They gain readers by posting serial installments for free, and have to write 2000 characters every day - often including holidays - to be competitive. (Dickens also wrote in serial installments; when he took a week off he got death threats.) The most successful stories become TV dramas and are turned into print editions (though they are so long I don’t know who would buy them).</p>
+<p>Modern storytelling has changed because of Game of Thrones. TV shows (e.g. Friends) used to be made up of episodes which could stand on their own, so one could jump in anytime. Ever since Game of Thrones, however, we have wanted long, complex stories that last the whole season and that we can watch in binges. <!-- soap opera--> We are in a unique age which has the most complicated narrative stories that humankind has ever written. There is no way to follow Lost without wikis, and even George R.R. Martin says that he relies on fan wikis.</p>
+<h3 id="webpages">Webpages</h3>
+<p>The scroll has returned in the digital age, as the format for websites. People get mad if a website is broken up into pages - is the website just trying to increase ad views?</p>
+<p>Early on, people figured out how to modify the CSS to get infinite scroll; it was the cool thing to do on tumblr.</p>
+<p>However, history was not so certain. There are two models for hypertext, the scroll model and the card model. The card model has breaks the text into smaller chunks with links between them. One reason the scroll model won is that it has all the benefits of the scroll and the codex: with anchors and links, clickable table of contents, and indices produced by search.</p>
+<p>Ironically, however, although the scroll has cultural significance as an authoritative relic, it is the written page that has hold on us now - as something more romantic than electronic text.</p>
+<h3 id="aside---books-in-the-legal-profession">Aside - books in the legal profession</h3>
+<p>As a lawyer, one of my angsts against the legal profession is its formal (“blue book”) citation method. It’s a system tied to hardcover books. Walk into a lawyer’s office and you’ll see bookshelves, one on either side, like a repository of arcane wizarding knowledge.</p>
+<p>It’s a stage prop. I’ve consulted the books about twice in my career.</p>
+<p>Instead, lawyers use legal databases to find information. In the databases, the text is in the form of an infinite scroll, but with ugly symbols denoting the page numbers, etc. It persists as a fiction that lawyers are consulting paper; the physical books are authoritative even though nobody has been using them for decades.</p>
+<h3 id="e-books">E-books</h3>
+<p>Kindle books are imitating the codex - for example in the ability to have page numbers (useful for citing). Apple is the worst offender, it has a “bookshelf” and when you flip the page there is an animation like an actual page flipping.</p>
+<p>Codices aren’t any good when they only imitate scrolls. Likewise e-books aren’t any good if they just imitate paper books.</p>
+<p>The New Yorker app reimagines what a electronic magazine can look like. It has articles side by side, and each article is an infinite scroll; it effectively utilizes a 2-D grid.</p>
+<p>There’s great potential for hypertext fiction. We haven’t reimagined navigation yet.</p>
+<h2 id="the-untapped-potential-of-electronic-reading-and-the-memex">The untapped potential of electronic reading, and the memex</h2>
+<p>Vannevar Bush, in his essay <a href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/">As we may think</a>, envisioned the <em>memex</em>, a most wondrous device for electronic reading. It’s commonly described as the predecessor of the Internet, but I disagree: it’s far more impressive.</p>
+<p>Machines have helped us amplify our physical capabilities, but they have been much more limited in amplifying our mental capabilities. One difficulty is that how we think is different from how computers think: humans are association machines, thinking in metaphors and accessing thoughts in a random fashion. Why not use computers to enhance this style of thinking? In Vannevar Bush’s vision, a memex features two screens to display text, and a user can tap to make a connection between them. He imagines that the primary work of the reader is to make these kinds of rich semantic links. The resulting database of links becomes a external manifestation of the reader’s mind.</p>
+<p>It is much easier for us to recall something by following associations than by looking up a random word. For example, how many times have you thought: I wish I could recall that website - I saw it after this and before that, and it reminds me of this, but I can’t remember the words I used to find it…</p>
+<p>Interested (and interesting) explorers of the universe and of human learning will forge trails of associations through all knowledge. A person could jump from the Origin of Species to Darwin’s original papers, to finches, to customs of the natives, to British politics, and so forth, to construct a natural history of a subject within the archive of human learning. The resulting rich web of links can be published as a book of its own, so that readers can follow it and build their own web on top of it, to create meta-associations. This will make learning much more personal and guided in a way we don’t really comprehend. The closest thing that we have now is browsing Wikipedia. Imagine if all learning were a richer form of Wikipedia where you could lose yourself in association. Authors could become known for the originality and beauty of their association webs. <!--(You would build on top of that.)--> <!--That's the true vision of the memex, and --> You would build on top of them like a <a href="https://en.wikipedia.org/wiki/Commonplace_book">commonplace book</a>, except that it’s a commonplace web. The Web is a poor and pale imitation of this future!</p>
+<p>As technology changes the kinds of books that are possible, the stories we can tell also change, and that’s a wonderful thing. I don’t believe we should be stuck with the scroll or codex. I can’t wait to see how electronic reading will develop as we push forward. I don’t lament the death of the paper book; what will come to replace it will be far more interesting.</p>
+<h2 id="questions-and-answers">Questions and answers</h2>
+<p><strong>Q:</strong> A lot of bookstores are having trouble. What’s the future for bookstores?</p>
+<p><strong>A:</strong> Bookstores aren’t going away, though chains have been hit hard. But they cannot compete with indie bookstores, which are community centers with author events; their curatorial role will not go away. Individual readers do wish to participate in the events and support the bookstore. The general trend is that content is digitized and turned into advertising for things can’t be easily copied.</p>
+<p>A similar thing has happened in the music industry. Here, the thing that can’t be easily copied is performance. Authors have not quite figured out what “performance” is for them. (It’s incredibly boring to watch an author write a book.) Musicians thought digitization was the end of the world, but now there is now more music than ever before, and many musicians are living better than ever, though music is being sold for cheaper. It’s not true for everyone though - musicians who don’t rely on live performances don’t do as well - it does threaten certain business models.</p>
+<p><strong>Q:</strong> What are some books that push these new frontiers?</p>
+<p><strong>A:</strong> I haven’t seen them so much in books as in games: visual novels (essentially books with programming around them) are pushing narrative in new interesting directions.</p>
+<p>I’d like to see more experimentation. Some publishers are doing interesting things, like <a href="https://www.serialbox.com/">serialbox</a>, who treats creating a serial story like creating a TV show, with writer’s rooms and seasons of stories. It’s an interesting model for book-writing.</p>
+<p><strong>Q:</strong> Have you taken this into account in the format of your own books?</p>
+<p><strong>A:</strong> I always envision them as physical books, with a map at the front, so that the reader can flip to it as they are reading. However, in the e-book it’s hard to refer to the map. Ironically, I had been blind to this. I’ve made the map available for download, and encouraged readers to print it out.</p>
+<p><strong>Q:</strong> How is writing versus translating?</p>
+<p><strong>A:</strong> It’s like the difference between composing and performing music, writing a play and acting. You use similar knowledge to do different things.</p>
+<p><strong>Q:</strong> What is your approach to writing?</p>
+<p><strong>A:</strong> I do unusual things, collaborating with ballet troupes, with the Guggenheim, doing art based on alternate reality. I like to experiment. I wrote a story that progressively loses words, so that you come to a different conclusion about what it’s about in the later versions.</p>
+<p>For this exhibition, I was approached by someone who wanted to use the physical artifact of books to illustrate an abstract concept. I was hired at my attorney rate to curate a book collection on what comes to mind when I think about the law in China. There’s a temptation to be political, but I have an aversion to that. There is nothing wrong with art as resistance, but it has to be open to interpretation.</p>
+<!--10141-->
+<p>Making art is like building a house. Certain houses are narrow and confining; unless the reader contorts themselves they don’t feel comfortable… But if the house has open spaces, allows you to walk around, then the reader is comfortable moving in it, exploring and discovering and making the house their own.</p>
+<p>I like the second approach better, because I’m a deep believer in the reader response theory of literature. Art takes two people to create the work. The reader is never a passive participant, but an active meaning maker.</p>
+<p>Before the text can be unpacked, it has to be packed with the reader’s assumptions and interpretive frameworks.</p>
+<p><strong>Q:</strong> If the future is a manifestation of (seemingly) random associations, would that require an evolution of narrative itself?</p>
+<p>Media theorists have studied and debated this forever. There’s always the argument that the long-form story has an important role in the way we think. This goes back to the days of Plato.</p>
+<p>This argument over whether e-reading is rotting our brains is not a new argument. Plato railed against the techology of writing: it will rot our children’s minds, and won’t know how to conduct rhetoric, argue against the writers, tell truth from fiction.</p>
+<p>As association-rich, interruption-rich reading becomes the norm, it will lead to a evolution in the way we judge and think about texts.</p>
+<p>One of the most popular new forms of fiction right now is twitter/text fiction: stories told as a chain of fictional text messages. As an art form, this is very difficult to do, and I’ve been amazed at the results. We can have alternate reality games, challenging what narrative can do.</p>
+<p>We’ll have to rethink narrative theories, but we’ve done this before. We thought <a href="https://en.wikipedia.org/wiki/Classical_unities">Aristotelian unities</a> were sacred, but movies, as a time random-access medium, have broken that apart.</p>
+<!--so many different possib for narr 
+will tech design drive narrative, -->
+<p><strong>Q:</strong> How does technology influence narrative? Will the designers of technologies, creators of platforms determine what narratives are told? Or will the narratives people create push for technology to accommodate them?</p>
+<p><strong>A:</strong> The future of art is going to be much more AI and audience-driven than we acknowledge. It’s mindblowing the way that AI has changed the way content is produced and consumed. For example, a lot of music in films is created by AI, but we don’t notice it. Even the way human creators create is shaped by AI: in a lot of visual art manipulation, the algorithms do a lot of the work and the human simply acts as a judge.</p>
+<p>The story of Netflix shows that dramatic art is no exception. No one thought it would succeed as a studio because it was supposedly just a platform to distribute content. However, in seven years it has gone from nothing to a top studio, with some of the most popular shows on earth. It’s now considered great prestige if you as a showrunner can get a show with Netflix.</p>
+<p>Their success has been possible because they are very data-driven. For example, their decision to pick up House of Cards was data-driven. They discovered that there would be a critical mass of people who are fans of Kevin Spacey, people who love David Fisher’s work, and who loved the original BBC series. They’ve learned that people don’t get hooked from the pilots, but only after 2-4 episodes. The platform is an unprecedented <a href="https://en.wikipedia.org/wiki/Panopticon">panopticon</a>: they track when you pause or skip a video, wait two days before watching the next one, can infer when you lose interest or find a series worth following. Never before has anyone been able to observe an audience at that level. They can use all this data to help produce popular shows.</p>
+<p>An extreme example of data-driven content creation is pornography on demand. The industry keeps track of search queries and uses them to meet people’s demands. Pornography has embraced a data-driven approach because it is a limited format where the creative choices are small.</p>
+<p>Data-driven authorship is a critical issue. A lot of artists have to be data-driven or be outcompeted by people who are.</p>
+<p>Imagine a future where stories can adapt to individual readers based on what they want: if a reader wants a couple to be together, they will be; if they want a character to go away, then the character dies on the next page. Perhaps this is how people prefer their stories.</p>
+<p>We treasure a Promethean vision of an artist, creating a masterpiece unsullied by what the public wants. However, there is a competing, utilitarian vision of the artist, enshrined in the constitution, as someone who fulfills a public need. Indeed, mass film and TV have been largely driven by a need to fulfill public desires. The difference is that it is now data-driven. This sounds dystopian, but it’s not a bad thing - many great TV shows have come out of this, and wouldn’t exist without it.</p>
+<p>We’ll have to wait to see how this evolves. I like to think of AI as augmenting the creator, versus taking my job away, but maybe this is just wishful thinking.</p>
+<!--
+# Thoughts
+
+Any tools like the memex? 
+-->
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>NIPS 2017 Deep learning panel</title>
     <link href="http://holdenlee.github.io/blog/posts/cs/ml/nips_2017.html" />
     <id>http://holdenlee.github.io/blog/posts/cs/ml/nips_2017.html</id>
@@ -848,476 +1010,6 @@
 <li><a href="https://www.goodreads.com/book/show/12961964-the-handmaid-s-tale">The Handmaid’s Tale</a></li>
 </ul></li>
 </ul>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Snake in Purescript</title>
-    <link href="http://holdenlee.github.io/blog/posts/programming/purescript/snake-in-purescript.html" />
-    <id>http://holdenlee.github.io/blog/posts/programming/purescript/snake-in-purescript.html</id>
-    <published>2016-11-06T00:00:00Z</published>
-    <updated>2016-11-06T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Snake in Purescript</h1>
-    </div>
-    
-    <div class="info">
-       <div class="subtitle"><p>How to program a simple game in Purescript</p></div> 
-       
-        <p>Posted: 2016-11-06 
-          , Modified: 2016-11-06 
-	</p>
-      
-       <p>Tags: <a href="/tags/purescript.html">purescript</a>, <a href="/tags/programming.html">programming</a>, <a href="/tags/functional%20programming.html">functional programming</a>, <a href="/tags/game.html">game</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  <div class="toc"> <ul>
- <li><a href="#introduction">Introduction</a></li>
- <li><a href="#getting-started">Getting started</a></li>
- <li><a href="#imports">Imports</a></li>
- <li><a href="#the-model-update-view-signal-architecture">The Model-Update-View-Signal Architecture</a></li>
- <li><a href="#model">Model</a></li>
- <li><a href="#update">Update</a></li>
- <li><a href="#view">View</a></li>
- <li><a href="#signal">Signal</a></li>
- <li><a href="#adding-randomness">Adding randomness</a><ul>
- <li><a href="#something-that-doesnt-work">Something that doesn’t work</a></li>
- <li><a href="#using-a-generator">Using a generator</a></li>
- </ul></li>
- <li><a href="#building">Building</a></li>
- </ul> </div>
-
-  <div class="blog-main">
-    <h2 id="introduction">Introduction</h2>
-<ul>
-<li>Play the game <a href="https://holdenlee.github.io/purescript-games/html/SnakeS.html">here</a>.</li>
-<li>Check out the code on <a href="https://github.com/holdenlee/purescript-games">github</a>.
-<ul>
-<li>The code for <code>Snake.purs</code> is <a href="https://github.com/holdenlee/purescript-games/blob/master/src/Snake.purs">here</a>.</li>
-</ul></li>
-</ul>
-<p><a href="http://www.purescript.org/">Purescript</a> is a functional programming language that compiles down to Javascript. In this post, I describe the process of building a simple game, Snake, in PureScript. Along the way, we’ll see how input/signals work, how to render to the screen, and how to work with arrays. I assume familiarity with functional programming. I’ll make some comparisons with Haskell and Elm.</p>
-<p>I like Purescript because it has the functional power of <a href="https://www.haskell.org/">Haskell</a>, while fitting very well into the web ecosystem (e.g. interops with Javascript), like <a href="http://www.elm-lang.org">Elm</a>. Think of it as Elm with all the features that come with Haskell, such as monads. <!--foreign functions--></p>
-<p>Some resources:</p>
-<ul>
-<li>Reference
-<ul>
-<li><a href="http://www.purescript.org">Main page</a></li>
-<li><a href="https://leanpub.com/purescript/read">Ebook (PureScript by Example)</a></li>
-<li><a href="https://github.com/purescript/purescript/wiki/Language-Guide">Language guide</a></li>
-<li><a href="https://pursuit.purescript.org/">Documentation (Pursuit)</a></li>
-</ul></li>
-<li>Purescript for Haskell/Elm users
-<ul>
-<li><a href="https://github.com/purescript/purescript/wiki/Differences-from-Haskell">Differences from Haskell</a></li>
-<li><a href="http://www.arow.info/blog/posts/2015-12-17-purescript-intro.html">PureScript for the Haskeller</a></li>
-<li><a href="http://www.parsonsmatt.org/2015/10/03/elm_vs_purescript.html">Elm vs. PureScript</a></li>
-<li><a href="http://www.lambdacat.com/getting-to-know-purescript-from-elm/">Getting to know PureScript from Elm</a></li>
-</ul></li>
-<li><a href="http://www.purescript.org/community/">Community</a>: The folks on Slack and IRC have been very helpful in helping me get set up and debugging my code.</li>
-<li>Other things written using <code>purescript-signal</code>
-<ul>
-<li><a href="https://github.com/michaelficarra/purescript-demo-mario">Mario</a></li>
-<li><a href="https://github.com/bodil/purescript-is-magic">Purescript is Magic</a></li>
-</ul></li>
-</ul>
-<h2 id="getting-started">Getting started</h2>
-<p>First follow the instructions <a href="http://www.purescript.org/learn/getting-started/">here</a> to install Purescript.</p>
-<p>Start a new project by</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> basic-games
-<span class="bu">cd</span> basic-games
-<span class="ex">pulp</span> init</code></pre></div>
-<p>Create a file <code>Snake.purs</code> in <code>src/</code>.</p>
-<h2 id="imports">Imports</h2>
-<p>First, the imports.</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">Snake</span> <span class="kw">where</span>
-
-<span class="kw">import </span><span class="dt">Prelude</span> <span class="co">-- must be explicitly imported</span>
-<span class="kw">import </span><span class="dt">Control.Monad.Eff</span> (<span class="dt">Eff</span>)
-<span class="kw">import </span><span class="dt">Control.Monad.Eff.Console</span> (<span class="dt">CONSOLE</span>, log)
-<span class="kw">import </span><span class="dt">Control.Monad.Eff.Random</span> (<span class="dt">RANDOM</span>, randomInt)
-<span class="kw">import </span><span class="dt">Data.Array</span> (length, uncons, slice, (:), last)
-<span class="kw">import </span><span class="dt">Data.Array.Partial</span> (head)
-<span class="kw">import </span><span class="dt">Data.Functor</span>
-<span class="kw">import </span><span class="dt">Data.Generic</span>
-<span class="kw">import </span><span class="dt">Data.Int</span>
-<span class="kw">import </span><span class="dt">Data.Maybe</span>
-<span class="kw">import </span><span class="dt">Data.Traversable</span>
-<span class="kw">import </span><span class="dt">Data.Tuple</span>
-<span class="kw">import </span><span class="dt">Graphics.Canvas</span> (<span class="dt">CANVAS</span>, closePath, lineTo, moveTo, fillPath,
-                        setFillStyle, arc, rect, getContext2D,
-                        getCanvasElementById, <span class="dt">Context2D</span>, <span class="dt">Rectangle</span>, clearRect)
-<span class="kw">import </span><span class="dt">Partial.Unsafe</span> (unsafePartial)
-<span class="kw">import </span><span class="dt">Signal</span> (<span class="dt">Signal</span>, runSignal, foldp, sampleOn, map4)
-<span class="kw">import </span><span class="dt">Signal.DOM</span> (keyPressed)
-<span class="kw">import </span><span class="dt">Signal.Time</span> (<span class="dt">Time</span>, second, every)
-<span class="kw">import </span><span class="dt">Test.QuickCheck.Gen</span> <span class="co">-- for randomness</span></code></pre></div>
-<p>You will need to install all these packages. You can install them one at a time via</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bower</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span> --save</code></pre></div>
-<p>or copy the <code>bower.json</code> file <a href="https://github.com/holdenlee/purescript-games/blob/master/bower.json">here</a> and do <code>bower install</code> to install all of them at once.</p>
-<h2 id="the-model-update-view-signal-architecture">The Model-Update-View-Signal Architecture</h2>
-<p>We break our program into the following parts. (For more information, see the <a href="http://guide.elm-lang.org/architecture/">Elm architecture tutorial</a>.)</p>
-<ul>
-<li><strong>Model</strong>: This is a complete description of the state of the program at any time. For Snake, this would include the array containing all points of the snake, the direction it is going, and the location of the mouse.</li>
-<li><strong>Update</strong>: Define a <code>step</code> function which given an input and the current model, returns the updated model. For Snake, an update would be the direction, and the step function would move the snake one unit in that direction, and check for things like whether the snake ate the mouse or bumped into the wall.</li>
-<li><strong>View</strong>: Given a model, describe how to render it on the screen.</li>
-<li><strong>Signal</strong>: Specify the input signals. A signal of type <code>a</code> is a time-varying value of type <code>a</code>. For a primer on signals see <a href="http://elm-lang.org:1234/guide/reactivity#signals">here</a>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
-</ul>
-<p><img src="/images/mvus.png"></p>
-<p>To put these components together we use:</p>
-<ul>
-<li><p><code>foldp</code>, the magic function that “folds” the input signals into the model via the <code>step</code> function. Note the similarity to <a href="http://colah.github.io/posts/2015-02-DataList-Illustrated/">foldl</a> both in the type signature and the picture. In the picture <code>a</code> corresponds to <code>Input</code> and <code>b</code> corresponds to <code>Model</code>. So given time-varying inputs and a starting model, <code>foldp</code> produces a time-varying model.</p>
-<pre><code>foldp :: forall a b. (a -&gt; b -&gt; b) -&gt; b -&gt; (Signal a) -&gt; (Signal b)</code></pre></li>
-<li><p><code>runSignal</code>: Given a signal encapsulating an effect, makes the effect happen.</p>
-<pre><code>runSignal :: forall e. Signal (Eff e Unit) -&gt; Eff e Unit</code></pre>
-<p>(In the old version of Elm, <code>main</code> is simply a <code>Signal</code>, but here, the type of <code>main</code> is an analogue of <code>IO</code> in Haskell.)</p></li>
-</ul>
-<!-- which given a signal of type `a` and a way to turn something of type `a` into an effect (e.g. a way to render it), makes the effect happen (e.g. renders it). -->
-<p>The skeleton of the program looks like this.</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="co">-- Model</span>
-<span class="kw">type</span> <span class="dt">Model</span> <span class="fu">=</span> <span class="fu">???</span>
-
-<span class="ot">start ::</span> <span class="dt">Model</span> 
-start <span class="fu">=</span> <span class="fu">???</span>
-
-<span class="co">-- Update</span>
-<span class="kw">type</span> <span class="dt">Input</span> <span class="fu">=</span> <span class="fu">???</span>
-
-<span class="ot">step ::</span> <span class="dt">Input</span> <span class="ot">-&gt;</span> <span class="dt">Model</span> <span class="ot">-&gt;</span> <span class="dt">Model</span>
-step inp m <span class="fu">=</span> <span class="fu">???</span>
-
-<span class="co">-- View</span>
-<span class="ot">render ::</span> <span class="dt">Model</span> <span class="ot">-&gt;</span> <span class="dt">Eff</span> _ <span class="dt">Unit</span> 
-render m <span class="fu">=</span> <span class="fu">???</span>
-
-<span class="co">-- Signal </span>
-<span class="ot">input ::</span> <span class="dt">Eff</span> _ (<span class="dt">Signal</span> <span class="dt">Input</span>)
-input <span class="fu">=</span> <span class="fu">???</span>
-
-<span class="co">-- Putting it all together</span>
-<span class="ot">main ::</span> <span class="dt">Eff</span> _ <span class="dt">Unit</span>
-main <span class="fu">=</span> 
-    void <span class="kw">do</span>
-      signal <span class="ot">&lt;-</span> input
-	  <span class="co">-- game :: Signal Model</span>
-      game <span class="ot">&lt;-</span> foldp step start signal
-	  <span class="co">-- map :: forall a b. (a -&gt; b) -&gt; f a -&gt; f b</span>
-	  <span class="co">--        (Model -&gt; Eff _ Unit) -&gt; Signal Model -&gt; Signal (Eff _ Unit)</span>
-      runSignal (map render game)</code></pre></div>
-<p>The <code>Eff</code> monad corresponds to Haskell’s <code>IO</code> monad, but uses <em>extensible effects</em>: it lists out explicitly all the effects it has (access to randomness, DOM, drawing canvas, console, etc.). For example, <code>Eff (random :: RANDOM, canvas :: CANVAS | eff) Unit</code> means having effects that include <code>RANDOM</code> and <code>CANVAS</code>). PureScript will infer all effects if you put <code>_</code>. See <a href="https://leanpub.com/purescript/read#leanpub-auto-the-eff-monad-1">Chapter 8.10</a> of the PureScript book.</p>
-<p>For a warm-up, <a href="https://github.com/holdenlee/purescript-games/blob/master/src/SimpleMove.purs">here</a> is a basic example following this paradigm. Here, the model is an integer (the location on a single axis), the update is moving -1, 0, or 1 units, the view is simply writing the location to the console, and the signal comes from the arrow keys once every second.</p>
-<h2 id="model">Model</h2>
-<p>For Snake, the model is a record containing</p>
-<ul>
-<li>the location of the <code>mouse</code></li>
-<li><code>snake</code> as an array of points</li>
-<li>whether the snake is <code>alive</code></li>
-</ul>
-<p>We also include some the dimensions <code>xd</code>, <code>yd</code> of the game board, the <code>size</code> of each square (alternatively, these can be hard-coded in), and the <code>prev</code> square (this is optional—it gives us an easy way to erase the tail of the snake when it moves). Valid positions are in <span class="math inline">\([1,xd]\times [1,yd]\)</span>.</p>
-<p>We want the mouse location to be generated at random. How to do this? We’ll fill in that part later. (For now, you can put in an arbitrary point.)</p>
-<p>Note also that the y-coordinate is 0 at the top of the screen and increases going down. The snake starts at the upper-left corner moving right.</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Point</span> <span class="fu">=</span> <span class="dt">Tuple</span> <span class="dt">Int</span> <span class="dt">Int</span>
-
-<span class="co">--MODEL</span>
-<span class="kw">type</span> <span class="dt">Snake</span> <span class="fu">=</span> <span class="dt">Array</span> <span class="dt">Point</span>
-
-<span class="kw">type</span> <span class="dt">Model</span> <span class="fu">=</span> {<span class="ot">xd ::</span> <span class="dt">Int</span>,<span class="ot"> yd ::</span> <span class="dt">Int</span>,<span class="ot"> size ::</span> <span class="dt">Int</span>,<span class="ot"> mouse::</span> <span class="dt">Point</span>,<span class="ot"> snake ::</span> <span class="dt">Snake</span>,<span class="ot"> dir ::</span> <span class="dt">Point</span>,<span class="ot"> alive ::</span> <span class="dt">Boolean</span>,<span class="ot"> prev ::</span> <span class="dt">Maybe</span> <span class="dt">Point</span>}
-
-<span class="ot">start ::</span> <span class="dt">Model</span>
-start <span class="fu">=</span> 
-  {xd <span class="fu">:</span> <span class="dv">25</span>, yd <span class="fu">:</span> <span class="dv">25</span>, size <span class="fu">:</span> <span class="dv">10</span>, mouse <span class="fu">:</span> <span class="fu">??</span>, snake <span class="fu">:</span> [<span class="dt">Tuple</span> <span class="dv">1</span> <span class="dv">1</span>], dir<span class="fu">:</span> <span class="dt">Tuple</span> <span class="dv">1</span> <span class="dv">0</span>, alive <span class="fu">:</span> true, prev <span class="fu">:</span> <span class="dt">Nothing</span>}</code></pre></div>
-<p>Note unlike Haskell,</p>
-<ul>
-<li>there is no syntactic sugar for <code>Tuple</code>.</li>
-<li>the basic list type is <code>Array</code>.</li>
-<li>booleans are <code>Boolean</code> and have values <code>true</code> or <code>false</code>.</li>
-</ul>
-<h2 id="update">Update</h2>
-<p>First we need two helper function: check to see if a point is in bounds, and check to see if the snake is OK (given the point where the head of the snake moves, check to see that it is in bounds and not part of the snake’s body).</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">inBounds ::</span> <span class="dt">Point</span> <span class="ot">-&gt;</span> <span class="dt">Model</span> <span class="ot">-&gt;</span> <span class="dt">Boolean</span>
-inBounds (<span class="dt">Tuple</span> x y) m <span class="fu">=</span> 
-  (x <span class="fu">&gt;</span> <span class="dv">0</span>) <span class="fu">&amp;&amp;</span> (y <span class="fu">&gt;</span> <span class="dv">0</span>) <span class="fu">&amp;&amp;</span> (x <span class="fu">&lt;=</span> m<span class="fu">.</span>xd) <span class="fu">&amp;&amp;</span> (y <span class="fu">&lt;=</span> m<span class="fu">.</span>yd)
-
-<span class="ot">checkOK ::</span> <span class="dt">Point</span> <span class="ot">-&gt;</span> <span class="dt">Model</span> <span class="ot">-&gt;</span> <span class="dt">Boolean</span>
-checkOK pt m <span class="fu">=</span> 
-  <span class="kw">let</span>
-    s <span class="fu">=</span> m<span class="fu">.</span>snake
-  <span class="kw">in</span>
-    m<span class="fu">.</span>alive <span class="fu">&amp;&amp;</span> (inBounds pt m) <span class="fu">&amp;&amp;</span> not (pt <span class="ot">`elem`</span> (body s))
-	
-<span class="ot">body ::</span> forall a<span class="fu">.</span> <span class="dt">Array</span> a <span class="ot">-&gt;</span> <span class="dt">Array</span> a
-body li <span class="fu">=</span> slice <span class="dv">0</span> ((length li) <span class="fu">-</span> <span class="dv">1</span>) li</code></pre></div>
-<p>For the step function, there are 3 cases:</p>
-<ul>
-<li>The snake is OK:
-<ul>
-<li>The snake eats the mouse. The snake grows, and regenerate the mouse on a random square. (We omit the randomness for now.)</li>
-<li>The snake doesn’t eat the mouse, in which case it moves. Here <code>body</code> is all of the snake except the last point.</li>
-</ul></li>
-<li>The snake is not OK: <code>alive = false</code> and nothing else happens.</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">step ::</span> <span class="dt">Partial</span> <span class="ot">=&gt;</span> <span class="dt">Point</span> <span class="ot">-&gt;</span> <span class="dt">Model</span> <span class="ot">-&gt;</span> <span class="dt">Model</span>
-step dir m <span class="fu">=</span> 
-  <span class="kw">let</span>
-	<span class="co">-- override the direction with the input, unless there is no input (corresponding to (0,0))</span>
-    d <span class="fu">=</span> <span class="kw">if</span> dir <span class="fu">/=</span> <span class="dt">Tuple</span> <span class="dv">0</span> <span class="dv">0</span>
-        <span class="kw">then</span> dir
-        <span class="kw">else</span> m<span class="fu">.</span>dir
-    s <span class="fu">=</span> m<span class="fu">.</span>snake
-    <span class="kw">let</span> hd <span class="fu">=</span> (head s <span class="fu">+</span> d)
-    <span class="kw">if</span> checkOK hd m
-      <span class="kw">then</span> 
-        <span class="kw">if</span> (hd <span class="fu">==</span> m<span class="fu">.</span>mouse) 
-        <span class="kw">then</span> m { snake <span class="fu">=</span> hd <span class="fu">:</span> s
-               , mouse <span class="fu">=</span> <span class="fu">???</span>
-               , dir <span class="fu">=</span> d
-               , prev <span class="fu">=</span> <span class="dt">Nothing</span> <span class="co">-- snake grows; nothing is deleted</span>
-               }
-        <span class="kw">else</span> m { snake <span class="fu">=</span> hd <span class="fu">:</span> (body s)
-               , dir <span class="fu">=</span> d
-               , prev <span class="fu">=</span> last s <span class="co">-- snake moves; the last pixel is deleted</span>
-               }
-      <span class="kw">else</span> m { alive <span class="fu">=</span> false, prev <span class="fu">=</span> <span class="dt">Nothing</span>}</code></pre></div>
-<p>Some differences from Haskell:</p>
-<ul>
-<li>Note that all partial functions must be notated with the empty type constraint <code>Partial</code>. <code>head</code> as imported from <code>Data.Array.Partial</code> is a partial function because it is undefined on <code>[]</code>. (We need not worry because the snake will never be empty.)</li>
-<li>Polymorphic functions must have type variables listed out at the beginning after <code>forall</code>.</li>
-</ul>
-<p>Note that we can add points! (Note the line <code>head s + d</code>.) This is because <code>Data.Tuple</code> has the instance <code>(Ring a, Ring b) =&gt; Ring (Tuple a b)</code>. If both components of a tuple can be added, then addition is automatically defined for the tuple.</p>
-<h2 id="view">View</h2>
-<p>Given the model, we have 4 things to render: the walls (a <span class="math inline">\(27\times 27\)</span> rectangle here), the background (a <span class="math inline">\(25\times 25\)</span> rectangle), the snake and the mouse. For instructions on using <code>purescript-canvas</code> see <a href="https://leanpub.com/purescript/read#leanpub-auto-canvas-graphics">Chapter 9</a> of the PureScript book. Change the colors as you wish.</p>
-<pre><code>render :: forall eff. Partial =&gt; Model -&gt; (Eff _ Unit)
-render m = 
-  void do
-        let s = m.snake
-        let size = m.size
-        Just canvas &lt;- getCanvasElementById &quot;canvas&quot;
-        ctx &lt;- getContext2D canvas
-        --walls
-        setFillStyle wallColor ctx
-        fillPath ctx $ rect ctx
-                     { x: 0.0
-                     , y: 0.0
-                     , w: toNumber $ size*(m.xd + 2)
-                     , h: toNumber $ size*(m.yd + 2)
-                     }
-        --interior
-        setFillStyle bgColor ctx
-        fillPath ctx $ rect ctx
-                     { x: toNumber $ size
-                     , y: toNumber $ size
-                     , w: toNumber $ size*(m.xd)
-                     , h: toNumber $ size*(m.yd)
-                     }
-        --snake 
-        for s (\x -&gt; colorSquare m.size x snakeColor ctx)
-        --mouse
-        colorSquare m.size (m.mouse) mouseColor ctx
-		
-colorSquare :: forall eff. Int -&gt; Point -&gt; String -&gt; Context2D -&gt; Eff (canvas :: CANVAS | eff) Context2D
-colorSquare size (Tuple x y) color ctx = do
-  setFillStyle color ctx
-  fillPath ctx $ rect ctx $ square size x y
-
-square :: Int -&gt; Int -&gt; Int -&gt; Rectangle
-square size x y = { x: toNumber $ size*x
-                  , y: toNumber $ size*y
-                  , w: toNumber $ size
-                  , h: toNumber $ size
-                  }
-
-white = &quot;#FFFFFF&quot;
-black = &quot;#000000&quot;
-red = &quot;#FF0000&quot;
-yellow = &quot;#FFFF00&quot;
-green = &quot;#008000&quot;
-blue = &quot;#0000FF&quot;
-purple = &quot;800080&quot;
-
-snakeColor = white
-bgColor = black
-mouseColor = red
-wallColor = green</code></pre>
-<p>The render function is a bit inefficient since it is redrawing the entire canvas every step (it doesn’t make much difference for such a simple game though). We can replace later calls to <code>render</code> with <code>renderStep</code> which only changes the squares that need to be changed at each time step. (There is much more freedom than Elm to draw specify what you want to draw and redraw.)</p>
-<pre><code>renderStep :: forall eff. Partial =&gt; Model -&gt; Eff (canvas :: CANVAS | eff) Unit
-renderStep m = 
-  void do
-        let s=m.snake
-        Just canvas &lt;- getCanvasElementById &quot;canvas&quot;
-        ctx &lt;- getContext2D canvas
-        colorSquare m.size (head s) snakeColor ctx
-        case m.prev of
-          Nothing -&gt; colorSquare m.size (m.mouse) mouseColor ctx
-          Just pt -&gt; colorSquare m.size pt bgColor ctx
-		  --make use of the fact: either we draw the mouse or erase the tail, not both, at any one step
-</code></pre>
-<h2 id="signal">Signal</h2>
-<p>The <code>step</code> function takes an update of type <code>Point</code>, so we need to produce a <code>Signal Point</code>.</p>
-<p><a href="https://pursuit.purescript.org/packages/purescript-signal/8.0.0">purescript-signal</a> contains signals from various sources, e.g. which keys are pressed and the time. We use the following functions from there:</p>
-<ul>
-<li><code>keyPressed :: forall e. Int -&gt; Eff (dom :: DOM | e) (Signal Boolean)</code>. (Note we need access to the DOM to get a keybord signal.) The key codes for L/U/D/R are 37, 38, 40, 39. We map them to <span class="math inline">\((-1,0), (0,-1), (0,1), (1,0)\)</span>, respectively.</li>
-<li><code>every :: Time -&gt; Signal Time</code> periodically signals the time.</li>
-<li><code>sampleOn :: forall a b. (Signal a) -&gt; (Signal b) -&gt; (Signal b)</code> creates a signal which yields the current value of the second signal every time the first signal yields. Usually the first signal is a periodic time signal (e.g. <code>every second</code>).</li>
-</ul>
-<p>Below, <code>input</code> gives a direction corresponding to the arrow key pressed every 1/20 second.</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="co">--SIGNALS</span>
-<span class="ot">inputDir ::</span> <span class="dt">Eff</span> _ (<span class="dt">Signal</span> <span class="dt">Point</span>)
-inputDir <span class="fu">=</span> 
-    <span class="kw">let</span> 
-        f <span class="fu">=</span> \l u d r <span class="ot">-&gt;</span> ifs [<span class="dt">Tuple</span> l <span class="fu">$</span> <span class="dt">Tuple</span> (<span class="fu">-</span><span class="dv">1</span>) <span class="dv">0</span>, <span class="dt">Tuple</span> u <span class="fu">$</span> <span class="dt">Tuple</span> <span class="dv">0</span> (<span class="fu">-</span><span class="dv">1</span>), <span class="dt">Tuple</span> d <span class="fu">$</span> <span class="dt">Tuple</span> <span class="dv">0</span> <span class="dv">1</span>, <span class="dt">Tuple</span> r <span class="fu">$</span> <span class="dt">Tuple</span> <span class="dv">1</span> <span class="dv">0</span>] <span class="fu">$</span> <span class="dt">Tuple</span> <span class="dv">0</span> <span class="dv">0</span>
-<span class="co">--note y goes DOWN</span>
-    <span class="kw">in</span>
-      map4 f <span class="fu">&lt;$&gt;</span> (keyPressed <span class="dv">37</span>) <span class="fu">&lt;*&gt;</span> (keyPressed <span class="dv">38</span>) <span class="fu">&lt;*&gt;</span> (keyPressed <span class="dv">40</span>) <span class="fu">&lt;*&gt;</span> (keyPressed <span class="dv">39</span>)
-
-<span class="ot">input ::</span> <span class="dt">Eff</span> _ (<span class="dt">Signal</span> <span class="dt">Point</span>)
-input <span class="fu">=</span> sampleOn (fps <span class="fl">20.0</span>) <span class="fu">&lt;$&gt;</span> inputDir
-
-<span class="ot">fps ::</span> <span class="dt">Time</span> <span class="ot">-&gt;</span> <span class="dt">Signal</span> <span class="dt">Time</span>
-fps x <span class="fu">=</span> every (second<span class="fu">/</span>x)
-
-<span class="ot">ifs::</span> forall a<span class="fu">.</span> <span class="dt">Array</span> (<span class="dt">Tuple</span> <span class="dt">Boolean</span> a) <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a
-ifs li z <span class="fu">=</span> <span class="kw">case</span> uncons li <span class="kw">of</span>
-             <span class="dt">Just</span> {head <span class="fu">:</span> <span class="dt">Tuple</span> b y, tail <span class="fu">:</span> tl} <span class="ot">-&gt;</span> <span class="kw">if</span> b <span class="kw">then</span> y <span class="kw">else</span> ifs tl z
-             <span class="dt">Nothing</span>         <span class="ot">-&gt;</span> z </code></pre></div>
-<p>At this point, we can slap in a <code>main</code> and then compile.</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">main ::</span> <span class="dt">Eff</span> _ <span class="dt">Unit</span>
-main <span class="fu">=</span>
-    void <span class="fu">$</span> unsafePartial <span class="kw">do</span>
-      <span class="co">-- create the signal</span>
-      dirSignal <span class="ot">&lt;-</span> input
-      game <span class="ot">&lt;-</span> foldp step start dirSignal
-      runSignal (map render game)</code></pre></div>
-<p>But we don’t have randomness yet.</p>
-<h2 id="adding-randomness">Adding randomness</h2>
-<p>How do we model randomness in a purely functional program?</p>
-<p>We need to add randomness as an effect.</p>
-<h3 id="something-that-doesnt-work">Something that doesn’t work</h3>
-<p>The initialization and step functions need randomness, so we can try to rewrite the functions so they have the following type signatures:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">init<span class="ot"> ::</span> <span class="dt">Eff</span> (<span class="ot">random::</span> <span class="dt">RANDOM</span>) <span class="dt">Model</span> 
-
-<span class="ot">step ::</span> forall e<span class="fu">.</span> <span class="dt">Point</span> <span class="ot">-&gt;</span> <span class="dt">Eff</span> (<span class="ot">random::</span><span class="dt">RANDOM</span> <span class="fu">|</span> e) <span class="dt">Model</span> <span class="ot">-&gt;</span> <span class="dt">Eff</span> (<span class="ot">random::</span><span class="dt">RANDOM</span> <span class="fu">|</span> e) <span class="dt">Model</span>
-
-<span class="ot">render ::</span> <span class="dt">Eff</span> (<span class="ot">random::</span> <span class="dt">RANDOM</span>) <span class="dt">Model</span> <span class="ot">-&gt;</span> <span class="dt">Eff</span> _ <span class="dt">Unit</span> 
-
-<span class="ot">input ::</span> <span class="dt">Eff</span> _ (<span class="dt">Signal</span> <span class="dt">Update</span>)
-
-<span class="co">-- Putting it all together</span>
-<span class="ot">main ::</span> <span class="dt">Eff</span> _ <span class="dt">Unit</span>
-main <span class="fu">=</span> 
-    void <span class="kw">do</span>
-      startGame <span class="ot">&lt;-</span> init
-      signal <span class="ot">&lt;-</span> input
-	  <span class="co">-- game :: Signal Model</span>
-      game <span class="ot">&lt;-</span> foldp step startGame signal
-	  <span class="co">-- map :: (a -&gt; b) -&gt; f a -&gt; f b</span>
-	  <span class="co">--        (Model -&gt; Eff _ Unit) -&gt; Signal Model -&gt; Signal (Eff _ Unit)</span>
-      runSignal (map render game)</code></pre></div>
-<p>If you try this you will get very weird behavior: the mouse will jump all over the place! My best explanation for this is that the effects are compiled in un-executed form in the signal, and at each step, the effects are executed <em>starting from the beginning</em>. Not only does this mean that the random numbers generated are different, it means that the the program will run slower and slower. See a discussion <a href="https://groups.google.com/forum/#!msg/purescript/CeVEETR0U3U/oacKYPmXAwAJ">here</a>.</p>
-<h3 id="using-a-generator">Using a generator</h3>
-<p>The standard way to do this is to include a <code>Seed</code> in the state, and whenever we need randomness, use the seed to generate a random number and a new seed, and update the seed. We can add a field for <code>seed</code> in <code>Model</code>…</p>
-<p>But this is clunky, and just the kind of thing that monads make easier to express! This sounds like a <code>State Seed</code> and in fact, the <a href="https://pursuit.purescript.org/packages/purescript-quickcheck/3.0.0/docs/Test.QuickCheck.Gen">Gen</a> monad is (basically) just this:</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">GenState</span> <span class="fu">=</span> {<span class="ot"> newSeed ::</span> <span class="dt">Seed</span>,<span class="ot"> size ::</span> <span class="dt">Size</span> }
-
-<span class="kw">newtype</span> <span class="dt">Gen</span> a <span class="fu">=</span> <span class="dt">Gen</span> (<span class="dt">StateT</span> <span class="dt">GenState</span> <span class="dt">Identity</span> a)</code></pre></div>
-<p>Our step function will no longer be <code>a -&gt; b -&gt; b</code>, but will draw on randomness, so will take the form <code>a -&gt; b -&gt; Gen b</code>. We now replace</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">foldp ::</span> forall a b<span class="fu">.</span> (a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> (<span class="dt">Signal</span> a) <span class="ot">-&gt;</span> (<span class="dt">Signal</span> b)</code></pre></div>
-<p>with the function</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">foldpR ::</span> forall a b e<span class="fu">.</span> (a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> <span class="dt">Gen</span> b) <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> (<span class="dt">Signal</span> a) <span class="ot">-&gt;</span> <span class="dt">Eff</span> (<span class="ot">random ::</span> <span class="dt">RANDOM</span> <span class="fu">|</span> e) (<span class="dt">Signal</span> b)</code></pre></div>
-<p>This is very reusable, and will make anything else we write with randomness painless.</p>
-<p>For this, we need a bit of footwork. Behind the scenes, we do as we said before: a function <code>f :: a -&gt; b -&gt; Gen b</code> is the same as a function <code>f' :: a -&gt; (b, GenState) -&gt; (b, GenState)</code>. We unravel <code>f</code>, and <code>foldp</code> using this <code>f'</code> as the step function and an initial seed. For sake of reusability, I’ve put <code>foldpR</code> in a separate module, in more generality than necessary, <a href="https://github.com/holdenlee/purescript-games/blob/master/src/SignalM.purs">here</a>; add <code>import SignalM</code> to <code>Snake</code>.</p>
-<p>The function <code>step :: Partial =&gt; Point -&gt; Model -&gt; Model</code> is now <code>step :: Partial =&gt; Point -&gt; Model -&gt; Gen Model</code>. In the branch of the <code>if</code> statement where the snake eats the mouse, we keep generating points within the dimensions until the point is not part of the snake. Note that PureScript uses <code>pure</code> instead of <code>return</code>. We add <code>pure</code> to the other branches (not shown).</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">  <span class="kw">do</span> 
-    newMouse <span class="ot">&lt;-</span> untilM (\pt <span class="ot">-&gt;</span> not (pt <span class="ot">`elem`</span> s <span class="fu">||</span> pt <span class="fu">==</span> hd)) (randomPoint m<span class="fu">.</span>xd m<span class="fu">.</span>yd)
-    pure <span class="fu">$</span> m { snake <span class="fu">=</span> hd <span class="fu">:</span> s
-             , mouse <span class="fu">=</span> newMouse
-             , dir <span class="fu">=</span> d
-             , prev <span class="fu">=</span> <span class="dt">Nothing</span> <span class="co">-- snake grows; nothing is deleted</span>
-             }</code></pre></div>
-<p>The auxiliary functions here are (<code>untilM</code> being the monadic analogue of “repeat until”)</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">untilM ::</span> forall m a<span class="fu">.</span> (<span class="dt">Monad</span> m) <span class="ot">=&gt;</span> (a <span class="ot">-&gt;</span> <span class="dt">Boolean</span>) <span class="ot">-&gt;</span> m a <span class="ot">-&gt;</span> m a
-untilM cond ma <span class="fu">=</span> 
-    <span class="kw">do</span> 
-      x <span class="ot">&lt;-</span> ma
-      <span class="kw">if</span> cond x <span class="kw">then</span> pure x <span class="kw">else</span> untilM cond ma
-
-<span class="ot">randomPoint ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Gen</span> <span class="dt">Point</span>
-randomPoint xmax ymax <span class="fu">=</span> 
-    <span class="kw">do</span>
-      x <span class="ot">&lt;-</span> chooseInt <span class="dv">1</span> xmax
-      y <span class="ot">&lt;-</span> chooseInt <span class="dv">1</span> ymax
-      pure <span class="fu">$</span> <span class="dt">Tuple</span> x y</code></pre></div>
-<p>We also similarly incorporate randomness in the starting model by replacing <code>start :: Model</code> with <code>init :: forall e. Eff (random::RANDOM | e) Model</code>. The final <code>main</code> looks like</p>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">main ::</span> <span class="dt">Eff</span> _ <span class="dt">Unit</span>
-main <span class="fu">=</span> 
-    void <span class="fu">$</span> unsafePartial <span class="kw">do</span>
-      <span class="co">--draw the board</span>
-      gameStart <span class="ot">&lt;-</span> init
-      render gameStart
-      <span class="co">-- create the signals</span>
-      dirSignal <span class="ot">&lt;-</span> input
-      <span class="co">-- need to be in effect monad in order to get a keyboard signal</span>
-      game <span class="ot">&lt;-</span> foldpR step gameStart dirSignal
-      runSignal (map renderStep game)</code></pre></div>
-<p>See all the code <a href="https://github.com/holdenlee/purescript-games/blob/master/src/Snake.purs">here</a>.</p>
-<p>The version I linked to has a few extra lines of code so that pressing SPACE restarts the game; the additions are in <a href="https://github.com/holdenlee/purescript-games/blob/master/src/SnakeS.purs">SnakeS.purs</a>, at the bottom.</p>
-<h2 id="building">Building</h2>
-<p>To build the project, run</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> dist
-<span class="ex">pulp</span> build
-<span class="ex">pulp</span> browserify -m Snake/index.js <span class="op">&gt;&gt;</span> dist/Snake.js</code></pre></div>
-<p>Browserify creates a javascript file with all the javascript libraries included. We need a html file to host the javascript. Create <code>html/index.html</code> with a canvas of the appropriate dimensions:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
-<span class="kw">&lt;html&gt;</span>
-  <span class="kw">&lt;head&gt;</span>
-    <span class="kw">&lt;title&gt;</span>Snake<span class="kw">&lt;/title&gt;</span>
-  <span class="kw">&lt;/head&gt;</span>
-  <span class="kw">&lt;body&gt;</span>
-    <span class="kw">&lt;canvas</span><span class="ot"> id=</span><span class="st">&quot;canvas&quot;</span><span class="ot"> width=</span><span class="st">&quot;270&quot;</span><span class="ot"> height=</span><span class="st">&quot;270&quot;</span><span class="ot"> style=</span><span class="st">&quot;border: 1px solid black; display: block; margin: auto;&quot;</span><span class="kw">&gt;&lt;/canvas&gt;</span>
-    <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> src=</span><span class="st">&quot;../dist/Snake.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span>
-  <span class="kw">&lt;/body&gt;</span>
-<span class="kw">&lt;/html&gt;</span></code></pre></div>
-<p>Now open the file and play!</p>
-<!--
-# Exercises
-
-* Add a tab for score.
-* Add a start screen. Press SPACE to begin. When the game ends, display "GAME OVER, SPACE to play again".
-* Add sounds whenever the snake eats a mouse.
-* Change the amount that the snake lengthens each time.
-* Allow the user to adjust the speed and the lengthening rate.
--->
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>The PureScript signal library is very similar to the former Elm signal library. Note that Elm no longer uses signals.<a href="#fnref1">↩</a></p></li>
-</ol>
-</section>
 
   </div>
 
