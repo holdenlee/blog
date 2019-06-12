@@ -8,8 +8,86 @@
         <name>Holden Lee</name>
         <email>oldheneel@gmail.com</email>
     </author>
-    <updated>2018-08-15T00:00:00Z</updated>
+    <updated>2019-06-11T00:00:00Z</updated>
     <entry>
+    <title>Month of Writing, Part 0</title>
+    <link href="http://holdenlee.github.io/blog/posts/writing/month_of_writing_part_0.html" />
+    <id>http://holdenlee.github.io/blog/posts/writing/month_of_writing_part_0.html</id>
+    <published>2019-06-11T00:00:00Z</published>
+    <updated>2019-06-11T00:00:00Z</updated>
+    <summary type="html"><![CDATA[
+<div class="container">
+  <div id="content">
+    <div class="page header">
+      <h1>Month of Writing, Part 0</h1>
+    </div>
+    
+    <div class="info">
+       <div class="subtitle"><p>Starting out</p></div> 
+       
+        <p>Posted: 2019-06-11 
+          , Modified: 2019-06-11 
+	</p>
+      
+       <p>Tags: <a href="/tags/fiction.html">fiction</a></p> 
+    </div>
+    
+  </div>
+  <!--/div-->
+
+  
+
+  <div class="blog-main">
+    <p>I’m spending one month focusing on writing! If you want to stay updated on my work, you can request to join the <a href="https://groups.google.com/forum/#!forum/holden-readers">Holden’s Readers googlegroup</a>.</p>
+<h2 id="where-i-am-now">Where I am now</h2>
+<p>After five years of work, I finally received my Ph.D. in mathematics! During grad school, I’ve put aside my writing for extended periods of time. But no more; I’ve come to realize over the past few years how essential writing is for me. Some of the most blissful times I’ve had are when I’m writing; moreover, my writing ambitions are no less important to me than my academic ones.</p>
+<p>I’m thankful to the communities of writers I have been part of over the past two years, who have helped me to realize this. I’m indebted to my friend who started <a href="https://archandarrow.princeton.edu/">Arch and Arrow</a>, a writing group at Princeton because she was “tired of writing alone in her room.” I’ve been inspired by the writing meetups I participated in during my summer in New York, which I wrote about <a href="https://docs.google.com/document/d/1gBfuIygKNVX0Sx3o57cnzgejif76LpnxWjSkA70G3YM/edit">here</a>. It’s really made me see the value of having a community of like-minded people. If you are an aspiring writer I encourage you to check out a meetup in your area, or otherwise find some friends you can share writing with.</p>
+<p>This spring I applied to three fiction workshops (Clarion, Clarion West, Odyssey). I was disappointed that I didn’t get in any of them, but the process of applying forced me to revise some of my stories, to reflect on my progress as a writer, and think about what my next steps are. So I’ve decided to take a month off from work to focus on my writing. I’ll mainly be working on stories, and also a few blog posts.</p>
+<h2 id="goals">Goals</h2>
+<p>My concrete goal is to write three short stories, and get them to a point where I feel good about sharing them with other people. I hope to do some revision, but it’s also OK to revise in the following weeks. I’ll focus on short stories because I can iterate much faster - I can learn from the previous one as I start the next one, and I can write stories that are different from each other to stretch my abilities. While I enjoy working on a novel more than a short story, I think the practice from writing more short stories will be more helpful at this time.</p>
+<p>I want this month to not just be focused of finishing stories, but instead on being a writer more broadly:</p>
+<ul>
+<li>reading a lot of material</li>
+<li>recording what I learn from reading</li>
+<li>improve at particular aspects of the craft (through specific writing exercises and lessons)</li>
+<li>generate and execute on a lot of ideas (I want to brainstorm lots of ideas and test-write some of them; this way I will have a lot of threads I could draw on later)</li>
+<li>focus on making progress on a specific short stories/novella/novel</li>
+<li>do research as necessary</li>
+<li>becoming confident about being a writer (not feeling like an impostor)</li>
+<li>becoming articulate about writing</li>
+<li>engage with other writers (ex. through exchanging and editing each other’s work)</li>
+<li>sharing through email and blog</li>
+<li>submitting stories for publication</li>
+</ul>
+<p>I want to expand the things I write about, and write what I <em>actually</em> want to write. There are some persistent themes in my writing (rational/optimization-minded people becoming disillusioned, or having the tables turned on them in terms of what’s important or valuable in life) that I would rather escape from. I was drawn to those themes as a response to the pressure from work, and they are not the bigger, more beautiful things I would write about if I were in a better state of mind.</p>
+<h2 id="the-bigger-picture">The bigger picture</h2>
+<p>More than just putting in a lot of hours, I want to develop good reading and writing habits that will persist afterwards. For example, I want to “garden” my thoughts, develop thoughtful reactions to things I read, and be able to talk about them.</p>
+<p>Even more broadly, I look forward to a month of self-reflection, discovery, and improvement. The practice of writing for me is more entangled with personal growth than math or computer science research is. My hope is that in freeing up the large amount of time that I would normally be working, that I can devote my full intellectual energy to things that have fallen by the wayside, instead of just the dregs of the energy at the end of the day.</p>
+<p>Stay tuned for updates!</p>
+
+  </div>
+
+    
+
+    <!-- Extension : Sharing buttons @ www.sharethis.com -->
+    <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_reddit_large' displayText='Reddit'></span>
+    <span class='st__large' displayText=''></span>
+
+    <div id="disqus_thread"></div>
+    
+
+
+  
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>The Bookmaking Species, Ken Liu</title>
     <link href="http://holdenlee.github.io/blog/posts/talks/the_bookmaking_species.html" />
     <id>http://holdenlee.github.io/blog/posts/talks/the_bookmaking_species.html</id>
@@ -867,149 +945,6 @@ Any tools like the memex?
 <p>Here are my <a href="https://www.dropbox.com/s/cbwmt7i2o9p0ki0/simons_ml.pdf?dl=0">notes</a> for the first workshop (Foundation of Machine Learning Boot Camp). Source is available on <a href="https://github.com/holdenlee/simons-ml">github</a>.</p>
 <p>I’m also taking notes on seminars and reading groups at the Simons Program in Machine Learning. All notes are available on the <a href="http://simons.squidhive.net/Notes">Simons Program wiki</a>.</p>
 <p>I will update this page as the workshop progresses.</p>
-
-  </div>
-
-    
-
-    <!-- Extension : Sharing buttons @ www.sharethis.com -->
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st__large' displayText=''></span>
-
-    <div id="disqus_thread"></div>
-    
-
-
-  
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Thoughts and links, 11-12/2016</title>
-    <link href="http://holdenlee.github.io/blog/posts/monthly_summaries/12-16.html" />
-    <id>http://holdenlee.github.io/blog/posts/monthly_summaries/12-16.html</id>
-    <published>2017-01-01T00:00:00Z</published>
-    <updated>2017-01-01T00:00:00Z</updated>
-    <summary type="html"><![CDATA[
-<div class="container">
-  <div id="content">
-    <div class="page header">
-      <h1>Thoughts and links, 11-12/2016</h1>
-    </div>
-    
-    <div class="info">
-       <div class="subtitle"><p>Election in perspective, the year in ML</p></div> 
-       
-        <p>Posted: 2017-01-01 
-          , Modified: 2017-01-01 
-	</p>
-      
-       <p>Tags: <a href="/tags/links.html">links</a>, <a href="/tags/election.html">election</a>, <a href="/tags/machine%20learning.html">machine learning</a>, <a href="/tags/AI.html">AI</a></p> 
-    </div>
-    
-  </div>
-  <!--/div-->
-
-  
-
-  <div class="blog-main">
-    <p>See all the links for <a href="https://workflowy.com/s/wL3CyEXpHY#/d1a52d188a8f?q=%232016-11">November</a> and <a href="https://workflowy.com/s/wL3CyEXpHY#/d1a52d188a8f?q=%232016-12">December</a>. (See <a href="4-16.html">April’s post</a> for an explanation of the organization.) Here are some highlights.</p>
-<ul>
-<li>Putting the election in perspective
-<ul>
-<li>Pre-election posts
-<ul>
-<li>Putanumonit: <a href="https://putanumonit.com/2016/11/07/the-day-after-tomorrow/">The day after tomorrow</a></li>
-<li>Slatestarcodex: <a href="http://slatestarcodex.com/2016/11/07/tuesday-shouldnt-change-the-narrative/">Tuesday shouldn’t change the narrative</a></li>
-<li><p><a href="http://www.vox.com/2016/4/21/11451378/smug-american-liberalism">The smug style in American liberalism</a> <a href="http://scrible.com/s/gexAS">h</a></p>
-<blockquote>
-<p>If the smug style can be reduced to a single sentence, it’s, Why are they voting against their own self-interest?…</p>
-<p>If Donald Trump has a chance in November, it is because the knowing will dictate our strategy. Unable to countenance the real causes of their collapse, they will comfort with own impotence by shouting, “Idiots!” again and again, angrier and angrier, the handmaidens of their own destruction.</p>
-<p>The smug style resists empathy for the unknowing. It denies the possibility of a politics whereby those who do not share knowing culture, who do not like the right things or know the Good Facts or recognize the intellectual bankruptcy of their own ideas can be worked with, in spite of these differences, toward a common goal…</p>
-<p>It is impossible, in the long run, to cleave the desire to help people from the duty to respect them…</p>
-<p>The smug style, at bottom, is a failure of empathy. Further: It is a failure to believe that empathy has any value at all.</p>
-</blockquote></li>
-</ul></li>
-<li>This American Life: <a href="https://www.thisamericanlife.org/radio-archives/episode/602/the-sun-comes-up">602 The sun comes up</a> Talking with people from both sides after the election</li>
-<li>Putanumonit: <a href="https://putanumonit.com/2016/11/09/this-is-the-way-the-world-is/">This is the way the world is</a></li>
-<li>Waitbutwhy: <a href="http://waitbutwhy.com/2016/11/its-going-to-be-okay.html">It’s going to be okay</a></li>
-<li><a href="https://www.hifromtheotherside.com/">Hi from the other side</a>: Meet someone who supported the other candidate.</li>
-</ul></li>
-<li><a href="https://www.theguardian.com/books/2016/nov/01/haruki-murakami-hans-christian-anderdersen-prize-speech-outsiders">Haruki Murakami cautions against excluding outsiders</a></li>
-<li>Academic
-<ul>
-<li>Jeremy Kun writes about his <a href="https://medium.com/@jeremyjkun/my-graduate-career-in-math-85fd4efb0fa9">graduate career in math</a>.</li>
-<li><a href="https://chroniclevitae.com/news/836-the-trick-to-being-a-prolific-scholar">Trick to being a prolific scholar</a>: Write your thoughts every day.</li>
-</ul></li>
-<li>Podcasts
-<ul>
-<li>Radiolab:
-<ul>
-<li><a href="http://www.radiolab.org/story/one-vote/">One Vote</a>: India’s goes to great lengths to make sure everyone is within a mile of a polling station. When one vote actually matters.</li>
-<li><a href="http://www.radiolab.org/story/bringing-gamma-back/">Bringing gamma back</a>: Lights flashing 40 times per second can treat Alzheimer’s in rats.</li>
-</ul></li>
-<li>Rationally speaking: <a href="http://rationallyspeakingpodcast.org/show/rs-172-brian-nosek-on-why-science-needs-openness.html">172 Brian Nosek on “Why science needs openness”</a></li>
-<li>Reply all: <a href="https://gimletmedia.com/episode/83-voyage-into-pizzagate/">83 Voyage into Pizzagate</a> How far a conspiracy theory goes. What should Reddit’s role as mediator be?</li>
-<li>Reveal: <a href="https://www.revealnews.org/episodes/the-pentagon-papers-secrets-lies-and-leaks/">The Pentagon Papers: Secrets, lies and leaks</a></li>
-<li>Strangers: (Warning: these stories can be graphic/disturbing)
-<ul>
-<li><a href="http://www.storycentral.org/the-truth/">The Truth</a> - dealing with a husband’s alleged sexual abuse of his children</li>
-<li><a href="http://www.storycentral.org/lex/">Lex</a> - when a son’s insanity endangers his family</li>
-</ul></li>
-<li>The Truth: <a href="http://www.thetruthpodcast.com/story/2015/10/7/naughty-or-nice">Naughty or nice</a> Santa surveillance and quick decision-making</li>
-<li>99% invisible
-<ul>
-<li><a href="http://99percentinvisible.org/episode/ten-letters-president/">235 Ten letters to the president</a>: Obama reads 10 letters every day.</li>
-<li><a href="http://99percentinvisible.org/episode/dollar-store-town-inside-worlds-biggest-wholesale-market/">237 Dollar store town</a>: The economy of Yiwu, China, is based on dollar store goods.</li>
-<li><a href="http://99percentinvisible.org/episode/guano-mania/">239 Guano island</a>: The historical impact of a guano obsession</li>
-</ul></li>
-</ul></li>
-<li>Technology and society
-<ul>
-<li><a href="http://www.economist.com/news/briefing/21711902-worrying-implications-its-social-credit-project-china-invents-digital-totalitarian?frsc=dg%7Cc">China invents the digital totalitarian state</a></li>
-<li><a href="https://www.theguardian.com/technology/2016/dec/16/uber-self-driving-cars-california-illegal-unethical-tactics">Uber defies CA laws</a></li>
-<li><a href="http://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html">The Great AI Awakening</a>: a wonderful synthesis of what enabled Google’s recent breakthrough in machine translation</li>
-<li><a href="https://www.oreilly.com/ideas/the-current-state-of-machine-intelligence-3-0?utm_content=bufferb04ac&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">The current state of machine intelligence 3.0</a></li>
-<li><a href="http://www.newyorker.com/business/currency/silicon-valley-has-an-empathy-vacuum">Silicon valley has an empathy vacuum</a>, <a href="http://www.newyorker.com/magazine/2014/07/07/california-screaming">California screaming</a></li>
-</ul></li>
-<li>Rationality
-<ul>
-<li><a href="https://putanumonit.com/2015/12/17/009-smelly/">I smell a chart</a>: how to spot BS in a pretty chart</li>
-<li><a href="http://waitbutwhy.com/2014/10/religion-for-the-nonreligious.html">Religion for the nonreligious</a></li>
-</ul></li>
-<li>I’ve been fascinated by tulpas, daemons, and other thoughtforms since listening to <a href="https://gimletmedia.com/episode/74-making-friends/">this podcast</a>.
-<ul>
-<li>See /r/tulpas <a href="http://scrible.com/s/06BMS">introduction</a>, <a href="http://scrible.com/s/0eRSS">FAQ</a>.</li>
-<li>See also <a href="https://www.tulpa.info/">tulpa.info</a> and <a href="https://tulpa.io/">tulpa.io</a>.</li>
-<li><a href="http://daemonpage.com/">Daemons</a></li>
-<li><a href="http://astraeasweb.net/plural/mediantalk.html">Medians</a></li>
-<li><a href="https://www.reddit.com/r/Tulpas/comments/3t0z1h/what_are_some_good_tulpa_blogs_both_alive_ones_to/">List of blogs</a>
-<ul>
-<li><a href="http://ofthoughtformsanddaemons.tumblr.com/">Of thoughtforms and daemons</a></li>
-<li><a href="http://ponystasha.tumblr.com/">Tulpas gone wrong</a></li>
-</ul></li>
-</ul></li>
-<li><a href="http://voiceofnature.tumblr.com/post/150051322751/squirrels-and-mushrooms-by-odd-e-kj%C3%B8lstad">Voice of nature: squirrels and mushrooms</a></li>
-<li>The <a href="http://envision-conference.com/">Envision conference</a> on future technology happened at Princeton. <a href="https://workflowy.com/s/wL3CyEXpHY#/be3708f86f05">Notes from the AI panel</a>.</li>
-<li>I went to New York for a weekend:
-<ul>
-<li>I visited the <a href="http://momath.org/">Museum of Mathematics</a> which I found delightul. This led me to getting an Ultimate Burr set for Christmas. A <a href="http://www.robspuzzlepage.com/interlocking.htm#trad">comprehensive guide to Burr puzzles</a>.</li>
-<li>I had a great time at the <a href="http://secularsolstice.com/">Secular Solstice</a> (like a “religious” celebration for the rationalist). Some of the <a href="https://humanistculture.bandcamp.com/album/brighter-than-today-a-secular-solstice">songs</a>.</li>
-<li>I attended my first Esperanto meetup in <a href="https://www.meetup.com/EsperantoSocietyOfNewYork/">NYC</a> and was pleasantly surpised by how much I could comprehend with 3 months of learning.</li>
-</ul></li>
-<li>Books
-<ul>
-<li><a href="https://www.goodreads.com/book/show/7711491-gold-boy-emerald-girl">Gold boy emerald girl, Yiyun Li</a> <a href="https://workflowy.com/s/4qkO9xWz4M#/c488a2116104">detailed notes</a>, <a href="https://docs.google.com/document/d/1v-_YXJa6kQ6bwZ5nYcFecVToYbDI26yywrkc0oyrQuY/edit?usp=sharing">summary notes</a>: Short story collection, set in China</li>
-<li><a href="https://www.goodreads.com/book/show/20518872-the-three-body-problem">Three body problem, Cixin Liu</a>: How does humanity respond to the coming of alien overlords? Set against the backdrop of China’s Cultural Revolution.</li>
-<li><a href="https://www.goodreads.com/book/show/12961964-the-handmaid-s-tale">The Handmaid’s Tale</a></li>
-</ul></li>
-</ul>
 
   </div>
 
