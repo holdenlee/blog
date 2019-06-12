@@ -56,6 +56,7 @@ I collaborated on scribing MAT529 and MAT597 notes with [Kiran Vodrahalli](https
 
 ## Other talks by date
 
+* Crash course in complex analysis, geared towards computer scientists ([post](http://holdenlee.github.io/blog/posts/math/analysis/complex_cs.html), [notes](https://www.dropbox.com/s/fn854rj0j98ij6d/complex_cs.pdf?dl=0))
 * Wilks lecture 2016, [On computational thinking, inferential thinking, and data science](https://www.dropbox.com/s/ohfzj4k2wzd292e/wilks2016.pdf?dl=0) by Michael Jordan
 * ITCS 2016 ([notes for first half](https://www.dropbox.com/s/u00bq061i32wjrq/itcs2016.pdf?dl=0))
 * Restriction phenomenon, Larry Guth ([notes](https://www.dropbox.com/s/efr4nyt64gc7sbk/10-19-larry-guth.pdf?dl=0)) - 10/19/15
