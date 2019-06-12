@@ -3,7 +3,7 @@ title: Month of Writing, Part 0
 subtitle: Starting out
 published: 2019-06-11
 modified: 2019-06-11
-tags: fiction
+tags: writing
 ---
 
 I'm spending one month focusing on writing! If you want to stay updated on my work, you can request to join the [Holden's Readers googlegroup](https://groups.google.com/forum/#!forum/holden-readers).
