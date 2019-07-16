@@ -30,16 +30,16 @@ I want this month to not just be focused of finishing stories, but instead on be
 + do research as necessary
 + becoming confident about being a writer (not feeling like an impostor)
 + becoming articulate about writing
-+ engage with other writers (ex. through exchanging and editing each other's work)
++ engaging with other writers (ex. through exchanging and editing each other's work)
 + sharing through email and blog
 + submitting stories for publication
 
-I want to expand the things I write about, and write what I *actually* want to write. There are some persistent themes in my writing (rational/optimization-minded people becoming disillusioned, or having the tables turned on them in terms of what's important or valuable in life) that I would rather escape from. I was drawn to those themes as a response to the pressure from work, and they are not the bigger, more beautiful things I would write about if I were in a better state of mind.
+I want to expand the things I write about, and write what I *actually* want to write. There are some persistent themes in my writing (rational/optimization-minded people becoming disillusioned, or having the tables turned on them in terms of what's important or valuable in life) that I would rather escape from. I was drawn to those themes as a response to the pressure from work, and they are not the bigger, more beautiful things I would write about if I were in a freer state of mind.
 
 # The bigger picture
 
 More than just putting in a lot of hours, I want to develop good reading and writing habits that will persist afterwards. For example, I want to "garden" my thoughts, develop thoughtful reactions to things I read, and be able to talk about them.
 
-Even more broadly, I look forward to a month of self-reflection, discovery, and improvement. The practice of writing for me is more entangled with personal growth than math or computer science research is. My hope is that in freeing up the large amount of time that I would normally be working, that I can devote my full intellectual energy to things that have fallen by the wayside, instead of just the dregs of the energy at the end of the day.
+Even more broadly, I look forward to a month of self-reflection, discovery, and improvement. The practice of writing for me is more entangled with personal growth than math or computer science research is. My hope is that in freeing up the large amount of time that I would normally be working, that I can devote my full intellectual energy - rather than the dregs of the energy at the end of the day - to things that have fallen by the wayside.
 
 Stay tuned for updates!

@@ -1,13 +1,12 @@
 ---
 title: Creations
 ---
-
 (\*) **Check out my current writing project, [Philosophocle](http://holdenlee.github.io/philosophocle/)**!
 
 Below are stories/poems I have finished and information about ones that I am working on, in chronological order. I'd love to hear comments (including criticisms)! Just comment on the googledocs or send me an email at [oldheneel@gmail.com](mailto:oldheneel@gmail.com). If you would like to preview and give feedback on work-in-progress, please join the [Holden's Readers googlegroup](https://groups.google.com/forum/#!forum/holden-readers).
 
 <center>
-<img src="/images/wifloflos.jpg">
+<img src="pics/wifloflos.jpg">
 
 *Read about [cloud fairies](https://docs.google.com/document/d/1sAF1ijUXiyCclrEly-UL9o7leuumVkaXwdeYmrzVv5Q).*
 </center>
@@ -33,6 +32,7 @@ Also check out my [deviant art](http://holdenlee.deviantart.com/).
 * (\*) [**Three**](https://docs.google.com/document/d/1nwi9UP50ZKmY5X9WlpeN7yiVMwpsCm_-wxwFi0_s7eU/edit) - A math olympiad coming-of-age story
 * (\*) [**Cloud fairies**](https://docs.google.com/document/d/1sAF1ijUXiyCclrEly-UL9o7leuumVkaXwdeYmrzVv5Q) (5/2017) - A myth about cloud fairies. [Recording](https://soundcloud.com/holden-lee-36529191/cloud-fairies) from Open Mic night.
 	* I would like to turn this into a picture book, and am looking for an illustrator. Email me if interested!
+* [**The heart of time**](https://docs.google.com/document/d/1zYMgu4pjDTWq_MMbSpI8w1GpsboEkWUHYeZdgmOlUEI/edit?usp=sharing) (3/2019) - Conservation of time says that however much one person is sped up, another must be slowed down by the same amount. Hence, Chronopolis is split into fasttown and slowtown. A fasttown-slowtown couple work together to break the system.
 
 ## Poetry
 
