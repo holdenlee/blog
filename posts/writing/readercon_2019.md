@@ -17,6 +17,8 @@ Disclaimer: I've paraphrased the panel discussion and author talks, and apologiz
 
 Collected list of online resources: [Ralan.com (list of markets)](https://www.ralan.com/), [Odyssey writing workshop](http://www.odysseyworkshop.org/), [Writing the other](https://writingtheother.com/), [Critters (online critique)](http://critters.org/), [Codex writers (online critique and support)](https://www.codexwriters.com/).
 
+[Some media from Readercon](http://www.readercon.org/media.htm).
+
 <!-- Raw notes: https://workflowy.com/s/readercon-2019/q370VHlWycZSE0RK -->
 
 # Impressions
