@@ -28,7 +28,7 @@ I learned about Readercon from hanging out with the [Brooklyn Speculative Fictio
 It's especially a great experience for an aspiring writer, because you get to connect with the community as well as leave with tools to get better, ideas to pursue, and books to read. Coming back from Readercon I feel newly motivated to write.
 
 I've found everyone really friendly, passionate, and dedicated to their work. I got to talk to Neil Clarke, editor of [Clarkesworld magazine](http://clarkesworldmagazine.com/), who was editor of the magazine for 13 years (while having a day job for the first 11 years) and goes through 1100 submissions a month; and Jeanne Cavelos, who went from astrophysicist to writer and spends a lot of time teaching writers through the [Odyssey writing workshops](http://www.odysseyworkshop.org/). 
-I always imagined editors as hostile people in my head, but the opposite was true: they wouldn't spend so much time on their job if they didn't love their work, and they wanted to see writers succeed. Being rejected was an universal experience that people celebrated: authors talked about having a thousand rejection letters; editors expressed their delight at having someone succeed on the seventy-something try. Another universal was having to find the time and energy to write while having a job - whether it's one that they're equally invested in (I was cheered to see quite a few scientists!), a job just to get money, or a job they would like to escape. A lot of people talk about having been mentored in their career, so that they *have* to pass it on. There was an acknowledgement of the difficulty of making it, as well as an infectious determination to persevere.[^f1]
+I always imagined editors as hostile people in my head, but the opposite was true: they wouldn't spend so much time on their job if they didn't love their work, and they wanted to see writers succeed. Being rejected was an universal experience that people celebrated: authors talked about having a thousand rejection letters; editors expressed their delight at having someone succeed on the seventy-something try. Another universal was having to find the time and energy to write while having a job - whether it's one that they're equally invested in (I was cheered to see quite a few scientists!), a job just to make a living, or a job they would like to escape. Many people talked about having been mentored in their career, and feeling compelled to pass it on. There was an acknowledgement of the difficulty of making it, as well as an infectious determination to persevere.[^f1]
 
 [^f1]: I feel like this is how any professional community - of experts and aspirants - should be, and yet I've hardly found it anywhere else. Perhaps it's because there are so many roads leading away from science fiction and fantasy that the people who are here really love it (it's not a good way to get money; it's not a good way to get conventional respect - it's not as respected as literary fiction; for example, several people mentioned being nudged away from genre fiction in college and finding their way back). <!--I think the academic community has a lot to learn from this!-->
 
@@ -74,13 +74,13 @@ CV:
 As genres, science fiction and fantasy often have trouble dealing with class because the hero is often the one who has enough spare time to pursue a plot or mystery. People who are not part of the elite (e.g., the nobility or technical elite) don't have time to figure out what's going on, only the time to face things as they come. Fantasy especially has trouble with this because the nobility are the "movers and shakers of history"; at best you get the middle class ("fat hobbits").
 
 CT: 
-A novel has to pick a person or small group to focus on to some climax, but actual history is seldom shaped by a few people. Tt's often a large group, with many people who don't get named. Speculative fiction could do a lot to explore movements: how large groups of people work together to change society. The Dispossessed by Ursula Le Guin does a good job.
+A novel has to follow a person or small group to some climax, but actual history is seldom shaped by a few people. It's more often shaped by a large group, including many people who don't get named. Speculative fiction could do a lot to explore movements: how large groups of people work together to change society. The Dispossessed by Ursula Le Guin does a good job.
 
 MO: 
 We act as if we're past monarchy, but a lot of things in our world came from the Victorian age. For example, breakfast buffets in hotels are an aristocratic tradition.
 
 CV: 
-We are still in a oligarchy; we are in a new gilded age. We have been "convinced as a culture to cheerlead capitalism, and specific players in capitalism." See how much geek fandom is invested in the Avengers endgame. Disney doesn't care about us! Media companies are making a ridiculous amount of money convincing us to consume their stuff as a fun hobby. Corporations are "making us complicit in our own oppression, and [making us] find it entertaining."
+We are still in a oligarchy; we are in a new gilded age. We have been "convinced as a culture to cheerlead capitalism, and specific players in capitalism." Consider how much geek fandom is invested in the Avengers endgame. Disney doesn't care about us! Media companies are making a ridiculous amount of money convincing us to consume their stuff as a fun hobby. Corporations are "making us complicit in our own oppression, and [making us] find it entertaining."
 
 SS: It's difficult to write a book about work, and about how politics works at a ground level. I think we can write more interesting novels if we can concentrate on how economic systems really work.
 
@@ -105,7 +105,7 @@ But this kind of heroism doesn't have to be boring - think about the struggle to
 
 CV: Pregnancy shows up in horror stories. But childbirth and early childrearing are ignored, and used as a way to get rid of a woman character. 
 
-Breastfeeding is a class marker that has switched. It used to be that wealthy people used baby formula; breastfeeding was seen as vulgar, obscene. Now, it's wealthy women who have the time to breastfeed, and the poor who use a formula because they have to go back to work.
+Breastfeeding is a class marker that has switched. It used to be that wealthy people used baby formula; breastfeeding was seen as vulgar and obscene. Now, it's wealthy women who have the time to breastfeed, and the poor who use a formula because they have to go back to work.
 
 Even women don't write about these things because they think it's not novel-worthy. Similarly, war is worthy and education is not. (Though, education and childrearing are talked about in AI stories.) 
 
@@ -596,7 +596,7 @@ A: On my theory about time traveling queers: A disproportionate number of time t
 + [Light Brigade](https://www.goodreads.com/book/show/40523931-the-light-brigade) <!-- Kameron Hurley-->
 + [Psychology of time travel](https://www.goodreads.com/book/show/41035725-the-psychology-of-time-travel)
 + [Alice Payne Arrives](https://www.goodreads.com/book/show/39332603-alice-payne-arrives)
-+ [Gods monsters and lucky peach](https://www.goodreads.com/book/show/36187158-gods-monsters-and-the-lucky-peach?ac=1&from_search=true)
++ [Gods, Monsters, and Lucky Peach](https://www.goodreads.com/book/show/36187158-gods-monsters-and-the-lucky-peach?ac=1&from_search=true)
 + [The future of another timeline](https://www.goodreads.com/book/show/43263807-the-future-of-another-timeline?ac=1&from_search=true)
 
 I asked the authors when they wrote the stories, It was all in 2016. Everyone was talking about how we're in the worst timeline: David Bowie died, the US election. Brexit happened when we were writing the novella.
