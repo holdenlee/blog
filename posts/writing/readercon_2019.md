@@ -208,8 +208,12 @@ CM: I like to focus on places with intercultural interactions, like the  Mediter
 
 ## Latinx authors break down the wall (Fri. 2pm)
 
+<!-- The panelists talked about their own experiences in growing up, their experiences of racism towards or within the Latinx community, and about the history of immigration to the US. Finally, the talked about the role of fiction in helping break those stereotypes.-->
+
 **Panelists:** Lisa Bradley (moderator), Carlos
-Hernandez, José Pablo Iriarte, Julia Rios, Sabrina Vourvoulias
+Hernandez, José Pablo Iriarte, Julia Rios
+
+<!--, Sabrina Vourvoulias-->
 
 **Description:** Isolationist governments portray immigrants (and citizens perceived as
 foreigners) as vectors for disease, crime, and terrorism. Currently, the U.S.
@@ -222,46 +226,49 @@ possibilities for future stories.
 
 **Highlights from panel discussion:**
 
-CH: After Fidel Castro took power, the US had the [wet foot dry foot](https://en.wikipedia.org/wiki/Wet_feet,_dry_feet_policy) policy: If a Cuban could put one food on American soil, they were allowed in and embraced, and if they were caught on the strait, they were sent back. (The policy was recently rescinded by the Obama administration.) After Castro came to power, the status of Cubans went from being perceived as exoticized like other Caribbean people, to freedom fighters.
+CH: After Fidel Castro took power, the US had the [wet foot dry foot](https://en.wikipedia.org/wiki/Wet_feet,_dry_feet_policy) policy: If a Cuban could put one foot on American soil, they were allowed in and embraced, and if they were caught on the strait, they were sent back. (The policy was recently rescinded by the Obama administration.) After Castro came to power, Cubans went from being perceived as exotic like other Caribbean people, to being perceived as freedom fighters.
 This gave Cubans a position of privilege compared to other Latin Americans, though they still faced racism.
 
 White is not a color; it is an ideological position. The Irish were not considered white for a long time.
 
-JPI: There are differences in status within the Miami Cuban population - people divided themselves based on who had left the country earlier
+JPI: There are differences in status within the Miami Cuban population - people divided themselves based on who had left the country earlier.
 
-JR: My father is from Mexico, but in our family we internalized the idea that the best way to be successful is to be as white as possible. My parents didn't want to teach us Spanish. 
+JR: My father is from Mexico, but in our family we internalized the idea that the best way to be successful is to be as white as possible. My parents didn't want to teach us Spanish. My dad wanted me to know my heritage without being part of it.
 
 *LB: Where we settle in the US has an effect on how we're treated.*
 
-CH: Florida is its own brand of weird. Google auto-complete "A Florida man." I grew up in Sarasota. The average age is deceased (older than the average life expectancy). It is the high school drinking capital. People have set up microwalls with each other. There is homophobia and lvels due to racism based on skin color. 
+CH: Florida is its own brand of weird - ask Google to auto-complete "A Florida man." I grew up in Sarasota. The average age is deceased (older than the average life expectancy). It is the high school drinking capital. People there have set up microwalls with each other. There is homophobia and different levels of racism based on skin color. 
 
-JR: There's a difference between rural and urban. Los Angeles has a giant Mex population, with more Mexican-Americans than whites, but it still feeds to white privilege. 
+JR: There's a difference between rural and urban communities. Los Angeles has a giant Mexican population, with more Mexican-Americans than whites, but it still feeds to white privilege. 
 
-Urban communities benefit from having a big community, so they have newspapers, festivals, activism. We moved to rural Southern California. It is very red and has a significant Latinx population - farm workers. White people own farms, and Latinx people work. 
+Urban communities benefit from having a big community, through having newspapers, festivals, and activism. We moved to rural Southern California. It is very red and has a significant Latinx population, much of which was farm workers. White people own farms, and Latinx people work. 
 
-I picked strawberries in the summer. Latinx workers were devalued and paid little (people who were much better at picking than me may have been paid less than me because they thought I was white). Urban - more community, ex. Opinión newspaper, festivals, etc. 
-
-My dad want me to know my heritage without being part of it.
+I picked strawberries in the summer. Latinx workers were devalued and paid little. People who were much better at picking than me may have been paid less because the owners thought I was white. 
+<!--Urban - more community, ex. Opinión newspaper, festivals, etc. -->
 
 *LB: Children of immigrants are part of two different cultures. What kinds of conflicts and identity issues arise?*
 
-JPI: I keep writing about children of immigrants "stuck between two cultures." There are expectations to honor our heritage, but it conflicts with the dominant culture. I grew up in the "shadow of Havana," in its recreation in Florida, but I have never been to Cuba. I feel a loyalty to the culture, obligations to a land I never stepped foot on. If I traveled there, I would travel as a tourist.
+JPI: I keep writing about children of immigrants "stuck between two cultures." We are expected to honor our heritage, but it conflicts with the dominant culture. I grew up in the "shadow of Havana," in its re-creation in Florida. I have never been to Cuba, and if I traveled there, it would be as a tourist, but I feel a loyalty to the culture, and obligations to the land. <!-- I never stepped foot on. If I traveled there, I would travel as a tourist.-->
 
-CH: I visited Cuba in 1997 as part of an educational exchange, and brought back $200 worth of cuban cigars, legally. I saw the devastation of Havana. It looks like a slow-motion bombing had happened over 4 decades. The Cuba that existed is preserved in Miami now - the idealistic version, with money. The "three failures" of the revolution are breakfast, lunch, and dinner.
+CH: I visited Cuba in 1997 as part of an educational exchange, and brought back $200 worth of cuban cigars, legally. I saw the devastation of Havana. It looks like a slow-motion bombing had happened over four decades. The Cuba that existed is preserved in Miami now - the idealistic version, with money. It's said that the "three failures" of the revolution are breakfast, lunch, and dinner.
 
-JR: I'm half-Mexican; my mother is white, Protestant. I didn't fit with either side of my family. People who spoke Spanish first were defensive, lashing out at anyone who doesn't speak Spanish. When you feel powerless, you gain the only power you can, by lashing out at other people.
+JR: I'm half-Mexican; my mother is white and Protestant. I didn't fit with either side of my family. 
 
-I took Spanish in high school. Father yelled at me when I made mistakes; I had a big mental block from learning the language for a long time.
+People who spoke Spanish as their first language were often defensive, lashing out at anyone who doesn't speak Spanish. When you feel powerless, you gain the only power you can, by lashing out at other people.
+
+I took Spanish in high school. My father yelled at me when I made mistakes; I had a big mental block from learning the language for a long time.
 
 JR: My ideal world is a world without borders. Open borders create economic prosperity. After Brexit, people didn't actually want to leave, because no other deal looks good; they need immigrants for industry.
 
-There was a community meeting on immigration policies in Somerville. The major said, we love immigrants, and we need you to work in the hotel and casino that's opening. We want you here - and out of sight.
+There was a community meeting on immigration policies in Somerville. The major said: we love immigrants, and we need you to work in the hotel and casino that's opening. The meaning was: We want you here - and out of sight.
 
 JR: We need fiction showing Latinx characters being human, and we need a variety of voices, for a chorus effect.
 
 JPI: Studies show that readers are more capable of empathy; they learn to live outside themselves. Marginalized communities get value from seeing themselves in print. Non-marginalized readers  get value fromn seeing us in print and identifying with us.
 
-JR: People change when they see people who they don't think they share an identity with, and then see themselves in those people.
+JR: People change when they see others who don't seem to share an identity with - 
+<!--they don't think they share an identity with,-->
+and then see themselves in those people.
 
 CH: Fiction plays the long game. A book here now can keep talking 75 years from now, reverberating and inspiring others to write things.
 
@@ -269,7 +276,7 @@ There are things to work on inside our communities: the bullshit machismo that p
 
 JPI: Criticism is easier to take from people within the community.
 
-JR: Racism is not just a problem here; it's also in Latinx countries.  When a country is colonized, being like the colonizer is ideal, so people prized whiteness. "Limpia de la sangre," purity of the blood, is racism based on how much Spanish/Indio heritage one has.
+JR: Racism is not just a problem in the US; it's also in Latinx countries.  When a country is colonized, being like the colonizer is ideal, so people prized whiteness. "Limpia de la sangre," purity of the blood, is racism based on how much Spanish/Indio heritage one has.
 
 Check out [Polloman](https://www.legendofpolloman.com/), a Mexican mythology comic.
 
@@ -428,7 +435,7 @@ Years ago, when the submission numbers were lower, Clarke did some research on d
 
 He gave out a survey to 1000 of the authors, asking them to read the five authors that most influenced them. He found that he was more likely to publish people who read authors he was unfamiliar with, and women were more likely to read different authors from him.
 <!-- Ursula Le Guin, Ray bradbury, Stephen King were common and good-->
-Lesson: reading broadly works. The more sources you can pull from, the less likely you'll write something the editor has seen before.
+The lesson is that reading broadly works. The more sources you can pull from, the less likely you'll write something the editor has seen before.
 
 <!-- pick stories that work well together, like a mixtape-->
 There are people who don't get published until their 70th submission.
@@ -457,7 +464,7 @@ CA: There is a range of contradictions and varieties in a small area. For exampl
 
 + The Maya in Yucatan had the *milpa* system of farming; it's the only sustainable way to farm with thin topsoil atop permeable limestone permeable, and it still persists now. 
 + The Aztecs (?) had an urban empire, and were in tune with the environment. Cortés wrote about a city twice as big as Madrid and clean, with free education.
-+ The Chichimekas (?) are nomadic hunter-gatherers, semi-pastoralists, who fought a 50-year long guerrilla war with the Spanish despite being relatively stone-age people.
++ The Chichimecas (?) are nomadic hunter-gatherers, semi-pastoralists, who fought a 50-year long guerrilla war with the Spanish despite being relatively stone-age people.
 
 CG: There is an amazing enchanted landscape, with ruins old as the Roman empire, enormous geometrical symbols on the landscape. When you walk across it you can't see the other end. They reproduced the same designs hundreds of miles apart, patterns of circles and squares. It's the fabled land of Ohio! <!--Indian mounds.--> These are symbols from a people fascinated with geometry and measurements. They knew math and astronomy. What message were they sending? It's a marvelous mystery.
 
@@ -890,7 +897,7 @@ MK: There are people you can approach to ask. The best resource is the local lib
 
 CH: I've been setting up google hangouts with writing friends. Once a month for 2 hours, we check in and get to work. We bounce ideas, and pass each other googledocs. 
 <!--Function - bounce ideas. Ready to be read. Pass googledoc between us. -->
-For the check-in, we walk about what's going on emotionally, like if we've had an upsetting week, etc. What's going on with my writing, where I am at? 
+For the check-in, we talk about what's going on emotionally, like if we've had an upsetting week, etc. What's going on with my writing, where I am at? 
 <!--Do you have thoughts? Back-and-forth on possibilities. We can see each other.-->
 <!--M: Great way to connect with writers not in local area. Chat for 5, write for 55. -->
 
@@ -908,7 +915,7 @@ MK: [Codex writers](https://www.codexwriters.com/) has a straightforward applica
  
 RC: I emailed an author, I love your work, and I'm writing with a story with an element similar to yours. That started a 2-month-long correspondence.
 
-MK: SFWA has a mentoring program. 
+MK: SFWA has a [mentoring program](https://docs.google.com/document/d/1qdeX6QB_lxacHuqrq1I9uvTXZE1AYOGLT2Tdao83XAI/edit). 
 
 ## From Seed to Story: How to Escape the Slush Pile (Sun. 1pm)
 
