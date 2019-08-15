@@ -161,17 +161,19 @@ Medieval Europe was a hotbed of interaction among people of different cultures a
 
 **Highlights from panel discussion:**
 
-CA: The image of Europe as a sequesterd place during the Middle Ages, not influenced by other lands, is absurd. A simple version of history is an agenda.
+*Inventing the narrative of the Middle Ages*
+
+CA: The image of Europe as a sequestered place during the Middle Ages, not influenced by other lands, is absurd. A simple version of history is an agenda.
 
 CM: Medievalism in pop culture tells us less about medieval world, and more about the ecology where it's written.
 Check out [Shiloh Carroll's book on medievalism in A Song of Ice and Fire](https://www.goodreads.com/book/show/35543040-medievalism-in-a-song-of-ice-and-fire-and-game-of-thrones).
 <!-- CM: Shylo Carol' examines medievalism in Song of Ice and Fire - writers and directors fall into traditional views and tropes #book -->
 
-FR/RK(?): MA is always being reinvented to mirror what people are looking for at the time. The very idea of "middle" started as pejorative. It was coined during the Italian Renaissance, to imply all the "middle" stuff between them the Roman empire was bad.
+FR: The Middle Ages is always being reinvented to mirror what people are looking for at the time. The very idea of "middle" started as pejorative. It was coined during the Italian Renaissance, to imply all the "middle" stuff between them the Roman empire was bad.
 
 On the flip side, countries often use their "history" in the middle ages for the sake of nation-building, for example, the [Kalevala](https://en.wikipedia.org/wiki/Kalevala) from Finland.
 
-CA: A lot of Russian and Muscovite culture comes from Mongol/steppe influence. As James Halper said, even hostilities require a degree of intimacy.
+CA: Saying that Mongols are oppressors is a simplistic narrative. A lot of Russian and Muscovite culture comes from Mongol/steppe influence. As James Halper said, even hostilities require a degree of intimacy. "You sacrifice accuracy for a narrative you find compelling... Fantasy is a key part of history."
 
 RK: Rulers create backstories for their countries to legitimize their rule. The idea of "national types/characters" is that the place a person is from tells you something about them.
 
@@ -192,15 +194,15 @@ FR: The name King Arthur Flour came from the association of medievalism with whi
 
 JN: The white nationalist website Stormfront gives a history of the white race, leaving out everyone who's not white; it constructs a reactionary version of the middle ages. The son of the cofounder read up on the middle ages and defected from his family and the movement, getting a degree in medieval studies.
 
-RK: Use facts. Anyone open to facts will have to change their mind; facts overwhelm simplistic stories.
+RK: Respond using facts! Anyone open to facts will have to change their mind; facts overwhelm simplistic stories.
 
-CA: Check out primary sources from other countries interacting with medieval Europe. A great book is [The Ultimate Ambition in the Arts of Erudition by Al-Nuwayri](https://www.penguinrandomhouse.com/books/316708/the-ultimate-ambition-in-the-arts-of-erudition-by-shihab-al-din-al-nuwayri-edited-translated-and-with-an-introduction-and-notes-by-elias-muhanna/9780143107484/). Open to any page and it's fascinating; you see a historical account of a battle, how to cure a hangover, erotic poetry next to an article denouncing erotic poetry.
+CA: Check out primary sources from other countries interacting with medieval Europe. A great book is [The Ultimate Ambition in the Arts of Erudition by Al-Nuwayri](https://www.penguinrandomhouse.com/books/316708/the-ultimate-ambition-in-the-arts-of-erudition-by-shihab-al-din-al-nuwayri-edited-translated-and-with-an-introduction-and-notes-by-elias-muhanna/9780143107484/). Open to any page and it's fascinating; you see a historical account of a battle, or how to cure a hangover, or erotic poetry next to an article denouncing erotic poetry.
 
 *Q: Tell us about another culture that has interacted with medieval Europe.*
 
-FR: I want to point out the Jewish contribution. When I was starting grad school, nobody was writing about it. There are huge amounts waiting for translation to be accessible - the Yiddish King Arthur story, story of the Jewish troubadours. 
+FR: I want to point out the Jewish contribution. When I was starting grad school, nobody was writing about it. There are huge amounts waiting for translation to be accessible, such as the Yiddish King Arthur story, and the story of the Jewish troubadours. 
 
-RK: The influence of Arabic literature. Research in the 90's and 2000's have revealed how much interaction there is.
+RK: Arabic literature had a large influence. Research in the 1990's and 2000's revealed the extent of the interaction.
 
 JN: I'm fascinated with individuals who cross borders. In 1102, a Sudanese man accompanied crusaders to North France, and became the hangman of Lyon, France. He was even more [Black Adder](https://en.wikipedia.org/wiki/The_Black_Adder) than Black Adder. The crusader was killed by a mob, and there was no evidence of what happened to the hangman (named John). He was wandering around Northern France. Someone needs to write this story!
 
@@ -208,7 +210,7 @@ CM: I like to focus on places with intercultural interactions, like the  Mediter
 
 ## Latinx authors break down the wall (Fri. 2pm)
 
-<!-- The panelists talked about their own experiences in growing up, their experiences of racism towards or within the Latinx community, and about the history of immigration to the US. Finally, the talked about the role of fiction in helping break those stereotypes.-->
+<!-- The panelists talked about their own experiences in growing up, their experiences of racism towards or within the Latinx community, and about the history of immigration to the US. Finally, they talked about the role of fiction in helping break those stereotypes.-->
 
 **Panelists:** Lisa Bradley (moderator), Carlos
 Hernandez, José Pablo Iriarte, Julia Rios
@@ -463,8 +465,8 @@ CG: The origin of science fiction and fantasy can be traced to travel literature
 CA: There is a range of contradictions and varieties in a small area. For example, going from Yucatan to the border with Texas: 
 
 + The Maya in Yucatan had the *milpa* system of farming; it's the only sustainable way to farm with thin topsoil atop permeable limestone permeable, and it still persists now. 
-+ The Aztecs (?) had an urban empire, and were in tune with the environment. Cortés wrote about a city twice as big as Madrid and clean, with free education.
-+ The Chichimecas (?) are nomadic hunter-gatherers, semi-pastoralists, who fought a 50-year long guerrilla war with the Spanish despite being relatively stone-age people.
++ The Aztecs (?) had an urban empire in tune with the environment. Cortés wrote about a city twice as big as Madrid and clean, with free education.
++ The Chichimecas are nomadic hunter-gatherers, semi-pastoralists, who fought a 50-year long guerrilla war with the Spanish despite being relatively stone-age people.
 
 CG: There is an amazing enchanted landscape, with ruins old as the Roman empire, enormous geometrical symbols on the landscape. When you walk across it you can't see the other end. They reproduced the same designs hundreds of miles apart, patterns of circles and squares. It's the fabled land of Ohio! <!--Indian mounds.--> These are symbols from a people fascinated with geometry and measurements. They knew math and astronomy. What message were they sending? It's a marvelous mystery.
 
@@ -472,14 +474,14 @@ CG: There is an amazing enchanted landscape, with ruins old as the Roman empire,
 
 *How do you approach research?*
 
-WW: Look at the literature of people I'm writing about. This gives the internal view. Read [Writing the Other](https://www.goodreads.com/book/show/1760104.Writing_the_Other?ac=1&from_search=true).
+WW: I look at the literature of people I'm writing about. This gives the internal view. I recommend Cynthia Ward and Nisi Shawl's book [Writing the Other](https://www.goodreads.com/book/show/1760104.Writing_the_Other?ac=1&from_search=true).
 
 CM: Stay abreast of recent scholarship. Folks are trying to make it broadly accessible.
 
 CG: There is no substitute for visiting the people themselves. Find differences in attitudes, in the way people look at the world. 
 <!-- It frames what you're thinking in a different way.-->
 
-CG: Non-western civilizations have different ways of telling stories - different narrative structure and language; it's non-Aristotelian. Western readers find it deeply unsatisfying. Just by transforming them to stories satisfying to Western readers, we are distorting and colonizing them.
+CG: Non-western civilizations have different ways of telling stories, different narrative structure and language; it's non-Aristotelian. Western readers find it deeply unsatisfying. Just by transforming them to stories satisfying to Western readers, we are distorting and colonizing them.
 
 CG (?): My research is on Brazil. I find a ton of stuff searching in Portuguese on YouTube. People film their local festivals. At the local market there will be someone selling DVD's. They're wicked good.
 <!-- 
