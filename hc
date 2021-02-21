@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ghc -i/C:/Users/oldhe/Dropbox/website/hakyll/src -threaded --make $1.hs
+ghc -i/mnt/c/Users/holden/Documents/web/blog-source/src -threaded --make $1.hs

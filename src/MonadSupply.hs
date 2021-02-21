@@ -24,24 +24,30 @@ module MonadSupply
 import Control.Monad
 import Control.Monad.Identity
 import Control.Monad.State
+import Control.Monad.Fail
  
 newtype SupplyT s m a = SupplyT (StateT [s] m a)
     deriving (Functor, Applicative, Monad, MonadTrans, MonadIO)
- 
+
 newtype Supply s a = Supply (SupplyT s Identity a)
     deriving (Functor, Applicative, Monad, MonadSupply s)
  
 class Monad m => MonadSupply s m | m -> s where
     supply :: m s
     peekS :: m s
- 
-instance Monad m => MonadSupply s (SupplyT s m) where
+
+instance (Monad m) => MonadSupply s (SupplyT s m) where
     supply = SupplyT $ do
-                (x:xs) <- get
+                li <- get
+                let x = head li
+                let xs = tail li
+                -- (x:xs) <- get
                 put xs
                 return x
     peekS = SupplyT $ do
-      (x:xs) <- get
+      li <- get
+      let x = head li
+      -- (x:xs) <- get
       return x
  
 evalSupplyT (SupplyT s) supp = evalStateT s supp
