@@ -8,7 +8,7 @@ version:             0.1.0.0
 license:             MIT
 license-file:        LICENSE
 author:              Holden Lee
-maintainer:          holdenl@princeton.edu
+maintainer:          oldheneel@gmail.com
 -- copyright:           
 category:            Web
 build-type:          Simple

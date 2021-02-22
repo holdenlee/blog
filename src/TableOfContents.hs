@@ -8,12 +8,17 @@ import           Hakyll
 import           Text.Pandoc.Options
 import           Control.Monad
 import           Data.List
+--import qualified Text.DocTemplates.Internal as TDI
+--import qualified Data.Text.Internal as DTI
 
 compileTOCVersion = version "toc" $
    compile $ pandocCompilerWith defaultHakyllReaderOptions
                                 defaultHakyllWriterOptions {
                                     writerTableOfContents = True
-                                  , writerTemplate = Just "$if(toc)$ $toc$ $endif$"
+                                  , writerTemplate = ( "$if(toc)$ $toc$ $endif$")
+								  -- Just 
+								  -- readTemplate
+								  -- :: TDI.Template DTI.Text
                                   -- , writerStandalone = True
                                   }
 

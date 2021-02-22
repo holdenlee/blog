@@ -24,7 +24,7 @@ module MonadSupply
 import Control.Monad
 import Control.Monad.Identity
 import Control.Monad.State
-import Control.Monad.Fail
+-- import Control.Monad.Fail
  
 newtype SupplyT s m a = SupplyT (StateT [s] m a)
     deriving (Functor, Applicative, Monad, MonadTrans, MonadIO)
