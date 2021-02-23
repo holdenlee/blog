@@ -38,16 +38,16 @@ class Monad m => MonadSupply s m | m -> s where
 
 instance (Monad m) => MonadSupply s (SupplyT s m) where
     supply = SupplyT $ do
-                li <- get
-                let x = head li
-                let xs = tail li
-                -- (x:xs) <- get
+                --li <- get
+                --let x = head li
+                --let xs = tail li
+                (x:xs) <- get
                 put xs
                 return x
     peekS = SupplyT $ do
-      li <- get
-      let x = head li
-      -- (x:xs) <- get
+      --li <- get
+      --let x = head li
+      (x:xs) <- get
       return x
  
 evalSupplyT (SupplyT s) supp = evalStateT s supp

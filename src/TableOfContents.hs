@@ -15,7 +15,7 @@ compileTOCVersion = version "toc" $
    compile $ pandocCompilerWith defaultHakyllReaderOptions
                                 defaultHakyllWriterOptions {
                                     writerTableOfContents = True
-                                  , writerTemplate = ( "$if(toc)$ $toc$ $endif$")
+                                  , writerTemplate = (Just "$if(toc)$ $toc$ $endif$")
 								  -- Just 
 								  -- readTemplate
 								  -- :: TDI.Template DTI.Text
