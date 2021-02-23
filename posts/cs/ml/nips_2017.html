@@ -126,7 +126,7 @@
 <p>SK: This is important in reinforcement learning (RL) because in some sense errors in RL always look like worst-case errors. Making progress on robustness in RL will be like making progress on adversarial learning. We don’t understand how error in RL compounds.</p>
 <p>PL: When I first learned about adversarial examples I thought it was cute, but over the years I found that it led to many other ideas. It relates to interpretability, teaching, generalizing models to new distributions, robustness (is it learning the right model?), and having the right inductive bias. Adversarial examples good way to stress-test a model.</p>
 <p>PB: Defending against adversarial attacks is important. Though, adversarial examples may be a phenomena of many systems (even humans).</p>
-<p>YB: It’s not specific to neural nets, but a broader problem. My intuition from the beginning is that it has a lot to do with the fact that humans use a lot of extra information about the data distribution <span class="math inline">\(p(x)\)</span>, and this influences our classifiers in a strong way - we mostly learn <span class="math inline">\(p(x,y)\)</span>, not <span class="math inline">\(p(y|x)\)</span>. Attempts to jointly learn the input probability distribution and the classifier were not very convincing, so this early idea was forgotten.</p>
+<p>YB: It’s not specific to neural nets, but a broader problem. My intuition from the beginning is that it has a lot to do with the fact that humans use a lot of extra information about the data distribution <span class="math inline"><em>p</em>(<em>x</em>)</span>, and this influences our classifiers in a strong way - we mostly learn <span class="math inline"><em>p</em>(<em>x</em>, <em>y</em>)</span>, not <span class="math inline"><em>p</em>(<em>y</em>|<em>x</em>)</span>. Attempts to jointly learn the input probability distribution and the classifier were not very convincing, so this early idea was forgotten.</p>
 <p>RS: Building good generative models would help. But they are hard to build.</p>
 <p>YB: If we capture 3-D models of images, a small perturbation won’t disturb them.</p>
 <p>PL: Wouldn’t they? You can still attack the generative model.</p>
@@ -163,7 +163,7 @@
 <p>SK: In RL, a lot of solution concepts aren’t just first order. Many use trust region methods. How does Monte Carlo tree search fit in? There’s issues of discrete vs. continuous optimization</p>
 <p>RS: It’s hard to beat SGD+momentum+BN. But there should be something going beyond it.</p>
 <h2 id="a-can-we-use-generative-models-to-prevent-adversarial-examples">A: Can we use generative models to prevent adversarial examples?</h2>
-<p>PL: Text adversarial examples cannot be detected by generative models. For adversarial examples, we need to think beyond the statistical worst case notion; <span class="math inline">\(L^\iy\)</span> is the tip of the iceberg.</p>
+<p>PL: Text adversarial examples cannot be detected by generative models. For adversarial examples, we need to think beyond the statistical worst case notion; <span class="math inline">$L^\iy$</span> is the tip of the iceberg.</p>
 <p>SK: Theory has a valuable contribution to make, on robustness (to adversarial perturbation).</p>
 <p>PL: Argmax is hard.</p>
 <p>SA: There’s something off about an information theoretic approach to unsupervised learning. When I imagine a scene with people, it’s not clear that it’s coming out of a distribution.</p>

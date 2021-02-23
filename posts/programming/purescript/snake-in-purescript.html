@@ -235,7 +235,7 @@ main <span class="fu">=</span>
 <li><code>snake</code> as an array of points</li>
 <li>whether the snake is <code>alive</code></li>
 </ul>
-<p>We also include some the dimensions <code>xd</code>, <code>yd</code> of the game board, the <code>size</code> of each square (alternatively, these can be hard-coded in), and the <code>prev</code> square (this is optional—it gives us an easy way to erase the tail of the snake when it moves). Valid positions are in <span class="math inline">\([1,xd]\times [1,yd]\)</span>.</p>
+<p>We also include some the dimensions <code>xd</code>, <code>yd</code> of the game board, the <code>size</code> of each square (alternatively, these can be hard-coded in), and the <code>prev</code> square (this is optional—it gives us an easy way to erase the tail of the snake when it moves). Valid positions are in <span class="math inline">[1, <em>x</em><em>d</em>]×[1, <em>y</em><em>d</em>]</span>.</p>
 <p>We want the mouse location to be generated at random. How to do this? We’ll fill in that part later. (For now, you can put in an arbitrary point.)</p>
 <p>Note also that the y-coordinate is 0 at the top of the screen and increases going down. The snake starts at the upper-left corner moving right.</p>
 <div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">Point</span> <span class="fu">=</span> <span class="dt">Tuple</span> <span class="dt">Int</span> <span class="dt">Int</span>
@@ -307,7 +307,7 @@ step dir m <span class="fu">=</span>
 </ul>
 <p>Note that we can add points! (Note the line <code>head s + d</code>.) This is because <code>Data.Tuple</code> has the instance <code>(Ring a, Ring b) =&gt; Ring (Tuple a b)</code>. If both components of a tuple can be added, then addition is automatically defined for the tuple.</p>
 <h2 id="view">View</h2>
-<p>Given the model, we have 4 things to render: the walls (a <span class="math inline">\(27\times 27\)</span> rectangle here), the background (a <span class="math inline">\(25\times 25\)</span> rectangle), the snake and the mouse. For instructions on using <code>purescript-canvas</code> see <a href="https://leanpub.com/purescript/read#leanpub-auto-canvas-graphics">Chapter 9</a> of the PureScript book. Change the colors as you wish.</p>
+<p>Given the model, we have 4 things to render: the walls (a <span class="math inline">27 × 27</span> rectangle here), the background (a <span class="math inline">25 × 25</span> rectangle), the snake and the mouse. For instructions on using <code>purescript-canvas</code> see <a href="https://leanpub.com/purescript/read#leanpub-auto-canvas-graphics">Chapter 9</a> of the PureScript book. Change the colors as you wish.</p>
 <pre><code>render :: forall eff. Partial =&gt; Model -&gt; (Eff _ Unit)
 render m = 
   void do
@@ -377,7 +377,7 @@ renderStep m =
 <p>The <code>step</code> function takes an update of type <code>Point</code>, so we need to produce a <code>Signal Point</code>.</p>
 <p><a href="https://pursuit.purescript.org/packages/purescript-signal/8.0.0">purescript-signal</a> contains signals from various sources, e.g. which keys are pressed and the time. We use the following functions from there:</p>
 <ul>
-<li><code>keyPressed :: forall e. Int -&gt; Eff (dom :: DOM | e) (Signal Boolean)</code>. (Note we need access to the DOM to get a keybord signal.) The key codes for L/U/D/R are 37, 38, 40, 39. We map them to <span class="math inline">\((-1,0), (0,-1), (0,1), (1,0)\)</span>, respectively.</li>
+<li><code>keyPressed :: forall e. Int -&gt; Eff (dom :: DOM | e) (Signal Boolean)</code>. (Note we need access to the DOM to get a keybord signal.) The key codes for L/U/D/R are 37, 38, 40, 39. We map them to <span class="math inline">( − 1, 0),(0, −1),(0, 1),(1, 0)</span>, respectively.</li>
 <li><code>every :: Time -&gt; Signal Time</code> periodically signals the time.</li>
 <li><code>sampleOn :: forall a b. (Signal a) -&gt; (Signal b) -&gt; (Signal b)</code> creates a signal which yields the current value of the second signal every time the first signal yields. Usually the first signal is a periodic time signal (e.g. <code>every second</code>).</li>
 </ul>
@@ -508,12 +508,12 @@ main <span class="fu">=</span>
 * Change the amount that the snake lengthens each time.
 * Allow the user to adjust the speed and the lengthening rate.
 -->
-<section class="footnotes">
+<div class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>The PureScript signal library is very similar to the former Elm signal library. Note that Elm no longer uses signals.<a href="#fnref1">↩</a></p></li>
 </ol>
-</section>
+</div>
 
   </div>
 
